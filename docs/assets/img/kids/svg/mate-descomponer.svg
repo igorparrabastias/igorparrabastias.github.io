@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 215" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Descomposición: un problema grande se parte en pedacitos pequeños">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#3b3f5c"/>
+    </marker>
+  </defs>
+  <!-- caption -->
+  <rect x="50" y="8" width="380" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">Un problema grande se parte en pedacitos 🍕</text>
+  <!-- big circle: problema grande -->
+  <circle cx="90" cy="125" r="55" fill="#ff8a65"/>
+  <text x="90" y="117" text-anchor="middle" font-size="28" font-weight="700" fill="#1a1a2e">🍕</text>
+  <text x="90" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">Problema</text>
+  <text x="90" y="156" text-anchor="middle" font-size="12" fill="#1a1a2e">grande</text>
+  <!-- arrow -->
+  <line x1="148" y1="125" x2="200" y2="125" stroke="#3b3f5c" stroke-width="3" marker-end="url(#arr)"/>
+  <!-- small circles in triangle arrangement -->
+  <circle cx="300" cy="78" r="30" fill="#64b5f6"/>
+  <text x="300" y="71" text-anchor="middle" font-size="20">🍕</text>
+  <text x="300" y="91" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a2e">parte 1</text>
+
+  <circle cx="388" cy="125" r="30" fill="#81c784"/>
+  <text x="388" y="118" text-anchor="middle" font-size="20">🍕</text>
+  <text x="388" y="138" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a2e">parte 2</text>
+
+  <circle cx="300" cy="172" r="30" fill="#ffd54f"/>
+  <text x="300" y="165" text-anchor="middle" font-size="20">🍕</text>
+  <text x="300" y="185" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a2e">parte 3</text>
+</svg>

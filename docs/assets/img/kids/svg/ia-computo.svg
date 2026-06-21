@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 210" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Entrenar una IA necesita muchos computadores potentes, muchas veces en la nube">
+  <defs>
+    <marker id="ahc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect x="40" y="8" width="400" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">Mucho poder de cálculo, en la nube ☁️</text>
+
+  <!-- tu compu -->
+  <text x="90" y="135" text-anchor="middle" font-size="52">💻</text>
+  <text x="90" y="178" text-anchor="middle" font-size="14" font-weight="700" fill="#3b3f5c">tu compu</text>
+
+  <!-- flecha doble -->
+  <line x1="140" y1="118" x2="245" y2="118" stroke="#1565c0" stroke-width="3" marker-end="url(#ahc)" marker-start="url(#ahc)"/>
+
+  <!-- nube -->
+  <g fill="#e3f2fd" stroke="#64b5f6" stroke-width="2">
+    <ellipse cx="350" cy="120" rx="95" ry="46"/>
+    <circle cx="300" cy="118" r="32"/>
+    <circle cx="345" cy="96" r="38"/>
+    <circle cx="398" cy="116" r="34"/>
+  </g>
+  <g fill="#90a4ae" stroke="#1a1a2e" stroke-width="1.5">
+    <rect x="312" y="106" width="20" height="30" rx="4"/>
+    <rect x="340" y="106" width="20" height="30" rx="4"/>
+    <rect x="368" y="106" width="20" height="30" rx="4"/>
+  </g>
+  <text x="350" y="186" text-anchor="middle" font-size="15" font-weight="700" fill="#3b3f5c">la nube ☁️</text>
+</svg>

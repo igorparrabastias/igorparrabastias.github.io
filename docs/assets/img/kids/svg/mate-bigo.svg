@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Big O: con pocos datos va rápido como una liebre, con muchos datos va lento como una tortuga">
+  <!-- caption -->
+  <rect x="40" y="8" width="400" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">Big O: ¿cuánto más tarda con más datos? ⏱️</text>
+  <!-- left panel: pocos datos = rápido -->
+  <rect x="18" y="50" width="198" height="152" rx="12" fill="#81c784"/>
+  <text x="117" y="78" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a2e">Pocos datos 🐇</text>
+  <text x="117" y="140" text-anchor="middle" font-size="58">⏱️</text>
+  <text x="117" y="188" text-anchor="middle" font-size="20" font-weight="700" fill="#1565c0">¡RÁPIDO! ⚡</text>
+  <!-- vs -->
+  <text x="240" y="135" text-anchor="middle" font-size="18" font-weight="700" fill="#3b3f5c">vs</text>
+  <!-- right panel: muchos datos = lento -->
+  <rect x="264" y="50" width="198" height="152" rx="12" fill="#ff8a65"/>
+  <text x="363" y="78" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a2e">Muchos datos 🐢</text>
+  <text x="363" y="140" text-anchor="middle" font-size="58">🕰️</text>
+  <text x="363" y="188" text-anchor="middle" font-size="20" font-weight="700" fill="#ff5252">LENTO... 🐌</text>
+</svg>

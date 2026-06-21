@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 215" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Trie para autocompletar: nodos raíz, C, A, S, A forman la palabra CASA, con una rama extra para CAMA">
+  <defs>
+    <marker id="arr-trie" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#90a4ae"/>
+    </marker>
+  </defs>
+
+  <!-- caption pill -->
+  <rect x="48" y="7" width="384" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="27" text-anchor="middle" font-size="15" fill="#3b3f5c">Trie: un árbol de letras para autocompletar 🔤</text>
+
+  <!-- arrows between main path nodes (horizontal, y=90) -->
+  <g stroke="#90a4ae" stroke-width="2" marker-end="url(#arr-trie)">
+    <line x1="48"  y1="90" x2="74"  y2="90"/>
+    <line x1="124" y1="90" x2="150" y2="90"/>
+    <line x1="210" y1="90" x2="236" y2="90"/>
+    <line x1="296" y1="90" x2="322" y2="90"/>
+  </g>
+
+  <!-- branch arrow: from A node (2nd) downward to M -->
+  <line x1="185" y1="116" x2="185" y2="144" stroke="#90a4ae" stroke-width="2" marker-end="url(#arr-trie)"/>
+  <!-- arrow from M to branch end A -->
+  <line x1="211" y1="168" x2="240" y2="168" stroke="#90a4ae" stroke-width="2" marker-end="url(#arr-trie)"/>
+
+  <!-- ROOT node -->
+  <circle cx="30"  cy="90" r="16" fill="#90a4ae"/>
+  <text x="30" cy="90" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">●</text>
+
+  <!-- C node -->
+  <circle cx="99"  cy="90" r="25" fill="#64b5f6"/>
+  <text x="99"  y="98" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a2e">C</text>
+
+  <!-- A node (from C) — branch point -->
+  <circle cx="185" cy="90" r="25" fill="#ff8a65"/>
+  <text x="185" y="98" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a2e">A</text>
+
+  <!-- S node -->
+  <circle cx="271" cy="90" r="25" fill="#81c784"/>
+  <text x="271" y="98" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a2e">S</text>
+
+  <!-- A* end node (CASA) -->
+  <circle cx="347" cy="90" r="25" fill="#ffd54f" stroke="#f9a825" stroke-width="3"/>
+  <text x="347" y="98" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a2e">A</text>
+  <text x="376" y="74" font-size="16" fill="#2e7d32">★</text>
+
+  <!-- CASA label -->
+  <text x="347" y="130" text-anchor="middle" font-size="13" font-weight="700" fill="#2e7d32">CASA 🏠</text>
+
+  <!-- M node (branch for CAMA) -->
+  <circle cx="185" cy="168" r="22" fill="#ba68c8"/>
+  <text x="185" y="176" text-anchor="middle" font-size="21" font-weight="700" fill="#1a1a2e">M</text>
+
+  <!-- A* end node (CAMA) -->
+  <circle cx="265" cy="168" r="22" fill="#ffd54f" stroke="#f9a825" stroke-width="3"/>
+  <text x="265" y="176" text-anchor="middle" font-size="21" font-weight="700" fill="#1a1a2e">A</text>
+  <text x="292" y="152" font-size="14" fill="#2e7d32">★</text>
+
+  <!-- CAMA label -->
+  <text x="265" y="202" text-anchor="middle" font-size="13" font-weight="700" fill="#2e7d32">CAMA 🛏️</text>
+
+  <!-- explanation -->
+  <text x="430" y="88"  font-size="13" fill="#3b3f5c" text-anchor="middle">★ = fin</text>
+  <text x="430" y="104" font-size="13" fill="#3b3f5c" text-anchor="middle">de palabra</text>
+</svg>

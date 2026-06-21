@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 185" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Línea de tiempo de la IA: desde los primeros computadores de 1950, pasando por las estadísticas de 1980-2000, hasta los chatbots de hoy">
+  <defs>
+    <marker id="arh" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#90a4ae"/>
+    </marker>
+  </defs>
+
+  <!-- caption pill -->
+  <rect x="50" y="8" width="380" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">De la primera maquina a los chatbots de hoy 🚀</text>
+
+  <!-- Timeline line -->
+  <line x1="50" y1="115" x2="455" y2="115" stroke="#90a4ae" stroke-width="3" marker-end="url(#arh)"/>
+
+  <!-- Node 1: 1950 -->
+  <circle cx="110" cy="115" r="15" fill="#64b5f6" stroke="#1565c0" stroke-width="2"/>
+  <text x="110" y="76" text-anchor="middle" font-size="28">🖥️</text>
+  <text x="110" y="142" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">1950</text>
+  <text x="110" y="162" text-anchor="middle" font-size="12" fill="#3b3f5c">¿Puede pensar?</text>
+
+  <!-- Node 2: 1980-2000 -->
+  <circle cx="265" cy="115" r="15" fill="#ff8a65" stroke="#ff5252" stroke-width="2"/>
+  <text x="265" y="76" text-anchor="middle" font-size="28">📊</text>
+  <text x="265" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a2e">1980–2000</text>
+  <text x="265" y="162" text-anchor="middle" font-size="12" fill="#3b3f5c">Aprende patrones</text>
+
+  <!-- Node 3: Hoy -->
+  <circle cx="410" cy="115" r="15" fill="#81c784" stroke="#2e7d32" stroke-width="2"/>
+  <text x="410" y="76" text-anchor="middle" font-size="28">🤖</text>
+  <text x="410" y="142" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">Hoy ✨</text>
+  <text x="410" y="162" text-anchor="middle" font-size="12" fill="#3b3f5c">Chatbots</text>
+</svg>

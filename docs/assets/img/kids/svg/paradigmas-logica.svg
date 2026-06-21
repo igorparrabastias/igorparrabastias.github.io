@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Programación lógica: hechos más reglas permiten deducir respuestas como un detective">
+  <defs>
+    <marker id="ahl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#ba68c8"/>
+    </marker>
+  </defs>
+
+  <!-- caption -->
+  <rect x="40" y="8" width="400" height="28" rx="14" fill="#eef0ff"/>
+  <text x="240" y="27" text-anchor="middle" font-size="14" fill="#3b3f5c">Hechos + reglas → el programa deduce la respuesta 🔍</text>
+
+  <!-- card 1: hecho -->
+  <rect x="14" y="58" width="120" height="46" rx="10" fill="#81c784"/>
+  <text x="74" y="77" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a2e">🐕 perro(Boby)</text>
+  <text x="74" y="96" text-anchor="middle" font-size="12" fill="#1a1a2e">hecho</text>
+
+  <!-- card 2: regla -->
+  <rect x="14" y="116" width="120" height="46" rx="10" fill="#ffd54f"/>
+  <text x="74" y="135" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a2e">perro → ladra</text>
+  <text x="74" y="154" text-anchor="middle" font-size="12" fill="#1a1a2e">regla</text>
+
+  <!-- arrow to magnifier -->
+  <line x1="134" y1="104" x2="172" y2="104" stroke="#ba68c8" stroke-width="3" marker-end="url(#ahl)"/>
+
+  <!-- magnifier circle -->
+  <circle cx="220" cy="104" r="48" fill="#eef0ff" stroke="#ba68c8" stroke-width="3"/>
+  <text x="220" y="118" text-anchor="middle" font-size="36">🔍</text>
+
+  <!-- arrow to result -->
+  <line x1="268" y1="104" x2="304" y2="104" stroke="#ba68c8" stroke-width="3" marker-end="url(#ahl)"/>
+
+  <!-- result box -->
+  <rect x="304" y="74" width="162" height="60" rx="12" fill="#64b5f6"/>
+  <text x="385" y="100" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a2e">¡Boby ladra! ✅</text>
+  <text x="385" y="122" text-anchor="middle" font-size="13" fill="#1a1a2e">respuesta deducida</text>
+</svg>

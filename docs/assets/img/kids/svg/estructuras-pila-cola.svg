@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 225" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Pila LIFO: el último en entrar sale primero. Cola FIFO: el primero en entrar sale primero">
+  <defs>
+    <marker id="arr-up" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#ff5252"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#1565c0"/>
+    </marker>
+  </defs>
+
+  <!-- caption pill -->
+  <rect x="8" y="6" width="464" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="26" text-anchor="middle" font-size="14" fill="#3b3f5c">Dos maneras de guardar y sacar cosas</text>
+
+  <!-- center divider -->
+  <line x1="240" y1="44" x2="240" y2="215" stroke="#90a4ae" stroke-width="2" stroke-dasharray="5,4"/>
+
+  <!-- ===== LEFT: PILA ===== -->
+  <text x="108" y="58" text-anchor="middle" font-size="19" font-weight="700" fill="#1a1a2e">Pila 🍽️</text>
+  <text x="108" y="74" text-anchor="middle" font-size="13" fill="#90a4ae">LIFO</text>
+
+  <!-- plates: top = last in = first out -->
+  <rect x="46" y="84"  width="124" height="36" rx="10" fill="#ffd54f"/>
+  <text x="108" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">último 👑</text>
+
+  <rect x="46" y="123" width="124" height="36" rx="10" fill="#ff8a65"/>
+  <text x="108" y="147" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">en medio</text>
+
+  <rect x="46" y="162" width="124" height="36" rx="10" fill="#64b5f6"/>
+  <text x="108" y="186" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">primero</text>
+
+  <!-- up arrow: the top plate exits first -->
+  <line x1="185" y1="95" x2="185" y2="68" stroke="#ff5252" stroke-width="3" marker-end="url(#arr-up)"/>
+  <text x="203" y="86" font-size="12" fill="#ff5252">sale ↑</text>
+
+  <!-- bottom label -->
+  <text x="108" y="213" text-anchor="middle" font-size="12" fill="#3b3f5c">el de arriba sale primero</text>
+
+  <!-- ===== RIGHT: COLA ===== -->
+  <text x="360" y="58" text-anchor="middle" font-size="19" font-weight="700" fill="#1a1a2e">Cola 🥖</text>
+  <text x="360" y="74" text-anchor="middle" font-size="13" fill="#90a4ae">FIFO</text>
+
+  <!-- 3 people emojis in horizontal line -->
+  <text x="264" y="148" font-size="34">🧍</text>
+  <text x="330" y="148" font-size="34">🧍</text>
+  <text x="396" y="148" font-size="34">🧍</text>
+
+  <!-- order labels below each person -->
+  <g font-size="13" fill="#1a1a2e" text-anchor="middle">
+    <text x="281" y="168">1°</text>
+    <text x="347" y="168">2°</text>
+    <text x="413" y="168">3°</text>
+  </g>
+
+  <!-- exit arrow on left (first person in queue exits first) -->
+  <line x1="260" y1="124" x2="242" y2="124" stroke="#2e7d32" stroke-width="3" marker-end="url(#arr-green)"/>
+  <text x="253" y="116" text-anchor="middle" font-size="11" fill="#2e7d32">sale</text>
+
+  <!-- entry arrow on right (new people join at the back) -->
+  <line x1="462" y1="124" x2="447" y2="124" stroke="#1565c0" stroke-width="3" marker-end="url(#arr-blue)"/>
+  <text x="470" y="116" text-anchor="end" font-size="11" fill="#1565c0">entra</text>
+
+  <!-- bottom label -->
+  <text x="360" y="213" text-anchor="middle" font-size="12" fill="#3b3f5c">el primero en llegar sale primero</text>
+</svg>

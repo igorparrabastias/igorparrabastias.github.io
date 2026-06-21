@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Montañas de datos (fotos, textos, sonidos) alimentan a una IA que aprende">
+  <defs>
+    <marker id="ahd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect x="60" y="8" width="360" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">Mientras más ejemplos, más lista la IA 📚</text>
+
+  <!-- pila de datos -->
+  <g font-size="14" font-weight="700" fill="#1a1a2e" text-anchor="middle">
+    <rect x="50" y="62" width="110" height="34" rx="9" fill="#64b5f6"/><text x="105" y="84">📷 fotos</text>
+    <rect x="50" y="102" width="110" height="34" rx="9" fill="#81c784"/><text x="105" y="124">📝 textos</text>
+    <rect x="50" y="142" width="110" height="34" rx="9" fill="#ffd54f"/><text x="105" y="164">🎵 sonidos</text>
+  </g>
+
+  <line x1="170" y1="119" x2="232" y2="119" stroke="#1565c0" stroke-width="3" marker-end="url(#ahd)"/>
+
+  <!-- robot IA -->
+  <rect x="250" y="70" width="180" height="100" rx="18" fill="#ba68c8"/>
+  <text x="340" y="120" text-anchor="middle" font-size="40">🤖</text>
+  <text x="340" y="150" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">IA que aprende</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Un mensaje se corta en paquetes numerados que viajan por separado y se vuelven a juntar al llegar">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#64b5f6"/>
+    </marker>
+  </defs>
+
+  <!-- caption pill -->
+  <rect x="50" y="8" width="380" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="14" fill="#3b3f5c">El mensaje viaja cortado en paquetes 📦</text>
+
+  <!-- left: source -->
+  <text x="44" y="105" text-anchor="middle" font-size="34">📨</text>
+  <text x="44" y="128" text-anchor="middle" font-size="12" fill="#3b3f5c">Mensaje</text>
+
+  <!-- arrow 1 -->
+  <line x1="72" y1="97" x2="118" y2="97" stroke="#64b5f6" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- packets 1, 2, 3 -->
+  <g font-size="26" font-weight="700" fill="#1a1a2e" text-anchor="middle">
+    <rect x="126" y="65" width="58" height="58" rx="10" fill="#ff8a65"/>
+    <text x="155" y="104">1</text>
+    <rect x="198" y="70" width="58" height="58" rx="10" fill="#81c784"/>
+    <text x="227" y="109">2</text>
+    <rect x="270" y="65" width="58" height="58" rx="10" fill="#ffd54f"/>
+    <text x="299" y="104">3</text>
+  </g>
+  <text x="227" y="148" text-anchor="middle" font-size="13" fill="#90a4ae">viajan por separado 🛣️</text>
+
+  <!-- arrow 2 -->
+  <line x1="337" y1="97" x2="383" y2="97" stroke="#64b5f6" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- right: destination -->
+  <text x="427" y="105" text-anchor="middle" font-size="34">📬</text>
+  <text x="427" y="128" text-anchor="middle" font-size="12" fill="#2e7d32">¡Llegó! ✅</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 210" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Grafo de ciudades unidas por caminos; el camino más corto de A a D resaltado en verde">
+  <defs>
+    <marker id="ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#2e7d32"/>
+    </marker>
+  </defs>
+
+  <rect x="60" y="8" width="360" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">El camino más corto de 🏠 a 🎯</text>
+
+  <!-- edges -->
+  <g stroke="#90a4ae" stroke-width="6" stroke-linecap="round">
+    <line x1="70" y1="120" x2="220" y2="70"/>
+    <line x1="70" y1="120" x2="200" y2="170"/>
+    <line x1="200" y1="170" x2="410" y2="120"/>
+  </g>
+  <!-- shortest path A->B->D in green -->
+  <g stroke="#2e7d32" stroke-width="7" stroke-linecap="round">
+    <line x1="220" y1="70" x2="410" y2="120"/>
+    <line x1="70" y1="120" x2="220" y2="70"/>
+  </g>
+
+  <!-- nodes -->
+  <g text-anchor="middle">
+    <circle cx="70"  cy="120" r="26" fill="#64b5f6"/><text x="70"  y="129" font-size="22">🏠</text>
+    <circle cx="220" cy="70"  r="26" fill="#ffd54f"/><text x="220" y="78" font-size="22" font-weight="700" fill="#1a1a2e">B</text>
+    <circle cx="200" cy="170" r="26" fill="#ba68c8"/><text x="200" y="178" font-size="22" font-weight="700" fill="#1a1a2e">C</text>
+    <circle cx="410" cy="120" r="26" fill="#81c784"/><text x="410" y="129" font-size="22">🎯</text>
+  </g>
+</svg>

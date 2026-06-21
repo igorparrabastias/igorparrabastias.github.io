@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Event loop: atiende tareas de red, correo, base de datos y clics por turnos en un bucle circular">
+  <defs>
+    <marker id="ahe" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#64b5f6"/>
+    </marker>
+  </defs>
+
+  <!-- caption -->
+  <rect x="75" y="8" width="330" height="26" rx="13" fill="#eef0ff"/>
+  <text x="240" y="26" text-anchor="middle" font-size="14" fill="#3b3f5c">Atiende tareas por turnos ♻️</text>
+
+  <!-- dashed ring (event loop path) -->
+  <circle cx="240" cy="138" r="80" fill="none" stroke="#64b5f6" stroke-width="3" stroke-dasharray="8,4"/>
+
+  <!-- clockwise arc arrow (top → right quarter) -->
+  <path d="M 240 58 A 80 80 0 0 1 320 138" fill="none" stroke="#64b5f6" stroke-width="3.5" marker-end="url(#ahe)"/>
+
+  <!-- center label -->
+  <text x="240" y="133" text-anchor="middle" font-size="16" font-weight="700" fill="#1565c0">Event Loop</text>
+  <text x="240" y="154" text-anchor="middle" font-size="13" fill="#3b3f5c">un turno a la vez</text>
+
+  <!-- N task: pedido web -->
+  <rect x="168" y="40" width="144" height="34" rx="10" fill="#ffd54f"/>
+  <text x="240" y="62" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">🌐 pedido web</text>
+
+  <!-- E task: correo -->
+  <rect x="332" y="121" width="125" height="34" rx="10" fill="#ff8a65"/>
+  <text x="394" y="143" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">📧 correo</text>
+
+  <!-- S task: base de datos -->
+  <rect x="168" y="202" width="144" height="34" rx="10" fill="#81c784"/>
+  <text x="240" y="224" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">🗄️ base de datos</text>
+
+  <!-- W task: clic usuario -->
+  <rect x="23" y="121" width="125" height="34" rx="10" fill="#ba68c8"/>
+  <text x="85" y="143" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">🖱️ clic usuario</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 165" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Programación funcional: das ingredientes, la función los transforma y sale un resultado nuevo">
+  <defs>
+    <marker id="ahf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#ff8a65"/>
+    </marker>
+  </defs>
+
+  <!-- caption -->
+  <rect x="55" y="8" width="370" height="28" rx="14" fill="#eef0ff"/>
+  <text x="240" y="27" text-anchor="middle" font-size="14" fill="#3b3f5c">Das ingredientes → función → ¡sale el resultado!</text>
+
+  <!-- ingredients box -->
+  <rect x="18" y="52" width="110" height="88" rx="12" fill="#ffd54f"/>
+  <text x="73" y="96" text-anchor="middle" font-size="26" font-weight="700">🥚 🥛</text>
+  <text x="73" y="126" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a2e">ingredientes</text>
+
+  <!-- arrow 1 -->
+  <line x1="128" y1="96" x2="162" y2="96" stroke="#ff8a65" stroke-width="3" marker-end="url(#ahf)"/>
+
+  <!-- function box -->
+  <rect x="162" y="52" width="156" height="88" rx="12" fill="#64b5f6"/>
+  <text x="240" y="95" text-anchor="middle" font-size="26">⚙️</text>
+  <text x="240" y="120" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a2e">función</text>
+  <text x="240" y="135" text-anchor="middle" font-size="12" fill="#1565c0">sin cambiar nada</text>
+
+  <!-- arrow 2 -->
+  <line x1="318" y1="96" x2="350" y2="96" stroke="#ff8a65" stroke-width="3" marker-end="url(#ahf)"/>
+
+  <!-- result box -->
+  <rect x="350" y="52" width="112" height="88" rx="12" fill="#81c784"/>
+  <text x="406" y="97" text-anchor="middle" font-size="30">🍰</text>
+  <text x="406" y="126" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a2e">¡resultado!</text>
+</svg>

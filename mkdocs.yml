@@ -33,6 +33,16 @@ theme:
 nav:
   - Inicio: index.md
   - Sobre mí: sobre-mi.md
+  - Para kids 🧒:
+    - kids/index.md
+    - 🤖 Inteligencia Artificial y PLN: kids/ia.md
+    - 🐍 Fundamentos de Python: kids/python.md
+    - 🧱 Estructuras de datos: kids/estructuras.md
+    - 🧩 Algoritmos: kids/algoritmos.md
+    - 🔢 Matemáticas y teoría: kids/matematicas.md
+    - 🎨 Paradigmas de programación: kids/paradigmas.md
+    - 🌐 Redes y comunicaciones: kids/redes.md
+    - 🕸️ Desarrollo web: kids/web.md
   - Inteligencia Artificial y PLN:
     - La historia (1950–hoy):
       - Introducción y serie: fundamento-del-pln-y-la-ia.md

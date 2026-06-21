@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Lógica: un búho con dos carteles, uno dice VERDADERO y otro FALSO">
+  <!-- caption -->
+  <rect x="55" y="8" width="370" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">La lógica tiene solo dos respuestas posibles 🦉</text>
+  <!-- left sign: VERDADERO -->
+  <rect x="12" y="52" width="158" height="118" rx="12" fill="#81c784"/>
+  <text x="91" y="106" text-anchor="middle" font-size="36" font-weight="700" fill="#2e7d32">✓</text>
+  <text x="91" y="150" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">VERDADERO</text>
+  <!-- owl center -->
+  <text x="240" y="148" text-anchor="middle" font-size="68">🦉</text>
+  <!-- right sign: FALSO -->
+  <rect x="310" y="52" width="158" height="118" rx="12" fill="#ff8a65"/>
+  <text x="389" y="106" text-anchor="middle" font-size="36" font-weight="700" fill="#ff5252">✗</text>
+  <text x="389" y="150" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">FALSO</text>
+</svg>

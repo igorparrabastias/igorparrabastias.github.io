@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 225" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Cálculo: la matemática del cambio, como medir la velocidad en un tobogán">
+  <defs>
+    <marker id="spd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#f9a825"/>
+    </marker>
+  </defs>
+  <!-- caption -->
+  <rect x="40" y="8" width="400" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">¿Qué tan rápido baja el niño? ¡Eso es cálculo! 📐</text>
+  <!-- support pole -->
+  <rect x="78" y="82" width="12" height="120" rx="4" fill="#90a4ae"/>
+  <!-- left base -->
+  <rect x="56" y="198" width="44" height="10" rx="4" fill="#90a4ae"/>
+  <!-- slide surface -->
+  <polygon points="78,85 422,194 422,210 78,101" fill="#64b5f6"/>
+  <!-- right base -->
+  <rect x="404" y="198" width="44" height="10" rx="4" fill="#90a4ae"/>
+  <!-- child at top of slide -->
+  <text x="100" y="80" text-anchor="middle" font-size="28">🧒</text>
+  <!-- speed arrow along slide surface -->
+  <line x1="130" y1="102" x2="370" y2="178" stroke="#f9a825" stroke-width="4" marker-end="url(#spd)"/>
+  <!-- velocity label -->
+  <rect x="148" y="175" width="164" height="28" rx="10" fill="#ffd54f"/>
+  <text x="230" y="194" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">⚡ velocidad</text>
+</svg>

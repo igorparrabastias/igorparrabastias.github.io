@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Árbol genealógico: nodo raíz arriba, dos hijos y cuatro nietos conectados por líneas">
+
+  <!-- caption pill -->
+  <rect x="65" y="6" width="350" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="26" text-anchor="middle" font-size="15" fill="#3b3f5c">Árbol: raíz arriba, hijos y nietos conectados 🌳</text>
+
+  <!-- connector lines (drawn first, behind nodes) -->
+  <g stroke="#90a4ae" stroke-width="2">
+    <!-- root to children -->
+    <line x1="240" y1="92" x2="128" y2="124"/>
+    <line x1="240" y1="92" x2="352" y2="124"/>
+    <!-- left child to grandchildren -->
+    <line x1="128" y1="162" x2="66"  y2="190"/>
+    <line x1="128" y1="162" x2="190" y2="190"/>
+    <!-- right child to grandchildren -->
+    <line x1="352" y1="162" x2="290" y2="190"/>
+    <line x1="352" y1="162" x2="414" y2="190"/>
+  </g>
+
+  <!-- root node -->
+  <rect x="200" y="52" width="80" height="40" rx="12" fill="#64b5f6" stroke="#1565c0" stroke-width="2"/>
+  <text x="240" y="78" text-anchor="middle" font-size="18" font-weight="700" fill="#1a1a2e">raíz</text>
+
+  <!-- child nodes -->
+  <rect x="88"  y="124" width="80" height="38" rx="12" fill="#ff8a65"/>
+  <text x="128" y="149" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a2e">hijo</text>
+
+  <rect x="312" y="124" width="80" height="38" rx="12" fill="#ff8a65"/>
+  <text x="352" y="149" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a2e">hijo</text>
+
+  <!-- grandchild nodes -->
+  <rect x="33"  y="190" width="66" height="36" rx="10" fill="#81c784"/>
+  <text x="66"  y="213" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">nieto</text>
+
+  <rect x="157" y="190" width="66" height="36" rx="10" fill="#81c784"/>
+  <text x="190" y="213" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">nieto</text>
+
+  <rect x="257" y="190" width="66" height="36" rx="10" fill="#81c784"/>
+  <text x="290" y="213" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">nieto</text>
+
+  <rect x="381" y="190" width="66" height="36" rx="10" fill="#81c784"/>
+  <text x="414" y="213" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">nieto</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 230" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="DFS baja a fondo por una rama; BFS avanza nivel por nivel">
+  <rect x="40" y="8" width="180" height="28" rx="14" fill="#eef0ff"/>
+  <text x="130" y="27" text-anchor="middle" font-size="14" fill="#3b3f5c">DFS 🕳️ a fondo</text>
+  <rect x="260" y="8" width="180" height="28" rx="14" fill="#eef0ff"/>
+  <text x="350" y="27" text-anchor="middle" font-size="14" fill="#3b3f5c">BFS 🌊 por niveles</text>
+
+  <!-- DFS tree (left): go deep one branch -->
+  <g stroke="#90a4ae" stroke-width="4">
+    <line x1="130" y1="70" x2="90" y2="130"/><line x1="130" y1="70" x2="170" y2="130"/>
+    <line x1="90" y1="130" x2="70" y2="190"/><line x1="90" y1="130" x2="120" y2="190"/>
+  </g>
+  <g text-anchor="middle" font-size="18" font-weight="700" fill="#1a1a2e">
+    <circle cx="130" cy="70"  r="20" fill="#ff8a65"/><text x="130" y="77">1</text>
+    <circle cx="90"  cy="130" r="20" fill="#ff8a65"/><text x="90"  y="137">2</text>
+    <circle cx="70"  cy="190" r="20" fill="#ff8a65"/><text x="70"  y="197">3</text>
+    <circle cx="120" cy="190" r="20" fill="#64b5f6"/><text x="120" y="197">4</text>
+    <circle cx="170" cy="130" r="20" fill="#64b5f6"/><text x="170" y="137">5</text>
+  </g>
+
+  <!-- BFS tree (right): level by level -->
+  <g stroke="#90a4ae" stroke-width="4">
+    <line x1="350" y1="70" x2="310" y2="130"/><line x1="350" y1="70" x2="390" y2="130"/>
+    <line x1="310" y1="130" x2="290" y2="190"/><line x1="310" y1="130" x2="340" y2="190"/>
+  </g>
+  <g text-anchor="middle" font-size="18" font-weight="700" fill="#1a1a2e">
+    <circle cx="350" cy="70"  r="20" fill="#81c784"/><text x="350" y="77">1</text>
+    <circle cx="310" cy="130" r="20" fill="#81c784"/><text x="310" y="137">2</text>
+    <circle cx="390" cy="130" r="20" fill="#81c784"/><text x="390" y="137">3</text>
+    <circle cx="290" cy="190" r="20" fill="#ffd54f"/><text x="290" y="197">4</text>
+    <circle cx="340" cy="190" r="20" fill="#ffd54f"/><text x="340" y="197">5</text>
+  </g>
+</svg>

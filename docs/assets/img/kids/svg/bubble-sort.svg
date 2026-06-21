@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 250" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Bubble sort: comparo dos vecinos y los cambio si están al revés">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#ff5252"/>
+    </marker>
+  </defs>
+
+  <!-- caption -->
+  <rect x="70" y="8" width="340" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">Comparo 2 vecinos y los cambio si están al revés 🫧</text>
+
+  <!-- swap arc over first pair -->
+  <path d="M88 66 C 100 40, 152 40, 164 66" fill="none" stroke="#ff5252" stroke-width="3" marker-end="url(#ah)" marker-start="url(#ah)"/>
+
+  <!-- row 1 -->
+  <g font-size="26" font-weight="700" fill="#1a1a2e" text-anchor="middle">
+    <rect x="56"  y="70" width="64" height="60" rx="12" fill="#64b5f6" stroke="#ff5252" stroke-width="4"/><text x="88"  y="109">5</text>
+    <rect x="132" y="70" width="64" height="60" rx="12" fill="#ff8a65" stroke="#ff5252" stroke-width="4"/><text x="164" y="109">3</text>
+    <rect x="208" y="70" width="64" height="60" rx="12" fill="#81c784"/><text x="240" y="109">8</text>
+    <rect x="284" y="70" width="64" height="60" rx="12" fill="#ffd54f"/><text x="316" y="109">1</text>
+    <rect x="360" y="70" width="64" height="60" rx="12" fill="#ba68c8"/><text x="392" y="109">9</text>
+  </g>
+
+  <!-- down arrow -->
+  <line x1="126" y1="140" x2="126" y2="168" stroke="#3b3f5c" stroke-width="3" marker-end="url(#ah)"/>
+  <text x="150" y="160" font-size="14" fill="#3b3f5c">cambio</text>
+
+  <!-- row 2 (after swap) -->
+  <g font-size="26" font-weight="700" fill="#1a1a2e" text-anchor="middle">
+    <rect x="56"  y="174" width="64" height="60" rx="12" fill="#ff8a65" stroke="#2e7d32" stroke-width="4"/><text x="88"  y="213">3</text>
+    <rect x="132" y="174" width="64" height="60" rx="12" fill="#64b5f6" stroke="#2e7d32" stroke-width="4"/><text x="164" y="213">5</text>
+    <rect x="208" y="174" width="64" height="60" rx="12" fill="#81c784"/><text x="240" y="213">8</text>
+    <rect x="284" y="174" width="64" height="60" rx="12" fill="#ffd54f"/><text x="316" y="213">1</text>
+    <rect x="360" y="174" width="64" height="60" rx="12" fill="#ba68c8"/><text x="392" y="213">9</text>
+  </g>
+  <text x="430" y="213" font-size="22">✅</text>
+</svg>

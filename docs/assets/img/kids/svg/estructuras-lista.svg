@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 195" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Lista de Python: vagones de tren numerados en orden, cada uno con su índice">
+
+  <!-- caption pill -->
+  <rect x="40" y="8" width="400" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">Lista: cosas en orden, cada una con su posición 🚂</text>
+
+  <!-- locomotive emoji -->
+  <text x="38" y="116" font-size="38">🚂</text>
+
+  <!-- wagon rects -->
+  <rect x="88"  y="72" width="84" height="58" rx="12" fill="#64b5f6"/>
+  <rect x="184" y="72" width="84" height="58" rx="12" fill="#ff8a65"/>
+  <rect x="280" y="72" width="84" height="58" rx="12" fill="#81c784"/>
+  <rect x="376" y="72" width="84" height="58" rx="12" fill="#ffd54f"/>
+
+  <!-- wagon numbers -->
+  <g font-size="26" font-weight="700" fill="#1a1a2e" text-anchor="middle">
+    <text x="130" y="112">1</text>
+    <text x="226" y="112">2</text>
+    <text x="322" y="112">3</text>
+    <text x="418" y="112">4</text>
+  </g>
+
+  <!-- connector links between wagons -->
+  <g stroke="#1a1a2e" stroke-width="4" stroke-linecap="round">
+    <line x1="172" y1="101" x2="184" y2="101"/>
+    <line x1="268" y1="101" x2="280" y2="101"/>
+    <line x1="364" y1="101" x2="376" y2="101"/>
+  </g>
+
+  <!-- index labels -->
+  <g font-size="14" fill="#3b3f5c" text-anchor="middle">
+    <text x="130" y="154">[0]</text>
+    <text x="226" y="154">[1]</text>
+    <text x="322" y="154">[2]</text>
+    <text x="418" y="154">[3]</text>
+  </g>
+
+  <!-- bottom rail line -->
+  <line x1="88" y1="143" x2="460" y2="143" stroke="#90a4ae" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- axle circles (wheels) -->
+  <g fill="#90a4ae">
+    <circle cx="110" cy="143" r="9"/>
+    <circle cx="150" cy="143" r="9"/>
+    <circle cx="206" cy="143" r="9"/>
+    <circle cx="246" cy="143" r="9"/>
+    <circle cx="302" cy="143" r="9"/>
+    <circle cx="342" cy="143" r="9"/>
+    <circle cx="398" cy="143" r="9"/>
+    <circle cx="438" cy="143" r="9"/>
+  </g>
+
+  <!-- label below -->
+  <text x="240" y="183" text-anchor="middle" font-size="13" fill="#3b3f5c">el índice 0 es el primer vagón; puedes agregar y quitar vagones</text>
+</svg>

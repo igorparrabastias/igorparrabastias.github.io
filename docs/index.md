@@ -16,12 +16,22 @@ Senior Full Stack Developer · Autodidacta · Programador en Python / PHP / Java
 > los lenguajes son solo la forma de implementarlos.
 
 [Sobre mí :octicons-arrow-right-24:](sobre-mi.md){ .md-button .md-button--primary }
+[Para kids 🧒 :octicons-arrow-right-24:](kids/index.md){ .md-button }
 
 ---
 
 ## Explora por tema
 
 <div class="grid cards" markdown>
+
+-   :material-teddy-bear: __Para kids 🧒__
+
+    ---
+
+    Todos los temas explicados **súper fácil**, para niños de ~9 años, con dibujos
+    y ejemplos de la vida real.
+
+    [:octicons-arrow-right-24: Entrar](kids/index.md)
 
 -   :material-brain: __Inteligencia Artificial y PLN__
 

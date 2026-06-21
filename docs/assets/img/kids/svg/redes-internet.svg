@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Internet: una red mundial que conecta computadores de todo el planeta con líneas de datos">
+  <!-- caption pill -->
+  <rect x="50" y="8" width="380" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="14" fill="#3b3f5c">Internet conecta computadores de todo el mundo 🌍</text>
+
+  <!-- connection lines (drawn first, behind everything) -->
+  <g stroke="#64b5f6" stroke-width="2.5" stroke-dasharray="7 4">
+    <line x1="80" y1="104" x2="198" y2="114"/>
+    <line x1="400" y1="104" x2="282" y2="114"/>
+    <line x1="240" y1="170" x2="240" y2="185"/>
+  </g>
+
+  <!-- globe in center -->
+  <circle cx="240" cy="120" r="50" fill="#64b5f6" opacity="0.15" stroke="#64b5f6" stroke-width="2.5"/>
+  <text x="240" y="138" text-anchor="middle" font-size="44">🌍</text>
+
+  <!-- computers -->
+  <g font-size="26" font-weight="700" fill="#1a1a2e" text-anchor="middle">
+    <!-- top-left -->
+    <rect x="32" y="50" width="96" height="54" rx="10" fill="#ba68c8"/>
+    <text x="80" y="88">💻</text>
+    <!-- top-right -->
+    <rect x="352" y="50" width="96" height="54" rx="10" fill="#ff8a65"/>
+    <text x="400" y="88">💻</text>
+    <!-- bottom -->
+    <rect x="192" y="185" width="96" height="54" rx="10" fill="#81c784"/>
+    <text x="240" y="223">💻</text>
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Dos formas de guardar un grafo: lista de vecinos y tabla de sí/no">
+  <rect x="20"  y="8" width="210" height="28" rx="14" fill="#eef0ff"/>
+  <text x="125" y="27" text-anchor="middle" font-size="14" fill="#3b3f5c">📝 Lista de vecinos</text>
+  <rect x="250" y="8" width="210" height="28" rx="14" fill="#eef0ff"/>
+  <text x="355" y="27" text-anchor="middle" font-size="14" fill="#3b3f5c">🔲 Tabla sí / no</text>
+
+  <!-- adjacency list -->
+  <g font-size="16" font-weight="700" fill="#1a1a2e">
+    <rect x="24" y="56"  width="40" height="34" rx="9" fill="#64b5f6"/><text x="44" y="79" text-anchor="middle">A</text>
+    <text x="74" y="79" font-size="15" fill="#3b3f5c">→ B, C</text>
+    <rect x="24" y="100" width="40" height="34" rx="9" fill="#ffd54f"/><text x="44" y="123" text-anchor="middle">B</text>
+    <text x="74" y="123" font-size="15" fill="#3b3f5c">→ A</text>
+    <rect x="24" y="144" width="40" height="34" rx="9" fill="#ba68c8"/><text x="44" y="167" text-anchor="middle">C</text>
+    <text x="74" y="167" font-size="15" fill="#3b3f5c">→ A</text>
+  </g>
+
+  <!-- adjacency matrix 3x3 -->
+  <g font-size="15" font-weight="700" text-anchor="middle">
+    <!-- headers -->
+    <text x="300" y="62" fill="#3b3f5c">A</text><text x="340" y="62" fill="#3b3f5c">B</text><text x="380" y="62" fill="#3b3f5c">C</text>
+    <text x="262" y="96" fill="#3b3f5c">A</text><text x="262" y="136" fill="#3b3f5c">B</text><text x="262" y="176" fill="#3b3f5c">C</text>
+    <!-- row A -->
+    <rect x="282" y="74" width="36" height="36" rx="8" fill="#eceff1"/><text x="300" y="98" fill="#90a4ae">0</text>
+    <rect x="322" y="74" width="36" height="36" rx="8" fill="#81c784"/><text x="340" y="98" fill="#1a1a2e">1</text>
+    <rect x="362" y="74" width="36" height="36" rx="8" fill="#81c784"/><text x="380" y="98" fill="#1a1a2e">1</text>
+    <!-- row B -->
+    <rect x="282" y="114" width="36" height="36" rx="8" fill="#81c784"/><text x="300" y="138" fill="#1a1a2e">1</text>
+    <rect x="322" y="114" width="36" height="36" rx="8" fill="#eceff1"/><text x="340" y="138" fill="#90a4ae">0</text>
+    <rect x="362" y="114" width="36" height="36" rx="8" fill="#eceff1"/><text x="380" y="138" fill="#90a4ae">0</text>
+    <!-- row C -->
+    <rect x="282" y="154" width="36" height="36" rx="8" fill="#81c784"/><text x="300" y="178" fill="#1a1a2e">1</text>
+    <rect x="322" y="154" width="36" height="36" rx="8" fill="#eceff1"/><text x="340" y="178" fill="#90a4ae">0</text>
+    <rect x="362" y="154" width="36" height="36" rx="8" fill="#eceff1"/><text x="380" y="178" fill="#90a4ae">0</text>
+  </g>
+</svg>

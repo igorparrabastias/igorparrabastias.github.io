@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 210" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Por dentro la IA ve números ordenados en listas (vectores) y tablas (matrices)">
+  <rect x="40" y="8" width="400" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">Por dentro, todo son números en listas y tablas 🔢</text>
+
+  <!-- vector -->
+  <text x="95" y="62" text-anchor="middle" font-size="14" font-weight="700" fill="#3b3f5c">vector (lista)</text>
+  <g font-size="20" font-weight="700" fill="#1a1a2e" text-anchor="middle">
+    <rect x="70" y="74" width="50" height="38" rx="9" fill="#64b5f6"/><text x="95" y="100">2</text>
+    <rect x="70" y="116" width="50" height="38" rx="9" fill="#81c784"/><text x="95" y="142">7</text>
+    <rect x="70" y="158" width="50" height="38" rx="9" fill="#ffd54f"/><text x="95" y="184">5</text>
+  </g>
+
+  <!-- matriz 3x3 -->
+  <text x="345" y="62" text-anchor="middle" font-size="14" font-weight="700" fill="#3b3f5c">matriz (tabla)</text>
+  <g font-size="18" font-weight="700" fill="#1a1a2e" text-anchor="middle">
+    <rect x="270" y="74"  width="44" height="38" rx="8" fill="#90caf9"/><text x="292" y="100">1</text>
+    <rect x="318" y="74"  width="44" height="38" rx="8" fill="#90caf9"/><text x="340" y="100">0</text>
+    <rect x="366" y="74"  width="44" height="38" rx="8" fill="#90caf9"/><text x="388" y="100">4</text>
+    <rect x="270" y="116" width="44" height="38" rx="8" fill="#a5d6a7"/><text x="292" y="142">2</text>
+    <rect x="318" y="116" width="44" height="38" rx="8" fill="#a5d6a7"/><text x="340" y="142">9</text>
+    <rect x="366" y="116" width="44" height="38" rx="8" fill="#a5d6a7"/><text x="388" y="142">1</text>
+    <rect x="270" y="158" width="44" height="38" rx="8" fill="#ffe082"/><text x="292" y="184">3</text>
+    <rect x="318" y="158" width="44" height="38" rx="8" fill="#ffe082"/><text x="340" y="184">6</text>
+    <rect x="366" y="158" width="44" height="38" rx="8" fill="#ffe082"/><text x="388" y="184">8</text>
+  </g>
+</svg>

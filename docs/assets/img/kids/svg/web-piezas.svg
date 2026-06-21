@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 224" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Las 3 capas de una página web apiladas: HTML, CSS y JavaScript">
+
+  <!-- caption -->
+  <rect x="70" y="8" width="340" height="28" rx="14" fill="#eef0ff"/>
+  <text x="240" y="27" text-anchor="middle" font-size="15" fill="#3b3f5c">Las 3 capas que forman una página web</text>
+
+  <!-- HTML layer -->
+  <rect x="60" y="48" width="360" height="52" rx="12" fill="#64b5f6"/>
+  <text x="240" y="80" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a2e">🧱 HTML — el QUÉ</text>
+
+  <!-- CSS layer -->
+  <rect x="60" y="110" width="360" height="52" rx="12" fill="#ff8a65"/>
+  <text x="240" y="142" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a2e">🎨 CSS — el CÓMO SE VE</text>
+
+  <!-- JavaScript layer -->
+  <rect x="60" y="172" width="360" height="52" rx="12" fill="#ffd54f"/>
+  <text x="240" y="204" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a2e">✨ JavaScript — el QUÉ HACE</text>
+
+</svg>

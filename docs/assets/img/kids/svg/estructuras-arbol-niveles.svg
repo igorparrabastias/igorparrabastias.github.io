@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 240" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Árbol con etiquetas de nivel 0, 1 y 2 a un lado para mostrar la profundidad de cada nodo">
+
+  <!-- caption pill -->
+  <rect x="80" y="6" width="380" height="30" rx="15" fill="#eef0ff"/>
+  <text x="270" y="26" text-anchor="middle" font-size="15" fill="#3b3f5c">Niveles del árbol: cuántos pisos tiene cada nodo 🪜</text>
+
+  <!-- level label pills (left side) -->
+  <rect x="2" y="57" width="68" height="26" rx="13" fill="#eef0ff"/>
+  <text x="36" y="75" text-anchor="middle" font-size="13" font-weight="700" fill="#3b3f5c">Nivel 0</text>
+
+  <rect x="2" y="127" width="68" height="26" rx="13" fill="#eef0ff"/>
+  <text x="36" y="145" text-anchor="middle" font-size="13" font-weight="700" fill="#3b3f5c">Nivel 1</text>
+
+  <rect x="2" y="192" width="68" height="26" rx="13" fill="#eef0ff"/>
+  <text x="36" y="210" text-anchor="middle" font-size="13" font-weight="700" fill="#3b3f5c">Nivel 2</text>
+
+  <!-- horizontal level guide lines (light dashed) -->
+  <g stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4">
+    <line x1="73" y1="70"  x2="530" y2="70"/>
+    <line x1="73" y1="140" x2="530" y2="140"/>
+    <line x1="73" y1="207" x2="530" y2="207"/>
+  </g>
+
+  <!-- connector lines (behind nodes) -->
+  <g stroke="#90a4ae" stroke-width="2">
+    <line x1="300" y1="92"  x2="188" y2="124"/>
+    <line x1="300" y1="92"  x2="412" y2="124"/>
+    <line x1="188" y1="162" x2="126" y2="190"/>
+    <line x1="188" y1="162" x2="250" y2="190"/>
+    <line x1="412" y1="162" x2="350" y2="190"/>
+    <line x1="412" y1="162" x2="474" y2="190"/>
+  </g>
+
+  <!-- root node (level 0) -->
+  <rect x="260" y="52" width="80" height="38" rx="12" fill="#64b5f6" stroke="#1565c0" stroke-width="2"/>
+  <text x="300" y="77" text-anchor="middle" font-size="18" font-weight="700" fill="#1a1a2e">raíz</text>
+
+  <!-- children (level 1) -->
+  <rect x="148" y="124" width="80" height="38" rx="12" fill="#ff8a65"/>
+  <text x="188" y="149" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a2e">hijo</text>
+
+  <rect x="372" y="124" width="80" height="38" rx="12" fill="#ff8a65"/>
+  <text x="412" y="149" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a2e">hijo</text>
+
+  <!-- grandchildren (level 2) -->
+  <rect x="93"  y="190" width="66" height="34" rx="10" fill="#81c784"/>
+  <text x="126" y="212" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">nieto</text>
+
+  <rect x="217" y="190" width="66" height="34" rx="10" fill="#81c784"/>
+  <text x="250" y="212" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">nieto</text>
+
+  <rect x="317" y="190" width="66" height="34" rx="10" fill="#81c784"/>
+  <text x="350" y="212" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">nieto</text>
+
+  <rect x="441" y="190" width="66" height="34" rx="10" fill="#81c784"/>
+  <text x="474" y="212" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">nieto</text>
+</svg>
