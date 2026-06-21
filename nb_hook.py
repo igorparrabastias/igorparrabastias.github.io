@@ -94,22 +94,22 @@ def on_config(config):
             "estructuras-de-datos-nativas-de-python",
             "implementacion-de-estructuras-de-datos-en-python",
             "implementacion-de-estructuras-simples",
+            "arboles", "implementacion-de-arboles",
             "implementacion-de-tablas-hash",
             "implementacion-de-heaps",
             "estructuras-de-datos-avanzadas",
-            "arboles", "implementacion-de-arboles",
         ],
         "Algoritmos": [
-            "algoritmos-basicos-de-busqueda",
             "algoritmos-basicos-de-ordenamiento",
+            "algoritmos-basicos-de-busqueda",
             "algoritmos-de-grafos",
             "algoritmos-de-grafos-recorrido-de-grafos",
             "algoritmos-de-grafos-otras-aplicaciones",
             "implementacion-de-grafos",
         ],
         "Matemáticas y teoría": [
-            "habilidades-de-resolucion-de-problemas-complejidad-algoritmica-y-optimizacion",
             "habilidades-de-resolucion-de-problemas-tecnicas-de-analisis-de-problemas",
+            "habilidades-de-resolucion-de-problemas-complejidad-algoritmica-y-optimizacion",
             "transicion-a-experto-matematicas-y-teoria-detras-de-los-algoritmos",
         ],
     }
@@ -138,14 +138,18 @@ def on_config(config):
         "transicion-a-experto-matematicas-y-teoria-detras-de-los-algoritmos":
             "Teoría detrás de los algoritmos",
     }
-    folder_theme = {f: t for t, fs in THEMES.items() for f in fs}
-
-    # Subgrupo por carpeta, repartido por tema; lo no mapeado va a un cajón final.
-    por_tema, leftover = {}, []
-    for c in sorted(grupos):
-        entry = {NICE.get(c, _titulo(c)): grupos[c]}
-        t = folder_theme.get(c)
-        (por_tema.setdefault(t, []).append(entry) if t else leftover.append(entry))
+    # Subgrupo por carpeta, repartido por tema RESPETANDO el orden de THEMES
+    # (no alfabético: así el sidebar sigue el mismo orden que las páginas-índice).
+    entries = {c: {NICE.get(c, _titulo(c)): grupos[c]} for c in grupos}
+    por_tema, leftover, asignadas = {}, [], set()
+    for t, folders in THEMES.items():
+        for c in folders:
+            if c in entries:
+                por_tema.setdefault(t, []).append(entries[c])
+                asignadas.add(c)
+    for c in sorted(entries):                 # carpetas no mapeadas, al final
+        if c not in asignadas:
+            leftover.append(entries[c])
 
     def _inject(nav, title, items):
         for node in nav:
