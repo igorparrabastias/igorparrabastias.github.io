@@ -12,11 +12,20 @@ Las URLs de Colab/GitHub apuntan a notebook/<...> en master (su ubicación real
 en el repo); la copia en pages/ es solo para el build y no se commitea.
 """
 import os
+import sys
 import json
 import glob
 import shutil
 
 REPO = os.path.dirname(os.path.abspath(__file__))
+# Orden pedagógico real de los notebooks (generado por _gen_nb_order.py desde los
+# índices curados). Sin esto, el menú saldría en orden alfabético y rompería la
+# secuencia de estudio.
+sys.path.insert(0, REPO)
+try:
+    from nb_order import ORDER
+except Exception:
+    ORDER = {}
 SRC = os.path.join(REPO, "notebook")
 DOCS = os.path.join(REPO, "docs")
 DST = os.path.join(DOCS, "notebook")
@@ -55,14 +64,25 @@ def on_config(config):
     if descartados:
         print("nb_hook: notebooks omitidos (vacíos/corruptos): " + ", ".join(descartados))
 
-    # Navegación agrupada por carpeta de primer nivel.
-    grupos = {}
-    for p in sorted(glob.glob(os.path.join(DST, "**", "*.ipynb"), recursive=True)):
+    # Navegación agrupada por carpeta, RESPETANDO el orden pedagógico de ORDER.
+    # Lo listado en el índice curado va primero (en ese orden); lo no listado va
+    # después, alfabético. Nunca alfabético "a secas" (rompería el orden de estudio).
+    crudos = {}
+    for p in glob.glob(os.path.join(DST, "**", "*.ipynb"), recursive=True):
         uri = os.path.relpath(p, DOCS).replace(os.sep, "/")
         partes = uri.split("/")          # notebook / carpeta / [...] / archivo.ipynb
         carpeta = partes[1] if len(partes) > 2 else "(raíz)"
-        nombre = os.path.splitext(partes[-1])[0]
-        grupos.setdefault(carpeta, []).append({_titulo(nombre): uri})
+        stem = os.path.splitext(partes[-1])[0]
+        crudos.setdefault(carpeta, []).append((stem, uri))
+
+    def _rank(carpeta, stem):
+        seq = ORDER.get(carpeta, [])
+        return (seq.index(stem), "") if stem in seq else (len(seq), stem)
+
+    grupos = {}
+    for carpeta, lst in crudos.items():
+        lst.sort(key=lambda t: _rank(carpeta, t[0]))
+        grupos[carpeta] = [{_titulo(s): u} for s, u in lst]
 
     # Temática primero: cada carpeta de notebooks se ANIDA bajo su sección del nav
     # (las secciones existen en mkdocs.yml). El lenguaje/implementación va dentro.
