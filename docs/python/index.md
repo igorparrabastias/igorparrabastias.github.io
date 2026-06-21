@@ -1,45 +1,57 @@
 # Fundamentos de Python
 
-El punto de partida del curso: de la sintaxis básica a la programación orientada a objetos
-y los rincones avanzados del lenguaje. Cada tema es un **notebook ejecutable** (lo abres en
-Colab con un clic) y está organizado en el menú lateral, bajo esta sección.
+El punto de partida del curso: de la sintaxis básica a la programación orientada a objetos y los rincones avanzados del lenguaje. Cada enlace abre el **notebook renderizado** en el sitio (y desde ahí, el botón *Abrir en Colab*).
 
-!!! tip "Cómo usar esta parte"
-    No hace falta leer en orden estricto, pero si vienes empezando, el **Repaso básico** te
-    da el piso firme antes de saltar a estructuras y algoritmos. Si ya programas en Python,
-    salta al **Repaso avanzado** (decoradores, closures, OOP) y a los **Anexos**.
+> [!TIP]
+> Si vienes empezando, ve en orden: el **Repaso básico** te da el piso firme antes de saltar a [Estructuras de datos](../estructuras/index.md) y [Algoritmos](../algoritmos/index.md). Si ya programas en Python, salta al avanzado.
 
-## Qué encontrarás
 
-<div class="grid cards" markdown>
+## Python: Repaso Básico
 
--   :material-language-python: __Repaso básico__
+- :page_with_curl: [Bases de Python](../notebook/python-repaso-basico/bases-de-python.ipynb)   
+- :page_with_curl: [Estructuras de Datos Básicas](../notebook/python-repaso-basico/estructuras-de-datos-basicas.ipynb)
+- :page_with_curl: [El Versátil Iterador "for"](../notebook/python-repaso-basico/el-versatil-iterador-for.ipynb)  
+- :page_with_curl: [Rebinding](../notebook/python-repaso-basico/rebinding.ipynb)  
+- :page_with_curl: [Slicing](../notebook/python-repaso-basico/slicing.ipynb)  
+- :page_with_curl: [Manejo de Excepciones](../notebook/python-repaso-basico/manejo-de-excepciones.ipynb)  
+- :page_with_curl: [Funciones Recursivas en Python](../notebook/python-repaso-basico/funciones-recursivas-en-python.ipynb)  
+- :page_with_curl: [Análisis de Complejidad](../notebook/python-repaso-basico/analisis-de-complejidad.ipynb)  
+- :page_with_curl: [Cheat sheet](../notebook/python-repaso-basico/cheat-sheet.ipynb)  
+- :clipboard: [Cuestionario de sección](../notebook/python-repaso-basico/cuestionario-de-seccion.ipynb)  
+- :clipboard: [Respuestas](../notebook/python-repaso-basico/respuestas.ipynb)  
+- :telescope: [Sabías que?](../notebook/python-repaso-basico/sabias-que.ipynb)
+- :construction_worker: [Proyecto: Creador de Agenda Telefónica](../notebook/python-repaso-basico/proyecto-creador-de-agenda-telefonica.md)
 
-    ---
+## Python: Repaso Avanzado
 
-    Bases del lenguaje, el iterador `for`, *slicing*, rebinding, manejo de excepciones,
-    recursión y un primer vistazo al análisis de complejidad. Incluye proyecto de agenda
-    telefónica.
+- :page_with_curl: [Iteradores y Generadores](../notebook/python-repaso-avanzado/iteradores-y-generadores.ipynb)
+- :page_with_curl: [Uso de `with` para Manejo de Recursos](../notebook/python-repaso-avanzado/uso-de-with-para-manejo-de-recursos.ipynb)  
+- :page_with_curl: [Decoradores](../notebook/python-repaso-avanzado/decoradores.ipynb)  
+- :page_with_curl: [Funciones como Objetos de Primera Clase](../notebook/python-repaso-avanzado/funciones-como-objetos-de-primera-clase.ipynb)  
+- :page_with_curl: [Clases](../notebook/python-repaso-avanzado/clases.ipynb)  
+- :page_with_curl: [Conceptos Avanzados en Programación Orientada a Objetos](../notebook/python-repaso-avanzado/conceptos-avanzados-en-programacion-orientada-a-objetos.ipynb)  
+- :page_with_curl: [Ejemplo de polimorfismo](../notebook/python-repaso-avanzado/ejemplo-de-polimorfismo.ipynb)  
+- :page_with_curl: [Abstracción en Python con Clases Abstractas](../notebook/python-repaso-avanzado/abstraccion-en-python-con-clases-abstractas.ipynb)  
+- :page_with_curl: [Lambdas y Funciones Anónimas](../notebook/python-repaso-avanzado/lambdas-y-funciones-anonimas.ipynb)  
+- :page_with_curl: [Profundizando en Lambdas y Funciones Anónimas](../notebook/python-repaso-avanzado/profundizando-en-lambdas-y-funciones-anonimas.ipynb)  
+  - :page_with_curl: [Caso de uso: Clic en un botón](../notebook/python-repaso-avanzado/caso-de-uso-clic-en-un-boton.ipynb)  
+  - :page_with_curl: [Casos de uso para Closures y Decoradores](../notebook/python-repaso-avanzado/casos-de-uso-para-closures-y-decoradores.ipynb)  
+- :clipboard: [Cuestionario de sección](../notebook/python-repaso-avanzado/cuestionario-de-seccion.ipynb)  
+- :clipboard: [Respuestas](../notebook/python-repaso-avanzado/respuestas.ipynb)  
+- :telescope: [Sabías que?](../notebook/python-repaso-avanzado/sabias-que.ipynb)  
+- :construction_worker: [Proyecto: Simulador de Biblioteca Digital](../notebook/python-repaso-basico/proyecto-simulador-de-biblioteca-digital.md)
 
--   :material-rocket: __Repaso avanzado__
+## Anexos
 
-    ---
-
-    Iteradores y generadores, `with`/context managers, decoradores, funciones como objetos
-    de primera clase, clases, polimorfismo, abstracción y lambdas.
-
--   :material-bookshelf: __Anexos__
-
-    ---
-
-    Profundizaciones: `for` a fondo, tipos de algoritmos, computabilidad y Turing, Big O en
-    estructuras de control, identidad de objetos, recolección de basura y más.
-
-</div>
-
-> [!NOTE]
-> Los notebooks de esta sección aparecen anidados en el menú de la izquierda. Cada uno trae
-> el botón **"Abrir en Colab"** para ejecutarlo sin instalar nada.
-
-¿Listo para el siguiente paso? Sigue con **[Estructuras de datos](../estructuras/index.md)**
-y **[Algoritmos](../algoritmos/index.md)**.
+- :page_with_curl: [Anexo 0: For en profundidad](../notebook/anexos/anexo-0-for-en-profundidad.ipynb)  
+- :page_with_curl: [Anexo 1: Clasificación y Tipos de Algoritmos](../notebook/anexos/anexo-1-clasificacion-y-tipos-de-algoritmos.ipynb)  
+- :page_with_curl: [Anexo 2: Teoría de la Computabilidad y Turing Completo](../notebook/anexos/anexo-2-teoria-de-la-computabilidad-y-turing-completo.ipynb)  
+- :page_with_curl: [Anexo 3: Análisis de Complejidad (Big O) en Estructuras de Control](../notebook/anexos/anexo-3-analisis-de-complejidad-big-o-en-estructuras-de-control.ipynb)  
+- :page_with_curl: [Anexo 4: Identidad de un Objeto](../notebook/anexos/anexo-4-identidad-de-un-objeto.ipynb)  
+- :page_with_curl: [Anexo 5: Rangos en Profundidad](../notebook/anexos/anexo-5-rangos-en-profundidad.ipynb)  
+- :page_with_curl: [Anexo 6: Comprensiones de Listas en Profundidad](../notebook/anexos/anexo-6-comprensiones-de-listas-en-profundidad.ipynb)  
+- :page_with_curl: [Anexo 7: Flexibilidad del Sistema de Tipos en Python](../notebook/anexos/anexo-7-flexibilidad-del-sistema-de-tipos-en-python.ipynb)  
+- :page_with_curl: [Anexo 8: Recolección de Basura en Python](../notebook/anexos/anexo-8-recoleccion-de-basura-en-python.ipynb)  
+- :page_with_curl: [Anexo 9: Rebinding en el Contexto del Paradigma Funcional en Python](../notebook/anexos/anexo-9-rebinding-en-el-contexto-del-paradigma-funcional-en-python.ipynb)  
+- :page_with_curl: [Anexo 10: Representación de Números en Python](../notebook/anexos/anexo10-representaci%C3%B3n-de-numeros-en-python.ipynb)
+- :page_with_curl: [Anexo 11: Preguntas y Respuestas](../notebook/anexos/anexo11-preguntas-y-respuestas.ipynb)
