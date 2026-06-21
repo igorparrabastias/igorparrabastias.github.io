@@ -5,8 +5,7 @@ El punto de partida del curso: de la sintaxis básica a la programación orienta
 > [!TIP]
 > Si vienes empezando, ve en orden: el **Repaso básico** te da el piso firme antes de saltar a [Estructuras de datos](../estructuras/index.md) y [Algoritmos](../algoritmos/index.md). Si ya programas en Python, salta al avanzado.
 
-
-## Python: Repaso Básico
+## Python · repaso básico
 
 - :page_with_curl: [Bases de Python](../notebook/python-repaso-basico/bases-de-python.ipynb)   
 - :page_with_curl: [Estructuras de Datos Básicas](../notebook/python-repaso-basico/estructuras-de-datos-basicas.ipynb)
@@ -22,24 +21,38 @@ El punto de partida del curso: de la sintaxis básica a la programación orienta
 - :telescope: [Sabías que?](../notebook/python-repaso-basico/sabias-que.ipynb)
 - :construction_worker: [Proyecto: Creador de Agenda Telefónica](../notebook/python-repaso-basico/proyecto-creador-de-agenda-telefonica.md)
 
-## Python: Repaso Avanzado
+## Python · repaso avanzado
 
-- :page_with_curl: [Iteradores y Generadores](../notebook/python-repaso-avanzado/iteradores-y-generadores.ipynb)
-- :page_with_curl: [Uso de `with` para Manejo de Recursos](../notebook/python-repaso-avanzado/uso-de-with-para-manejo-de-recursos.ipynb)  
-- :page_with_curl: [Decoradores](../notebook/python-repaso-avanzado/decoradores.ipynb)  
-- :page_with_curl: [Funciones como Objetos de Primera Clase](../notebook/python-repaso-avanzado/funciones-como-objetos-de-primera-clase.ipynb)  
-- :page_with_curl: [Clases](../notebook/python-repaso-avanzado/clases.ipynb)  
-- :page_with_curl: [Conceptos Avanzados en Programación Orientada a Objetos](../notebook/python-repaso-avanzado/conceptos-avanzados-en-programacion-orientada-a-objetos.ipynb)  
-- :page_with_curl: [Ejemplo de polimorfismo](../notebook/python-repaso-avanzado/ejemplo-de-polimorfismo.ipynb)  
-- :page_with_curl: [Abstracción en Python con Clases Abstractas](../notebook/python-repaso-avanzado/abstraccion-en-python-con-clases-abstractas.ipynb)  
-- :page_with_curl: [Lambdas y Funciones Anónimas](../notebook/python-repaso-avanzado/lambdas-y-funciones-anonimas.ipynb)  
-- :page_with_curl: [Profundizando en Lambdas y Funciones Anónimas](../notebook/python-repaso-avanzado/profundizando-en-lambdas-y-funciones-anonimas.ipynb)  
-  - :page_with_curl: [Caso de uso: Clic en un botón](../notebook/python-repaso-avanzado/caso-de-uso-clic-en-un-boton.ipynb)  
-  - :page_with_curl: [Casos de uso para Closures y Decoradores](../notebook/python-repaso-avanzado/casos-de-uso-para-closures-y-decoradores.ipynb)  
-- :clipboard: [Cuestionario de sección](../notebook/python-repaso-avanzado/cuestionario-de-seccion.ipynb)  
-- :clipboard: [Respuestas](../notebook/python-repaso-avanzado/respuestas.ipynb)  
-- :telescope: [Sabías que?](../notebook/python-repaso-avanzado/sabias-que.ipynb)  
-- :construction_worker: [Proyecto: Simulador de Biblioteca Digital](../notebook/python-repaso-basico/proyecto-simulador-de-biblioteca-digital.md)
+### [Iteradores y Generadores](../notebook/python-repaso-avanzado/iteradores-y-generadores.ipynb)
+
+### [Uso de `with` para Manejo de Recursos](../notebook/python-repaso-avanzado/uso-de-with-para-manejo-de-recursos.ipynb)
+
+### [Decoradores](../notebook/python-repaso-avanzado/decoradores.ipynb)
+
+### [Funciones como Objetos de Primera Clase](../notebook/python-repaso-avanzado/funciones-como-objetos-de-primera-clase.ipynb)
+
+### [Clases](../notebook/python-repaso-avanzado/clases.ipynb)
+
+### [Conceptos Avanzados en Programación Orientada a Objetos](../notebook/python-repaso-avanzado/conceptos-avanzados-en-programacion-orientada-a-objetos.ipynb)
+
+### [Ejemplo de polimorfismo](../notebook/python-repaso-avanzado/ejemplo-de-polimorfismo.ipynb)
+
+### [Abstracción en Python con Clases Abstractas](../notebook/python-repaso-avanzado/abstraccion-en-python-con-clases-abstractas.ipynb)
+
+### [Lambdas y Funciones Anónimas](../notebook/python-repaso-avanzado/lambdas-y-funciones-anonimas.ipynb)
+
+### [Profundizando en Lambdas y Funciones Anónimas](../notebook/python-repaso-avanzado/profundizando-en-lambdas-y-funciones-anonimas.ipynb)
+
+- :page_with_curl: [Caso de uso: Clic en un botón](../notebook/python-repaso-avanzado/caso-de-uso-clic-en-un-boton.ipynb)
+- :page_with_curl: [Casos de uso para Closures y Decoradores](../notebook/python-repaso-avanzado/casos-de-uso-para-closures-y-decoradores.ipynb)
+
+### [Cuestionario de sección](../notebook/python-repaso-avanzado/cuestionario-de-seccion.ipynb)
+
+### [Respuestas](../notebook/python-repaso-avanzado/respuestas.ipynb)
+
+### [Sabías que?](../notebook/python-repaso-avanzado/sabias-que.ipynb)
+
+### [Proyecto: Simulador de Biblioteca Digital](../notebook/python-repaso-basico/proyecto-simulador-de-biblioteca-digital.md)
 
 ## Anexos
 

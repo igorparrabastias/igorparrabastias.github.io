@@ -156,7 +156,15 @@ def on_config(config):
             if isinstance(node, dict):
                 for k, v in node.items():
                     if k == title and isinstance(v, list):
-                        v.extend(items)
+                        # Inserta los notebooks DESPUÉS del índice de la sección
+                        # (las páginas iniciales que son str), antes de los
+                        # subgrupos (dicts, p.ej. "JavaScript"). Así el menú
+                        # coincide con el orden de la página y el lenguaje queda
+                        # anidado al final.
+                        pos = 0
+                        while pos < len(v) and not isinstance(v[pos], dict):
+                            pos += 1
+                        v[pos:pos] = items
                         return True
                     if isinstance(v, list) and _inject(v, title, items):
                         return True

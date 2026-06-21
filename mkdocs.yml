@@ -51,18 +51,21 @@ nav:
     # nb_hook anida aquí: repaso básico, repaso avanzado, anexos
   - Estructuras de datos:
     - estructuras/index.md
-    - En JavaScript: estructuras/javascript.md
-    - Estructuras de árboles: index-trees.md
-    # nb_hook anida aquí: nativas, implementaciones, hash, heaps, árboles, avanzadas
+    # nb_hook anida aquí (tras el índice): nativas, implementaciones, árboles, hash, heaps, avanzadas.
+    # index-trees.md NO va en el menú: duplicaba el grupo "Árboles" (mismos notebooks).
+    # Queda como índice curado enlazado desde la sección "Árboles" de estructuras/index.md.
+    - JavaScript:
+      - Estructuras de datos en JavaScript: estructuras/javascript.md
   - Algoritmos:
     - algoritmos/index.md
-    - En JavaScript: algoritmos/javascript.md
-    - Problemas resueltos · JavaScript: algoritmos/problemas-javascript.md
-    # nb_hook anida aquí: búsqueda, ordenamiento, grafos
+    # nb_hook anida aquí (tras el índice): ordenamiento, búsqueda, grafos
+    - JavaScript:
+      - Algoritmos en JavaScript: algoritmos/javascript.md
+      - Problemas resueltos: algoritmos/problemas-javascript.md
   - Matemáticas y teoría:
     - matematicas/index.md
+    # nb_hook anida aquí (tras el índice): técnicas de análisis, complejidad, teoría
     - Cálculo 1A (MITx): matematicas/calculo-mitx.md
-    # nb_hook anida aquí: complejidad, análisis de problemas, teoría
   - Paradigmas de programación:
     - paradigmas/index.md
     - Funcional y concurrente — Elixir:
