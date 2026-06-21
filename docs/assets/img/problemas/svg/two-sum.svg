@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Two Sum con hashing: al llegar al 7 busco su pareja 9 menos 7 igual 2, que ya estaba guardada">
+  <defs>
+    <marker id="ts-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#1565c0"/>
+    </marker>
+  </defs>
+
+  <!-- caption -->
+  <rect x="20" y="8" width="440" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">Objetivo 9: en el 7 busco su pareja 9−7=2, ¡que ya vi! 🎯</text>
+
+  <!-- array boxes -->
+  <text x="48" y="78" text-anchor="middle" font-size="13" fill="#90a4ae">array</text>
+  <g font-size="22" font-weight="700" text-anchor="middle">
+    <rect x="100" y="58" width="54" height="54" rx="10" fill="#81c784" stroke="#2e7d32" stroke-width="3"/><text x="127" y="93" fill="#1a1a2e">2</text>
+    <rect x="166" y="58" width="54" height="54" rx="10" fill="#64b5f6" stroke="#1565c0" stroke-width="3"/><text x="193" y="93" fill="#1a1a2e">7</text>
+    <rect x="232" y="58" width="54" height="54" rx="10" fill="#90a4ae"/><text x="259" y="93" fill="#1a1a2e">11</text>
+    <rect x="298" y="58" width="54" height="54" rx="10" fill="#90a4ae"/><text x="325" y="93" fill="#1a1a2e">5</text>
+  </g>
+  <text x="193" y="52" text-anchor="middle" font-size="16">👀</text>
+
+  <!-- arrow from current (7) down to the seen-set -->
+  <line x1="193" y1="116" x2="193" y2="150" stroke="#1565c0" stroke-width="3" marker-end="url(#ts-ah)"/>
+  <text x="270" y="140" text-anchor="middle" font-size="13" fill="#1565c0">9 − 7 = 2 ?</text>
+
+  <!-- seen set -->
+  <rect x="100" y="156" width="252" height="48" rx="12" fill="#fff" stroke="#90a4ae" stroke-width="2"/>
+  <text x="118" y="185" font-size="14" fill="#3b3f5c">ya vistos:</text>
+  <rect x="200" y="166" width="40" height="30" rx="8" fill="#ffd54f" stroke="#f9a825" stroke-width="3"/>
+  <text x="220" y="187" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a2e">2</text>
+  <text x="290" y="186" font-size="15" fill="#2e7d32">✅ ¡par!</text>
+</svg>

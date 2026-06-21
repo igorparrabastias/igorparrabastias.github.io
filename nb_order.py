@@ -239,6 +239,15 @@ ORDER = {
         'ejemplos-de-uso',
         'caso-de-uso-inventario-para-una-tienda',
     ],
+    'problemas-de-estructuras-y-algoritmos': [
+        'two-sum',
+        'greatest-common-divisor',
+        'largest-sum-contiguous-subarray',
+        'search-in-a-row-wise-and-column-wise-sorted-matrix',
+        'reverse-nodes-in-k-group',
+        'construct-binary-tree-from-preorder-and-inorder-traversal',
+        'maximum-path-sum-in-a-binary-tree',
+    ],
     'python-repaso-avanzado': [
         'iteradores-y-generadores',
         'uso-de-with-para-manejo-de-recursos',

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 215" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Algoritmo de Euclides: 48 entre 18 deja resto 12, 18 entre 12 deja 6, 12 entre 6 deja 0, el MCD es 6">
+  <defs>
+    <marker id="gcd-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#1565c0"/>
+    </marker>
+  </defs>
+
+  <!-- caption -->
+  <rect x="22" y="8" width="436" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">Euclides: saco el resto y repito hasta que sobre 0</text>
+
+  <!-- step pills (snake: top-left → top-right → bottom-right → bottom-left) -->
+  <g font-size="15" text-anchor="middle">
+    <rect x="44" y="58" width="180" height="40" rx="12" fill="#64b5f6"/>
+    <text x="134" y="83" font-weight="700" fill="#1a1a2e">48 ÷ 18 → resto 12</text>
+
+    <rect x="256" y="58" width="180" height="40" rx="12" fill="#64b5f6"/>
+    <text x="346" y="83" font-weight="700" fill="#1a1a2e">18 ÷ 12 → resto 6</text>
+
+    <rect x="256" y="128" width="180" height="40" rx="12" fill="#64b5f6"/>
+    <text x="346" y="153" font-weight="700" fill="#1a1a2e">12 ÷ 6 → resto 0</text>
+
+    <rect x="44" y="124" width="180" height="48" rx="14" fill="#ffd54f" stroke="#f9a825" stroke-width="3"/>
+    <text x="134" y="153" font-size="17" font-weight="700" fill="#1a1a2e">MCD = 6 🎉</text>
+  </g>
+
+  <!-- arrows along the snake -->
+  <line x1="228" y1="78"  x2="252" y2="78"  stroke="#1565c0" stroke-width="3" marker-end="url(#gcd-ah)"/>
+  <line x1="346" y1="100" x2="346" y2="126" stroke="#1565c0" stroke-width="3" marker-end="url(#gcd-ah)"/>
+  <line x1="252" y1="148" x2="228" y2="148" stroke="#1565c0" stroke-width="3" marker-end="url(#gcd-ah)"/>
+
+  <text x="240" y="202" text-anchor="middle" font-size="13" fill="#3b3f5c">el último resto distinto de 0 es la respuesta</text>
+</svg>

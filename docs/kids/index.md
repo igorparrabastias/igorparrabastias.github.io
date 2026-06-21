@@ -1,7 +1,7 @@
 # Para kids 🧒
 
 > [!TIP]
-> ¡Bienvenido! 👋 Aquí explicamos las mismas cosas del sitio, pero **súper fácil**, como para contárselas a alguien de 9 años. Con dibujos, ejemplos de la vida real y cero palabras difíciles. 🎈
+> ¡Hola! 👋 Aquí te explico las mismas cosas del sitio, pero **súper fácil**, para que las entiendas tú aunque tengas 9 años. Con dibujos, ejemplos de la vida real y cero palabras difíciles. 🎈
 
 Elige un tema y entra a explorar:
 

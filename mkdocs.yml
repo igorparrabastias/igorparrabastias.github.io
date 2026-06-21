@@ -72,6 +72,9 @@ nav:
     - JavaScript:
       - Algoritmos en JavaScript: algoritmos/javascript.md
       - Problemas resueltos: algoritmos/problemas-javascript.md
+  - Problemas de Estructuras de Datos y Algoritmos:
+    - problemas/index.md
+    # nb_hook anida aquí (tras el índice): los 7 problemas resueltos en Python.
   - Matemáticas y teoría:
     - matematicas/index.md
     # nb_hook anida aquí (tras el índice): técnicas de análisis, complejidad, teoría
@@ -102,7 +105,6 @@ nav:
     - Data Ecosystem (IBM): practica/ibm-data-ecosystem.md
   - Redes y comunicaciones: fundamentos-de-redes-y-comunicaciones-digitales.md
   - Desarrollo web (en construcción): web.md
-  - Cómo ejecutar los notebooks: demo-notebooks.md
   # Los ~263 notebooks .ipynb los anida nb_hook.py DENTRO de cada sección temática
   # (Fundamentos de Python, Estructuras, Algoritmos, Matemáticas).
 
@@ -147,9 +149,6 @@ extra:
     - icon: fontawesome/brands/stack-overflow
       link: http://stackoverflow.com/users/333061/igor-parra
       name: Stack Overflow
-    - icon: fontawesome/brands/github
-      link: https://github.com/igorparrabastias
-      name: GitHub
 
 validation:
   links:

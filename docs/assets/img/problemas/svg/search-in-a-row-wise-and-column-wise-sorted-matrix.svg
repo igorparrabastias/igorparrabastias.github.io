@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 250" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Matriz ordenada por filas y columnas: empiezo arriba a la derecha y voy a la izquierda o hacia abajo hasta encontrar el 29">
+  <!-- caption -->
+  <rect x="14" y="8" width="452" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="14" fill="#3b3f5c">Empiezo arriba a la derecha: si es grande ←, si es chico ↓</text>
+
+  <!-- 4x4 grid; path 40→30→20→25→29 highlighted, target 29 amber, start 40 blue -->
+  <g font-size="18" font-weight="700" text-anchor="middle">
+    <!-- row 0 -->
+    <rect x="132" y="52" width="54" height="40" rx="8" fill="#fff" stroke="#90a4ae" stroke-width="2"/><text x="159" y="79" fill="#1a1a2e">10</text>
+    <rect x="190" y="52" width="54" height="40" rx="8" fill="#81c784" stroke="#2e7d32" stroke-width="3"/><text x="217" y="79" fill="#1a1a2e">20</text>
+    <rect x="248" y="52" width="54" height="40" rx="8" fill="#81c784" stroke="#2e7d32" stroke-width="3"/><text x="275" y="79" fill="#1a1a2e">30</text>
+    <rect x="306" y="52" width="54" height="40" rx="8" fill="#64b5f6" stroke="#1565c0" stroke-width="3"/><text x="333" y="79" fill="#1a1a2e">40</text>
+    <!-- row 1 -->
+    <rect x="132" y="96" width="54" height="40" rx="8" fill="#fff" stroke="#90a4ae" stroke-width="2"/><text x="159" y="123" fill="#1a1a2e">15</text>
+    <rect x="190" y="96" width="54" height="40" rx="8" fill="#81c784" stroke="#2e7d32" stroke-width="3"/><text x="217" y="123" fill="#1a1a2e">25</text>
+    <rect x="248" y="96" width="54" height="40" rx="8" fill="#fff" stroke="#90a4ae" stroke-width="2"/><text x="275" y="123" fill="#1a1a2e">35</text>
+    <rect x="306" y="96" width="54" height="40" rx="8" fill="#fff" stroke="#90a4ae" stroke-width="2"/><text x="333" y="123" fill="#1a1a2e">45</text>
+    <!-- row 2 -->
+    <rect x="132" y="140" width="54" height="40" rx="8" fill="#fff" stroke="#90a4ae" stroke-width="2"/><text x="159" y="167" fill="#1a1a2e">27</text>
+    <rect x="190" y="140" width="54" height="40" rx="8" fill="#ffd54f" stroke="#f9a825" stroke-width="3"/><text x="217" y="167" fill="#1a1a2e">29</text>
+    <rect x="248" y="140" width="54" height="40" rx="8" fill="#fff" stroke="#90a4ae" stroke-width="2"/><text x="275" y="167" fill="#1a1a2e">37</text>
+    <rect x="306" y="140" width="54" height="40" rx="8" fill="#fff" stroke="#90a4ae" stroke-width="2"/><text x="333" y="167" fill="#1a1a2e">48</text>
+    <!-- row 3 -->
+    <rect x="132" y="184" width="54" height="40" rx="8" fill="#fff" stroke="#90a4ae" stroke-width="2"/><text x="159" y="211" fill="#1a1a2e">32</text>
+    <rect x="190" y="184" width="54" height="40" rx="8" fill="#fff" stroke="#90a4ae" stroke-width="2"/><text x="217" y="211" fill="#1a1a2e">33</text>
+    <rect x="248" y="184" width="54" height="40" rx="8" fill="#fff" stroke="#90a4ae" stroke-width="2"/><text x="275" y="211" fill="#1a1a2e">39</text>
+    <rect x="306" y="184" width="54" height="40" rx="8" fill="#fff" stroke="#90a4ae" stroke-width="2"/><text x="333" y="211" fill="#1a1a2e">50</text>
+  </g>
+
+  <!-- start / target labels -->
+  <text x="333" y="46" text-anchor="middle" font-size="13" fill="#1565c0">empiezo aquí</text>
+  <text x="240" y="244" text-anchor="middle" font-size="14" fill="#3b3f5c">camino <tspan fill="#2e7d32" font-weight="700">40→30→20→25</tspan> hasta el <tspan fill="#f9a825" font-weight="700">29 🎯</tspan></text>
+</svg>

@@ -16,7 +16,6 @@ Senior Full Stack Developer · Autodidacta · Programador en Python / PHP / Java
 > los lenguajes son solo la forma de implementarlos.
 
 [Sobre mí :octicons-arrow-right-24:](sobre-mi.md){ .md-button .md-button--primary }
-[Para kids 🧒 :octicons-arrow-right-24:](kids/index.md){ .md-button }
 
 ---
 
@@ -68,6 +67,15 @@ Senior Full Stack Developer · Autodidacta · Programador en Python / PHP / Java
     backtracking, con problemas clásicos resueltos.
 
     [:octicons-arrow-right-24: Entrar](algoritmos/index.md)
+
+-   :material-flask: __Problemas resueltos__
+
+    ---
+
+    Clásicos de entrevista resueltos paso a paso en Python: Two Sum, Kadane,
+    Euclides, listas enlazadas y árboles binarios, con su análisis de complejidad.
+
+    [:octicons-arrow-right-24: Entrar](problemas/index.md)
 
 -   :material-file-tree: __Estructuras de árboles__
 

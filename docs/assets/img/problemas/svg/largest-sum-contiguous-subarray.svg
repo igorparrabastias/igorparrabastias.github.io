@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 210" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Kadane: el tramo seguido con la suma más grande es 3 más 4 menos 1 más 5 igual 11">
+  <!-- caption -->
+  <rect x="24" y="8" width="432" height="30" rx="15" fill="#eef0ff"/>
+  <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">El tramo seguido que más suma: 3+4−1+5 = 11 ✨</text>
+
+  <!-- array boxes (window 3,4,-1,5 highlighted) -->
+  <g font-size="20" font-weight="700" text-anchor="middle">
+    <rect x="40"  y="62" width="58" height="54" rx="10" fill="#90a4ae"/><text x="69"  y="96" fill="#1a1a2e">−2</text>
+    <rect x="104" y="62" width="58" height="54" rx="10" fill="#81c784" stroke="#2e7d32" stroke-width="3"/><text x="133" y="96" fill="#1a1a2e">3</text>
+    <rect x="168" y="62" width="58" height="54" rx="10" fill="#81c784" stroke="#2e7d32" stroke-width="3"/><text x="197" y="96" fill="#1a1a2e">4</text>
+    <rect x="232" y="62" width="58" height="54" rx="10" fill="#81c784" stroke="#2e7d32" stroke-width="3"/><text x="261" y="96" fill="#1a1a2e">−1</text>
+    <rect x="296" y="62" width="58" height="54" rx="10" fill="#ffd54f" stroke="#f9a825" stroke-width="3"/><text x="325" y="96" fill="#1a1a2e">5</text>
+    <rect x="360" y="62" width="58" height="54" rx="10" fill="#90a4ae"/><text x="389" y="96" fill="#1a1a2e">−8</text>
+  </g>
+
+  <!-- bracket under the window -->
+  <path d="M104 130 L104 140 L354 140 L354 130" fill="none" stroke="#2e7d32" stroke-width="3"/>
+  <line x1="229" y1="140" x2="229" y2="152" stroke="#2e7d32" stroke-width="3"/>
+  <rect x="150" y="158" width="160" height="34" rx="12" fill="#eef0ff"/>
+  <text x="230" y="181" text-anchor="middle" font-size="16" font-weight="700" fill="#2e7d32">suma = 11</text>
+</svg>

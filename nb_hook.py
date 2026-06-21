@@ -112,6 +112,9 @@ def on_config(config):
             "habilidades-de-resolucion-de-problemas-complejidad-algoritmica-y-optimizacion",
             "transicion-a-experto-matematicas-y-teoria-detras-de-los-algoritmos",
         ],
+        "Problemas de Estructuras de Datos y Algoritmos": [
+            "problemas-de-estructuras-y-algoritmos",
+        ],
     }
     NICE = {
         "estructuras-de-datos-nativas-de-python": "Estructuras nativas de Python",
@@ -137,6 +140,7 @@ def on_config(config):
             "Técnicas de análisis de problemas",
         "transicion-a-experto-matematicas-y-teoria-detras-de-los-algoritmos":
             "Teoría detrás de los algoritmos",
+        "problemas-de-estructuras-y-algoritmos": "Ejercicios resueltos (Python)",
     }
     # Subgrupo por carpeta, repartido por tema RESPETANDO el orden de THEMES
     # (no alfabético: así el sidebar sigue el mismo orden que las páginas-índice).

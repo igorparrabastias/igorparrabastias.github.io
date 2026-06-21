@@ -13,6 +13,19 @@ datos, un proceso (la caja negra) y salida de información**. Treinta y cinco a�
 después, los datos y los algoritmos siguen siendo el corazón de todo, ya los llamemos
 *big data* o *inteligencia artificial*.
 
+## Mi misión con estos apuntes
+
+Este espacio es para cualquiera interesado en profundizar en la computación, abarcando
+una variedad de lenguajes de programación y conceptos clave de las ciencias de la
+computación. Aquí comparto mis conocimientos y experiencia a través de **módulos
+estructurados y cursos cuidadosamente diseñados** —con asistencia de Inteligencia
+Artificial— para facilitar el aprendizaje autodidacta y el desarrollo profesional.
+
+Mi propósito es ofrecer la misma rigurosidad que encontrarías en cursos impartidos por
+instituciones tradicionales, esperando que recibas una educación de calidad que
+respalde tus esfuerzos autodidactas. Y, sobre todo, que aprendas **en serio y te
+diviertas en el camino**.
+
 ## Experiencia profesional
 
 - **Ingeniería y habilidades técnicas** — Especializado en microservicios, computación
@@ -26,17 +39,18 @@ después, los datos y los algoritmos siguen siendo el corazón de todo, ya los l
 
 ## El valor del aprendizaje autodidacta
 
-Ser autodidacta se ha convertido en una forma esencial de aprender. Exige compromiso y
-disciplina, pero a menudo lleva a un entendimiento más profundo, porque implica una
-exploración personalizada y a tu propio ritmo. Mi objetivo con estos materiales es
-ofrecer la misma rigurosidad de un curso institucional, para respaldar tus esfuerzos
-autodidactas.
+Ser autodidacta se ha convertido en una forma esencial de aprender en estos tiempos.
+Exige un alto grado de compromiso y disciplina. A menudo, esta ruta de aprendizaje
+lleva a un mejor entendimiento y a un nivel de *expertise* más profundo, ya que implica
+una exploración más personalizada y una adaptación a tu propio ritmo y estilo de
+aprendizaje. Me propongo ofrecer la misma rigurosidad encontrada en cursos impartidos
+por instituciones tradicionales, esperando con esto que recibas una educación de
+calidad que respalde tus esfuerzos autodidactas.
 
 ## Encuéntrame
 
 - :material-linkedin: [LinkedIn](https://www.linkedin.com/in/igor-parra-bastias-06335059)
 - :material-stack-overflow: [Stack Overflow](http://stackoverflow.com/users/333061/igor-parra) — reputación **10.000** (top 4% overall)
-- :material-github: [GitHub](https://github.com/igorparrabastias)
 - :material-laptop: [Freelancer.com](https://www.freelancer.com/u/NomikOS.html) — **5.0 / 5.0** (65 reseñas)
 
 ---
