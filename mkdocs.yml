@@ -1,0 +1,148 @@
+site_name: Igor Parra Bastias
+site_description: Apuntes, cursos y experimentos sobre Tecnologías de la Información y Comunicaciones — organizados por tema. PLN/IA, estructuras de datos, algoritmos, paradigmas y más.
+site_url: https://igorparrabastias.github.io/
+docs_dir: docs
+# URLs planas (.html) para que las rutas relativas de <img> en HTML resuelvan igual
+# en GitHub, local y Pages (assets/ junto a la página, no en un subdirectorio).
+use_directory_urls: false
+
+theme:
+  name: material
+  language: es
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle: { icon: material/weather-night, name: Modo oscuro }
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle: { icon: material/weather-sunny, name: Modo claro }
+  features:
+    - navigation.instant
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Inicio: index.md
+  - Sobre mí: sobre-mi.md
+  - Inteligencia Artificial y PLN:
+    - La historia (1950–hoy):
+      - Introducción y serie: fundamento-del-pln-y-la-ia.md
+      - 1 · Orígenes (1950–1979): fundamentos-1-origenes.md
+      - 2 · Estadística y redes (1980–2000s): fundamentos-2-estadistica-redes.md
+      - 3 · La era de los LLM (2013–2026): fundamentos-3-era-llm.md
+      - 4 · Investigación reciente y futuro: fundamentos-4-investigacion-futuro.md
+    - IA práctica:
+      - RAG Skyline Agent · Python: ia-practica/rag-skyline-agent.md
+      - RAG de cero a héroe · Python: ia-practica/rag-cero-a-heroe.md
+      - Machine Learning con Python: ia-practica/ml-practico.md
+      - Curso NVIDIA · Building RAG Agents: ia-practica/curso-nvidia-rag.md
+      - Curso DeepLearning.AI · ChatGPT API: ia-practica/curso-deeplearning-chatgpt.md
+  - Fundamentos de Python:
+    - python/index.md
+    # nb_hook anida aquí: repaso básico, repaso avanzado, anexos
+  - Estructuras de datos:
+    - estructuras/index.md
+    - En JavaScript: estructuras/javascript.md
+    - Estructuras de árboles: index-trees.md
+    # nb_hook anida aquí: nativas, implementaciones, hash, heaps, árboles, avanzadas
+  - Algoritmos:
+    - algoritmos/index.md
+    - En JavaScript: algoritmos/javascript.md
+    - Problemas resueltos · JavaScript: algoritmos/problemas-javascript.md
+    # nb_hook anida aquí: búsqueda, ordenamiento, grafos
+  - Matemáticas y teoría:
+    - matematicas/index.md
+    - Cálculo 1A (MITx): matematicas/calculo-mitx.md
+    # nb_hook anida aquí: complejidad, análisis de problemas, teoría
+  - Paradigmas de programación:
+    - paradigmas/index.md
+    - Funcional y concurrente — Elixir:
+      - pingpong (microservicio): paradigmas/elixir/pingpong.md
+      - Hola mundo web ×3: paradigmas/elixir/web-3-variantes.md
+      - Ejercicios: paradigmas/elixir/ejercicios.md
+      - Referencia · elixir-koans: paradigmas/elixir/ref-koans.md
+      - Referencia · libro "Learning Elixir": paradigmas/elixir/ref-libro-packt.md
+    - Lógica — Prolog:
+      - Ejercicios: paradigmas/prolog/ejercicios.md
+      - Referencia · prolog-examples: paradigmas/prolog/ref-prolog-examples.md
+      - Referencia · newton-microservice: paradigmas/prolog/ref-newton-microservice.md
+      - Referencia · metro (Strawberry Prolog): paradigmas/prolog/ref-metro.md
+    - Runtime de JavaScript / Node.js:
+      - Event loop: paradigmas/nodejs/event-loop.md
+      - Fundamentos: paradigmas/nodejs/fundamentos.md
+      - Referencia · nodejs-docs-samples: paradigmas/nodejs/ref-nodejs-docs-samples.md
+    - Otros lenguajes:
+      - PHP y snippets sueltos: paradigmas/otros/php-fizzbuzz.md
+  - Práctica y cursos:
+    - Exercism (Elixir · Python): practica/exercism.md
+    - MITx 6.00.1x — soluciones · Python: practica/mitx-6001x.md
+    - MITx 6.00.2x — soluciones · Python: practica/mitx-6002x.md
+    - Data Ecosystem (IBM): practica/ibm-data-ecosystem.md
+  - Redes y comunicaciones: fundamentos-de-redes-y-comunicaciones-digitales.md
+  - Desarrollo web (en construcción): web.md
+  - Cómo ejecutar los notebooks: demo-notebooks.md
+  # Los ~263 notebooks .ipynb los anida nb_hook.py DENTRO de cada sección temática
+  # (Fundamentos de Python, Estructuras, Algoritmos, Matemáticas).
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.gfm
+  - pymdownx.details
+  - pymdownx.snippets:
+      base_path: ['.']
+      check_paths: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+hooks:
+  - nb_hook.py        # integra los ~263 notebooks + botón "Abrir en Colab" (sin tocarlos)
+
+plugins:
+  - callouts          # convierte > [!TIP] (estilo GitHub) en cajas Material visibles
+  - search:
+      lang: es
+  - mkdocs-jupyter:
+      execute: false
+      include_source: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/igor-parra-bastias-06335059
+      name: LinkedIn
+    - icon: fontawesome/brands/stack-overflow
+      link: http://stackoverflow.com/users/333061/igor-parra
+      name: Stack Overflow
+    - icon: fontawesome/brands/github
+      link: https://github.com/igorparrabastias
+      name: GitHub
+
+validation:
+  links:
+    anchors: ignore
+
+# _revision/ es la tubería de build del doc PLN/IA (no se publica).
+# learning/ y notebook/ no son docs_dir; entran vía snippets y nb_hook.
+exclude_docs: |
+  _revision/

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 230" font-family="system-ui, sans-serif" role="img" aria-label="Descomposición SVD: A es aproximadamente U por Sigma por V transpuesta">
+  <style>
+    .op{font-size:30px;fill:#3a47b8;text-anchor:middle}
+    .lab{font-size:14px;font-weight:700;fill:#1f2430;text-anchor:middle}
+    .sub{font-size:11px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="600" height="230" fill="#ffffff"/>
+  <!-- A -->
+  <rect x="40" y="50" width="90" height="110" fill="#eef0fb" stroke="#3a47b8" stroke-width="2"/>
+  <text class="lab" x="85" y="110">A</text>
+  <text class="sub" x="85" y="178">términos × docs</text>
+  <text class="op" x="158" y="113">≈</text>
+  <!-- U -->
+  <rect x="190" y="50" width="70" height="110" fill="#f6f1e9" stroke="#e0863a" stroke-width="2"/>
+  <text class="lab" x="225" y="110">U</text>
+  <text class="sub" x="225" y="178">conceptos</text>
+  <text class="op" x="285" y="113">·</text>
+  <!-- Σ (diagonal) -->
+  <rect x="310" y="65" width="80" height="80" fill="#eaf5ee" stroke="#1d7a4d" stroke-width="2"/>
+  <line x1="316" y1="71" x2="384" y2="139" stroke="#1d7a4d" stroke-width="2"/>
+  <text class="lab" x="350" y="110" dx="6">Σ</text>
+  <text class="sub" x="350" y="178">pesos</text>
+  <text class="op" x="412" y="113">·</text>
+  <!-- Vᵀ -->
+  <rect x="438" y="70" width="120" height="70" fill="#f6f1e9" stroke="#e0863a" stroke-width="2"/>
+  <text class="lab" x="498" y="110">Vᵀ</text>
+  <text class="sub" x="498" y="178">docs × conceptos</text>
+  <text class="sub" x="300" y="212" style="font-size:12px">Quedándonos con los k mayores valores de Σ: aproximación de rango k (la "semántica latente").</text>
+</svg>

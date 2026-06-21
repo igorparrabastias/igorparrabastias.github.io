@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 360" font-family="system-ui, sans-serif" role="img" aria-label="Espacio vectorial Word2Vec: rey menos hombre mas mujer es igual a reina">
+  <style>
+    .pt{fill:#3a47b8} .wl{font-size:14px;font-weight:700;fill:#1f2430}
+    .ax{stroke:#d4d7e6;stroke-width:1.5} .rel{stroke:#3a47b8;stroke-width:2;fill:none}
+    .gen{stroke:#e0863a;stroke-width:2;stroke-dasharray:5 4;fill:none}
+    .cap{font-size:12px;fill:#666}
+  </style>
+  <rect width="460" height="360" fill="#ffffff"/>
+  <!-- ejes -->
+  <line class="ax" x1="40" y1="320" x2="430" y2="320"/>
+  <line class="ax" x1="40" y1="320" x2="40" y2="30"/>
+  <!-- arrowheads -->
+  <defs>
+    <marker id="ab" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#3a47b8"/></marker>
+    <marker id="ao" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e0863a"/></marker>
+  </defs>
+  <!-- puntos: hombre(120,260) mujer(120,150) rey(330,230) reina(330,120) -->
+  <!-- relación de género (azul): hombre->mujer y rey->reina, misma dirección -->
+  <line class="rel" x1="120" y1="260" x2="120" y2="162" marker-end="url(#ab)"/>
+  <line class="rel" x1="330" y1="230" x2="330" y2="132" marker-end="url(#ab)"/>
+  <!-- relación realeza (gris) hombre->rey, mujer->reina -->
+  <line class="gen" x1="135" y1="258" x2="318" y2="232" marker-end="url(#ao)"/>
+  <line class="gen" x1="135" y1="150" x2="318" y2="124" marker-end="url(#ao)"/>
+  <circle class="pt" cx="120" cy="260" r="5"/><text class="wl" x="92" y="282">hombre</text>
+  <circle class="pt" cx="120" cy="150" r="5"/><text class="wl" x="98" y="142">mujer</text>
+  <circle class="pt" cx="330" cy="230" r="5"/><text class="wl" x="342" y="234">rey</text>
+  <circle class="pt" cx="330" cy="120" r="5"/><text class="wl" x="342" y="124">reina</text>
+  <text class="cap" x="40" y="346">vec(rey) − vec(hombre) + vec(mujer) ≈ vec(reina)</text>
+  <text class="cap" x="150" y="205" fill="#3a47b8">↑ misma</text>
+  <text class="cap" x="150" y="219" fill="#3a47b8">dirección "género"</text>
+</svg>

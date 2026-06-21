@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" font-family="system-ui, sans-serif" role="img" aria-label="Línea de tiempo 1950 a hoy">
+  <style>
+    .yr{font-size:13px;font-weight:700;fill:#3a47b8}
+    .lb{font-size:11px;fill:#444}
+    .dot{fill:#fff;stroke:#3a47b8;stroke-width:2.5}
+  </style>
+  <rect width="760" height="200" fill="#ffffff"/>
+  <line x1="40" y1="100" x2="720" y2="100" stroke="#c7cbe8" stroke-width="3"/>
+  <!-- hitos -->
+  <g>
+    <circle class="dot" cx="60"  cy="100" r="7"/>
+    <text class="yr" x="60"  y="78"  text-anchor="middle">1950</text>
+    <text class="lb" x="60"  y="125" text-anchor="middle">Análisis</text>
+    <text class="lb" x="60"  y="139" text-anchor="middle">semántico</text>
+  </g>
+  <g>
+    <circle class="dot" cx="143" cy="100" r="7"/>
+    <text class="yr" x="143" y="78"  text-anchor="middle">1960</text>
+    <text class="lb" x="143" y="125" text-anchor="middle">MDS</text>
+  </g>
+  <g>
+    <circle class="dot" cx="226" cy="100" r="7"/>
+    <text class="yr" x="226" y="78"  text-anchor="middle">1970</text>
+    <text class="lb" x="226" y="125" text-anchor="middle">PCA</text>
+  </g>
+  <g>
+    <circle class="dot" cx="309" cy="100" r="7"/>
+    <text class="yr" x="309" y="78"  text-anchor="middle">1980</text>
+    <text class="lb" x="309" y="125" text-anchor="middle">LSA / SVD</text>
+  </g>
+  <g>
+    <circle class="dot" cx="392" cy="100" r="7"/>
+    <text class="yr" x="392" y="78"  text-anchor="middle">1990</text>
+    <text class="lb" x="392" y="125" text-anchor="middle">Redes</text>
+    <text class="lb" x="392" y="139" text-anchor="middle">neuronales</text>
+  </g>
+  <g>
+    <circle class="dot" cx="475" cy="100" r="7"/>
+    <text class="yr" x="475" y="78"  text-anchor="middle">2000s</text>
+    <text class="lb" x="475" y="125" text-anchor="middle">LDA</text>
+  </g>
+  <g>
+    <circle class="dot" cx="558" cy="100" r="7"/>
+    <text class="yr" x="558" y="78"  text-anchor="middle">2013</text>
+    <text class="lb" x="558" y="125" text-anchor="middle">Word2Vec</text>
+  </g>
+  <g>
+    <circle class="dot" cx="641" cy="100" r="7"/>
+    <text class="yr" x="641" y="78"  text-anchor="middle">2017</text>
+    <text class="lb" x="641" y="125" text-anchor="middle">Transformer</text>
+  </g>
+  <g>
+    <circle cx="700" cy="100" r="8" fill="#3a47b8"/>
+    <text class="yr" x="700" y="78"  text-anchor="middle">2018+</text>
+    <text class="lb" x="700" y="125" text-anchor="middle">LLMs</text>
+    <text class="lb" x="700" y="139" text-anchor="middle">(GPT, BERT…)</text>
+  </g>
+</svg>
