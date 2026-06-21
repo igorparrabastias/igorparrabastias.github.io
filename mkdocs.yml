@@ -44,6 +44,7 @@ nav:
     - 🌐 Redes y comunicaciones: kids/redes.md
     - 🕸️ Desarrollo web: kids/web.md
   - Inteligencia Artificial y PLN:
+    - ia/index.md
     - La historia (1950–hoy):
       - Introducción y serie: fundamento-del-pln-y-la-ia.md
       - 1 · Orígenes (1950–1979): fundamentos-1-origenes.md
@@ -51,6 +52,7 @@ nav:
       - 3 · La era de los LLM (2013–2026): fundamentos-3-era-llm.md
       - 4 · Investigación reciente y futuro: fundamentos-4-investigacion-futuro.md
     - IA práctica:
+      - ia-practica/index.md
       - RAG Skyline Agent · Python: ia-practica/rag-skyline-agent.md
       - RAG de cero a héroe · Python: ia-practica/rag-cero-a-heroe.md
       - Machine Learning con Python: ia-practica/ml-practico.md
@@ -77,8 +79,16 @@ nav:
     # nb_hook anida aquí (tras el índice): los 7 problemas resueltos en Python.
   - Matemáticas y teoría:
     - matematicas/index.md
-    # nb_hook anida aquí (tras el índice): técnicas de análisis, complejidad, teoría
-    - Cálculo 1A (MITx): matematicas/calculo-mitx.md
+    - Lo que de verdad necesita la IA: matematicas/necesita-ia.md
+    - Técnicas de análisis de problemas:
+      - matematicas/tecnicas.md
+      # nb_hook anida aquí los notebooks de técnicas de análisis
+    - Complejidad algorítmica y optimización:
+      - matematicas/complejidad.md
+      # nb_hook anida aquí los notebooks de complejidad
+    - Teoría detrás de los algoritmos:
+      - matematicas/teoria.md
+      # nb_hook anida aquí los notebooks de teoría
   - Paradigmas de programación:
     - paradigmas/index.md
     - Funcional y concurrente — Elixir:
@@ -99,6 +109,7 @@ nav:
     - Otros lenguajes:
       - PHP y snippets sueltos: paradigmas/otros/php-fizzbuzz.md
   - Práctica y cursos:
+    - practica/index.md
     - Exercism (Elixir · Python): practica/exercism.md
     - MITx 6.00.1x — soluciones · Python: practica/mitx-6001x.md
     - MITx 6.00.2x — soluciones · Python: practica/mitx-6002x.md

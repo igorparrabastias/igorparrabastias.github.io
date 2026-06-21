@@ -107,9 +107,16 @@ def on_config(config):
             "algoritmos-de-grafos-otras-aplicaciones",
             "implementacion-de-grafos",
         ],
-        "Matemáticas y teoría": [
+        # Matemáticas: cada carpeta cuelga de su propia sub-página (ver mkdocs.yml),
+        # no de un único "Matemáticas y teoría". Así las cards del índice coinciden
+        # con el sidebar y cada una lleva a su página.
+        "Técnicas de análisis de problemas": [
             "habilidades-de-resolucion-de-problemas-tecnicas-de-analisis-de-problemas",
+        ],
+        "Complejidad algorítmica y optimización": [
             "habilidades-de-resolucion-de-problemas-complejidad-algoritmica-y-optimizacion",
+        ],
+        "Teoría detrás de los algoritmos": [
             "transicion-a-experto-matematicas-y-teoria-detras-de-los-algoritmos",
         ],
         "Problemas de Estructuras de Datos y Algoritmos": [
@@ -147,10 +154,15 @@ def on_config(config):
     entries = {c: {NICE.get(c, _titulo(c)): grupos[c]} for c in grupos}
     por_tema, leftover, asignadas = {}, [], set()
     for t, folders in THEMES.items():
-        for c in folders:
-            if c in entries:
-                por_tema.setdefault(t, []).append(entries[c])
-                asignadas.add(c)
+        present = [c for c in folders if c in entries]
+        for c in present:
+            asignadas.add(c)
+        if len(present) == 1:
+            # Tema de una sola carpeta: cuelga los notebooks DIRECTAMENTE de la
+            # sección (sin un sub-grupo cuyo nombre duplicaría el de la sección).
+            por_tema[t] = list(grupos[present[0]])
+        elif present:
+            por_tema[t] = [entries[c] for c in present]
     for c in sorted(entries):                 # carpetas no mapeadas, al final
         if c not in asignadas:
             leftover.append(entries[c])

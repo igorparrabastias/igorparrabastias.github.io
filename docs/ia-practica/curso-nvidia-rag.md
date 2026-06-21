@@ -1,6 +1,8 @@
 # Building RAG Agents with LLMs (NVIDIA DLI) 🔵
 
 > **Material de terceros.** Curso *Building RAG Agents with LLMs* del **NVIDIA Deep Learning Institute (DLI)**: diapositivas y código provisto. Lo estudié para profundizar en RAG de extremo a extremo, y mis propios *refactors* y ejercicios viven en el subdirectorio `course/practice/`. Es el complemento "industrial" a mis proyectos propios de [RAG](rag-skyline-agent.md).
+>
+> **Curso original:** [NVIDIA DLI · Building RAG Agents with LLMs](https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+S-FX-15+V1)
 
 ## Qué es
 

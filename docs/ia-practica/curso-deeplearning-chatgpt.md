@@ -1,6 +1,8 @@
 # Building Systems with the ChatGPT API (DeepLearning.AI) 🔵
 
 > **Material de terceros.** Curso corto *Building Systems with the ChatGPT API* de **DeepLearning.AI**, impartido por **Isa Fulford (OpenAI)** y **Andrew Ng**. Conservo los notebooks de estudiante (L1, L2, L3) como apuntes. Encaja como la cara "ingeniería de aplicaciones LLM" de la serie [Fundamentos del PLN y la IA](../fundamento-del-pln-y-la-ia.md).
+>
+> **Curso original:** [DeepLearning.AI · Building Systems with the ChatGPT API](https://www.deeplearning.ai/short-courses/building-systems-with-chatgpt/)
 
 ## Qué es
 

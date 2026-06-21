@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" font-family="system-ui, sans-serif" role="img" aria-label="Coste según la longitud: la atención del Transformer crece de forma cuadrática y los modelos de estado de forma lineal">
+  <style>
+    .axis{stroke:#333;stroke-width:1.5}
+    .quad{stroke:#c0392b;stroke-width:3;fill:none}
+    .lin{stroke:#3a47b8;stroke-width:3;fill:none}
+    .grid{stroke:#e6e8f2;stroke-width:1}
+    .ax{font-size:13px;fill:#333}
+    .cap{font-size:12px;fill:#666}
+    .lq{font-size:13px;fill:#c0392b;font-weight:700}
+    .ll{font-size:13px;fill:#3a47b8;font-weight:700}
+  </style>
+  <rect width="560" height="300" fill="#ffffff"/>
+
+  <!-- grid -->
+  <line class="grid" x1="70" y1="70" x2="520" y2="70"/>
+  <line class="grid" x1="70" y1="130" x2="520" y2="130"/>
+  <line class="grid" x1="70" y1="190" x2="520" y2="190"/>
+
+  <!-- axes -->
+  <line class="axis" x1="70" y1="40" x2="70" y2="240"/>
+  <line class="axis" x1="70" y1="240" x2="525" y2="240"/>
+
+  <!-- quadratic: O(n^2) -->
+  <path class="quad" d="M70,240 Q300,232 430,60"/>
+  <text class="lq" x="360" y="80">Transformer · O(n²)</text>
+
+  <!-- linear: O(n) -->
+  <path class="lin" d="M70,240 L500,150"/>
+  <text class="ll" x="430" y="150">estado/Mamba · O(n)</text>
+
+  <!-- axis labels -->
+  <text class="ax" x="22" y="150" transform="rotate(-90 22,150)">cómputo →</text>
+  <text class="ax" x="300" y="270" text-anchor="middle">longitud de la secuencia →</text>
+
+  <text class="cap" x="70" y="292">Duplicar la longitud cuadruplica el trabajo de la atención clásica; los modelos de estado crecen solo en línea recta.</text>
+</svg>

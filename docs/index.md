@@ -108,9 +108,10 @@ Senior Full Stack Developer · Autodidacta · Programador en Python / PHP / Java
 
     ---
 
-    Ejercicios de Exercism (Elixir · Python) y mis soluciones a cursos MITx 6.00.1x/2x.
+    Mis licencias y certificaciones (NVIDIA, NTU, edX…), ejercicios de Exercism
+    (Elixir · Python) y soluciones a los cursos MITx 6.00.1x/2x.
 
-    [:octicons-arrow-right-24: Entrar](practica/exercism.md)
+    [:octicons-arrow-right-24: Entrar](practica/index.md)
 
 -   :material-lan: __Redes y comunicaciones__
 

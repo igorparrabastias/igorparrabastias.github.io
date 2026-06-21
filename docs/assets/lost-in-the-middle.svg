@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" font-family="system-ui, sans-serif" role="img" aria-label="Información perdida en el medio: el modelo recuerda mejor lo que está al inicio y al final del contexto que lo del centro">
+  <style>
+    .axis{stroke:#333;stroke-width:1.5}
+    .curve{stroke:#3a47b8;stroke-width:3;fill:none}
+    .grid{stroke:#e6e8f2;stroke-width:1}
+    .ax{font-size:13px;fill:#333}
+    .cap{font-size:12px;fill:#666}
+    .note{font-size:12px;fill:#c0392b;font-weight:700;text-anchor:middle}
+    .good{font-size:12px;fill:#3a47b8;font-weight:700;text-anchor:middle}
+  </style>
+  <rect width="560" height="300" fill="#ffffff"/>
+
+  <!-- grid -->
+  <line class="grid" x1="70" y1="70" x2="520" y2="70"/>
+  <line class="grid" x1="70" y1="130" x2="520" y2="130"/>
+  <line class="grid" x1="70" y1="190" x2="520" y2="190"/>
+
+  <!-- axes -->
+  <line class="axis" x1="70" y1="50" x2="70" y2="240"/>
+  <line class="axis" x1="70" y1="240" x2="525" y2="240"/>
+
+  <!-- U-shaped curve: high, dip, high -->
+  <path class="curve" d="M80,72 C150,90 200,200 295,205 C390,210 440,92 510,74"/>
+
+  <!-- dip marker -->
+  <line x1="295" y1="205" x2="295" y2="240" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text class="note" x="295" y="225">se pierde el medio</text>
+  <text class="good" x="100" y="64">inicio</text>
+  <text class="good" x="490" y="66">final</text>
+
+  <!-- axis labels -->
+  <text class="ax" x="22" y="170" transform="rotate(-90 22,170)">recall (lo que recuerda) →</text>
+  <text class="ax" x="300" y="270" text-anchor="middle">posición del dato en el contexto →</text>
+
+  <text class="cap" x="70" y="292">Aceptar un contexto enorme no es aprovecharlo: lo situado en el centro recibe menos atención efectiva.</text>
+</svg>

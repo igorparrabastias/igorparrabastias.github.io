@@ -1,6 +1,8 @@
 # Machine Learning con Python (IBM) 🔵
 
 > **Material de terceros.** Notebooks del curso *Machine Learning with Python* de **IBM** (código `ML0101EN`, plataforma Cognitive Class). Los guardo aquí como referencia de estudio: es el cimiento "clásico" sobre el que descansa toda la serie de [Fundamentos del PLN y la IA](../fundamento-del-pln-y-la-ia.md) — antes de los transformers, había regresión y KNN.
+>
+> **Curso original:** [IBM · Machine Learning with Python (Cognitive Class)](https://cognitiveclass.ai/courses/machine-learning-with-python)
 
 ## Qué es
 

@@ -15,16 +15,16 @@ después, los datos y los algoritmos siguen siendo el corazón de todo, ya los l
 
 ## Mi misión con estos apuntes
 
-Este espacio es para cualquiera interesado en profundizar en la computación, abarcando
-una variedad de lenguajes de programación y conceptos clave de las ciencias de la
-computación. Aquí comparto mis conocimientos y experiencia a través de **módulos
-estructurados y cursos cuidadosamente diseñados** —con asistencia de Inteligencia
-Artificial— para facilitar el aprendizaje autodidacta y el desarrollo profesional.
+Esto **no es un curso**: son mis **apuntes** —notas de estudio, ejemplos y notebooks
+ejecutables— sobre computación, abarcando una variedad de lenguajes de programación y
+conceptos clave de las ciencias de la computación. Los recopilo y ordeno (con ayuda de
+la Inteligencia Artificial) pensando en dos usos: que sirvan para **aprender por cuenta
+propia** desde cero, y como **recordatorio de consulta** para quienes ya programan y
+necesitan refrescar un tema.
 
-Mi propósito es ofrecer la misma rigurosidad que encontrarías en cursos impartidos por
-instituciones tradicionales, esperando que recibas una educación de calidad que
-respalde tus esfuerzos autodidactas. Y, sobre todo, que aprendas **en serio y te
-diviertas en el camino**.
+Mi propósito es que el material sea riguroso y claro, un apoyo de verdad para el
+aprendizaje autodidacta. Y, sobre todo, que aprendas **en serio y te diviertas en el
+camino**.
 
 ## Experiencia profesional
 
@@ -43,9 +43,9 @@ Ser autodidacta se ha convertido en una forma esencial de aprender en estos tiem
 Exige un alto grado de compromiso y disciplina. A menudo, esta ruta de aprendizaje
 lleva a un mejor entendimiento y a un nivel de *expertise* más profundo, ya que implica
 una exploración más personalizada y una adaptación a tu propio ritmo y estilo de
-aprendizaje. Me propongo ofrecer la misma rigurosidad encontrada en cursos impartidos
-por instituciones tradicionales, esperando con esto que recibas una educación de
-calidad que respalde tus esfuerzos autodidactas.
+aprendizaje. Por eso intento que estos apuntes sean rigurosos y claros: un material de
+apoyo de verdad para quien aprende por su cuenta y para el profesional que necesita
+volver sobre un tema.
 
 ## Encuéntrame
 

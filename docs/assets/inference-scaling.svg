@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" font-family="system-ui, sans-serif" role="img" aria-label="Cómputo en inferencia: dejar pensar más al modelo mejora el acierto, con rendimientos decrecientes">
+  <style>
+    .axis{stroke:#333;stroke-width:1.5}
+    .curve{stroke:#3a47b8;stroke-width:3;fill:none}
+    .grid{stroke:#e6e8f2;stroke-width:1}
+    .dot{fill:#3a47b8}
+    .ax{font-size:13px;fill:#333}
+    .cap{font-size:12px;fill:#666}
+    .note{font-size:12px;fill:#3a47b8;font-weight:700}
+  </style>
+  <rect width="560" height="300" fill="#ffffff"/>
+
+  <!-- grid -->
+  <line class="grid" x1="70" y1="60" x2="520" y2="60"/>
+  <line class="grid" x1="70" y1="120" x2="520" y2="120"/>
+  <line class="grid" x1="70" y1="180" x2="520" y2="180"/>
+
+  <!-- axes -->
+  <line class="axis" x1="70" y1="40" x2="70" y2="240"/>
+  <line class="axis" x1="70" y1="240" x2="525" y2="240"/>
+
+  <!-- curve: rising with diminishing returns -->
+  <path class="curve" d="M70,222 C150,150 230,95 330,78 C410,66 470,62 515,60"/>
+
+  <!-- markers -->
+  <circle class="dot" cx="92" cy="205" r="5"/>
+  <text class="note" x="100" y="200">respuesta directa</text>
+  <circle class="dot" cx="330" cy="78" r="5"/>
+  <text class="note" x="250" y="70">+ razonar y verificar</text>
+
+  <!-- axis labels -->
+  <text class="ax" x="22" y="145" transform="rotate(-90 22,145)">acierto →</text>
+  <text class="ax" x="300" y="270" text-anchor="middle">cómputo al responder (test-time) →</text>
+
+  <text class="cap" x="70" y="292">Para un mismo modelo, dejarlo "pensar" más mejora el resultado… pero cada paso extra rinde menos y cuesta más.</text>
+</svg>
