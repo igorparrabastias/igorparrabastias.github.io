@@ -7,7 +7,7 @@ hide:
 # Igor Parra Bastias
 
 <p style="font-size:1.15rem; margin-top:-0.4rem;">
-Senior Full Stack Developer · Autodidacta · Programador en Python / PHP / JavaScript / Elixir
+Senior Full Stack Developer · Programador autodidacta
 </p>
 
 > Aprender se ha vuelto una forma de vivir. Este es mi sitio de **apuntes, cursos y

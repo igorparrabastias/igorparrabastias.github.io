@@ -31,9 +31,10 @@ camino**.
 - **Ingeniería y habilidades técnicas** — Especializado en microservicios, computación
   en la nube y arquitectura basada en eventos. Trabajo con plataformas como **GCP** y
   **AWS**, y lenguajes como **Node.js, PHP, Python y Elixir**.
-- **Formación académica** — Base teórica y práctica en Matemáticas y Ciencias de la
-  Computación. He completado cursos en instituciones como **NTU, UBC, MITx y Stanford**
-  en Software Development, Statistics, Operations Research y Data Science.
+- **Formación académica** — Dos años de **Licenciatura en Matemáticas** en la
+  **Universidad de Concepción**. He completado además cursos online en instituciones
+  como **NTU, UBC, MITx y Stanford** en Software Development, Statistics, Operations
+  Research y Data Science.
 - **Reputación en la comunidad IT** — Trayectoria destacada en StackOverflow y
   Freelancer.com, con un compromiso constante con la calidad.
 
