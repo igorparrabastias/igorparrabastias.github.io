@@ -113,6 +113,15 @@ Senior Full Stack Developer · Autodidacta · Programador en Python / PHP / Java
 
     [:octicons-arrow-right-24: Entrar](practica/index.md)
 
+-   :material-chip: __Arquitectura de computadores__
+
+    ---
+
+    Cómo funciona un computador por dentro, del bit a los núcleos: representación,
+    CPU e ISA, jerarquía de memoria, entrada/salida y paralelismo.
+
+    [:octicons-arrow-right-24: Entrar](arquitectura/index.md)
+
 -   :material-lan: __Redes y comunicaciones__
 
     ---
