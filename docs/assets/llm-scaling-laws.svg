@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 280" font-family="system-ui, sans-serif" role="img" aria-label="Leyes de escala: el error baja de forma predecible al aumentar cómputo, datos y parámetros">
+  <style>
+    .ax{stroke:#cfd3e8;stroke-width:1.5}
+    .curve{stroke:#3a47b8;stroke-width:3;fill:none}
+    .axl{font-size:12px;fill:#666}
+    .tick{font-size:10px;fill:#999}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+    .note{font-size:11px;fill:#3a47b8;text-anchor:middle;font-weight:700}
+  </style>
+  <rect width="620" height="280" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#cfd3e8"/></marker></defs>
+  <text class="ttl" x="310" y="28">Leyes de escala: el error baja de forma predecible</text>
+
+  <line class="ax" x1="80" y1="220" x2="560" y2="220" marker-end="url(#a)"/>
+  <line class="ax" x1="80" y1="220" x2="80"  y2="55"  marker-end="url(#a)"/>
+  <text class="axl" x="250" y="252">cómputo · datos · parámetros (escala log) ⟶</text>
+  <text class="axl" x="30" y="150" transform="rotate(-90 30 150)">error (loss) ⟶</text>
+
+  <!-- curva ley de potencias descendente -->
+  <path class="curve" d="M 100 75 C 200 150, 330 195, 560 208"/>
+
+  <circle cx="120" cy="92"  r="4" fill="#3a47b8"/><text class="tick" x="135" y="88">modelo pequeño</text>
+  <circle cx="300" cy="185" r="4" fill="#3a47b8"/><text class="tick" x="315" y="180">mediano</text>
+  <circle cx="540" cy="208" r="4" fill="#3a47b8"/><text class="tick" x="520" y="200">grande</text>
+
+  <text class="note" x="310" y="268">Recta en escala log-log: permite PREDECIR cuánto mejorará un modelo antes de entrenarlo.</text>
+</svg>

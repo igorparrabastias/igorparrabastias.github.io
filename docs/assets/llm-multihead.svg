@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" font-family="system-ui, sans-serif" role="img" aria-label="Multi-head attention: varias cabezas de atención en paralelo se concatenan y se proyectan">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
+    .head{fill:#dfe3f7;stroke:#3a47b8;stroke-width:1.5}
+    .bd{fill:#3a47b8}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:12px;font-weight:700;fill:#fff;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:1.8;fill:none}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+  </style>
+  <rect width="640" height="240" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="320" y="28">Multi-head attention: varias miradas a la vez</text>
+
+  <rect class="box" x="270" y="48" width="100" height="30" rx="6"/><text class="t" x="320" y="68">entrada</text>
+
+  <!-- heads -->
+  <rect class="head" x="60"  y="105" width="110" height="40" rx="6"/><text class="t" x="115" y="129">cabeza 1</text>
+  <rect class="head" x="190" y="105" width="110" height="40" rx="6"/><text class="t" x="245" y="129">cabeza 2</text>
+  <rect class="head" x="340" y="105" width="110" height="40" rx="6"/><text class="t" x="395" y="129">cabeza 3</text>
+  <rect class="head" x="470" y="105" width="110" height="40" rx="6"/><text class="t" x="525" y="129">cabeza h</text>
+
+  <line class="fl" x1="290" y1="78" x2="115" y2="105" marker-end="url(#a)"/>
+  <line class="fl" x1="305" y1="78" x2="245" y2="105" marker-end="url(#a)"/>
+  <line class="fl" x1="335" y1="78" x2="395" y2="105" marker-end="url(#a)"/>
+  <line class="fl" x1="350" y1="78" x2="525" y2="105" marker-end="url(#a)"/>
+
+  <rect class="box" x="200" y="165" width="240" height="30" rx="6"/><text class="t" x="320" y="185">concatenar + proyección lineal</text>
+  <line class="fl" x1="115" y1="145" x2="250" y2="165" marker-end="url(#a)"/>
+  <line class="fl" x1="245" y1="145" x2="300" y2="165" marker-end="url(#a)"/>
+  <line class="fl" x1="395" y1="145" x2="350" y2="165" marker-end="url(#a)"/>
+  <line class="fl" x1="525" y1="145" x2="400" y2="165" marker-end="url(#a)"/>
+
+  <text class="cap" x="320" y="222">Cada cabeza aprende un tipo de relación (sintaxis, correferencia…); juntas dan una vista más rica.</text>
+</svg>

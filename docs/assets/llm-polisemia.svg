@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 210" font-family="system-ui, sans-serif" role="img" aria-label="Polisemia: Word2Vec da un único vector a banco, mezclando sus dos significados">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
+    .bd{fill:#3a47b8}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:12px;font-weight:700;fill:#fff;text-anchor:middle}
+    .sense{font-size:12px;fill:#333;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:1.8;fill:none}
+    .cap{font-size:12px;fill:#e0663f;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+  </style>
+  <rect width="620" height="210" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="310" y="30">El problema de Word2Vec: un vector por palabra</text>
+
+  <rect class="box" x="40" y="55" width="230" height="34" rx="6"/><text class="sense" x="155" y="77">"me senté en el banco del parque"</text>
+  <rect class="box" x="40" y="120" width="230" height="34" rx="6"/><text class="sense" x="155" y="142">"saqué dinero del banco"</text>
+
+  <rect class="bd" x="360" y="85" width="150" height="44" rx="8"/><text class="tw" x="435" y="105">un único vector</text><text class="tw" x="435" y="121" font-size="10">"banco"</text>
+
+  <line class="fl" x1="270" y1="72"  x2="360" y2="100" marker-end="url(#a)"/>
+  <line class="fl" x1="270" y1="137" x2="360" y2="114" marker-end="url(#a)"/>
+
+  <text class="cap" x="310" y="185">Los dos sentidos colapsan en el mismo punto: el contexto no cambia el vector.</text>
+</svg>

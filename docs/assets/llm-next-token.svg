@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" font-family="system-ui, sans-serif" role="img" aria-label="Preentrenamiento: dado un contexto, el modelo aprende a predecir el siguiente token como una distribución de probabilidad">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
+    .bd{fill:#3a47b8}
+    .bar{fill:#3a47b8}
+    .barlo{fill:#aab0dd}
+    .t{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:12px;font-weight:700;fill:#fff;text-anchor:middle}
+    .lab{font-size:11px;fill:#333}
+    .num{font-size:11px;fill:#666}
+    .fl{stroke:#9aa0c8;stroke-width:1.8;fill:none}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="640" height="220" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="320" y="28">Preentrenamiento: predecir el siguiente token</text>
+
+  <rect class="box" x="30" y="80" width="180" height="40" rx="6"/><text class="t" x="120" y="105">"el gato se subió al…"</text>
+  <rect class="bd"  x="250" y="78" width="80" height="44" rx="8"/><text class="tw" x="290" y="105">LLM</text>
+  <line class="fl" x1="210" y1="100" x2="250" y2="100" marker-end="url(#a)"/>
+  <line class="fl" x1="330" y1="100" x2="375" y2="100" marker-end="url(#a)"/>
+
+  <!-- barras de probabilidad -->
+  <rect class="bar"   x="430" y="60"  width="150" height="20"/><text class="lab" x="378" y="75">árbol</text><text class="num" x="588" y="75">.55</text>
+  <rect class="bar"   x="430" y="88"  width="80"  height="20"/><text class="lab" x="378" y="103">tejado</text><text class="num" x="518" y="103">.30</text>
+  <rect class="barlo" x="430" y="116" width="30"  height="20"/><text class="lab" x="378" y="131">coche</text><text class="num" x="468" y="131">.10</text>
+  <rect class="barlo" x="430" y="144" width="12"  height="20"/><text class="lab" x="378" y="159">azul</text><text class="num" x="450" y="159">.03</text>
+
+  <text class="cap" x="320" y="195">Se entrena con billones de palabras tapando la siguiente y comparando su apuesta con la real.</text>
+  <text class="cap" x="320" y="211" fill="#3a47b8">Sin etiquetas humanas: el propio texto es la respuesta correcta (auto-supervisión).</text>
+</svg>

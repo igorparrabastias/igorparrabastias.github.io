@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" font-family="system-ui, sans-serif" role="img" aria-label="Patrón ReAct: el agente alterna razonar, actuar y observar en un bucle hasta resolver la tarea">
+  <style>
+    .think{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .act{fill:#dfe3f7;stroke:#3a47b8;stroke-width:2}
+    .obs{fill:#f3d7cb;stroke:#e0663f;stroke-width:2}
+    .done{fill:#3a47b8}
+    .t{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .to{font-size:12px;font-weight:700;fill:#e0663f;text-anchor:middle}
+    .tw{font-size:12px;font-weight:700;fill:#fff;text-anchor:middle}
+    .sub{font-size:10px;fill:#888;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2;fill:none}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="600" height="250" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="300" y="30">ReAct: razonar → actuar → observar (en bucle)</text>
+
+  <rect class="think" x="60"  y="80" width="130" height="56" rx="8"/><text class="t" x="125" y="105">Razonar</text><text class="sub" x="125" y="123">¿qué me falta?</text>
+  <rect class="act"   x="235" y="80" width="130" height="56" rx="8"/><text class="t" x="300" y="105">Actuar</text><text class="sub" x="300" y="123">usar herramienta</text>
+  <rect class="obs"   x="410" y="80" width="130" height="56" rx="8"/><text class="to" x="475" y="105">Observar</text><text class="sub" x="475" y="123">leer resultado</text>
+
+  <line class="fl" x1="190" y1="108" x2="235" y2="108" marker-end="url(#a)"/>
+  <line class="fl" x1="365" y1="108" x2="410" y2="108" marker-end="url(#a)"/>
+  <!-- bucle de vuelta -->
+  <path class="fl" d="M 475 136 L 475 175 L 125 175 L 125 136" marker-end="url(#a)"/>
+  <text class="cap" x="300" y="170">repite hasta tener la respuesta</text>
+
+  <!-- salida final -->
+  <rect class="done" x="235" y="195" width="130" height="36" rx="8"/><text class="tw" x="300" y="218">respuesta final</text>
+  <line class="fl" x1="125" y1="136" x2="270" y2="195" marker-end="url(#a)"/>
+</svg>

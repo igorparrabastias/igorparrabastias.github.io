@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" font-family="system-ui, sans-serif" role="img" aria-label="BERT mira a ambos lados para rellenar un hueco; GPT mira solo a la izquierda para predecir el siguiente token">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
+    .mask{fill:#f3d7cb;stroke:#e0663f;stroke-width:1.5}
+    .pred{fill:#3a47b8}
+    .t{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:12px;font-weight:700;fill:#fff;text-anchor:middle}
+    .tm{font-size:12px;font-weight:700;fill:#e0663f;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .att{stroke:#9aa0c8;stroke-width:1.6;fill:none}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="640" height="230" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <!-- BERT -->
+  <text class="ttl" x="160" y="30">BERT — solo encoder</text>
+  <text class="cap" x="160" y="48">comprende: rellena el hueco mirando AMBOS lados</text>
+  <rect class="box"  x="35"  y="80" width="60" height="30"/><text class="t" x="65"  y="100">el</text>
+  <rect class="mask" x="105" y="80" width="60" height="30"/><text class="tm" x="135" y="100">[MASK]</text>
+  <rect class="box"  x="175" y="80" width="60" height="30"/><text class="t" x="205" y="100">come</text>
+  <path class="att" d="M 65 80 Q 100 55 130 78" marker-end="url(#a)"/>
+  <path class="att" d="M 205 80 Q 170 55 140 78" marker-end="url(#a)"/>
+
+  <line x1="320" y1="40" x2="320" y2="195" stroke="#e6e6ef" stroke-width="1.5"/>
+
+  <!-- GPT -->
+  <text class="ttl" x="480" y="30">GPT — solo decoder</text>
+  <text class="cap" x="480" y="48">genera: predice el siguiente (mira a la IZQUIERDA)</text>
+  <rect class="box"  x="370" y="80" width="60" height="30"/><text class="t" x="400" y="100">el</text>
+  <rect class="box"  x="440" y="80" width="60" height="30"/><text class="t" x="470" y="100">gato</text>
+  <rect class="pred" x="510" y="80" width="80" height="30"/><text class="tw" x="550" y="100">¿…?</text>
+  <path class="att" d="M 400 80 Q 460 55 545 78" marker-end="url(#a)"/>
+  <path class="att" d="M 470 80 Q 505 60 545 78" marker-end="url(#a)"/>
+
+  <text class="cap" x="320" y="175">Misma base (Transformer), dos objetivos: comprensión bidireccional vs. generación autorregresiva.</text>
+  <text class="cap" x="320" y="195" fill="#888">(BERT no puede "ver" el futuro porque lo tapa; GPT tampoco, porque lo enmascara causalmente)</text>
+</svg>

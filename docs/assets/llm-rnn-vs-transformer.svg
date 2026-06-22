@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" font-family="system-ui, sans-serif" role="img" aria-label="RNN procesa los tokens en secuencia; el Transformer los procesa todos a la vez con atención total">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
+    .bd{fill:#3a47b8}
+    .t{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:1.8;fill:none}
+    .att{stroke:#e0663f;stroke-width:1.2;fill:none;opacity:0.7}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="640" height="240" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <!-- RNN -->
+  <text class="ttl" x="160" y="30">RNN / LSTM</text>
+  <text class="cap" x="160" y="48">una palabra tras otra (secuencial)</text>
+  <rect class="box" x="30"  y="70" width="55" height="34" rx="6"/><text class="t" x="57"  y="92">el</text>
+  <rect class="box" x="115" y="70" width="55" height="34" rx="6"/><text class="t" x="142" y="92">gato</text>
+  <rect class="box" x="200" y="70" width="55" height="34" rx="6"/><text class="t" x="227" y="92">come</text>
+  <line class="fl" x1="85"  y1="87" x2="115" y2="87" marker-end="url(#a)"/>
+  <line class="fl" x1="170" y1="87" x2="200" y2="87" marker-end="url(#a)"/>
+  <text class="cap" x="150" y="135" fill="#e0663f">lento: el paso N espera al N−1</text>
+
+  <line x1="320" y1="40" x2="320" y2="200" stroke="#e6e6ef" stroke-width="1.5"/>
+
+  <!-- Transformer -->
+  <text class="ttl" x="480" y="30">Transformer</text>
+  <text class="cap" x="480" y="48">todas a la vez (paralelo)</text>
+  <rect class="box" x="370" y="70" width="55" height="34" rx="6"/><text class="t" x="397" y="92">el</text>
+  <rect class="box" x="455" y="70" width="55" height="34" rx="6"/><text class="t" x="482" y="92">gato</text>
+  <rect class="box" x="540" y="70" width="55" height="34" rx="6"/><text class="t" x="567" y="92">come</text>
+  <!-- atención todos con todos -->
+  <path class="att" d="M 397 70 Q 440 45 482 70"/>
+  <path class="att" d="M 482 70 Q 525 45 567 70"/>
+  <path class="att" d="M 397 70 Q 482 30 567 70"/>
+  <text class="cap" x="480" y="135" fill="#e0663f">cada palabra "ve" a todas (atención)</text>
+
+  <text class="cap" x="320" y="180">El paralelismo es lo que permitió entrenar a una escala antes imposible —</text>
+  <text class="cap" x="320" y="198">y por eso el Transformer desplazó a las RNN y las LSTM.</text>
+</svg>

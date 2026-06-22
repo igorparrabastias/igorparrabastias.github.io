@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" font-family="system-ui, sans-serif" role="img" aria-label="El coste de la atención crece con el cuadrado de la longitud del contexto: cada token se compara con todos">
+  <style>
+    .grid{fill:#eef0fb;stroke:#3a47b8;stroke-width:1}
+    .diag{fill:#3a47b8}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .lbl{font-size:11px;fill:#666;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .curve{stroke:#e0663f;stroke-width:2.5;fill:none}
+    .ax{stroke:#cfd3e8;stroke-width:1.5}
+  </style>
+  <rect width="640" height="240" fill="#ffffff"/>
+  <text class="ttl" x="320" y="28">La atención compara cada token con TODOS → coste n²</text>
+
+  <!-- matriz n x n -->
+  <text class="t" x="120" y="52" fill="#333">matriz de atención (n × n)</text>
+  <g>
+    <!-- 6x6 grid -->
+    <g>
+      <rect class="grid" x="60" y="62" width="22" height="22"/><rect class="grid" x="82" y="62" width="22" height="22"/><rect class="grid" x="104" y="62" width="22" height="22"/><rect class="grid" x="126" y="62" width="22" height="22"/><rect class="grid" x="148" y="62" width="22" height="22"/><rect class="grid" x="170" y="62" width="22" height="22"/>
+    </g>
+    <g transform="translate(0,22)"><rect class="grid" x="60" y="62" width="22" height="22"/><rect class="grid" x="82" y="62" width="22" height="22"/><rect class="grid" x="104" y="62" width="22" height="22"/><rect class="grid" x="126" y="62" width="22" height="22"/><rect class="grid" x="148" y="62" width="22" height="22"/><rect class="grid" x="170" y="62" width="22" height="22"/></g>
+    <g transform="translate(0,44)"><rect class="grid" x="60" y="62" width="22" height="22"/><rect class="grid" x="82" y="62" width="22" height="22"/><rect class="grid" x="104" y="62" width="22" height="22"/><rect class="grid" x="126" y="62" width="22" height="22"/><rect class="grid" x="148" y="62" width="22" height="22"/><rect class="grid" x="170" y="62" width="22" height="22"/></g>
+    <g transform="translate(0,66)"><rect class="grid" x="60" y="62" width="22" height="22"/><rect class="grid" x="82" y="62" width="22" height="22"/><rect class="grid" x="104" y="62" width="22" height="22"/><rect class="grid" x="126" y="62" width="22" height="22"/><rect class="grid" x="148" y="62" width="22" height="22"/><rect class="grid" x="170" y="62" width="22" height="22"/></g>
+    <g transform="translate(0,88)"><rect class="grid" x="60" y="62" width="22" height="22"/><rect class="grid" x="82" y="62" width="22" height="22"/><rect class="grid" x="104" y="62" width="22" height="22"/><rect class="grid" x="126" y="62" width="22" height="22"/><rect class="grid" x="148" y="62" width="22" height="22"/><rect class="grid" x="170" y="62" width="22" height="22"/></g>
+    <g transform="translate(0,110)"><rect class="grid" x="60" y="62" width="22" height="22"/><rect class="grid" x="82" y="62" width="22" height="22"/><rect class="grid" x="104" y="62" width="22" height="22"/><rect class="grid" x="126" y="62" width="22" height="22"/><rect class="grid" x="148" y="62" width="22" height="22"/><rect class="grid" x="170" y="62" width="22" height="22"/></g>
+  </g>
+  <text class="lbl" x="126" y="205">duplicar n → ×4 el coste</text>
+
+  <!-- curva cuadrática -->
+  <text class="t" x="470" y="52" fill="#333">coste vs. longitud</text>
+  <line class="ax" x1="320" y1="190" x2="610" y2="190"/>
+  <line class="ax" x1="320" y1="190" x2="320" y2="62"/>
+  <path class="curve" d="M 320 188 Q 520 185 600 70"/>
+  <text class="lbl" x="470" y="208">longitud del contexto ⟶</text>
+  <text class="lbl" x="300" y="120" transform="rotate(-90 300 120)">cómputo / memoria</text>
+
+  <text class="cap" x="320" y="230" fill="#e0663f">Por eso las ventanas de contexto largas son tan caras — y un área activa de investigación.</text>
+</svg>

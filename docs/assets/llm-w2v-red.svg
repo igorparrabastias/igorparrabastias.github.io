@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" font-family="system-ui, sans-serif" role="img" aria-label="Red poco profunda de Word2Vec: entrada one-hot, capa de proyección que es el embedding, y salida softmax">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
+    .bd{fill:#3a47b8}
+    .t{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:11px;font-weight:700;fill:#fff;text-anchor:middle}
+    .lbl{font-size:11px;fill:#888;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:1.8;fill:none}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .mono{font-size:11px;fill:#3a47b8;text-anchor:middle;font-family:ui-monospace,monospace}
+  </style>
+  <rect width="640" height="220" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="320" y="28">Una red simple, sin capas ocultas profundas</text>
+
+  <rect class="box" x="40" y="60" width="110" height="60" rx="6"/><text class="mono" x="95" y="85">[0 0 1 0 0]</text><text class="lbl" x="95" y="105">one-hot</text>
+  <text class="lbl" x="95" y="140">palabra de entrada</text>
+
+  <rect class="bd"  x="245" y="55" width="120" height="70" rx="8"/><text class="tw" x="305" y="85">proyección</text><text class="tw" x="305" y="102" font-size="9">= el EMBEDDING</text>
+  <text class="lbl" x="305" y="145">vector denso (p. ej. 300 dim)</text>
+
+  <rect class="box" x="460" y="60" width="140" height="60" rx="6"/><text class="t" x="530" y="85">softmax</text><text class="lbl" x="530" y="103">sobre el vocabulario</text>
+  <text class="lbl" x="530" y="140">palabra predicha</text>
+
+  <line class="fl" x1="150" y1="90" x2="245" y2="90" marker-end="url(#a)"/>
+  <line class="fl" x1="365" y1="90" x2="460" y2="90" marker-end="url(#a)"/>
+
+  <text class="cap" x="320" y="190">La clave de Mikolov: quitar complejidad para poder entrenar con MILES de millones de palabras.</text>
+  <text class="cap" x="320" y="208" fill="#3a47b8">Al terminar, lo valioso no es la salida sino los pesos de la proyección: los vectores.</text>
+</svg>

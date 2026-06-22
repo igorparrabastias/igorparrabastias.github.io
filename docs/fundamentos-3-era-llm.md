@@ -95,6 +95,8 @@ Para afrontar estos desafíos se han desarrollado varias familias de métodos de
 
 #### 📌 Innovación técnica: simplificación de modelos neuronales
 
+<p align="center"><img src="assets/llm-w2v-red.svg" alt="Red simple de Word2Vec: one-hot, proyección (el embedding) y softmax" width="520"></p>
+
 La gran aportación de Mikolov fue simplificar los modelos neuronales para entrenar más rápido y con menos recursos. La simplificación de modelos neuronales es un área de creciente interés en PLN y aprendizaje profundo: con el aumento del tamaño y la complejidad de los modelos, resultó esencial encontrar métodos eficientes en tiempo y cómputo, lo que no solo facilita el acceso a tecnologías avanzadas, sino que permite su implementación en dispositivos de recursos limitados. Las motivaciones principales son:
 
 1. **Eficiencia computacional**: reducir el tamaño del modelo disminuye la carga de cómputo y memoria durante el entrenamiento y la inferencia.
@@ -136,6 +138,8 @@ CBOW es una de las dos arquitecturas principales propuestas por Mikolov y su equ
 - **Significados polifacéticos**: asigna un único vector a cada palabra, por lo que tiene dificultades con la polisemia.
 
 #### 📌 Skip-Gram: predice el contexto a partir de una palabra objetivo
+
+<p align="center"><img src="assets/llm-cbow-skipgram.svg" alt="CBOW predice la palabra desde el contexto; Skip-Gram, el contexto desde la palabra" width="520"></p>
 
 Skip-Gram, introducido por Mikolov et al. en 2013 como parte de Word2Vec, parte de la idea inversa: una palabra sirve para predecir el contexto en que aparece. El contexto son las palabras que rodean a la palabra objetivo dentro de una ventana de texto. En la frase "El gato se sienta en la alfombra", con objetivo "gato", el contexto serían "El", "se", "sienta", "en", "la", "alfombra". Este enfoque ha tenido un impacto significativo en la forma de manejar y representar palabras en el aprendizaje automático.
 
@@ -288,6 +292,8 @@ Comprender cómo se manifiestan estos sesgos en los vectores y trabajar activame
 
 #### 📌 Contexto limitado: la polisemia
 
+<p align="center"><img src="assets/llm-polisemia.svg" alt="Word2Vec da un único vector a 'banco', mezclando sus dos significados" width="520"></p>
+
 El "contexto limitado" es la incapacidad de ciertos modelos de PLN para interpretar correctamente el significado de palabras con múltiples sentidos, conocidas como polisémicas. La **polisemia** ocurre cuando una misma palabra tiene varios significados relacionados según el contexto. Word2Vec no la captura bien: por ejemplo, "banco" puede ser una entidad financiera o un objeto para sentarse. En la frase "Fui al banco a retirar dinero", el contexto aclara el sentido, pero un modelo que solo ve una ventana reducida ("Fui al", "a retirar") puede confundir "banco" con su otro significado al no disponer de información suficiente para desambiguar.
 
 Los modelos tradicionales basados en n-gramas tienen este contexto limitado porque consideran solo un número fijo de palabras adyacentes, por lo que no captan la complejidad del significado que surge de oraciones largas o de la estructura del discurso. Los modelos más avanzados (redes neuronales y Transformers) capturan contextos más amplios, aunque aún pueden fallar cuando la información relevante está lejos en la secuencia. La desambiguación del significado de palabras (word sense disambiguation, WSD) es crucial en traducción automática, análisis de sentimientos y respuesta a preguntas, ya que interpretar mal una palabra polisémica produce errores significativos. Estrategias para mejorarla:
@@ -301,6 +307,8 @@ Los modelos tradicionales basados en n-gramas tienen este contexto limitado porq
 A partir de Word2Vec, la investigación avanzó en dos direcciones complementarias: los word embeddings contextuales (ELMo, BERT), que asignan representaciones dependientes del contexto, y los modelos basados en Transformers y deep learning, que superan las capacidades de Word2Vec.
 
 #### 📌 Modelos contextuales: ELMo y BERT
+
+<p align="center"><img src="assets/llm-contextual.svg" alt="Embeddings contextuales: 'banco' recibe un vector distinto según la frase" width="520"></p>
 
 Los modelos contextuales revolucionaron la representación de palabras. A diferencia de Word2Vec y GloVe, que asignan un vector fijo a cada palabra (la misma representación para "banco" en "banco de peces" y "banco financiero", pese a sus significados distintos), los modelos contextuales generan representaciones que varían según el contexto en que aparece la palabra, lo que ha permitido avances significativos en traducción automática, análisis de sentimientos y respuesta a preguntas.
 
@@ -410,9 +418,13 @@ La división entre `√d_k` es un detalle importante: sin ella, para dimensiones
 
 #### 📌 Multi-head attention
 
+<p align="center"><img src="assets/llm-multihead.svg" alt="Multi-head attention: varias cabezas en paralelo se concatenan y proyectan" width="520"></p>
+
 En lugar de calcular una sola atención, el Transformer ejecuta varias en paralelo: la **atención multi-cabezal** (*multi-head attention*). El modelo original usa 8 cabezas. Cada cabeza dispone de sus propias matrices Q/K/V y, por tanto, aprende a fijarse en un tipo distinto de relación: una cabeza puede especializarse en concordancias sintácticas, otra en correferencias, otra en relaciones semánticas. Las salidas de todas las cabezas se **concatenan** y se proyectan de nuevo mediante una capa lineal. El resultado es una representación mucho más rica que la de una atención única.
 
 ### 👾 Codificación posicional (positional encoding)
+
+<p align="center"><img src="assets/llm-posicional.svg" alt="Codificación posicional: a cada embedding se le suma un patrón sinusoidal" width="520"></p>
 
 <p align="center"><img src="assets/img/2017-b.png" alt="Ilustración" width="460"></p>
 
@@ -432,6 +444,8 @@ Estas funciones producen un patrón único para cada posición y permiten al mod
 
 ### 👾 Arquitectura completa: encoder y decoder
 
+<p align="center"><img src="assets/llm-transformer-arq.svg" alt="Arquitectura Transformer: pila de encoder y pila de decoder" width="440"></p>
+
 <p align="center"><img src="assets/img/2017-c.png" alt="Ilustración" width="460"></p>
 
 
@@ -441,6 +455,8 @@ El Transformer original es un modelo de traducción y combina dos pilas:
 - El **decoder** (otras 6 capas) genera la traducción palabra por palabra. Añade una sub-capa de atención *enmascarada* (para no "ver el futuro" al generar) y una sub-capa de **atención cruzada** que consulta la salida del encoder.
 
 ### 👾 Por qué desplazó a las RNN y las LSTM
+
+<p align="center"><img src="assets/llm-rnn-vs-transformer.svg" alt="RNN procesa en secuencia; el Transformer, todos los tokens a la vez" width="520"></p>
 
 <p align="center"><img src="assets/img/2017-d.png" alt="Ilustración" width="460"></p>
 
@@ -479,6 +495,8 @@ BERT se ofreció en dos tamaños, *base* (unos 110 millones de parámetros) y *l
 
 #### 📌 GPT-1: generación autorregresiva (decoder)
 
+<p align="center"><img src="assets/llm-bert-vs-gpt.svg" alt="BERT (encoder, bidireccional) frente a GPT (decoder, autorregresivo)" width="520"></p>
+
 En paralelo, OpenAI presentó **GPT-1** (*Generative Pre-trained Transformer*, Radford et al., 2018), que usa **solo la pila de decoders**. Su objetivo de preentrenamiento es más simple: **predecir la siguiente palabra** dada la secuencia anterior (modelado de lenguaje autorregresivo). Con unos 117 millones de parámetros, entrenado sobre el corpus BooksCorpus, GPT-1 demostró que un preentrenamiento no supervisado seguido de un ajuste fino ligero podía resolver muchas tareas. Su orientación es la **generación** de texto.
 
 La divergencia de 2018 quedó así fijada: **encoders para comprender, decoders para generar**. El tiempo acabaría dando un protagonismo casi total a la línea generativa.
@@ -497,6 +515,8 @@ OpenAI publicó **GPT-2**, que llevó la receta de GPT-1 a **1.500 millones de p
 
 #### 📌 GPT-3 y el in-context learning
 
+<p align="center"><img src="assets/llm-in-context.svg" alt="Aprendizaje en contexto: ejemplos en el prompt, sin cambiar los pesos" width="520"></p>
+
 En 2020, OpenAI presentó **GPT-3** (*Language Models are Few-Shot Learners*, Brown et al.), con **175.000 millones de parámetros** (175B), unas cien veces más que GPT-2. Más allá del tamaño, GPT-3 reveló una capacidad emergente que cambió la forma de usar estos modelos: el **aprendizaje en contexto** (*in-context learning*). Sin reentrenar ni ajustar pesos, bastaba con describir la tarea en el propio *prompt* y, opcionalmente, dar unos pocos ejemplos:
 
 - **Zero-shot**: solo la instrucción.
@@ -506,6 +526,8 @@ En 2020, OpenAI presentó **GPT-3** (*Language Models are Few-Shot Learners*, Br
 El modelo "entendía" la tarea sobre la marcha. Esto desplazó el paradigma del *fine-tuning* específico hacia el **diseño de prompts**, abriendo la puerta a un uso mucho más flexible y accesible.
 
 #### 📌 Leyes de escala (scaling laws)
+
+<p align="center"><img src="assets/llm-scaling-laws.svg" alt="Leyes de escala: el error baja de forma predecible con cómputo, datos y parámetros" width="520"></p>
 
 Ese mismo año, **Kaplan et al.** (OpenAI) formalizaron las **leyes de escala** (*Scaling Laws for Neural Language Models*): observaron que la pérdida (el error) del modelo disminuye de forma **predecible**, siguiendo leyes de potencia, a medida que crecen los parámetros, el tamaño del conjunto de datos y el cómputo. Por primera vez, mejorar un modelo dejó de ser puro ensayo y error y pasó a ser, en parte, un problema de ingeniería predecible. En 2022, el trabajo **Chinchilla** de DeepMind (Hoffmann et al.) refinó estas leyes, mostrando que muchos modelos estaban **infraentrenados en datos**: para un presupuesto de cómputo dado, conviene equilibrar parámetros y volumen de datos, en lugar de solo agrandar el modelo.
 
@@ -517,6 +539,8 @@ Ese mismo año, **Kaplan et al.** (OpenAI) formalizaron las **leyes de escala** 
 Un modelo grande es potente, pero no necesariamente **útil ni seguro**: puede ignorar la intención del usuario, divagar o generar contenido problemático. El reto pasó de la *capacidad* a la **alineación**.
 
 #### 📌 InstructGPT y RLHF
+
+<p align="center"><img src="assets/llm-rlhf.svg" alt="De loro estadístico a asistente: preentrenamiento, instrucciones, recompensa y RLHF" width="520"></p>
 
 OpenAI publicó **InstructGPT** (Ouyang et al., 2022), que introdujo a gran escala el **aprendizaje por refuerzo a partir de retroalimentación humana** (*RLHF*, Reinforcement Learning from Human Feedback). El proceso tiene tres fases:
 
@@ -550,6 +574,8 @@ Reentrenar todos los parámetros de un modelo gigantesco es caro. Surgieron téc
 
 #### 📌 RAG: conocimiento externo
 
+<p align="center"><img src="assets/llm-rag.svg" alt="RAG: recuperar documentos de una base vectorial antes de generar" width="520"></p>
+
 Los LLM "saben" solo lo que vieron durante el entrenamiento y pueden **alucinar** (inventar datos). La **generación aumentada por recuperación** (*RAG*, Retrieval-Augmented Generation, Lewis et al., 2020) ataca el problema: ante una consulta, el sistema primero **recupera** documentos relevantes de una base de conocimiento externa (usando búsqueda semántica sobre embeddings) y los inserta en el *prompt* para que el modelo responda **fundamentado** en ellos. RAG permite respuestas actualizadas, verificables y específicas de una organización sin reentrenar el modelo.
 
 #### 📌 Agentes
@@ -575,6 +601,8 @@ Un **gran modelo de lenguaje** (*Large Language Model*, LLM) no manipula texto d
 
 ### 👾 Tokenización: la unidad mínima
 
+<p align="center"><img src="assets/llm-tokenizacion.svg" alt="Tokenización: el texto se parte en sub-palabras y se mapea a números" width="520"></p>
+
 > [!TIP] 😄 Pausa
 > Un LLM no lee letras, lee "tokens" (trozos de palabra). Por eso a veces cuenta mal las erres de "ferrocarril": ve pedazos, no letras. Tú tampoco cuentas bien sin los dedos, no juzgues.
 
@@ -590,6 +618,8 @@ Esto tiene consecuencias muy prácticas:
 - **Coste.** Tanto el precio de las API como los límites de longitud se miden **en tokens**, no en palabras ni caracteres. Como regla aproximada, en inglés un token equivale a unos tres cuartos de palabra; en español, algo menos.
 
 ### 👾 Preentrenamiento: predecir el siguiente token a escala
+
+<p align="center"><img src="assets/llm-next-token.svg" alt="Preentrenamiento: predecir el siguiente token como distribución de probabilidad" width="520"></p>
 
 El corazón del aprendizaje es sorprendentemente simple. Durante el **preentrenamiento**, el modelo recibe enormes cantidades de texto y se entrena en una sola tarea: **predecir el siguiente token** dado todo lo anterior. No hay etiquetas humanas; la "respuesta correcta" es, sencillamente, el token que de verdad venía a continuación. Por eso se habla de aprendizaje **autosupervisado**.
 
@@ -624,6 +654,8 @@ Por eso ha ganado terreno una alternativa más simple, el **DPO** (*Direct Prefe
 
 ### 👾 Inferencia y decodificación: por qué generar es caro
 
+<p align="center"><img src="assets/llm-inferencia.svg" alt="Inferencia autorregresiva: un token cada vez, con caché KV" width="520"></p>
+
 Una vez entrenado, el modelo **genera** texto de forma **autorregresiva**: produce un token, lo añade a la secuencia y vuelve a predecir el siguiente, repitiendo el ciclo. Esta naturaleza **secuencial** es la razón de que generar sea inherentemente más lento que procesar una entrada ya completa: cada token depende del anterior y no puede calcularse en paralelo con los que vendrán.
 
 En cada paso, el modelo no entrega un token único, sino una **distribución de probabilidad** sobre todo el vocabulario. Cómo se elige el token a partir de ahí es la **estrategia de decodificación**:
@@ -638,11 +670,15 @@ Esto introduce la tensión entre **latencia** (cuánto tarda en aparecer la resp
 
 ### 👾 La ventana de contexto y su coste cuadrático
 
+<p align="center"><img src="assets/llm-contexto-cuadratico.svg" alt="La atención compara cada token con todos: coste cuadrático con la longitud" width="520"></p>
+
 La **ventana de contexto** es la cantidad máxima de tokens —prompt más respuesta— que el modelo puede tener "a la vista" a la vez. Todo lo que quede fuera, sencillamente, no existe para el modelo.
 
 Ampliarla es difícil por una razón estructural: el coste de la **atención** crece de forma **cuadrática** con la longitud. Si la secuencia se duplica, el cómputo y la memoria de la atención se cuadruplican, porque cada token se compara con todos los demás. Por eso pasar de unos pocos miles de tokens a cientos de miles ha exigido años de investigación en variantes de atención más eficientes, mejores codificaciones de posición y trucos de ingeniería. Hoy existen modelos con ventanas de **cientos de miles**, e incluso del orden de un millón de tokens, pero usar todo ese contexto sigue siendo costoso.
 
 ### 👾 Cuantización: modelos grandes en hardware modesto
+
+<p align="center"><img src="assets/llm-cuantizacion.svg" alt="Cuantización: comprimir los pesos de 32 a 8 o 4 bits" width="520"></p>
 
 Los pesos de un LLM se almacenan habitualmente en números de coma flotante de 16 bits. La **cuantización** los representa con menos precisión —**int8** (8 bits) o incluso **int4** (4 bits)— reduciendo drásticamente la memoria necesaria. Gracias a ello, modelos que exigirían servidores especializados pueden ejecutarse en un ordenador personal o en una sola GPU de consumo, con una pérdida de calidad por lo general pequeña. Es una de las claves de la explosión de modelos ejecutables localmente.
 
@@ -670,6 +706,8 @@ Conviene distinguir dos modos de uso del mismo modelo. Un **chatbot** recibe un 
 Un **agente**, en cambio, persigue un **objetivo** a lo largo de **varios pasos**. No solo genera texto: decide *qué hacer a continuación*, ejecuta acciones a través de herramientas, observa los resultados y ajusta su plan. La diferencia clave es la presencia de un **bucle de control** y de la capacidad de **actuar** sobre un entorno (un sistema de ficheros, una API, un navegador, una base de datos). El chatbot responde; el agente ejecuta tareas.
 
 ### 👾 Uso de herramientas y *function calling*
+
+<p align="center"><img src="assets/llm-function-calling.svg" alt="Function calling: el LLM emite una llamada, una herramienta la ejecuta y el resultado vuelve" width="520"></p>
 
 El mecanismo central que convierte a un LLM en agente es el **uso de herramientas**, conocido técnicamente como **function calling** (invocación de funciones). La idea es sencilla pero poderosa: además del texto del usuario, se le entrega al modelo una lista de **herramientas disponibles**, cada una descrita mediante un **esquema** en formato **JSON** (*JavaScript Object Notation*) con su nombre, una descripción en lenguaje natural y los parámetros que acepta.
 
@@ -724,6 +762,8 @@ Este ciclo **percepción → razonamiento → acción → observación** se repi
 
 ### 👾 El patrón ReAct: razonar y actuar
 
+<p align="center"><img src="assets/llm-react.svg" alt="Patrón ReAct: razonar, actuar y observar en bucle" width="520"></p>
+
 El patrón **ReAct** (de *Reasoning + Acting*, razonar y actuar) formaliza esta dinámica intercalando, paso a paso, **pensamientos** explícitos y **acciones**. En cada iteración el modelo escribe un breve razonamiento ("para responder esto necesito buscar X"), emite una acción (la llamada a herramienta) y luego incorpora la observación antes de pensar de nuevo. Hacer visible el razonamiento mejora la fiabilidad y, además, facilita la depuración, porque el desarrollador puede leer la cadena de decisiones.
 
 Sobre esta base se construyen capacidades más avanzadas:
@@ -744,6 +784,8 @@ La **memoria a largo plazo** resuelve esa limitación almacenando información f
 A medida que proliferaban las integraciones, conectar cada modelo con cada herramienta o fuente de datos se volvió un trabajo repetitivo y frágil. De ahí el interés por **estandarizar** la conexión. Un ejemplo destacado, presentado a finales de 2024 por Anthropic y adoptado ampliamente durante 2025, es el **MCP** (*Model Context Protocol*, protocolo de contexto del modelo): un estándar abierto que define cómo un asistente descubre y usa herramientas y datos externos a través de **servidores** que exponen esas capacidades de forma uniforme. La analogía habitual es la de un "puerto universal": en vez de un conector a medida por cada integración, un mismo protocolo permite enchufar de manera homogénea sistemas de archivos, repositorios, bases de datos o aplicaciones de terceros. La estandarización reduce el esfuerzo de integración y favorece un ecosistema de herramientas reutilizables.
 
 ### 👾 Sistemas multi-agente
+
+<p align="center"><img src="assets/llm-multiagente.svg" alt="Multi-agente: un orquestador reparte subtareas a agentes especializados" width="520"></p>
 
 En lugar de un único agente que lo hace todo, a veces es más eficaz repartir el trabajo entre varios **agentes especializados** con **roles** distintos que **colaboran**. Por ejemplo, un agente "investigador" recopila información, un agente "redactor" la sintetiza y un agente "revisor" la verifica. A menudo un **orquestador** coordina al conjunto: descompone el objetivo, reparte subtareas y combina los resultados.
 
@@ -870,6 +912,8 @@ El **audio** suele transformarse primero en un **espectrograma** (una representa
 
 ### 👾 Un espacio común: embeddings compartidos
 
+<p align="center"><img src="assets/llm-multimodal-espacio.svg" alt="Espacio compartido: texto, imagen y audio en el mismo espacio de embeddings" width="520"></p>
+
 El verdadero salto conceptual es lograr que distintas modalidades compartan un mismo **espacio de representación**. El ejemplo canónico es **CLIP** (*Contrastive Language-Image Pre-training*, preentrenamiento contrastivo de lenguaje e imagen), de OpenAI. CLIP entrena en paralelo dos codificadores, uno para texto y otro para imágenes, usando millones de pares (imagen, descripción) recogidos de la web. El objetivo del entrenamiento **contrastivo** es sencillo de enunciar: acercar en el espacio vectorial los pares que sí van juntos (una foto de un perro y el texto "un perro") y alejar los que no.
 
 El resultado es un **espacio de embeddings compartido**: la imagen de un gato y la palabra "gato" caen en posiciones cercanas, aunque provengan de modalidades distintas. Esto permite, por ejemplo, buscar imágenes con una frase, o clasificar fotos sin haber sido entrenado explícitamente para cada categoría (capacidad llamada *zero-shot*, "sin ejemplos previos").
@@ -881,6 +925,8 @@ Los primeros sistemas multimodales eran, en realidad, varios modelos pegados: un
 La frontera siguiente es lo que se denomina **"any-to-any"** (de cualquier modalidad a cualquier modalidad): un único modelo que recibe entradas en varias modalidades y también **genera** salidas en varias de ellas. Un sistema así puede escuchar una pregunta hablada, mirar una imagen adjunta y responder con voz o con una imagen nueva, todo dentro del mismo flujo. Esto reduce la latencia y conserva matices (como el tono de voz) que se perderían al traducir todo a texto intermedio.
 
 ### 👾 Generar imágenes y vídeo: la difusión
+
+<p align="center"><img src="assets/llm-difusion.svg" alt="Difusión: partir de ruido y quitarlo paso a paso, guiado por el texto" width="520"></p>
 
 Generar texto y generar imágenes funcionan de manera distinta. Los modelos de texto son **autoregresivos**: producen un token tras otro, prediciendo la siguiente palabra según las anteriores. La imagen y el vídeo, en cambio, suelen crearse con **modelos de difusión** (*diffusion models*).
 

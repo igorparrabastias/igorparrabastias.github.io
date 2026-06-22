@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 320" font-family="system-ui, sans-serif" role="img" aria-label="Arquitectura Transformer: pila de encoder y pila de decoder, cada bloque con atención y red feed-forward">
+  <style>
+    .enc{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
+    .dec{fill:#dfe3f7;stroke:#3a47b8;stroke-width:1.5}
+    .stack{fill:none;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .lab{font-size:12px;font-weight:700;fill:#333;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:1.8;fill:none}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="620" height="320" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <text class="lab" x="155" y="32">ENCODER  (×N)</text>
+  <rect class="stack" x="60" y="45" width="190" height="200" rx="8"/>
+  <rect class="enc" x="80" y="65"  width="150" height="34" rx="6"/><text class="t" x="155" y="86">Self-attention</text>
+  <rect class="enc" x="80" y="110" width="150" height="34" rx="6"/><text class="t" x="155" y="131">Feed-forward</text>
+  <rect class="enc" x="80" y="160" width="150" height="34" rx="6"/><text class="t" x="155" y="181">Self-attention</text>
+  <rect class="enc" x="80" y="205" width="150" height="34" rx="6"/><text class="t" x="155" y="226">Feed-forward</text>
+
+  <text class="lab" x="460" y="32">DECODER  (×N)</text>
+  <rect class="stack" x="370" y="45" width="190" height="200" rx="8"/>
+  <rect class="dec" x="390" y="65"  width="150" height="34" rx="6"/><text class="t" x="465" y="86">Masked attention</text>
+  <rect class="dec" x="390" y="110" width="150" height="34" rx="6"/><text class="t" x="465" y="131">Cross-attention</text>
+  <rect class="dec" x="390" y="160" width="150" height="34" rx="6"/><text class="t" x="465" y="181">Feed-forward</text>
+  <rect class="dec" x="390" y="205" width="150" height="34" rx="6"/><text class="t" x="465" y="226">…</text>
+
+  <!-- encoder feeds decoder cross-attention -->
+  <line class="fl" x1="250" y1="127" x2="390" y2="127" marker-end="url(#a)"/>
+
+  <line class="fl" x1="155" y1="265" x2="155" y2="245" marker-end="url(#a)"/>
+  <text class="cap" x="155" y="282">texto de entrada</text>
+  <line class="fl" x1="465" y1="265" x2="465" y2="245" marker-end="url(#a)"/>
+  <text class="cap" x="465" y="282">salida (token a token)</text>
+
+  <text class="cap" x="310" y="308">El encoder comprende; el decoder genera. BERT usa solo encoder; GPT, solo decoder.</text>
+</svg>

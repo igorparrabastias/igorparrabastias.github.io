@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" font-family="system-ui, sans-serif" role="img" aria-label="Codificación posicional: a cada embedding se le suma un patrón sinusoidal según su posición">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
+    .pos{fill:#f3d7cb;stroke:#e0663f;stroke-width:1.5}
+    .sum{fill:#3a47b8}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:11px;font-weight:700;fill:#fff;text-anchor:middle}
+    .to{font-size:11px;font-weight:700;fill:#e0663f;text-anchor:middle}
+    .op{font-size:18px;font-weight:700;fill:#999;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .wave{stroke:#e0663f;stroke-width:1.8;fill:none}
+  </style>
+  <rect width="640" height="230" fill="#ffffff"/>
+  <text class="ttl" x="320" y="28">El Transformer no tiene orden: hay que dárselo</text>
+
+  <text class="t" x="80" y="62" fill="#333">token</text>
+  <text class="to" x="80" y="115">posición</text>
+  <text class="t" x="80" y="172" fill="#333">entrada</text>
+
+  <!-- embeddings -->
+  <g>
+    <rect class="box" x="140" y="48" width="70" height="26"/><text class="t" x="175" y="66">"el"</text>
+    <rect class="box" x="230" y="48" width="70" height="26"/><text class="t" x="265" y="66">"gato"</text>
+    <rect class="box" x="320" y="48" width="70" height="26"/><text class="t" x="355" y="66">"come"</text>
+  </g>
+  <text class="op" x="265" y="95">+</text>
+  <!-- positional -->
+  <g>
+    <rect class="pos" x="140" y="100" width="70" height="26"/><text class="to" x="175" y="118">pos 0</text>
+    <rect class="pos" x="230" y="100" width="70" height="26"/><text class="to" x="265" y="118">pos 1</text>
+    <rect class="pos" x="320" y="100" width="70" height="26"/><text class="to" x="355" y="118">pos 2</text>
+  </g>
+  <text class="op" x="265" y="150">=</text>
+  <!-- sum -->
+  <g>
+    <rect class="sum" x="140" y="155" width="70" height="26"/><text class="tw" x="175" y="173">el₀</text>
+    <rect class="sum" x="230" y="155" width="70" height="26"/><text class="tw" x="265" y="173">gato₁</text>
+    <rect class="sum" x="320" y="155" width="70" height="26"/><text class="tw" x="355" y="173">come₂</text>
+  </g>
+
+  <!-- onda sinusoidal -->
+  <path class="wave" d="M 440 113 q 15 -25 30 0 t 30 0 t 30 0 t 30 0 t 30 0"/>
+  <text class="cap" x="510" y="140">patrón sinusoidal</text>
+
+  <text class="cap" x="320" y="210">Cada posición recibe una firma única (senos/cosenos) que se suma al embedding: ya hay orden.</text>
+</svg>
