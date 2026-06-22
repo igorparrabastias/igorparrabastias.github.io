@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="system-ui, sans-serif" role="img" aria-label="El banco de registros: celdas rápidas dentro de la CPU que alimentan a la ALU">
+  <style>
+    .cell{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
+    .spec{fill:#dfe3f7;stroke:#3a47b8;stroke-width:1.5}
+    .alu{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .r{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle;font-family:ui-monospace,monospace}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2;fill:none}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="560" height="240" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="150" y="28">Banco de registros</text>
+
+  <!-- columna de registros -->
+  <g>
+    <rect class="cell" x="60" y="45"  width="180" height="26"/><text class="r" x="150" y="63">R0  0000 1010</text>
+    <rect class="cell" x="60" y="73"  width="180" height="26"/><text class="r" x="150" y="91">R1  0000 0011</text>
+    <rect class="cell" x="60" y="101" width="180" height="26"/><text class="r" x="150" y="119">R2  1111 0000</text>
+    <rect class="cell" x="60" y="129" width="180" height="26"/><text class="r" x="150" y="147">R3  ...</text>
+  </g>
+  <rect class="spec" x="60" y="165" width="180" height="26"/><text class="r" x="150" y="183">PC · IR · estado</text>
+  <text class="cap" x="150" y="212">especiales</text>
+
+  <!-- lecturas hacia ALU -->
+  <line class="fl" x1="240" y1="58" x2="360" y2="90" marker-end="url(#a)"/>
+  <line class="fl" x1="240" y1="86" x2="360" y2="120" marker-end="url(#a)"/>
+
+  <polygon class="alu" points="365,75 435,75 455,115 435,155 365,155 385,115"/>
+  <text class="t" x="413" y="120">ALU</text>
+
+  <!-- escritura de vuelta -->
+  <path class="fl" d="M 455 115 L 500 115 L 500 35 L 150 35 L 150 45" marker-end="url(#a)"/>
+  <text class="cap" x="330" y="232">Acceso inmediato (mucho más rápido que la RAM); el resultado vuelve aquí.</text>
+</svg>

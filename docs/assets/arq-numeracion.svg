@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" font-family="system-ui, sans-serif" role="img" aria-label="El mismo número 250 en decimal, hexadecimal y binario">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .bd{fill:#3a47b8}
+    .v{font-size:20px;font-weight:700;fill:#3a47b8;text-anchor:middle;font-family:ui-monospace,monospace}
+    .vw{font-size:18px;font-weight:700;fill:#fff;text-anchor:middle;font-family:ui-monospace,monospace}
+    .lab{font-size:12px;fill:#666;text-anchor:middle}
+    .eq{font-size:22px;font-weight:700;fill:#999;text-anchor:middle}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+  </style>
+  <rect width="600" height="180" fill="#ffffff"/>
+  <text class="ttl" x="300" y="30">El mismo número, tres bases</text>
+  <rect class="box" x="40"  y="55" width="120" height="50" rx="8"/><text class="v"  x="100" y="88">250</text>
+  <text class="lab" x="100" y="122">decimal (10)</text>
+  <text class="eq" x="185" y="88">=</text>
+  <rect class="box" x="210" y="55" width="120" height="50" rx="8"/><text class="v"  x="270" y="88">FA</text>
+  <text class="lab" x="270" y="122">hex (16)</text>
+  <text class="eq" x="355" y="88">=</text>
+  <rect class="bd"  x="380" y="55" width="180" height="50" rx="8"/><text class="vw" x="470" y="88">1111&#160;1010</text>
+  <text class="lab" x="470" y="122">binario (2)</text>
+  <text class="cap" x="300" y="158">Un dígito hex = 4 bits:  F = 1111,  A = 1010.</text>
+</svg>

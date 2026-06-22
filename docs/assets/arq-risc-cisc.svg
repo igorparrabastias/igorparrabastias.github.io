@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 230" font-family="system-ui, sans-serif" role="img" aria-label="RISC frente a CISC: pocas instrucciones simples contra muchas instrucciones complejas">
+  <style>
+    .h1{fill:#3a47b8}
+    .h2{fill:#7782d6}
+    .ht{font-size:14px;font-weight:700;fill:#fff;text-anchor:middle}
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
+    .li{font-size:12px;fill:#333}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="600" height="230" fill="#ffffff"/>
+
+  <!-- RISC -->
+  <rect class="h1" x="40" y="40" width="240" height="34" rx="6"/><text class="ht" x="160" y="63">RISC  (ARM, RISC-V)</text>
+  <rect class="box" x="40" y="80" width="240" height="110" rx="6"/>
+  <text class="li" x="55" y="105">• pocas instrucciones simples</text>
+  <text class="li" x="55" y="128">• 1 instrucción ≈ 1 ciclo</text>
+  <text class="li" x="55" y="151">• fácil de segmentar → rápido</text>
+  <text class="li" x="55" y="174">• más instrucciones por tarea</text>
+
+  <!-- CISC -->
+  <rect class="h2" x="320" y="40" width="240" height="34" rx="6"/><text class="ht" x="440" y="63">CISC  (x86)</text>
+  <rect class="box" x="320" y="80" width="240" height="110" rx="6"/>
+  <text class="li" x="335" y="105">• muchas instrucciones complejas</text>
+  <text class="li" x="335" y="128">• una orden hace mucho</text>
+  <text class="li" x="335" y="151">• código más corto</text>
+  <text class="li" x="335" y="174">• hardware más complicado</text>
+
+  <text class="cap" x="300" y="215">Mismo objetivo, filosofías opuestas. Hoy RISC domina en móviles y gana terreno en todo.</text>
+</svg>

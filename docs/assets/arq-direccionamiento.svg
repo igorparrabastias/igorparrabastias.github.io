@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" font-family="system-ui, sans-serif" role="img" aria-label="Modos de direccionamiento: inmediato, de registro, directo e indirecto">
+  <style>
+    .row{fill:#f6f7fc;stroke:#e0e3f0;stroke-width:1}
+    .name{font-size:13px;font-weight:700;fill:#3a47b8}
+    .mono{font-size:12px;fill:#333;font-family:ui-monospace,monospace}
+    .desc{font-size:12px;fill:#666}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+  </style>
+  <rect width="600" height="250" fill="#ffffff"/>
+  <text class="ttl" x="300" y="28">Dónde está el dato (modos de direccionamiento)</text>
+
+  <rect class="row" x="40" y="45" width="520" height="42" rx="6"/>
+  <text class="name" x="55" y="62">Inmediato</text>
+  <text class="mono" x="55" y="80">ADD R1, #5</text>
+  <text class="desc" x="300" y="72">el dato (5) viaja DENTRO de la instrucción</text>
+
+  <rect class="row" x="40" y="93" width="520" height="42" rx="6"/>
+  <text class="name" x="55" y="110">De registro</text>
+  <text class="mono" x="55" y="128">ADD R1, R2</text>
+  <text class="desc" x="300" y="120">el dato está en un registro (R2)</text>
+
+  <rect class="row" x="40" y="141" width="520" height="42" rx="6"/>
+  <text class="name" x="55" y="158">Directo</text>
+  <text class="mono" x="55" y="176">ADD R1, [100]</text>
+  <text class="desc" x="300" y="168">en la posición de memoria 100</text>
+
+  <rect class="row" x="40" y="189" width="520" height="42" rx="6"/>
+  <text class="name" x="55" y="206">Indirecto</text>
+  <text class="mono" x="55" y="224">ADD R1, [R2]</text>
+  <text class="desc" x="300" y="216">R2 contiene la dirección del dato (¡punteros!)</text>
+</svg>

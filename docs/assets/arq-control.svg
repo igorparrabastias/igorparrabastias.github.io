@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 230" font-family="system-ui, sans-serif" role="img" aria-label="Unidad de control cableada (circuito fijo) frente a microprogramada (microcódigo en memoria)">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .bd{fill:#3a47b8}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:12px;font-weight:700;fill:#fff;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2;fill:none}
+    .cap{font-size:11px;fill:#888;text-anchor:middle}
+  </style>
+  <rect width="600" height="230" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <!-- Cableada -->
+  <text class="ttl" x="155" y="32">Cableada</text>
+  <rect class="box" x="50" y="50" width="210" height="55" rx="8"/><text class="t" x="155" y="83">circuito lógico fijo</text>
+  <line class="fl" x1="155" y1="105" x2="155" y2="135" marker-end="url(#a)"/>
+  <text class="t" x="155" y="158" font-size="12" fill="#333">señales de control</text>
+  <text class="cap" x="155" y="185">rápida · rígida · típica de RISC</text>
+
+  <line x1="300" y1="40" x2="300" y2="195" stroke="#e6e6ef" stroke-width="1.5"/>
+
+  <!-- Microprogramada -->
+  <text class="ttl" x="445" y="32">Microprogramada</text>
+  <rect class="box" x="340" y="50" width="210" height="55" rx="8"/><text class="t" x="445" y="73">microcódigo</text>
+  <text class="cap" x="445" y="92">(memoria interna de microinstrucciones)</text>
+  <line class="fl" x1="445" y1="105" x2="445" y2="135" marker-end="url(#a)"/>
+  <text class="t" x="445" y="158" font-size="12" fill="#333">señales de control</text>
+  <text class="cap" x="445" y="185">flexible · más lenta · típica de CISC</text>
+
+  <text class="cap" x="300" y="216" fill="#666">Dos formas de generar, en cada ciclo, las órdenes que mueven el datapath.</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 230" font-family="system-ui, sans-serif" role="img" aria-label="La ALU: recibe dos operandos y un código de operación, y entrega resultado y flags">
+  <style>
+    .alu{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:15px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .io{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2;fill:none}
+    .op{stroke:#e0663f;stroke-width:2;fill:none}
+    .lbl{font-size:11px;fill:#888;text-anchor:middle}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="560" height="230" fill="#ffffff"/>
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker>
+    <marker id="ao" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e0663f"/></marker>
+  </defs>
+
+  <!-- forma de ALU -->
+  <polygon class="alu" points="200,55 320,55 350,115 320,175 200,175 230,115"/>
+  <text class="t" x="278" y="120">ALU</text>
+
+  <!-- operandos -->
+  <line class="fl" x1="90" y1="80" x2="222" y2="80" marker-end="url(#a)"/><text class="io" x="70" y="85">A</text>
+  <line class="fl" x1="90" y1="150" x2="222" y2="150" marker-end="url(#a)"/><text class="io" x="70" y="155">B</text>
+
+  <!-- operación (control) -->
+  <line class="op" x1="278" y1="20" x2="278" y2="55" marker-end="url(#ao)"/>
+  <text class="lbl" x="278" y="15" fill="#e0663f">operación (suma, AND…)</text>
+
+  <!-- resultado -->
+  <line class="fl" x1="350" y1="115" x2="470" y2="115" marker-end="url(#a)"/><text class="io" x="500" y="120">resultado</text>
+
+  <!-- flags -->
+  <line class="op" x1="335" y1="160" x2="400" y2="195" marker-end="url(#ao)"/>
+  <text class="lbl" x="455" y="200" fill="#e0663f">flags: cero, acarreo, overflow</text>
+
+  <text class="cap" x="280" y="225">Es la "calculadora": dos entradas, una operación → un resultado y sus indicadores.</text>
+</svg>

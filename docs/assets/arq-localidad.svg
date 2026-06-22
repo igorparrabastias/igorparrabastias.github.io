@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 230" font-family="system-ui, sans-serif" role="img" aria-label="Localidad: al pedir un dato, la caché trae toda su línea (los vecinos), aprovechando la localidad espacial">
+  <style>
+    .cell{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
+    .hit{fill:#3a47b8;stroke:#3a47b8;stroke-width:1.5}
+    .near{fill:#aab0dd;stroke:#3a47b8;stroke-width:1.5}
+    .n{font-size:11px;fill:#3a47b8;text-anchor:middle;font-family:ui-monospace,monospace}
+    .nw{font-size:11px;fill:#fff;text-anchor:middle;font-family:ui-monospace,monospace}
+    .lbl{font-size:12px;font-weight:700;fill:#3a47b8}
+    .cap{font-size:12px;fill:#666}
+    .br{stroke:#9aa0c8;stroke-width:1.5;fill:none}
+  </style>
+  <rect width="620" height="230" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <text class="lbl" x="40" y="50">RAM (un arreglo en memoria)</text>
+  <g>
+    <rect class="cell" x="40"  y="60" width="44" height="34"/><text class="n" x="62"  y="81">a[0]</text>
+    <rect class="hit"  x="84"  y="60" width="44" height="34"/><text class="nw" x="106" y="81">a[1]</text>
+    <rect class="near" x="128" y="60" width="44" height="34"/><text class="n" x="150" y="81">a[2]</text>
+    <rect class="near" x="172" y="60" width="44" height="34"/><text class="n" x="194" y="81">a[3]</text>
+    <rect class="near" x="216" y="60" width="44" height="34"/><text class="n" x="238" y="81">a[4]</text>
+    <rect class="cell" x="260" y="60" width="44" height="34"/><text class="n" x="282" y="81">a[5]</text>
+    <rect class="cell" x="304" y="60" width="44" height="34"/><text class="n" x="326" y="81">…</text>
+  </g>
+  <text class="cap" x="106" y="115" fill="#3a47b8" text-anchor="middle" font-weight="700">pides a[1]</text>
+
+  <!-- línea de caché traída -->
+  <path class="br" d="M 106 94 L 106 140" marker-end="url(#a)"/>
+  <rect class="cell" x="84" y="145" width="176" height="34" rx="4" fill="#dfe3f7"/>
+  <text class="n" x="172" y="166">a[1] a[2] a[3] a[4]  →  caché</text>
+
+  <text class="cap" x="40" y="205">La caché trae la LÍNEA entera (los vecinos): localidad espacial.</text>
+  <text class="cap" x="40" y="223">Si vuelves a usar a[1] pronto: localidad temporal.</text>
+</svg>

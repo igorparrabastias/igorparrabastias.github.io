@@ -6,11 +6,15 @@ Cuando exprimir un solo núcleo ya no da más —y la [ley de Amdahl](rendimient
 
 **SIMD** (*Single Instruction, Multiple Data*) aplica **la misma operación a un vector entero de valores de golpe**. En vez de sumar dos números, suma dos listas de ocho números en una sola instrucción. Es ideal para todo lo que tenga estructura regular: gráficos, audio, vídeo y, sobre todo, **álgebra lineal**. Los procesadores traen extensiones SIMD (SSE, AVX, NEON) justo para esto.
 
+![SIMD: una sola instrucción suma dos vectores completos a la vez](../assets/arq-simd.svg)
+
 ## Multinúcleo: paralelismo de hilos
 
 Un chip **multinúcleo** mete varios procesadores completos en el mismo encapsulado, cada uno ejecutando su propio **hilo** de ejecución en paralelo (paralelismo a nivel de hilo, **TLP**). Técnicas como el **multihilo simultáneo** (*hyper-threading*) van más allá y dejan que un mismo núcleo ejecute dos hilos a la vez aprovechando sus huecos ociosos.
 
 Esto traslada el problema al **software**: para sacarle partido hay que dividir el trabajo en tareas independientes, y ahí aparecen las dificultades clásicas de la **concurrencia** —sincronización, condiciones de carrera, bloqueos—. El hardware ofrece los núcleos; aprovecharlos es trabajo del programador.
+
+![Multinúcleo: varios núcleos en un chip, cada uno ejecutando un hilo en paralelo](../assets/arq-multinucleo.svg)
 
 ## GPUs: paralelismo masivo
 

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" font-family="system-ui, sans-serif" role="img" aria-label="Tres técnicas de E/S: polling mantiene la CPU ocupada esperando; las interrupciones la liberan; el DMA mueve los datos sin la CPU">
+  <style>
+    .busy{fill:#e0663f}
+    .free{fill:#aab0dd}
+    .dma{fill:#3a47b8}
+    .lbl{font-size:13px;font-weight:700;fill:#3a47b8}
+    .leg{font-size:11px;fill:#666}
+    .cap{font-size:11px;fill:#888}
+    .ax{font-size:11px;fill:#888}
+  </style>
+  <rect width="640" height="250" fill="#ffffff"/>
+  <text class="ax" x="300" y="26">uso de la CPU durante una transferencia ⟶</text>
+
+  <!-- Polling -->
+  <text class="lbl" x="30" y="62">Polling</text>
+  <rect class="busy" x="140" y="48" width="380" height="24"/>
+  <text class="cap" x="140" y="44">CPU ocupada preguntando todo el rato</text>
+
+  <!-- Interrupciones -->
+  <text class="lbl" x="30" y="112">Interrup.</text>
+  <rect class="busy" x="140" y="98" width="40"  height="24"/>
+  <rect class="free" x="180" y="98" width="300" height="24"/>
+  <rect class="busy" x="480" y="98" width="40"  height="24"/>
+  <text class="cap" x="330" y="138">CPU libre; el dispositivo avisa al terminar</text>
+
+  <!-- DMA -->
+  <text class="lbl" x="30" y="162">DMA</text>
+  <rect class="busy" x="140" y="148" width="22"  height="24"/>
+  <rect class="free" x="162" y="148" width="336" height="24"/>
+  <rect class="busy" x="498" y="148" width="22"  height="24"/>
+  <rect class="dma"  x="162" y="178" width="336" height="16"/>
+  <text class="cap" x="200" y="208" fill="#3a47b8">el controlador DMA (barra azul) mueve los datos sin la CPU</text>
+
+  <!-- leyenda -->
+  <rect class="busy" x="140" y="225" width="14" height="12"/><text class="leg" x="160" y="235">CPU ocupada</text>
+  <rect class="free" x="270" y="225" width="14" height="12"/><text class="leg" x="290" y="235">CPU libre</text>
+  <rect class="dma"  x="380" y="225" width="14" height="12"/><text class="leg" x="400" y="235">transferencia DMA</text>
+</svg>

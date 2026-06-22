@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 210" font-family="system-ui, sans-serif" role="img" aria-label="Del ensamblador al código máquina: ADD R1,R2,R3 se traduce a campos binarios">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .op{fill:#3a47b8}
+    .ar{fill:#dfe3f7;stroke:#3a47b8;stroke-width:1.5}
+    .asm{font-size:16px;font-weight:700;fill:#3a47b8;text-anchor:middle;font-family:ui-monospace,monospace}
+    .tw{font-size:12px;font-weight:700;fill:#fff;text-anchor:middle;font-family:ui-monospace,monospace}
+    .bin{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle;font-family:ui-monospace,monospace}
+    .lab{font-size:10px;fill:#888;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2;fill:none}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+  </style>
+  <rect width="600" height="210" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="300" y="30">Ensamblador → código máquina</text>
+
+  <rect class="box" x="180" y="50" width="240" height="40" rx="8"/><text class="asm" x="300" y="76">ADD R1, R2, R3</text>
+  <line class="fl" x1="300" y1="90" x2="300" y2="120" marker-end="url(#a)"/>
+
+  <rect class="op" x="60"  y="125" width="120" height="40"/><text class="tw" x="120" y="150">100000</text>
+  <rect class="ar" x="180" y="125" width="120" height="40"/><text class="bin" x="240" y="150">00001</text>
+  <rect class="ar" x="300" y="125" width="120" height="40"/><text class="bin" x="360" y="150">00010</text>
+  <rect class="ar" x="420" y="125" width="120" height="40"/><text class="bin" x="480" y="150">00011</text>
+  <text class="lab" x="120" y="180">opcode (ADD)</text>
+  <text class="lab" x="240" y="180">R1</text>
+  <text class="lab" x="360" y="180">R2</text>
+  <text class="lab" x="480" y="180">R3</text>
+
+  <text class="cap" x="300" y="203">Un mnemónico legible por humanos; cada campo, unos bits que la CPU entiende.</text>
+</svg>

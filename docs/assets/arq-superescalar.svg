@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" font-family="system-ui, sans-serif" role="img" aria-label="Superescalar: dos instrucciones por ciclo usando dos pipelines en paralelo">
+  <style>
+    .a{fill:#cdd3f2;stroke:#3a47b8;stroke-width:1.5}
+    .b{fill:#9aa3e0;stroke:#3a47b8;stroke-width:1.5}
+    .c{font-size:10px;font-weight:700;fill:#1a2050;text-anchor:middle}
+    .lab{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ax{font-size:11px;fill:#888}
+    .cap{font-size:12px;fill:#666}
+  </style>
+  <rect width="640" height="220" fill="#ffffff"/>
+  <text class="ax" x="320" y="28">tiempo (ciclos) ⟶</text>
+
+  <text class="lab" x="35" y="62">vía 1</text>
+  <text class="lab" x="35" y="98">vía 2</text>
+
+  <!-- via 1: I1 -->
+  <g>
+    <rect class="a" x="80"  y="48" width="52" height="26"/><text class="c" x="106" y="65">IF</text>
+    <rect class="a" x="132" y="48" width="52" height="26"/><text class="c" x="158" y="65">ID</text>
+    <rect class="a" x="184" y="48" width="52" height="26"/><text class="c" x="210" y="65">EX</text>
+    <rect class="a" x="236" y="48" width="52" height="26"/><text class="c" x="262" y="65">MEM</text>
+    <rect class="a" x="288" y="48" width="52" height="26"/><text class="c" x="314" y="65">WB</text>
+  </g>
+  <!-- via 2: I2 (mismo ciclo) -->
+  <g>
+    <rect class="b" x="80"  y="84" width="52" height="26"/><text class="c" x="106" y="101">IF</text>
+    <rect class="b" x="132" y="84" width="52" height="26"/><text class="c" x="158" y="101">ID</text>
+    <rect class="b" x="184" y="84" width="52" height="26"/><text class="c" x="210" y="101">EX</text>
+    <rect class="b" x="236" y="84" width="52" height="26"/><text class="c" x="262" y="101">MEM</text>
+    <rect class="b" x="288" y="84" width="52" height="26"/><text class="c" x="314" y="101">WB</text>
+  </g>
+  <!-- siguiente par -->
+  <g opacity="0.55">
+    <rect class="a" x="132" y="120" width="52" height="26"/><text class="c" x="158" y="137">IF</text>
+    <rect class="b" x="132" y="150" width="52" height="26"/><text class="c" x="158" y="167">IF</text>
+  </g>
+
+  <text class="cap" x="80" y="200">Dos unidades de ejecución → dos instrucciones empiezan en CADA ciclo (ILP).</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" font-family="system-ui, sans-serif" role="img" aria-label="Tablas de verdad de las operaciones AND, OR y NOT">
+  <style>
+    .h{fill:#3a47b8}
+    .ht{font-size:13px;font-weight:700;fill:#fff;text-anchor:middle}
+    .cell{stroke:#cfd3e8;stroke-width:1;fill:#fff}
+    .one{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle;font-family:ui-monospace,monospace}
+    .zero{font-size:13px;font-weight:700;fill:#aab0bb;text-anchor:middle;font-family:ui-monospace,monospace}
+    .ttl{font-size:14px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="600" height="240" fill="#ffffff"/>
+
+  <!-- AND -->
+  <text class="ttl" x="100" y="35">AND (y)</text>
+  <rect class="h" x="40" y="50" width="120" height="26"/><text class="ht" x="70" y="68">A B</text><text class="ht" x="130" y="68">A·B</text>
+  <g>
+    <rect class="cell" x="40" y="76" width="120" height="24"/><text class="one"  x="70" y="93">0 0</text><text class="zero" x="130" y="93">0</text>
+    <rect class="cell" x="40" y="100" width="120" height="24"/><text class="one"  x="70" y="117">0 1</text><text class="zero" x="130" y="117">0</text>
+    <rect class="cell" x="40" y="124" width="120" height="24"/><text class="one"  x="70" y="141">1 0</text><text class="zero" x="130" y="141">0</text>
+    <rect class="cell" x="40" y="148" width="120" height="24"/><text class="one"  x="70" y="165">1 1</text><text class="one"  x="130" y="165">1</text>
+  </g>
+  <text class="cap" x="100" y="195">1 solo si AMBAS</text>
+
+  <!-- OR -->
+  <text class="ttl" x="300" y="35">OR (o)</text>
+  <rect class="h" x="240" y="50" width="120" height="26"/><text class="ht" x="270" y="68">A B</text><text class="ht" x="330" y="68">A+B</text>
+  <g>
+    <rect class="cell" x="240" y="76" width="120" height="24"/><text class="one"  x="270" y="93">0 0</text><text class="zero" x="330" y="93">0</text>
+    <rect class="cell" x="240" y="100" width="120" height="24"/><text class="one"  x="270" y="117">0 1</text><text class="one"  x="330" y="117">1</text>
+    <rect class="cell" x="240" y="124" width="120" height="24"/><text class="one"  x="270" y="141">1 0</text><text class="one"  x="330" y="141">1</text>
+    <rect class="cell" x="240" y="148" width="120" height="24"/><text class="one"  x="270" y="165">1 1</text><text class="one"  x="330" y="165">1</text>
+  </g>
+  <text class="cap" x="300" y="195">1 si AL MENOS una</text>
+
+  <!-- NOT -->
+  <text class="ttl" x="500" y="35">NOT (no)</text>
+  <rect class="h" x="450" y="50" width="100" height="26"/><text class="ht" x="480" y="68">A</text><text class="ht" x="525" y="68">¬A</text>
+  <g>
+    <rect class="cell" x="450" y="76" width="100" height="24"/><text class="zero" x="480" y="93">0</text><text class="one"  x="525" y="93">1</text>
+    <rect class="cell" x="450" y="100" width="100" height="24"/><text class="one"  x="480" y="117">1</text><text class="zero" x="525" y="117">0</text>
+  </g>
+  <text class="cap" x="500" y="195">invierte</text>
+
+  <text class="cap" x="300" y="225">Con estas tres (o solo NAND) se construye cualquier función lógica.</text>
+</svg>

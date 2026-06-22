@@ -29,6 +29,8 @@ Entre paso y paso, el PC normalmente avanza solo; pero una instrucción de **sal
 
 Al recorrido físico que siguen los datos entre los registros, la ALU y la memoria durante este ciclo se le llama **camino de datos** (*datapath*). La unidad de control es quien abre y cierra las "compuertas" de ese camino en el orden correcto en cada ciclo de reloj. El detalle de esas piezas está en [La CPU](cpu.md).
 
+![El PC direcciona la memoria; la instrucción llega a la unidad de control y dirige el flujo entre registros y ALU](../assets/arq-vn-datapath.svg)
+
 ---
 
 ➡️ Sigue en [La CPU](cpu.md).

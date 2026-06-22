@@ -26,15 +26,21 @@ Que la pirámide funcione se debe a un patrón empírico en cómo los programas 
 
 Por eso, al traer un dato de la RAM, la caché trae también sus vecinos —una **línea de caché** entera—, apostando a que harán falta.
 
+![Localidad: al pedir un dato, la caché trae toda su línea (los vecinos)](../assets/arq-localidad.svg)
+
 ## La caché en detalle
 
 Cuando la CPU pide un dato: si está en caché → **acierto** (*hit*), rapidísimo; si no → **fallo** (*miss*), hay que ir a la RAM (lento) y subir su línea. La **tasa de aciertos** es decisiva para el rendimiento real.
 
 Para decidir *dónde* puede ir cada línea se usan esquemas de **mapeo**: **directo** (cada bloque tiene un único hueco posible, simple pero con colisiones), **totalmente asociativo** (puede ir a cualquier hueco, flexible pero caro) y **asociativo por conjuntos** (el equilibrio que se usa en la práctica). Cuando la caché se llena, una **política de reemplazo** (como **LRU**, *el menos usado recientemente*) decide a quién echar. Y al escribir hay dos estrategias: ***write-through*** (escribir a la vez en caché y RAM) o ***write-back*** (escribir en RAM solo al expulsar la línea, más rápido).
 
+![Mapeo de caché: directo, asociativo por conjuntos y totalmente asociativo](../assets/arq-cache-mapeo.svg)
+
 ## Memoria virtual
 
 La **memoria virtual** da a cada programa la ilusión de tener toda la memoria para sí, en un espacio continuo, aunque la RAM física sea menor y esté compartida. Funciona dividiendo la memoria en **páginas** de tamaño fijo; la **MMU** traduce las direcciones virtuales a físicas mediante una **tabla de páginas**, acelerada por una caché especial de traducciones, la **TLB**. Si una página no está en RAM, se trae del disco (*page fault*); si falta espacio, otra se manda al disco (*swap*). Como efecto secundario, **aísla** los programas entre sí, base de la seguridad del sistema.
+
+![Memoria virtual: las páginas virtuales se traducen a marcos físicos vía la tabla de páginas](../assets/arq-memoria-virtual.svg)
 
 ---
 

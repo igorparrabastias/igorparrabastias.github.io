@@ -16,9 +16,13 @@ donde **CPI** es los *ciclos por instrucción* promedio. Mejorar el rendimiento 
 
 Lo interesante es que **se compensan entre sí**: un diseño RISC sube el número de instrucciones pero baja tanto el CPI y el ciclo que gana en conjunto.
 
+![Tiempo de CPU = nº de instrucciones × CPI × tiempo de ciclo](../assets/arq-formula-cpu.svg)
+
 ## MIPS, FLOPS y por qué desconfiar
 
 Medidas como **MIPS** (millones de instrucciones por segundo) o **FLOPS** (operaciones de coma flotante por segundo) resumen el ritmo en un solo número, pero hay que tomarlas con pinzas: no todas las instrucciones cuestan lo mismo, y dos máquinas con la misma cifra de MIPS pueden rendir muy distinto en un programa real. Por eso se usan **benchmarks** —programas representativos— en vez de fiarse de un número aislado.
+
+![Dos máquinas con los mismos MIPS pueden tardar muy distinto en un programa real](../assets/arq-mips.svg)
 
 ## La ley de Amdahl
 

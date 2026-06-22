@@ -18,9 +18,13 @@ Ese ideal rara vez se alcanza, porque hay situaciones que rompen el flujo:
 - **Riesgos de datos**: una instrucción necesita un resultado que la anterior **todavía no terminó** de calcular. Se mitigan con **adelantamiento** (*forwarding*: pasar el resultado directamente de una etapa a otra sin esperar a que se escriba) y, si no hay más remedio, insertando una **burbuja** (*stall*: una pausa).
 - **Riesgos de control**: tras un **salto**, no se sabe qué instrucción viene hasta resolverlo, y la tubería ya empezó a llenarse. Se ataca con **predicción de saltos**: el procesador *apuesta* por el camino más probable y ejecuta de forma especulativa; si acierta, no pierde tiempo; si falla, descarta el trabajo especulado y vuelve atrás.
 
+![Riesgo de datos: I2 necesita un resultado que I1 aún no escribió, lo que fuerza una burbuja](../assets/arq-hazard.svg)
+
 ## Más allá: ILP
 
 Llevar esto al extremo es explotar el **paralelismo a nivel de instrucción** (ILP): ejecutar **varias instrucciones por ciclo**. Un diseño **superescalar** tiene varias unidades de ejecución en paralelo; la ejecución **fuera de orden** (*out-of-order*) reordena las instrucciones para no quedarse parada esperando, manteniendo la apariencia de que todo ocurrió en orden. Son las técnicas que llevan décadas exprimiendo cada núcleo.
+
+![Superescalar: dos instrucciones empiezan en cada ciclo usando dos pipelines](../assets/arq-superescalar.svg)
 
 ---
 

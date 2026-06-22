@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 230" font-family="system-ui, sans-serif" role="img" aria-label="SIMD: una sola instrucción suma dos vectores completos a la vez, elemento a elemento">
+  <style>
+    .a{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
+    .b{fill:#dfe3f7;stroke:#3a47b8;stroke-width:1.5}
+    .r{fill:#3a47b8}
+    .n{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle;font-family:ui-monospace,monospace}
+    .nw{font-size:13px;font-weight:700;fill:#fff;text-anchor:middle;font-family:ui-monospace,monospace}
+    .op{font-size:16px;font-weight:700;fill:#e0663f;text-anchor:middle}
+    .lbl{font-size:12px;font-weight:700;fill:#333;text-anchor:end}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+  </style>
+  <rect width="620" height="230" fill="#ffffff"/>
+  <text class="ttl" x="310" y="30">SIMD: una instrucción, muchos datos</text>
+
+  <!-- vector A -->
+  <text class="lbl" x="70" y="72">A</text>
+  <g>
+    <rect class="a" x="85"  y="55" width="60" height="34"/><text class="n" x="115" y="77">3</text>
+    <rect class="a" x="155" y="55" width="60" height="34"/><text class="n" x="185" y="77">8</text>
+    <rect class="a" x="225" y="55" width="60" height="34"/><text class="n" x="255" y="77">1</text>
+    <rect class="a" x="295" y="55" width="60" height="34"/><text class="n" x="325" y="77">5</text>
+  </g>
+  <text class="op" x="400" y="78">+</text>
+
+  <!-- vector B -->
+  <text class="lbl" x="70" y="122">B</text>
+  <g>
+    <rect class="b" x="85"  y="105" width="60" height="34"/><text class="n" x="115" y="127">4</text>
+    <rect class="b" x="155" y="105" width="60" height="34"/><text class="n" x="185" y="127">2</text>
+    <rect class="b" x="225" y="105" width="60" height="34"/><text class="n" x="255" y="127">9</text>
+    <rect class="b" x="295" y="105" width="60" height="34"/><text class="n" x="325" y="127">0</text>
+  </g>
+
+  <!-- resultado -->
+  <text class="lbl" x="70" y="180">=</text>
+  <g>
+    <rect class="r" x="85"  y="163" width="60" height="34"/><text class="nw" x="115" y="185">7</text>
+    <rect class="r" x="155" y="163" width="60" height="34"/><text class="nw" x="185" y="185">10</text>
+    <rect class="r" x="225" y="163" width="60" height="34"/><text class="nw" x="255" y="185">10</text>
+    <rect class="r" x="295" y="163" width="60" height="34"/><text class="nw" x="325" y="185">5</text>
+  </g>
+
+  <text class="op" x="460" y="125" font-size="13">1 instrucción</text>
+  <text class="cap" x="460" y="150" font-size="11">en vez de 4</text>
+
+  <text class="cap" x="310" y="222">Ideal para gráficos, audio y álgebra lineal — la base del cálculo de la IA.</text>
+</svg>

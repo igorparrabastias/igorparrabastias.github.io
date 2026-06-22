@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" font-family="system-ui, sans-serif" role="img" aria-label="Riesgo de datos: una instrucción necesita un resultado que la anterior aún no escribió, lo que obliga a una burbuja">
+  <style>
+    .if{fill:#cdd3f2;stroke:#3a47b8;stroke-width:1.5}
+    .ex{fill:#9aa3e0;stroke:#3a47b8;stroke-width:1.5}
+    .wb{fill:#5663c8;stroke:#3a47b8;stroke-width:1.5}
+    .bub{fill:#f3d7cb;stroke:#e0663f;stroke-width:1.5}
+    .c{font-size:10px;font-weight:700;fill:#1a2050;text-anchor:middle}
+    .cw{font-size:10px;font-weight:700;fill:#fff;text-anchor:middle}
+    .cb{font-size:10px;font-weight:700;fill:#e0663f;text-anchor:middle}
+    .lab{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .dep{stroke:#e0663f;stroke-width:2;fill:none}
+    .cap{font-size:12px;fill:#666}
+  </style>
+  <rect width="640" height="230" fill="#ffffff"/>
+  <defs><marker id="ao" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e0663f"/></marker></defs>
+
+  <text class="lab" x="35" y="62">I1</text>
+  <text class="lab" x="35" y="122">I2</text>
+  <text class="c" x="120" y="34" fill="#888">ADD R1…</text>
+  <text class="c" x="300" y="94" fill="#888">usa R1</text>
+
+  <!-- I1: IF ID EX MEM WB -->
+  <g>
+    <rect class="if" x="70"  y="45" width="55" height="26"/><text class="c"  x="97"  y="62">IF</text>
+    <rect class="if" x="125" y="45" width="55" height="26"/><text class="c"  x="152" y="62">ID</text>
+    <rect class="ex" x="180" y="45" width="55" height="26"/><text class="c"  x="207" y="62">EX</text>
+    <rect class="ex" x="235" y="45" width="55" height="26"/><text class="cw" x="262" y="62">MEM</text>
+    <rect class="wb" x="290" y="45" width="55" height="26"/><text class="cw" x="317" y="62">WB</text>
+  </g>
+  <!-- I2 con burbuja: necesita R1 antes de que I1 lo escriba -->
+  <g>
+    <rect class="if"  x="125" y="105" width="55" height="26"/><text class="c"  x="152" y="122">IF</text>
+    <rect class="bub" x="180" y="105" width="55" height="26"/><text class="cb" x="207" y="122">stall</text>
+    <rect class="bub" x="235" y="105" width="55" height="26"/><text class="cb" x="262" y="122">stall</text>
+    <rect class="ex"  x="290" y="105" width="55" height="26"/><text class="c"  x="317" y="122">ID</text>
+    <rect class="ex"  x="345" y="105" width="55" height="26"/><text class="cw" x="372" y="122">EX</text>
+  </g>
+
+  <!-- dependencia -->
+  <path class="dep" d="M 317 71 C 317 88, 280 90, 290 103" marker-end="url(#ao)"/>
+
+  <text class="cap" x="70" y="170">Riesgo de DATOS: I2 necesita R1, que I1 aún no ha escrito (WB).</text>
+  <text class="cap" x="70" y="192" fill="#e0663f">Solución: forwarding (pasar el dato antes) o, si no, una burbuja (pausa).</text>
+</svg>

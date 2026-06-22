@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 200" font-family="system-ui, sans-serif" role="img" aria-label="Tiempo de CPU = número de instrucciones por CPI por tiempo de ciclo">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .res{fill:#3a47b8}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:14px;font-weight:700;fill:#fff;text-anchor:middle}
+    .op{font-size:24px;font-weight:700;fill:#999;text-anchor:middle}
+    .sub{font-size:11px;fill:#888;text-anchor:middle}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+  </style>
+  <rect width="620" height="200" fill="#ffffff"/>
+  <text class="ttl" x="310" y="32">Lo que de verdad cuesta un programa</text>
+
+  <rect class="res" x="30"  y="65" width="110" height="50" rx="8"/><text class="tw" x="85" y="95">tiempo</text>
+  <text class="op" x="160" y="98">=</text>
+
+  <rect class="box" x="185" y="65" width="120" height="50" rx="8"/><text class="t" x="245" y="88">nº de</text><text class="t" x="245" y="106">instrucciones</text>
+  <text class="op" x="320" y="98">×</text>
+
+  <rect class="box" x="340" y="65" width="90" height="50" rx="8"/><text class="t" x="385" y="95">CPI</text>
+  <text class="op" x="445" y="98">×</text>
+
+  <rect class="box" x="465" y="65" width="125" height="50" rx="8"/><text class="t" x="527" y="88">tiempo de</text><text class="t" x="527" y="106">ciclo</text>
+
+  <text class="sub" x="245" y="135">compilador / algoritmo</text>
+  <text class="sub" x="385" y="135">arquitectura</text>
+  <text class="sub" x="527" y="135">tecnología (GHz)</text>
+
+  <text class="cap" x="310" y="172">La frecuencia (GHz) es solo UNO de los tres factores: por eso más GHz no siempre es más rápido.</text>
+</svg>

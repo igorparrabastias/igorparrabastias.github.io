@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" font-family="system-ui, sans-serif" role="img" aria-label="Semisumador: dos entradas A y B producen suma (XOR) y acarreo (AND)">
+  <style>
+    .g{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .w{stroke:#9aa0c8;stroke-width:2;fill:none}
+    .nm{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .io{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:12px;fill:#666;text-anchor:middle;font-family:ui-monospace,monospace}
+  </style>
+  <rect width="600" height="220" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="300" y="28">Semisumador (medio sumador)</text>
+
+  <text class="io" x="55" y="80">A</text>
+  <text class="io" x="55" y="150">B</text>
+
+  <!-- líneas de entrada con ramas -->
+  <line class="w" x1="65" y1="75" x2="180" y2="65"/>
+  <line class="w" x1="65" y1="145" x2="180" y2="95"/>
+  <line class="w" x1="65" y1="75" x2="180" y2="135"/>
+  <line class="w" x1="65" y1="145" x2="180" y2="165"/>
+
+  <!-- XOR -> Suma -->
+  <path class="g" d="M 185 55 Q 210 80 185 105 Q 235 105 260 80 Q 235 55 185 55 Z"/>
+  <path class="w" d="M 177 55 Q 202 80 177 105"/>
+  <text class="nm" x="218" y="84">XOR</text>
+  <line class="w" x1="260" y1="80" x2="360" y2="80" marker-end="url(#a)"/>
+  <text class="io" x="395" y="85">Suma</text>
+
+  <!-- AND -> Acarreo -->
+  <path class="g" d="M 185 130 L 185 175 L 215 175 A 22 22 0 0 0 215 130 Z"/>
+  <text class="nm" x="208" y="157">AND</text>
+  <line class="w" x1="237" y1="152" x2="360" y2="152" marker-end="url(#a)"/>
+  <text class="io" x="400" y="157">Acarreo</text>
+
+  <text class="cap" x="300" y="205">1+1 = 10 :  Suma=0, Acarreo=1 — la base de toda la aritmética.</text>
+</svg>

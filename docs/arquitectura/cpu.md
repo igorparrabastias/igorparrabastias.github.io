@@ -6,9 +6,13 @@ La unidad central de proceso es el cerebro de la máquina: donde el [ciclo de in
 
 La **unidad aritmético-lógica** (ALU) es la calculadora del procesador: suma, resta, compara y hace las operaciones lógicas (AND, OR, XOR…). Recibe dos operandos y un código que indica qué operación realizar, y entrega un resultado más unos **indicadores** (*flags*): si hubo acarreo, si el resultado fue cero, si hubo desbordamiento. Esos flags son los que luego usan los saltos condicionales.
 
+![La ALU recibe dos operandos y un código de operación, y entrega resultado y flags](../assets/arq-alu.svg)
+
 ## El banco de registros
 
 Los **registros** son un puñado de celdas de memoria ultrarrápidas dentro de la propia CPU, donde viven los datos con los que se está trabajando ahora mismo. Acceder a un registro es muchísimo más veloz que ir a la RAM, así que el compilador se esfuerza en mantener en ellos lo más caliente. Además de los de propósito general, hay registros especiales: el **PC**, el **IR** y el **registro de estado** (que guarda los flags).
+
+![Banco de registros: celdas rápidas que alimentan a la ALU y reciben el resultado](../assets/arq-registros.svg)
 
 ## La unidad de control
 
@@ -16,6 +20,8 @@ La **unidad de control** es el director de orquesta: en cada ciclo genera las se
 
 - **Cableada**: un circuito lógico fijo que produce las señales. Es muy **rápida** y típica de los diseños **RISC**, pero rígida: cambiarla implica rediseñar el hardware.
 - **Microprogramada**: cada instrucción se traduce a una secuencia de **microinstrucciones** guardadas en una pequeña memoria interna (el *microcódigo*). Es más **flexible** —se pueden añadir o corregir instrucciones— y típica de los diseños **CISC**, a costa de algo de velocidad.
+
+![Unidad de control cableada (circuito fijo) frente a microprogramada (microcódigo)](../assets/arq-control.svg)
 
 ## El camino de datos en acción
 

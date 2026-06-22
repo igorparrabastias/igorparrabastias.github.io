@@ -6,6 +6,8 @@ Una CPU que solo calcula no sirve de nada: necesita **hablar con el mundo** —t
 
 Los dispositivos son **muchísimo más lentos** que la CPU y muy distintos entre sí. Para no atarse a cada uno, la CPU no habla directamente con el hardware sino con **módulos de E/S** (controladores) que exponen un puñado de registros. Acceder a esos registros se hace de dos maneras: **mapeada en memoria** (los registros del dispositivo ocupan direcciones como si fueran RAM, y se leen/escriben con las instrucciones normales) o con **E/S aislada** (instrucciones especiales y un espacio de direcciones aparte).
 
+![La CPU habla con un módulo de E/S que expone registros, no con el dispositivo directamente](../assets/arq-es-modulo.svg)
+
 ## Las tres técnicas
 
 ¿Cómo espera la CPU a un dispositivo lento? Hay tres enfoques, de peor a mejor aprovechamiento:
@@ -13,6 +15,8 @@ Los dispositivos son **muchísimo más lentos** que la CPU y muy distintos entre
 1. **E/S programada (*polling*)**: la CPU pregunta una y otra vez "¿ya estás listo?". Simple, pero **desperdicia** todo ese tiempo girando en vacío.
 2. **Por interrupciones**: la CPU sigue con otro trabajo y el dispositivo **avisa** (lanza una *interrupción*) cuando termina. La CPU suspende lo que hacía, atiende con una rutina (*ISR*) y vuelve a lo suyo. Mucho más eficiente. Las interrupciones tienen **prioridades** y un **vector** que indica qué rutina ejecutar.
 3. **DMA (acceso directo a memoria)**: para transferencias grandes (un bloque de disco entero), un controlador especial mueve los datos **entre el dispositivo y la RAM sin pasar por la CPU**, que solo se entera al final con una interrupción. Libera por completo al procesador para otras tareas.
+
+![Polling mantiene la CPU ocupada; las interrupciones la liberan; el DMA mueve los datos sin la CPU](../assets/arq-es-tecnicas.svg)
 
 ## Buses
 

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 200" font-family="system-ui, sans-serif" role="img" aria-label="La CPU no habla con el dispositivo directamente, sino con un módulo de E/S que expone registros">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .mod{fill:#dfe3f7;stroke:#3a47b8;stroke-width:2}
+    .dev{fill:#f3d7cb;stroke:#e0663f;stroke-width:2}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .td{font-size:13px;font-weight:700;fill:#e0663f;text-anchor:middle}
+    .lbl{font-size:10px;fill:#888;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2;fill:none}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="620" height="200" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <rect class="box" x="40"  y="65" width="110" height="55" rx="8"/><text class="t" x="95" y="97">CPU</text>
+  <rect class="mod" x="240" y="55" width="140" height="75" rx="8"/><text class="t" x="310" y="82">Módulo de E/S</text><text class="lbl" x="310" y="104">registros: datos,</text><text class="lbl" x="310" y="118">estado, control</text>
+  <rect class="dev" x="470" y="65" width="110" height="55" rx="8"/><text class="td" x="525" y="90">Dispositivo</text><text class="lbl" x="525" y="108" fill="#b84a26">lento y distinto</text>
+
+  <line class="fl" x1="150" y1="92" x2="240" y2="92" marker-end="url(#a)"/>
+  <line class="fl" x1="240" y1="100" x2="150" y2="100" marker-end="url(#a)"/>
+  <line class="fl" x1="380" y1="92" x2="470" y2="92" marker-end="url(#a)"/>
+  <line class="fl" x1="470" y1="100" x2="380" y2="100" marker-end="url(#a)"/>
+
+  <text class="cap" x="310" y="165">La CPU lee/escribe los registros del módulo (mapeados en memoria o con E/S aislada);</text>
+  <text class="cap" x="310" y="183">el módulo se encarga del hardware concreto. Así la CPU no depende de cada aparato.</text>
+</svg>

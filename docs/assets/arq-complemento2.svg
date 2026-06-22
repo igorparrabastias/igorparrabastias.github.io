@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 210" font-family="system-ui, sans-serif" role="img" aria-label="Complemento a dos: negar 5 invirtiendo los bits y sumando uno da -5">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .mono{font-size:18px;font-weight:700;fill:#3a47b8;text-anchor:middle;font-family:ui-monospace,monospace}
+    .step{font-size:12px;fill:#666;text-anchor:end}
+    .fl{stroke:#9aa0c8;stroke-width:2;fill:none}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .hi{fill:#e0663f}
+  </style>
+  <rect width="600" height="210" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="300" y="28">Cómo se obtiene −5 (en 8 bits)</text>
+
+  <text class="step" x="250" y="62">+5 =</text>
+  <rect class="box" x="260" y="45" width="200" height="32" rx="6"/><text class="mono" x="360" y="68">0000 0101</text>
+
+  <text class="step" x="250" y="107">invertir los bits →</text>
+  <rect class="box" x="260" y="90" width="200" height="32" rx="6"/><text class="mono" x="360" y="113">1111 1010</text>
+
+  <text class="step" x="250" y="152">sumar 1 →</text>
+  <rect class="box" x="260" y="135" width="200" height="32" rx="6"/><text class="mono hi" x="360" y="158">1111 1011</text>
+  <text class="mono hi" x="510" y="158">= −5</text>
+
+  <line class="fl" x1="360" y1="77" x2="360" y2="90" marker-end="url(#a)"/>
+  <line class="fl" x1="360" y1="122" x2="360" y2="135" marker-end="url(#a)"/>
+
+  <text class="cap" x="300" y="192">Con n bits: de −2ⁿ⁻¹ a 2ⁿ⁻¹−1.  La resta A−B = suma de A con el complemento de B.</text>
+</svg>

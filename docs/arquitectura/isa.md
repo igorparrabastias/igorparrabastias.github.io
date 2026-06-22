@@ -23,6 +23,8 @@ Una instrucción necesita decir *dónde* están sus datos, y hay varias formas d
 
 Esta variedad es lo que permite a un lenguaje de alto nivel traducir punteros, arreglos y estructuras a algo que la máquina entienda.
 
+![Modos de direccionamiento: inmediato, de registro, directo e indirecto](../assets/arq-direccionamiento.svg)
+
 ## RISC vs CISC
 
 Hay dos grandes filosofías de diseño:
@@ -30,9 +32,13 @@ Hay dos grandes filosofías de diseño:
 - **CISC** (p. ej. x86): muchas instrucciones, algunas **complejas** que hacen mucho en una sola orden. El código ocupa menos, pero el hardware es más complicado y difícil de acelerar.
 - **RISC** (p. ej. ARM, RISC-V): pocas instrucciones **simples y regulares**, fáciles de segmentar y de ejecutar en un ciclo. Necesita más instrucciones por tarea, pero corre más rápido y gasta menos energía. Domina hoy en móviles y, cada vez más, en todas partes (incluidos los chips de Apple y los servidores).
 
+![RISC (pocas instrucciones simples) frente a CISC (muchas instrucciones complejas)](../assets/arq-risc-cisc.svg)
+
 ## Ensamblador
 
 Programar en **ensamblador** es escribir directamente en este nivel: una línea por instrucción, usando nombres mnemotécnicos (`MOV`, `ADD`, `JMP`) en vez de binario. Casi nadie programa así hoy, pero **leerlo** es esencial para entender qué hace de verdad el compilador, depurar a bajo nivel y optimizar lo crítico.
+
+![Del ensamblador ADD R1,R2,R3 a sus campos binarios de código máquina](../assets/arq-ensamblador.svg)
 
 ---
 
