@@ -12,6 +12,7 @@ Las URLs de Colab/GitHub apuntan a notebook/<...> en master (su ubicación real
 en el repo); la copia en pages/ es solo para el build y no se commitea.
 """
 import os
+import re
 import sys
 import json
 import glob
@@ -194,10 +195,32 @@ def on_config(config):
     return config
 
 
+# Enlaces internos heredados: los notebooks de 'problemas' venían de problems/ (raíz
+# del repo) con rutas '../notebook/...' que, al renderizarse ahora en notebook/<carpeta>/,
+# resuelven a /notebook/notebook/... (doble). Se corrige la base ('../notebook/' -> '../')
+# y se apunta al .html renderizado. Algunos destinos cambiaron de nombre al unificar el
+# repo; se remapean a su equivalente actual para que no queden enlaces rotos.
+_NB_REMAP = {
+    "implementacion-de-estructuras-simples/linked-lists-listas-enlazadas":
+        "implementacion-de-estructuras-simples/listas-enlazadas-linked-lists",
+    "algoritmos-de-arboles/arboles-binarios": "arboles/arbol-binario",
+    "algoritmos-de-arboles/recorridos-en-arboles-binarios": "arboles/arbol-binario",
+    "implementacion-de-arboles/arboles-binarios-definicion-y-recorridos-preorden-inorden-postorden":
+        "arboles/arbol-binario",
+}
+
+
+def _fix_nb_link(m):
+    path = _NB_REMAP.get(m.group(1), m.group(1))
+    return f'href="../{path}.html"'
+
+
 def on_page_content(html, page, config, files):
     src = page.file.src_uri
     if not src.endswith(".ipynb"):
         return html
+    # Corrige los enlaces internos heredados (ver nota en _NB_REMAP arriba).
+    html = re.sub(r'href="\.\./notebook/([^"]+?)\.ipynb"', _fix_nb_link, html)
     # src es 'notebook/<...>.ipynb' (o 'demo/slicing.ipynb'); ambos existen en master.
     colab = f"https://colab.research.google.com/github/{GH}/blob/{BRANCH}/{src}"
     github = f"https://github.com/{GH}/blob/{BRANCH}/{src}"
