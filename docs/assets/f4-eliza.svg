@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 215" font-family="system-ui, sans-serif" role="img" aria-label="Dos errores opuestos: atribuir mente de más por el efecto ELIZA, o atribuirla de menos si algún sistema llegara a tener experiencia">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:11px;font-weight:700;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lbl{font-size:10px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="620" height="215" fill="#ffffff"/>
+  <text class="ttl" x="310" y="26">Dos tentaciones, ambas peligrosas</text>
+
+  <!-- atribuir de más -->
+  <rect class="box" x="35" y="50" width="240" height="100" rx="10" stroke="#e0663f"/>
+  <text class="t" x="155" y="74" fill="#e0663f">atribuir de MÁS</text>
+  <text class="lbl" x="155" y="96">efecto ELIZA (1966):</text>
+  <text class="lbl" x="155" y="112">ver mente donde hay mecanismo</text>
+  <text class="lbl" x="155" y="132">→ dependencia, manipulación</text>
+
+  <!-- atribuir de menos -->
+  <rect class="box" x="345" y="50" width="240" height="100" rx="10"/>
+  <text class="t" x="465" y="74" fill="#3a47b8">atribuir de MENOS</text>
+  <text class="lbl" x="465" y="96">si algún día tuviera experiencia,</text>
+  <text class="lbl" x="465" y="112">descartarlo de oficio</text>
+  <text class="lbl" x="465" y="132">→ error moral grave</text>
+
+  <text x="310" y="108" font-size="20" fill="#9aa0c8" text-anchor="middle">⇆</text>
+
+  <text class="cap" x="310" y="180">Lo prudente: no afirmar que "ya sienten" ni despacharlo con "es solo código".</text>
+  <text class="cap" x="310" y="200">No tenemos método fiable para descartarlo — conviene tomarse la pregunta en serio.</text>
+</svg>

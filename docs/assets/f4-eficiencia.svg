@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" font-family="system-ui, sans-serif" role="img" aria-label="Destilación de un modelo maestro grande a uno estudiante pequeño y cuantización de 16 a 4 bits">
+  <style>
+    .big{fill:#3a47b8}
+    .small{fill:#aab0dd;stroke:#3a47b8;stroke-width:1.5}
+    .tw{font-size:11px;font-weight:700;fill:#fff;text-anchor:middle}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2;fill:none}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .sub{font-size:10px;fill:#888;text-anchor:middle}
+    .bit{font-size:10px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+  </style>
+  <rect width="640" height="230" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="320" y="26">Hacer modelos pequeños y capaces</text>
+
+  <!-- destilación -->
+  <text class="t" x="160" y="55">Destilación</text>
+  <circle class="big" cx="70" cy="120" r="42"/><text class="tw" x="70" y="118">maestro</text><text class="tw" x="70" y="132" font-size="9">grande</text>
+  <line class="fl" x1="118" y1="120" x2="210" y2="120" marker-end="url(#a)"/>
+  <text class="sub" x="164" y="112">enseña a imitar</text>
+  <circle class="small" cx="240" cy="120" r="24"/><text class="t" x="240" y="124" font-size="10">estudiante</text>
+  <text class="sub" x="160" y="180">misma competencia, fracción del tamaño</text>
+
+  <line x1="330" y1="50" x2="330" y2="190" stroke="#ccc" stroke-width="1"/>
+
+  <!-- cuantización -->
+  <text class="t" x="490" y="55">Cuantización</text>
+  <rect class="big" x="375" y="95" width="60" height="50" rx="6"/><text class="bit" x="405" y="125" fill="#fff">16 bits</text>
+  <line class="fl" x1="445" y1="120" x2="495" y2="120" marker-end="url(#a)"/>
+  <rect class="small" x="500" y="103" width="44" height="34" rx="6"/><text class="bit" x="522" y="124" font-size="9">8 bits</text>
+  <line class="fl" x1="552" y1="120" x2="592" y2="120" marker-end="url(#a)"/>
+  <rect class="small" x="592" y="108" width="32" height="24" rx="6" fill="#7782d6"/><text class="bit" x="608" y="124" font-size="8" fill="#fff">4 bits</text>
+  <text class="sub" x="500" y="180">menos memoria y cómputo, casi sin perder calidad</text>
+
+  <text class="cap" x="320" y="212">Con destilación, cuantización y mejores datos, un modelo pequeño cabe en tu teléfono.</text>
+</svg>

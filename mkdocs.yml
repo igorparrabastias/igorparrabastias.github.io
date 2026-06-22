@@ -160,6 +160,13 @@ plugins:
   - callouts          # convierte > [!TIP] (estilo GitHub) en cajas Material visibles
   - search:
       lang: es
+  - glightbox:        # abre las imágenes (diagramas SVG) en un modal con zoom al hacer clic
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      zoomable: true
+      draggable: true
+      auto_caption: true
   - mkdocs-jupyter:
       execute: false
       include_source: true

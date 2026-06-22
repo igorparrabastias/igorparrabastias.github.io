@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 215" font-family="system-ui, sans-serif" role="img" aria-label="Alineación: que el objetivo del modelo apunte a lo que queremos, no a una versión torcida como el reward hacking">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lbl{font-size:10px;fill:#666;text-anchor:middle}
+    .good{stroke:#2e8b57;stroke-width:3;fill:none}
+    .bad{stroke:#e0663f;stroke-width:3;fill:none}
+  </style>
+  <rect width="620" height="215" fill="#ffffff"/>
+  <defs>
+    <marker id="g" markerWidth="9" markerHeight="9" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#2e8b57"/></marker>
+    <marker id="r" markerWidth="9" markerHeight="9" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#e0663f"/></marker>
+  </defs>
+  <text class="ttl" x="310" y="26">Alineación: que el modelo quiera lo correcto</text>
+
+  <!-- alineado -->
+  <rect class="box" x="40" y="60" width="90" height="40" rx="8"/><text class="t" x="85" y="84">modelo</text>
+  <line class="good" x1="135" y1="80" x2="245" y2="80" marker-end="url(#g)"/>
+  <circle cx="262" cy="80" r="8" fill="none" stroke="#2e8b57" stroke-width="2"/><circle cx="262" cy="80" r="3" fill="#2e8b57"/>
+  <text class="t" x="345" y="84" fill="#2e8b57">lo que queremos</text>
+  <text class="lbl" x="150" y="115">alineado: objetivos coinciden</text>
+
+  <line x1="310" y1="130" x2="310" y2="200" stroke="#ccc" stroke-width="1"/>
+  <line x1="40" y1="128" x2="580" y2="128" stroke="#ccc" stroke-width="1"/>
+
+  <!-- desalineado / reward hacking -->
+  <rect class="box" x="40" y="148" width="90" height="40" rx="8" stroke="#e0663f"/><text class="t" x="85" y="172" fill="#e0663f">modelo</text>
+  <line class="bad" x1="135" y1="168" x2="240" y2="200" marker-end="url(#r)"/>
+  <text class="t" x="330" y="205" fill="#e0663f">✗ maximiza la recompensa</text>
+  <text class="lbl" x="300" y="150">reward hacking: atajo torcido</text>
+
+  <text class="lbl" x="470" y="172">cumple la métrica,</text>
+  <text class="lbl" x="470" y="188">no la intención real</text>
+</svg>

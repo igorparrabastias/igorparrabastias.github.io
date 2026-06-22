@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 210" font-family="system-ui, sans-serif" role="img" aria-label="Seis retos abiertos: fiabilidad, alineación, sostenibilidad física, economía, concentración de poder e impacto social">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .sub{font-size:9px;fill:#888;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="620" height="210" fill="#ffffff"/>
+  <text class="ttl" x="310" y="26">Retos abiertos que no tienen solución cerrada</text>
+
+  <rect class="box" x="25"  y="45" width="185" height="52" rx="8"/><text class="t" x="117" y="68">Fiabilidad</text><text class="sub" x="117" y="84">alucinaciones convincentes</text>
+  <rect class="box" x="218" y="45" width="185" height="52" rx="8"/><text class="t" x="310" y="68">Alineación y seguridad</text><text class="sub" x="310" y="84">sistemas autónomos</text>
+  <rect class="box" x="411" y="45" width="185" height="52" rx="8"/><text class="t" x="503" y="68">Sostenibilidad física</text><text class="sub" x="503" y="84">energía, agua, materiales</text>
+
+  <rect class="box" x="25"  y="105" width="185" height="52" rx="8"/><text class="t" x="117" y="128">Economía</text><text class="sub" x="117" y="144">¿cuadran las cuentas?</text>
+  <rect class="box" x="218" y="105" width="185" height="52" rx="8"/><text class="t" x="310" y="128">Poder y gobernanza</text><text class="sub" x="310" y="144">quién controla el cómputo</text>
+  <rect class="box" x="411" y="105" width="185" height="52" rx="8"/><text class="t" x="503" y="128">Impacto social</text><text class="sub" x="503" y="144">empleo y automatización</text>
+
+  <text class="cap" x="310" y="188">Forman parte, precisamente, de lo que hace de este un momento abierto.</text>
+</svg>

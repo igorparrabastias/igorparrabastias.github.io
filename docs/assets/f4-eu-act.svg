@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" font-family="system-ui, sans-serif" role="img" aria-label="El Reglamento de IA de la UE clasifica los usos por nivel de riesgo en una pirámide: prohibido, alto, limitado y mínimo">
+  <style>
+    .t{font-size:12px;font-weight:700;fill:#fff;text-anchor:middle}
+    .lbl{font-size:10px;fill:#333;text-anchor:start}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="600" height="220" fill="#ffffff"/>
+  <text class="ttl" x="300" y="26">EU AI Act: regular por nivel de riesgo</text>
+
+  <polygon points="248,46 312,46 322,79 238,79" fill="#e0663f"/>
+  <text class="t" x="280" y="67" font-size="10">prohibido</text>
+  <polygon points="238,81 322,81 334,114 226,114" fill="#3a47b8"/>
+  <text class="t" x="280" y="102">alto riesgo</text>
+  <polygon points="226,116 334,116 346,149 214,149" fill="#7782d6"/>
+  <text class="t" x="280" y="137">riesgo limitado</text>
+  <polygon points="214,151 346,151 358,184 202,184" fill="#aab0dd"/>
+  <text class="t" x="280" y="172" fill="#333">riesgo mínimo</text>
+
+  <text class="lbl" x="372" y="65">se prohíbe (p. ej. puntuación social)</text>
+  <text class="lbl" x="372" y="102">obligaciones estrictas</text>
+  <text class="lbl" x="372" y="137">deber de transparencia</text>
+  <text class="lbl" x="372" y="172">sin reglas especiales</text>
+
+  <text class="cap" x="300" y="212">Aplicación escalonada desde 2025. El reto: regular algo que cambia más rápido que las leyes.</text>
+</svg>

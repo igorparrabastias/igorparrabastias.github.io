@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 215" font-family="system-ui, sans-serif" role="img" aria-label="Tensión entre la concentración del cómputo en pocas manos y los modelos abiertos que democratizan el acceso">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lbl{font-size:10px;fill:#666;text-anchor:middle}
+    .h{font-size:11px;font-weight:700;text-anchor:middle}
+  </style>
+  <rect width="620" height="215" fill="#ffffff"/>
+  <text class="ttl" x="310" y="26">Concentración vs. apertura</text>
+
+  <!-- concentración -->
+  <text class="h" x="155" y="52" fill="#e0663f">control / concentración</text>
+  <circle cx="155" cy="105" r="34" fill="#3a47b8"/><text x="155" y="102" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">cómputo</text><text x="155" y="116" font-size="9" fill="#fff" text-anchor="middle">pocas manos</text>
+  <text class="lbl" x="155" y="160">más seguridad,</text>
+  <text class="lbl" x="155" y="174">pero menos acceso</text>
+
+  <text x="310" y="110" font-size="22" fill="#9aa0c8" text-anchor="middle">⇄</text>
+
+  <!-- apertura -->
+  <text class="h" x="465" y="52" fill="#2e8b57">apertura / abiertos</text>
+  <g fill="#7782d6">
+    <circle cx="430" cy="90" r="13"/><circle cx="470" cy="82" r="13"/><circle cx="505" cy="98" r="13"/>
+    <circle cx="445" cy="125" r="13"/><circle cx="485" cy="120" r="13"/>
+  </g>
+  <text class="lbl" x="465" y="160">más acceso e innovación,</text>
+  <text class="lbl" x="465" y="174">pero más riesgo de abuso</text>
+
+  <text class="cap" x="310" y="200">Quién controla el cómputo y los modelos punteros es uno de los ejes políticos de los próximos años.</text>
+</svg>

@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install mkdocs-material mkdocs-callouts mkdocs-jupyter
+      - run: pip install mkdocs-material mkdocs-callouts mkdocs-jupyter mkdocs-glightbox
       - run: mkdocs build --site-dir _site
       - uses: actions/upload-pages-artifact@v3
         with:

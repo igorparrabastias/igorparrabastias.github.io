@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" font-family="system-ui, sans-serif" role="img" aria-label="El muro de los datos: el texto de calidad se agota, y el colapso del modelo por entrenar con datos sintéticos sin filtro">
+  <style>
+    .axis{stroke:#9aa0c8;stroke-width:1.5}
+    .curve{fill:none;stroke:#3a47b8;stroke-width:2.5}
+    .wall{stroke:#e0663f;stroke-width:2;stroke-dasharray:5 4}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .lbl{font-size:10px;fill:#666;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .ow{font-size:10px;font-weight:700;fill:#e0663f;text-anchor:middle}
+  </style>
+  <rect width="640" height="230" fill="#ffffff"/>
+  <text class="ttl" x="320" y="26">El muro de los datos y el colapso del modelo</text>
+
+  <!-- izq: muro -->
+  <text class="t" x="160" y="52">texto de buena calidad disponible</text>
+  <line class="axis" x1="50" y1="170" x2="290" y2="170"/>
+  <line class="axis" x1="50" y1="60" x2="50" y2="170"/>
+  <path class="curve" d="M50,160 C110,120 170,95 250,90"/>
+  <line class="wall" x1="250" y1="60" x2="250" y2="175"/>
+  <text class="ow" x="252" y="185" text-anchor="start">muro</text>
+  <text class="lbl" x="160" y="200">se agota el texto bueno, diverso y no repetido</text>
+
+  <line x1="330" y1="45" x2="330" y2="195" stroke="#ccc" stroke-width="1"/>
+
+  <!-- der: colapso (fotocopia de fotocopia) -->
+  <text class="t" x="490" y="52">colapso: IA entrena con IA</text>
+  <rect x="375" y="75" width="44" height="56" rx="4" fill="#eef0fb" stroke="#3a47b8" stroke-width="1.5"/>
+  <rect x="450" y="80" width="44" height="56" rx="4" fill="#dfe3f5" stroke="#7782d6" stroke-width="1.5"/>
+  <rect x="525" y="85" width="44" height="56" rx="4" fill="#eceef6" stroke="#aab0dd" stroke-width="1.5"/>
+  <text class="lbl" x="397" y="148">original</text>
+  <text class="lbl" x="472" y="153">copia</text>
+  <text class="lbl" x="547" y="158">copia 2</text>
+  <line x1="419" y1="103" x2="450" y2="103" stroke="#9aa0c8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="494" y1="108" x2="525" y2="108" stroke="#9aa0c8" stroke-width="2" marker-end="url(#a)"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ow" x="490" y="190">cada generación pierde diversidad</text>
+
+  <text class="cap" x="320" y="218">La ventaja ya no es tener MÁS texto, sino MEJOR texto: limpio, diverso y exclusivo.</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 230" font-family="system-ui, sans-serif" role="img" aria-label="Dos formas de evaluar tareas abiertas: un LLM como juez y las arenas donde personas votan entre respuestas anónimas para construir un ranking Elo">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2;fill:none}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lbl{font-size:10px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="620" height="230" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="310" y="26">Evaluar lo que no tiene respuesta única</text>
+
+  <!-- LLM juez -->
+  <text class="t" x="155" y="52">LLM como juez</text>
+  <rect class="box" x="40"  y="70" width="90" height="30" rx="6"/><text class="t" x="85" y="90" font-size="10">respuesta A</text>
+  <rect class="box" x="40"  y="110" width="90" height="30" rx="6"/><text class="t" x="85" y="130" font-size="10">respuesta B</text>
+  <rect x="180" y="80" width="80" height="50" rx="8" fill="#3a47b8"/><text x="220" y="103" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">juez</text><text x="220" y="119" font-size="9" fill="#fff" text-anchor="middle">modelo</text>
+  <line class="fl" x1="130" y1="90"  x2="178" y2="100" marker-end="url(#a)"/>
+  <line class="fl" x1="130" y1="125" x2="178" y2="112" marker-end="url(#a)"/>
+  <text class="lbl" x="155" y="155">barato y escala, pero con sesgos</text>
+
+  <line x1="320" y1="42" x2="320" y2="180" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Arena -->
+  <text class="t" x="470" y="52">Arena (voto humano)</text>
+  <rect class="box" x="350" y="70" width="80" height="30" rx="6"/><text class="t" x="390" y="90" font-size="10">A (anónima)</text>
+  <rect class="box" x="350" y="110" width="80" height="30" rx="6"/><text class="t" x="390" y="130" font-size="10">B (anónima)</text>
+  <g fill="#3a47b8"><circle cx="470" cy="98" r="7"/><path d="M457,120 a13,13 0 0 1 26,0 z"/></g><text class="lbl" x="470" y="138">votante</text>
+  <line class="fl" x1="430" y1="90"  x2="455" y2="100" marker-end="url(#a)"/>
+  <line class="fl" x1="430" y1="125" x2="455" y2="112" marker-end="url(#a)"/>
+  <rect x="500" y="85" width="100" height="36" rx="8" fill="#fbeee9" stroke="#e0663f" stroke-width="1.5"/><text class="t" x="550" y="102" font-size="10" fill="#e0663f">ranking Elo</text><text class="lbl" x="550" y="115">(como ajedrez)</text>
+  <line class="fl" x1="485" y1="103" x2="500" y2="103" marker-end="url(#a)"/>
+  <text class="lbl" x="470" y="160">miles de votos → qué prefiere la gente</text>
+
+  <text class="cap" x="310" y="200">Ambos miden bien… pero "agradar" no es lo mismo que "acertar".</text>
+</svg>

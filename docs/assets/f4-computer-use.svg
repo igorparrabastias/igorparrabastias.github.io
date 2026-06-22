@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 230" font-family="system-ui, sans-serif" role="img" aria-label="Computer use: el agente lee la pantalla, decide y actúa con el cursor en un bucle, como una persona">
+  <style>
+    .scr{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .bar{fill:#3a47b8}
+    .btn{fill:#fff;stroke:#7782d6;stroke-width:1.5}
+    .ag{fill:#3a47b8}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:11px;font-weight:700;fill:#fff;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2;fill:none}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lbl{font-size:10px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="600" height="230" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="300" y="26">El agente usa el ordenador como una persona</text>
+
+  <rect class="ag" x="60" y="95" width="110" height="50" rx="10"/><text class="tw" x="115" y="118">agente</text><text class="tw" x="115" y="134" font-size="9">decide</text>
+
+  <rect class="scr" x="360" y="60" width="180" height="120" rx="6"/>
+  <rect class="bar" x="360" y="60" width="180" height="18" rx="6"/><text class="tw" x="450" y="73" font-size="9">navegador / app</text>
+  <rect class="btn" x="378" y="92" width="144" height="16" rx="3"/>
+  <rect class="btn" x="378" y="116" width="90" height="16" rx="3"/>
+  <rect class="btn" x="378" y="146" width="70" height="22" rx="4" fill="#e0663f" stroke="none"/><text class="tw" x="413" y="161" font-size="9">Enviar</text>
+  <path d="M495,150 l10,4 l-4,2 l3,6 l-3,1 l-3,-6 l-4,3 z" fill="#3a47b8"/>
+
+  <path class="fl" d="M170,108 C260,80 300,80 358,100" marker-end="url(#a)"/>
+  <text class="lbl" x="265" y="78">actúa: clic, teclea</text>
+  <path class="fl" d="M358,150 C300,180 240,178 170,138" marker-end="url(#a)"/>
+  <text class="lbl" x="265" y="190">percibe: lee la pantalla</text>
+
+  <text class="cap" x="300" y="216">Mueve el cursor, hace clic y rellena formularios: puede usar cualquier software hecho para humanos.</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" font-family="system-ui, sans-serif" role="img" aria-label="El costo hídrico oculto: los datacenters generan calor y la refrigeración evaporativa consume agua dulce">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2;fill:none}
+    .heat{stroke:#e0663f;stroke-width:2;fill:none}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lbl{font-size:10px;fill:#666;text-anchor:middle}
+    .water{fill:#3a8fd8}
+  </style>
+  <rect width="600" height="220" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="300" y="26">El costo hídrico oculto</text>
+
+  <rect class="box" x="50" y="80" width="120" height="60" rx="8"/><text class="t" x="110" y="106">datacenter</text><text class="t" x="110" y="123" font-size="10">GPUs</text>
+
+  <path class="heat" d="M195,95 q8,-8 0,-16 M210,95 q8,-8 0,-16 M225,95 q8,-8 0,-16"/>
+  <text class="lbl" x="215" y="120">calor</text>
+
+  <rect class="box" x="260" y="80" width="120" height="60" rx="8"/><text class="t" x="320" y="103">refrigeración</text><text class="t" x="320" y="120" font-size="10">evaporativa</text>
+
+  <line class="fl" x1="170" y1="110" x2="258" y2="110" marker-end="url(#a)"/>
+  <line class="fl" x1="380" y1="110" x2="470" y2="110" marker-end="url(#a)"/>
+
+  <g class="water">
+    <path d="M500,80 c12,16 12,26 0,30 c-12,-4 -12,-14 0,-30 z"/>
+    <path d="M525,95 c9,12 9,20 0,23 c-9,-3 -9,-11 0,-23 z" opacity="0.8"/>
+    <path d="M478,98 c9,12 9,20 0,23 c-9,-3 -9,-11 0,-23 z" opacity="0.8"/>
+  </g>
+  <text class="lbl" x="505" y="150">agua dulce</text>
+
+  <text class="cap" x="300" y="185">Cientos de miles de millones de litros al año, a menudo en regiones con estrés hídrico.</text>
+  <text class="cap" x="300" y="205">Solución en estudio: refrigeración líquida en circuito cerrado y por inmersión.</text>
+</svg>

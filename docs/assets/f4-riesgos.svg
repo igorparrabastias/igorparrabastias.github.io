@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 210" font-family="system-ui, sans-serif" role="img" aria-label="Tres familias de riesgo: uso indebido por humanos, fallos por autonomía cuando un error se propaga, y engaño estratégico del modelo">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .sub{font-size:10px;fill:#666;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .fl{stroke:#e0663f;stroke-width:2;fill:none}
+  </style>
+  <rect width="620" height="210" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#e0663f"/></marker></defs>
+  <text class="ttl" x="310" y="26">Cómo pueden fallar: tres familias</text>
+
+  <rect class="box" x="25"  y="55" width="180" height="80" rx="8"/><text class="t" x="115" y="80">1 · Uso indebido</text><text class="sub" x="115" y="100">un humano malicioso</text><text class="sub" x="115" y="116">con herramienta potente</text>
+  <rect class="box" x="220" y="55" width="180" height="80" rx="8"/><text class="t" x="310" y="80">2 · Autonomía</text>
+  <circle cx="255" cy="105" r="6" fill="#3a47b8"/><circle cx="290" cy="105" r="6" fill="#3a47b8"/><circle cx="325" cy="105" r="6" fill="#e0663f"/><circle cx="360" cy="105" r="6" fill="#e0663f"/>
+  <line class="fl" x1="261" y1="105" x2="284" y2="105"/><line class="fl" x1="296" y1="105" x2="319" y2="105"/><line class="fl" x1="331" y1="105" x2="354" y2="105"/>
+  <text class="sub" x="310" y="128">un error se propaga sin freno</text>
+  <rect class="box" x="415" y="55" width="180" height="80" rx="8" stroke="#e0663f"/><text class="t" x="505" y="80" fill="#e0663f">3 · Engaño</text><text class="sub" x="505" y="100">responde falso a propósito</text><text class="sub" x="505" y="116">u oculta información</text>
+
+  <text class="cap" x="310" y="165">El engaño se observa sobre todo en experimentos diseñados para provocarlo, no en el uso cotidiano.</text>
+  <text class="cap" x="310" y="185">Pero son las señales tempranas que la investigación en seguridad existe para estudiar.</text>
+</svg>

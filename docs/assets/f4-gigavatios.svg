@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 220" font-family="system-ui, sans-serif" role="img" aria-label="Un megacluster mide su potencia en gigavatios, comparable a una ciudad mediana o un reactor nuclear">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .gpu{fill:#3a47b8}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:12px;font-weight:700;fill:#fff;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lbl{font-size:11px;fill:#333;text-anchor:middle}
+    .eq{font-size:20px;font-weight:700;fill:#e0663f;text-anchor:middle}
+  </style>
+  <rect width="620" height="220" fill="#ffffff"/>
+  <text class="ttl" x="310" y="26">La nueva unidad de poderío: el gigavatio</text>
+
+  <rect x="40" y="55" width="150" height="100" rx="8" fill="#eef0fb" stroke="#3a47b8" stroke-width="2"/>
+  <g fill="#3a47b8">
+    <rect x="55" y="70" width="14" height="20"/><rect x="74" y="70" width="14" height="20"/><rect x="93" y="70" width="14" height="20"/><rect x="112" y="70" width="14" height="20"/><rect x="131" y="70" width="14" height="20"/><rect x="150" y="70" width="14" height="20"/>
+    <rect x="55" y="98" width="14" height="20"/><rect x="74" y="98" width="14" height="20"/><rect x="93" y="98" width="14" height="20"/><rect x="112" y="98" width="14" height="20"/><rect x="131" y="98" width="14" height="20"/><rect x="150" y="98" width="14" height="20"/>
+  </g>
+  <text class="t" x="115" y="146">megacluster (100.000+ GPUs)</text>
+
+  <text class="eq" x="240" y="115">≈</text>
+
+  <circle cx="320" cy="105" r="38" class="box"/><text class="lbl" x="320" y="100">1 GW</text><text class="lbl" x="320" y="116" font-size="10">≈ ciudad</text>
+
+  <text class="eq" x="400" y="115">≈</text>
+
+  <rect x="440" y="68" width="140" height="76" rx="8" class="box"/>
+  <path d="M510,80 a18,28 0 1 0 0.1,0" fill="none" stroke="#3a47b8" stroke-width="2.5"/>
+  <circle cx="510" cy="108" r="6" fill="#e0663f"/>
+  <text class="lbl" x="510" y="160" font-size="10">1 reactor nuclear</text>
+
+  <text class="cap" x="310" y="200">Ya no se cuentan solo parámetros: el entrenamiento puntero se mide en gigavatios de potencia.</text>
+</svg>

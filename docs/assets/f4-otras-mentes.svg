@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 220" font-family="system-ui, sans-serif" role="img" aria-label="El problema de las otras mentes: atribuimos conciencia a otros por analogía, pero la IA rompe la analogía porque su comportamiento sugiere mente y su sustrato no se parece al nuestro">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lbl{font-size:10px;fill:#666;text-anchor:middle}
+    .ok{font-size:10px;font-weight:700;fill:#2e8b57;text-anchor:middle}
+    .no{font-size:10px;font-weight:700;fill:#e0663f;text-anchor:middle}
+  </style>
+  <rect width="620" height="220" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="310" y="26">¿Cómo sé que el otro tiene mente?</text>
+
+  <!-- humano: analogía funciona -->
+  <rect class="box" x="35" y="55" width="90" height="40" rx="8"/><text class="t" x="80" y="80">yo</text>
+  <line x1="125" y1="75" x2="200" y2="75" stroke="#9aa0c8" stroke-width="2" marker-end="url(#a)"/>
+  <text class="lbl" x="162" y="65">analogía</text>
+  <rect class="box" x="205" y="55" width="90" height="40" rx="8"/><text class="t" x="250" y="80">otra persona</text>
+  <text class="ok" x="165" y="115">comportamiento ✓ + sustrato ✓ → infiero mente</text>
+
+  <line x1="40" y1="135" x2="580" y2="135" stroke="#ccc" stroke-width="1"/>
+
+  <!-- IA: analogía rota -->
+  <rect class="box" x="35" y="150" width="90" height="40" rx="8"/><text class="t" x="80" y="175">yo</text>
+  <line x1="125" y1="170" x2="200" y2="170" stroke="#e0663f" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#a)"/>
+  <text class="no" x="162" y="160">analogía rota</text>
+  <rect class="box" x="205" y="150" width="90" height="40" rx="8" stroke="#e0663f"/><text class="t" x="250" y="175" fill="#e0663f">una IA</text>
+  <text class="ok" x="430" y="165">comportamiento ✓ "quizá sí"</text>
+  <text class="no" x="430" y="183">sustrato ✗ "no se parece a nada"</text>
+
+  <text class="cap" x="310" y="210">No tenemos un "conciencímetro" que dirima el empate entre las dos señales.</text>
+</svg>

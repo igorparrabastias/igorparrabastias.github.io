@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 215" font-family="system-ui, sans-serif" role="img" aria-label="El problema difícil de la conciencia: el procesamiento es explicable, pero por qué viene acompañado de experiencia subjetiva no lo es">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .hard{fill:#fbeee9;stroke:#e0663f;stroke-width:2}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .th{font-size:11px;font-weight:700;fill:#e0663f;text-anchor:middle}
+    .sub{font-size:10px;fill:#666;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="600" height="215" fill="#ffffff"/>
+  <text class="ttl" x="300" y="26">Dos clases de problema (Chalmers)</text>
+
+  <rect class="box" x="35" y="55" width="230" height="90" rx="10"/>
+  <text class="t" x="150" y="78">"fáciles"</text>
+  <text class="sub" x="150" y="100">procesar información,</text>
+  <text class="sub" x="150" y="116">integrar señales,</text>
+  <text class="sub" x="150" y="132">dirigir la atención</text>
+
+  <rect class="hard" x="335" y="55" width="230" height="90" rx="10"/>
+  <text class="th" x="450" y="78">"difícil"</text>
+  <text class="sub" x="450" y="100">¿por qué hay</text>
+  <text class="sub" x="450" y="116">experiencia subjetiva?</text>
+  <text class="sub" x="450" y="132">(qualia: "qué se siente")</text>
+
+  <text class="cap" x="150" y="172">la ciencia, en principio, puede explicarlos</text>
+  <text class="cap" x="450" y="172" fill="#e0663f">nada que medimos en un modelo lo toca</text>
+
+  <text class="cap" x="300" y="200">Un sistema podría comportarse como consciente sin que "se sienta nada" dentro: el zombi filosófico.</text>
+</svg>

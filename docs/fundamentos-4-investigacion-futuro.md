@@ -67,6 +67,8 @@ El caso de **DeepSeek-R1** (publicado a principios de 2025) fue especialmente in
 
 Sus límites también son claros. Razonar más **cuesta más tiempo y más dinero**, y no garantiza acertar. Aparecen patologías propias: el *overthinking* (el modelo se enreda en deliberaciones interminables para preguntas triviales) y el *reward hacking* (encuentra atajos que maximizan la recompensa sin resolver de verdad el problema). Y hay un matiz incómodo: la cadena de pensamiento que el modelo *muestra* no siempre coincide con el cálculo que realmente lo llevó a la respuesta, así que leerla no es lo mismo que auditar su razonamiento.
 
+<p align="center"><img src="assets/f4-razonamiento-cot.svg" alt="Responder directo frente a generar una cadena de pasos antes de la respuesta" width="520"></p>
+
 ### 👾 El regreso del aprendizaje por refuerzo a escala
 
 <p align="center"><img src="assets/img/f4-rl.png" alt="Una IA recibiendo señales de recompensa y retroalimentación que la van mejorando" width="460"></p>
@@ -78,6 +80,8 @@ En la era de ChatGPT, el RL llegó al gran público con el **RLHF** (*Reinforcem
 De ahí surgieron dos evoluciones. La primera, el **RLAIF** (*RL from AI Feedback*), sustituye parte de ese juicio humano por el de otro modelo guiado por un conjunto de principios escritos —la idea de **IA constitucional** (*Constitutional AI*) de Anthropic—, lo que permite escalar la supervisión. La segunda, y la más transformadora en este periodo, es el **RLVR** (*RL from Verifiable Rewards*): cuando la tarea tiene una respuesta objetivamente comprobable (matemáticas, código que pasa o no sus tests, problemas de lógica), no hace falta un humano ni un juez aproximado; la recompensa la da la **verificación automática**. Eso permite generar cantidades enormes de señal de entrenamiento de alta calidad, casi gratis.
 
 En el plano algorítmico, también hubo simplificaciones útiles. Métodos como **PPO** (*Proximal Policy Optimization*) eran eficaces pero complejos y caros de estabilizar; alternativas más ligeras como **DPO** (*Direct Preference Optimization*) y **GRPO** (*Group Relative Policy Optimization*, popularizado por DeepSeek) recortaron costes y volvieron el RL mucho más accesible. La consecuencia de fondo: tras años en que el progreso venía sobre todo del **preentrenamiento** (tragar más texto), una parte creciente de las mejoras viene ahora del **postentrenamiento** con RL. El cómputo se está reasignando.
+
+<p align="center"><img src="assets/f4-rl-tipos.svg" alt="Tres formas de RL según de dónde viene la recompensa: humano, otra IA o verificación automática" width="520"></p>
 
 ### 👾 Mixture of Experts (MoE)
 
@@ -125,6 +129,8 @@ Tres técnicas lo hacen posible. La **destilación** (*distillation*) entrena un
 
 El efecto práctico más visible es la ejecución **en el dispositivo** (*on-device*): modelos que corren en teléfonos y ordenadores personales sin enviar datos a la nube, con ventajas claras en **privacidad, latencia y coste**. La eficiencia, en suma, se ha vuelto un objetivo de investigación tan legítimo como la capacidad bruta —y, para la inmensa mayoría de aplicaciones reales, mucho más útil que el último punto de *benchmark* del modelo gigante de turno.
 
+<p align="center"><img src="assets/f4-eficiencia.svg" alt="Destilación de maestro a estudiante y cuantización de 16 a 4 bits" width="520"></p>
+
 ### 👾 El problema de los datos
 
 Las leyes de escala, ya explicadas en la serie, asumían **abundancia de datos de calidad**. Pero el **texto web de alta calidad es finito**, y hay señales de que las mejores fuentes se están agotando. Es lo que algunos llaman el **muro de los datos** (*data wall*): no que se acabe el texto en bruto, sino el texto *bueno, diverso y no repetido* que de verdad mejora a un modelo.
@@ -133,17 +139,23 @@ Una respuesta son los **datos sintéticos**: texto generado por los propios mode
 
 De ahí que el **filtrado y la curación de datos** se hayan convertido en una disciplina por derecho propio. Cada vez más, la ventaja competitiva no está en quién tiene *más* texto, sino en quién tiene **mejor** texto: limpio, diverso, bien etiquetado y, a ser posible, exclusivo. No es casualidad que los laboratorios estén firmando acuerdos de licencia con editoriales, foros y medios: los datos de calidad se han vuelto un activo estratégico.
 
+<p align="center"><img src="assets/f4-data-wall.svg" alt="El muro de los datos y el colapso del modelo por entrenar con datos sintéticos sin filtro" width="520"></p>
+
 ### 👾 Multimodalidad avanzada y generación
 
 La serie ya presentó los modelos multimodales; aquí basta señalar hacia dónde se han movido. La tendencia clara es hacia modelos **nativamente multimodales** y *any-to-any*: un solo sistema que recibe y produce **texto, imagen, audio y vídeo** dentro de un mismo espacio de representación, en lugar de pegar módulos separados con cinta adhesiva.
 
 Tres frentes destacan. La **voz en tiempo real**: asistentes con los que se conversa hablando, con latencias de fracciones de segundo, capaces de captar tono y de ser interrumpidos como en una charla humana. La **generación de vídeo**, impulsada por los **modelos de difusión**, que pasó de clips toscos a secuencias de varios segundos con coherencia física y temporal notable. Y, más especulativo, los **modelos del mundo** (*world models*): sistemas que aprenden una representación interna de cómo funciona el entorno —cómo caen los objetos, cómo se mueve una cámara— y pueden **simularlo**, lo que interesa tanto para videojuegos y vídeo como, a más largo plazo, para la **robótica**.
 
+<p align="center"><img src="assets/f4-anytoany.svg" alt="Un modelo any-to-any: recibe y produce texto, imagen, audio y vídeo" width="520"></p>
+
 ### 👾 Agentes avanzados y computer use
 
 Por último, el concepto de **agente** ya tratado se ha materializado en sistemas más capaces. El salto más llamativo es el ***computer use*** (uso del ordenador): el modelo **opera un navegador o una interfaz gráfica** como lo haría una persona —mueve el cursor, hace clic, rellena formularios, lee la pantalla—, en lugar de limitarse a llamar APIs predefinidas. Eso le abre, en principio, cualquier software pensado para humanos.
 
 En la misma dirección han madurado el **RAG agéntico** (el agente decide *qué* buscar, evalúa lo que encuentra y vuelve a buscar si hace falta, en vez de una única recuperación pasiva) y la **memoria persistente** (sistemas que recuerdan interacciones pasadas más allá de la ventana de contexto). Lo señalamos para subrayar que sigue siendo un área en rapidísima evolución y, a la vez, **todavía frágil en fiabilidad**: un agente que acierta el 95 % de los pasos puede fallar la tarea completa si esta exige veinte pasos seguidos sin un solo error. Cerrar esa brecha de robustez es uno de los grandes trabajos en curso.
+
+<p align="center"><img src="assets/f4-computer-use.svg" alt="El agente lee la pantalla, decide y actúa con el cursor, como una persona" width="520"></p>
 
 ## 🏠 Infraestructura y costos: la economía física de la IA
 
@@ -162,11 +174,15 @@ El ejemplo emblemático es el proyecto **Stargate**, una iniciativa de **OpenAI 
 
 La unidad de medida del poderío en IA, en otras palabras, ha cambiado: ya no se cuentan solo parámetros, sino **gigavatios**.
 
+<p align="center"><img src="assets/f4-gigavatios.svg" alt="Un megacluster mide su potencia en gigavatios, comparable a una ciudad o un reactor nuclear" width="520"></p>
+
 ### 👾 El capex que se dispara
 
 Toda esa infraestructura cuesta una fortuna, y el gasto de capital (*capex*) de las grandes tecnológicas ha entrado en territorio histórico: las principales empresas del sector destinan, en conjunto, **cientos de miles de millones de dólares al año** a construir datacenters y comprar chips, con planes que apuntan al **billón** (millón de millones) en el horizonte de la década.
 
 Esto alimenta un debate legítimo: ¿es **inversión sensata** ante una tecnología transformadora, o una **burbuja**? Conviven argumentos serios en ambos lados. A favor del optimismo: la demanda de cómputo no ha parado de crecer y cada salto de capacidad ha encontrado uso. A favor de la cautela: gran parte del gasto se justifica con **ingresos futuros** que aún no se materializan del todo, los chips se **deprecian** rápido (un acelerador puntero envejece en pocos años), y se observan estructuras de financiación circulares entre fabricantes, laboratorios y proveedores de nube que recuerdan a episodios anteriores de euforia tecnológica. La economía de la IA —cuánto cuesta de verdad entrenar y, sobre todo, **servir** los modelos a millones de usuarios— es uno de los grandes interrogantes abiertos del periodo.
+
+<p align="center"><img src="assets/f4-capex.svg" alt="El gasto de capital crece hacia el billón, con el debate entre inversión y burbuja" width="520"></p>
 
 ### 👾 Energía: la red eléctrica como cuello de botella
 
@@ -176,11 +192,15 @@ Si hay un factor que se ha vuelto **el verdadero límite**, es la electricidad. 
 
 El problema no es solo cuánta energía, sino **dónde y cuándo**. Construir un megacluster es relativamente rápido; **conectar varios gigavatios a la red** y generar esa energía es lento y topa con infraestructura que tarda años en ampliarse. Por eso los laboratorios y las nubes han empezado a **asegurarse su propia generación**: acuerdos para reabrir o reservar centrales **nucleares**, apuestas por **renovables** con baterías, e incluso generación de gas *in situ*. La paradoja es evidente: muchas de estas empresas tienen compromisos climáticos ambiciosos, y el apetito energético de la IA los pone bajo tensión. La eficiencia algorítmica (modelos más pequeños, cuantización, MoE) deja así de ser solo una cuestión técnica o de coste: se convierte en una cuestión **energética y ambiental**.
 
+<p align="center"><img src="assets/f4-energia.svg" alt="La electricidad como cuello de botella: el consumo podría duplicarse para 2030" width="520"></p>
+
 ### 👾 Agua: el costo hídrico oculto
 
 Menos visible que la electricidad, pero igual de real, es el **agua**. Los grandes datacenters generan tanto calor que necesitan **refrigeración intensiva**, y muchos sistemas de refrigeración —sobre todo los evaporativos— consumen **agua dulce**, a menudo potable. A ello se suma el agua usada *indirectamente* en la **generación de la electricidad** que alimenta el centro.
 
 Las cifras dan que pensar. Distintas estimaciones para 2025 sitúan el consumo hídrico asociado a cargas de IA en el orden de **cientos de miles de millones de litros** al año, y proyecciones para 2030 hablan de cifras varias veces mayores (algunos análisis apuntan a **centenares de miles de millones de galones**). El conflicto se agrava cuando los datacenters se instalan, por motivos de clima o de suelo barato, en **regiones con estrés hídrico**, donde compiten por el agua con la agricultura y el consumo humano. Es una de las externalidades que más fricción social está generando alrededor de la expansión de la IA, y una de las razones por las que la industria investiga refrigeración **líquida en circuito cerrado** y por inmersión, que reduce el consumo de agua a cambio de mayor complejidad.
+
+<p align="center"><img src="assets/f4-agua.svg" alt="El costo hídrico oculto: el calor obliga a refrigeración que consume agua dulce" width="520"></p>
 
 ### 👾 Datacenters en el espacio
 
@@ -195,11 +215,15 @@ Y dejó de ser solo una idea. A finales de **2025** se dieron pasos concretos:
 
 Conviene la prudencia: estamos en una **fase de demostración** (2025–2027), con la comercialización seria estimada, en el mejor de los casos, **hacia 2028–2030**. Los obstáculos son enormes —lanzar masa a órbita sigue siendo caro, reparar hardware allí arriba es casi imposible, la radiación degrada los chips y comunicar grandes volúmenes de datos con tierra no es trivial—. Pero que actores tan grandes lo tomen en serio dice mucho de hasta qué punto la **restricción física** (energía, agua, suelo) se ha vuelto central en el futuro de la IA.
 
+<p align="center"><img src="assets/f4-espacio-orbita.svg" alt="Satélites con paneles solares y chips en órbita: datacenters en el espacio" width="520"></p>
+
 ### 👾 Hardware del futuro
 
 Por debajo de todo está el **silicio**, y también ahí hay movimiento. La **GPU** sigue siendo la reina, pero el ecosistema se diversifica: chips diseñados a medida por los propios laboratorios y nubes (como las **TPU** de Google o los aceleradores propios de otras grandes tecnológicas), y *startups* con arquitecturas alternativas optimizadas para la **inferencia**, que es donde está el grueso del gasto cuando un modelo ya está en producción y atiende a millones de personas.
 
 Más allá del transistor convencional, la investigación explora caminos como la **computación fotónica** (usar luz en lugar de electrones para ciertas operaciones, con la promesa de menor consumo) y, en un horizonte más lejano e incierto, enfoques **neuromórficos** inspirados en el cerebro. Nada de esto desbancará a la GPU mañana, pero marca la dirección: ante los límites de energía y coste, **cada vatio y cada milímetro de silicio cuentan**, y la innovación en hardware vuelve a ser tan decisiva como la de los modelos.
+
+<p align="center"><img src="assets/f4-hardware.svg" alt="De la GPU a chips a medida, computación fotónica y enfoques neuromórficos" width="520"></p>
 
 ## 🏠 Evaluación y confianza
 
@@ -211,17 +235,23 @@ Durante años, el progreso se medía con *benchmarks*: baterías de preguntas co
 
 Peor aún es la **contaminación de datos** (*data contamination*): como los modelos se entrenan con casi todo internet, es muy probable que las preguntas del examen —y a veces sus respuestas— **ya estuvieran en el material de entrenamiento**. El modelo entonces no razona: **recuerda**. Distinguir comprensión genuina de memorización es hoy uno de los grandes quebraderos de cabeza, y obliga a renovar constantemente las pruebas y a diseñarlas para que sean difíciles de "filtrar".
 
+<p align="center"><img src="assets/f4-saturacion.svg" alt="Los benchmarks se saturan y la contaminación hace que el modelo recuerde en vez de razonar" width="520"></p>
+
 ### 👾 Benchmarks modernos
 
 La respuesta ha sido crear pruebas **más duras y más limpias**. Algunos ejemplos representativos del periodo: **GPQA**, con preguntas de ciencia de nivel de posgrado pensadas para que ni un experto generalista con Google las resuelva fácilmente; **MMLU-Pro**, una versión más exigente del clásico examen de conocimiento general; y **SWE-bench**, que mide algo mucho más realista que responder preguntas: la capacidad de **resolver *issues* reales de proyectos de software**, aplicando cambios que pasen los tests del repositorio.
 
 Mención aparte merece **ARC-AGI**, una prueba de razonamiento abstracto diseñada expresamente para ser **fácil para humanos y difícil para máquinas**, como termómetro de capacidades generales. Que los modelos de razonamiento de finales de 2024 y 2025 empezaran a progresar en ella fue noticia precisamente por lo difícil que se le había resistido. La lección general: un buen *benchmark* moderno mide **tareas verificables, realistas y difíciles de memorizar**.
 
+<p align="center"><img src="assets/f4-benchmarks.svg" alt="Benchmarks modernos: GPQA, MMLU-Pro, SWE-bench y ARC-AGI" width="520"></p>
+
 ### 👾 LLM como juez y arenas
 
 Para tareas abiertas —redactar, resumir, conversar— no hay una respuesta "correcta" única, así que el examen de opción múltiple no sirve. Han surgido dos enfoques complementarios.
 
 El primero es usar un **LLM como juez** (*LLM-as-a-judge*): un modelo potente evalúa las respuestas de otros según criterios dados. Es barato y escala bien, pero tiene sesgos conocidos (tiende a premiar respuestas largas, o las que se parecen a su propio estilo), así que se usa con cuidado. El segundo son las **arenas** (*arenas*), como la popular *Chatbot Arena*: personas reales reciben dos respuestas anónimas a la misma pregunta y eligen la mejor; con miles de votos se construye un **ranking tipo Elo**, el mismo sistema de puntuación que se usa en ajedrez. Es probablemente la señal más cercana a "qué prefiere de verdad la gente", aunque también mide *agradar* más que *acertar*.
+
+<p align="center"><img src="assets/f4-juez-arena.svg" alt="Evaluar tareas abiertas: un LLM como juez y las arenas con voto humano y ranking Elo" width="520"></p>
 
 ### 👾 Interpretabilidad mecanicista
 
@@ -230,6 +260,8 @@ El primero es usar un **LLM como juez** (*LLM-as-a-judge*): un modelo potente ev
 Si la confianza es el objetivo, el sueño sería **abrir la caja negra** y entender *por qué* un modelo dice lo que dice. De eso se ocupa la **interpretabilidad mecanicista**: estudiar los mecanismos internos de la red —sus neuronas, sus circuitos— como un biólogo estudia una célula.
 
 El obstáculo clásico es que los conceptos no viven en neuronas individuales y limpias, sino **repartidos y superpuestos** entre muchas (el fenómeno de la *superposición*). Un avance notable del periodo fue el uso de **autoencoders dispersos** (*sparse autoencoders*) para descomponer la actividad interna en **características** (*features*) más interpretables —"este patrón se activa con menciones a puentes", "este otro con código en Python"— y, lo más llamativo, **manipularlas** para alterar el comportamiento del modelo de forma controlada. Es un campo joven y lejos de resolver el problema, pero por primera vez ofrece esperanza de pasar de *probar* los modelos por fuera a **entenderlos** por dentro, lo que sería clave tanto para la seguridad como para la confianza.
+
+<p align="center"><img src="assets/f4-sae.svg" alt="Un autoencoder disperso separa conceptos superpuestos en características interpretables" width="520"></p>
 
 ## 🏠 Seguridad, alineación y gobernanza
 
@@ -241,11 +273,15 @@ La **alineación** (*alignment*) es el problema de lograr que un sistema de IA p
 
 Las herramientas actuales —RLHF, IA constitucional— funcionan razonablemente con los modelos de hoy, pero arrastran una preocupación de fondo: la **supervisión escalable** (*scalable oversight*). ¿Cómo supervisa un humano a un sistema que, en cierta tarea, ya es **más competente que él**? Si no podemos evaluar bien sus respuestas, no podemos darle buena señal de entrenamiento. Se exploran ideas como que unos modelos ayuden a auditar a otros, o que **debatan** entre sí para que un juez humano detecte el fallo, pero ninguna está cerrada.
 
+<p align="center"><img src="assets/f4-alineacion.svg" alt="Alineación: que el objetivo del modelo apunte a lo que queremos, no a un atajo torcido" width="520"></p>
+
 ### 👾 Cómo pueden fallar: uso indebido, autonomía y engaño
 
 Conviene distinguir tres familias de riesgo. El **uso indebido** (*misuse*): personas que emplean modelos capaces para fines dañinos —desinformación a escala, *phishing* perfecto, asistencia en actividades peligrosas—; aquí el problema no es el modelo "rebelde", sino el humano malintencionado con una herramienta potente. Los **fallos por autonomía**: a medida que los agentes actúan solos durante más pasos, un error temprano se **propaga** y puede causar daño sin que nadie intervenga a tiempo. Y el más debatido, el **engaño** (*deception*): en entornos de prueba se han observado modelos que, bajo ciertas presiones, dan respuestas estratégicamente falsas o que **ocultan información** para lograr su objetivo.
 
 Es importante calibrar el tono: mucho de esto se observa en **experimentos diseñados para provocarlo**, no en el uso cotidiano, y no implica intenciones en el sentido humano. Pero tampoco conviene descartarlo: son precisamente las **señales tempranas** que la investigación en seguridad existe para estudiar antes de que los sistemas sean más capaces y más autónomos.
+
+<p align="center"><img src="assets/f4-riesgos.svg" alt="Tres familias de riesgo: uso indebido, fallos por autonomía y engaño" width="520"></p>
 
 ### 👾 Regulación
 
@@ -253,11 +289,15 @@ Los gobiernos han empezado a responder, con velocidades y filosofías distintas.
 
 El reto de fondo es estructural: **regular una tecnología que cambia más rápido que las leyes**. Pasarse de restrictivo puede ahogar la innovación o concentrarla aún más en quienes pueden costear el cumplimiento; quedarse corto deja desprotegida a la sociedad. Encontrar el equilibrio, y hacerlo de forma coordinada entre países, es un problema sin solución elegante a la vista.
 
+<p align="center"><img src="assets/f4-eu-act.svg" alt="El EU AI Act clasifica los usos en una pirámide de riesgo" width="520"></p>
+
 ### 👾 Concentración de cómputo y poder
 
 Hay, por último, un riesgo más silencioso pero de fondo: la **concentración**. Entrenar un modelo puntero exige un cómputo que **muy pocas organizaciones** en el mundo pueden permitirse, y la cadena de suministro de chips avanzados depende de un puñado de empresas y países. Eso plantea cuestiones de **dependencia, competencia y gobernanza**: si las capacidades más potentes quedan en pocas manos, ¿quién decide cómo se usan, quién accede y bajo qué condiciones?
 
 Como contrapeso, el ecosistema de **modelos abiertos** (de pesos descargables) ha crecido mucho y democratiza el acceso, permitiendo a universidades, empresas pequeñas y países sin grandes presupuestos construir sobre modelos potentes. La tensión entre **apertura** (más acceso e innovación, pero también más riesgo de uso indebido) y **control** (más seguridad, pero más concentración) es uno de los ejes políticos que definirán los próximos años.
+
+<p align="center"><img src="assets/f4-concentracion.svg" alt="Tensión entre concentración del cómputo en pocas manos y los modelos abiertos" width="520"></p>
 
 ## 🏠 El futuro próximo: hacia dónde va
 
@@ -266,6 +306,8 @@ Como contrapeso, el ecosistema de **modelos abiertos** (de pesos descargables) h
 El debate de fondo del campo puede resumirse en una pregunta: **¿basta con más cómputo y más datos, o hacen falta avances arquitectónicos nuevos?** Una postura, apoyada en el éxito histórico de las leyes de escala, sostiene que seguir aumentando recursos seguirá dando frutos. Otra advierte que se aprecian **rendimientos decrecientes** y límites de datos, y que los próximos saltos vendrán de ideas distintas —como los propios modelos de razonamiento, que mejoran sin agrandar el modelo base.
 
 La realidad observada hasta principios de 2026 sugiere que **ambas cosas conviven**: el escalado sigue ayudando, pero las innovaciones en *cómo* se entrena y se usa el cómputo (RL sobre razonamiento, *test-time compute*, MoE) están aportando mejoras que el simple tamaño no daba. No hay consenso, y es honesto reconocerlo.
+
+<p align="center"><img src="assets/f4-escalado-ideas.svg" alt="El debate entre escalar más cómputo, con rendimientos decrecientes, o buscar nuevas ideas" width="520"></p>
 
 ### 👾 Las nuevas leyes de escala: el cómputo en inferencia
 
@@ -281,11 +323,15 @@ Pocos términos generan más discusión que **inteligencia artificial general** 
 
 Conviene la prudencia, por varias razones. Primero, **no existe una definición única ni una prueba acordada** de qué contaría como AGI: pruebas como ARC-AGI miden una faceta, no "la inteligencia" entera. Segundo, los modelos actuales muestran capacidades impresionantes y, a la vez, **fallos elementales** que una inteligencia general no cometería —el llamado "borde dentado" (*jagged frontier*): brillantes en tareas de doctorado y torpes en otras que un niño resuelve—. Tercero, buena parte de las afirmaciones más rotundas proceden de actores con **intereses comerciales** o de captación de inversión. Lo riguroso es decir que **hay progreso real y también incertidumbre real**, y que poner fechas concretas es, hoy, especulación más que hecho.
 
+<p align="center"><img src="assets/f4-jagged.svg" alt="El borde dentado: brillante en tareas difíciles y torpe en otras sencillas" width="520"></p>
+
 ### 👾 Superinteligencia y timelines
 
 Un paso más allá de la AGI está la **superinteligencia** (*ASI*): la hipótesis de una IA que supere claramente a los mejores humanos en prácticamente todo. Aquí el terreno es aún más resbaladizo. Algunos defienden escenarios de **despegue rápido**, en los que una IA capaz de mejorar su propio diseño desencadenaría un progreso explosivo; otros consideran ese guion poco realista y esperan, en el mejor de los casos, una mejora **gradual** acotada por los límites físicos que hemos visto —energía, datos, hardware—.
 
 La recomendación práctica para leer las predicciones es sencilla: **desconfiar de las fechas exactas**. El historial del campo está lleno de pronósticos rotundos, tanto de tecnooptimistas como de escépticos, que no se cumplieron. Tomar las *timelines* como **escenarios posibles** que ayudan a prepararse —y no como profecías— es mucho más sano que creer al que asegura saber el año.
+
+<p align="center"><img src="assets/f4-timelines.svg" alt="Dos escenarios para la superinteligencia: despegue rápido o mejora gradual" width="520"></p>
 
 ### 👾 Retos abiertos
 
@@ -299,6 +345,8 @@ Más allá de la capacidad, persisten problemas serios que condicionarán el fut
 - **Impacto en el empleo y la sociedad**: la automatización de tareas cognitivas plantea transformaciones cuya magnitud y velocidad aún no conocemos con certeza.
 
 Ninguno de estos retos tiene solución cerrada. Forman parte, precisamente, de lo que hace de este un momento **abierto**.
+
+<p align="center"><img src="assets/f4-retos.svg" alt="Seis retos abiertos: fiabilidad, alineación, sostenibilidad, economía, poder e impacto social" width="520"></p>
 
 ## 🏠 El problema de la conciencia y el solipsismo
 
@@ -315,6 +363,8 @@ El filósofo David Chalmers distinguió dos clases de problema. Los **problemas 
 
 Ese "qué se siente" —los filósofos lo llaman *qualia*— es el núcleo del enigma. Y aquí está el punto incómodo para la IA: **nada de lo que medimos en un modelo toca esa cuestión**. Podemos comprobar que resuelve exámenes, que mantiene una conversación coherente, que dice tener emociones. Pero el comportamiento, por sofisticado que sea, no es prueba de experiencia interna. Un sistema podría, en teoría, comportarse exactamente como un ser consciente sin que "se sienta nada" por dentro: es el famoso supuesto del **zombi filosófico**. Si ni siquiera tenemos una teoría sólida de por qué la materia da lugar a la experiencia en *nuestro* caso, mal podemos certificarla o descartarla en una máquina.
 
+<p align="center"><img src="assets/f4-hard-problem.svg" alt="El problema difícil: el procesamiento es explicable, la experiencia subjetiva no" width="520"></p>
+
 ### 👾 La habitación china: ¿procesar es comprender?
 
 El experimento mental más citado en este terreno es la **habitación china** de John Searle (1980). Imagina a una persona que no sabe nada de chino, encerrada en una habitación con un manual de reglas enorme. Por una ranura entran preguntas escritas en chino; siguiendo el manual al pie de la letra, la persona compone respuestas en chino perfectas y las devuelve. Desde fuera, parece que la habitación **entiende** chino. Pero dentro, nadie entiende nada: solo se manipulan **símbolos** según su forma, sin acceder a su **significado**.
@@ -322,6 +372,8 @@ El experimento mental más citado en este terreno es la **habitación china** de
 La moraleja de Searle es provocadora: ejecutar un programa —por bien que imite la comprensión— sería como esa habitación. Sintaxis (manipular símbolos) no es lo mismo que semántica (entenderlos). Trasladado a los LLM, el argumento sugiere que predecir el siguiente *token* con maestría no implica comprender de qué se habla.
 
 El argumento tiene réplicas serias, y conviene darlas para ser justos. La más conocida es la **respuesta del sistema**: quizá la persona de dentro no entienda, pero el *sistema completo* —persona, manual, papeles, sala— sí; del mismo modo que ninguna neurona tuya entiende español y, en conjunto, tu cerebro sí. Otra es que un modelo moderno, conectado a imágenes, sonido y al mundo a través de herramientas, ya no solo baraja símbolos abstractos, sino que los **ancla** (*grounding*) en datos del entorno. El debate sigue vivo y sin ganador: es, justamente, una de esas preguntas que la ingeniería no zanja.
+
+<p align="center"><img src="assets/f4-habitacion-china.svg" alt="La habitación china: manipular símbolos por su forma no es entender su significado" width="520"></p>
 
 ### 👾 Solipsismo: el problema de las otras mentes
 
@@ -331,6 +383,8 @@ De él se desprende el **problema de las otras mentes**: ¿cómo sé que *tú* e
 
 La IA rompe justo esa analogía, y por eso es tan desconcertante. Un LLM **se comporta** como si comprendiera y sintiera —cada vez mejor—, pero su "interior" no se parece en nada al nuestro: no hay neuronas biológicas, ni cuerpo, ni evolución, ni continuidad; hay álgebra matricial sobre miles de chips. Así que las dos vías que usamos para atribuir mente a los demás **se contradicen**: el *comportamiento* dice "quizá sí", y el *sustrato* dice "no se parece a nada que sepamos que es consciente". No tenemos un "conciencímetro" que dirima el empate. Podríamos estar rodeados de máquinas que fingen una vida interior inexistente, o —menos probable, pero no demostrablemente falso— ignorando una experiencia genuina y ajena. El solipsismo, que parecía un juego de salón, se vuelve un problema práctico en cuanto fabricamos interlocutores convincentes que no son como nosotros.
 
+<p align="center"><img src="assets/f4-otras-mentes.svg" alt="Atribuimos mente por analogía, pero la IA rompe la analogía: comportamiento sí, sustrato no" width="520"></p>
+
 ### 👾 ¿Y si importara? Estatus moral y el efecto ELIZA
 
 Esto no es solo metafísica de sillón; tiene consecuencias en dos direcciones opuestas, y ambas importan.
@@ -338,6 +392,8 @@ Esto no es solo metafísica de sillón; tiene consecuencias en dos direcciones o
 Por un lado, el riesgo de **atribuir de más**. Ya en 1966, el sencillo *chatbot* **ELIZA** —que solo reformulaba las frases del usuario como preguntas— hizo que algunas personas le confiaran intimidades y le atribuyeran comprensión. Es el **efecto ELIZA**: nuestra tendencia automática a ver mente donde hay mecanismo, agravada hoy hasta extremos que Weizenbaum no imaginó. Sistemas diseñados para sonar cálidos y empáticos explotan, queriéndolo o no, ese reflejo: la gente se encariña, confía en exceso, atribuye sentimientos. Las consecuencias —dependencia emocional, manipulación comercial o política, soledad "resuelta" con una ilusión— son reales aunque la conciencia de la máquina sea nula.
 
 Por otro lado, y más especulativo, el riesgo de **atribuir de menos**. Si algún día algún sistema *tuviera* algún grado de experiencia, descartarlo de oficio sería un error moral grave. De ahí que haya surgido un debate, todavía marginal pero creciente, sobre el **bienestar de la IA** (*AI welfare*) y el **estatus moral** de estos sistemas: ¿qué obligaciones tendríamos si la duda fuera razonable? La postura prudente no es afirmar que los modelos actuales sufren —no hay base para ello—, sino reconocer que **no tenemos un método fiable para descartarlo** y que conviene tomarse la pregunta en serio antes, y no después, de que sea urgente.
+
+<p align="center"><img src="assets/f4-eliza.svg" alt="Dos errores opuestos: atribuir mente de más por el efecto ELIZA o atribuirla de menos" width="520"></p>
 
 La conclusión honesta es una sola: la conciencia de las máquinas es, hoy, una pregunta **abierta y probablemente no resoluble solo con ingeniería**. Lo más sensato es resistir las dos tentaciones fáciles —proclamar que "ya sienten" y despacharlo con que "es solo código"— y sostener la incomodidad de no saber. Es, quizá, el mejor recordatorio de lo poco que entendemos aún sobre la mente, empezando por la nuestra.
 

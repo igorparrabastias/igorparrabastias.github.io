@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 215" font-family="system-ui, sans-serif" role="img" aria-label="La habitación china: desde fuera parece entender chino, pero dentro solo se manipulan símbolos según su forma, sin acceder al significado">
+  <style>
+    .room{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .slot{fill:#fff;stroke:#3a47b8;stroke-width:1.5}
+    .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lbl{font-size:10px;fill:#666;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2;fill:none}
+  </style>
+  <rect width="600" height="215" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+  <text class="ttl" x="300" y="26">La habitación china (Searle)</text>
+
+  <rect class="room" x="180" y="55" width="240" height="105" rx="8"/>
+  <g fill="#3a47b8"><circle cx="300" cy="74" r="7"/><path d="M287,94 a13,13 0 0 1 26,0 z"/></g>
+  <rect x="225" y="95" width="150" height="22" rx="3" fill="#fff" stroke="#7782d6" stroke-width="1.5"/>
+  <text class="lbl" x="300" y="110">manual de reglas</text>
+  <text class="lbl" x="300" y="138">manipula símbolos por su forma,</text>
+  <text class="lbl" x="300" y="152" fill="#e0663f">sin entender su significado</text>
+
+  <text class="t" x="80" y="95">en chino</text>
+  <line class="fl" x1="55" y1="105" x2="178" y2="105" marker-end="url(#a)"/>
+  <text class="lbl" x="100" y="120">entra pregunta</text>
+
+  <text class="t" x="520" y="95">en chino</text>
+  <line class="fl" x1="422" y1="125" x2="545" y2="125" marker-end="url(#a)"/>
+  <text class="lbl" x="500" y="140">sale respuesta perfecta</text>
+
+  <text class="cap" x="300" y="188">Desde fuera "parece" entender chino; dentro, nadie entiende. Sintaxis ≠ semántica.</text>
+  <text class="cap" x="300" y="206">Réplica: quizá el sistema completo —no la persona— sí entiende.</text>
+</svg>

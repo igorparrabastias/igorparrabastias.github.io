@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 215" font-family="system-ui, sans-serif" role="img" aria-label="Dos escenarios para la superinteligencia: un despegue rápido explosivo o una mejora gradual acotada por límites físicos">
+  <style>
+    .axis{stroke:#9aa0c8;stroke-width:1.5}
+    .fast{fill:none;stroke:#e0663f;stroke-width:2.5}
+    .slow{fill:none;stroke:#3a47b8;stroke-width:2.5}
+    .t{font-size:11px;font-weight:700;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lbl{font-size:10px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="600" height="215" fill="#ffffff"/>
+  <text class="ttl" x="300" y="26">Superinteligencia: ¿despegue rápido o gradual?</text>
+
+  <line class="axis" x1="60" y1="165" x2="540" y2="165"/>
+  <line class="axis" x1="60" y1="50" x2="60" y2="165"/>
+  <text class="lbl" x="300" y="185">tiempo →</text>
+  <text class="lbl" x="30" y="108" transform="rotate(-90 30 108)">capacidad</text>
+
+  <path class="fast" d="M60,160 C300,158 360,150 400,60"/>
+  <text class="t" x="430" y="62" fill="#e0663f">despegue rápido</text>
+  <path class="slow" d="M60,160 C200,130 360,100 540,85"/>
+  <text class="t" x="500" y="78" fill="#3a47b8">gradual</text>
+
+  <text class="cap" x="300" y="205">La recomendación práctica: desconfiar de las fechas exactas; tomarlas como escenarios, no profecías.</text>
+</svg>
