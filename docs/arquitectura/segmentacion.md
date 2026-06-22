@@ -8,6 +8,8 @@ En vez de ejecutar cada instrucción de principio a fin antes de empezar la sigu
 
 La segmentación **no acelera una instrucción suelta** (sigue tardando lo mismo de inicio a fin), pero multiplica el **caudal** (*throughput*): instrucciones terminadas por unidad de tiempo. Con cinco etapas equilibradas, el rendimiento ideal es hasta **5×**.
 
+![Segmentación: cinco instrucciones avanzando por las etapas IF ID EX MEM WB, desplazadas un ciclo](../assets/arq-pipeline.svg)
+
 ## Los riesgos (*hazards*)
 
 Ese ideal rara vez se alcanza, porque hay situaciones que rompen el flujo:

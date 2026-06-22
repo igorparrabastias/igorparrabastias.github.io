@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 270" font-family="system-ui, sans-serif" role="img" aria-label="Los tres buses (datos, direcciones, control) conectando CPU, memoria y E/S">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .busd{stroke:#3a47b8;stroke-width:6;fill:none}
+    .busa{stroke:#7782d6;stroke-width:6;fill:none}
+    .busc{stroke:#e0663f;stroke-width:6;fill:none}
+    .lab{font-size:12px;font-weight:700;text-anchor:end}
+    .cap{font-size:12px;fill:#666}
+  </style>
+  <rect width="640" height="270" fill="#ffffff"/>
+  <defs>
+    <marker id="d" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#3a47b8"/></marker>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#7782d6"/></marker>
+    <marker id="c" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 z" fill="#e0663f"/></marker>
+  </defs>
+
+  <!-- componentes -->
+  <rect class="box" x="60"  y="40" width="120" height="44" rx="8"/><text class="t" x="120" y="67">CPU</text>
+  <rect class="box" x="270" y="40" width="120" height="44" rx="8"/><text class="t" x="330" y="67">Memoria</text>
+  <rect class="box" x="480" y="40" width="120" height="44" rx="8"/><text class="t" x="540" y="67">E/S</text>
+
+  <!-- drops desde cada caja a los buses -->
+  <g stroke="#cfd3e8" stroke-width="1.5">
+    <line x1="120" y1="84" x2="120" y2="130"/><line x1="330" y1="84" x2="330" y2="130"/><line x1="540" y1="84" x2="540" y2="130"/>
+  </g>
+
+  <!-- bus de datos (bidireccional) -->
+  <line class="busd" x1="60" y1="140" x2="600" y2="140" marker-start="url(#d)" marker-end="url(#d)"/>
+  <text class="lab" x="55" y="144" fill="#3a47b8">datos</text>
+  <!-- bus de direcciones (CPU -> resto) -->
+  <line class="busa" x1="60" y1="175" x2="600" y2="175" marker-end="url(#a)"/>
+  <text class="lab" x="55" y="179" fill="#7782d6">direcciones</text>
+  <!-- bus de control (bidireccional) -->
+  <line class="busc" x1="60" y1="210" x2="600" y2="210" marker-start="url(#c)" marker-end="url(#c)"/>
+  <text class="lab" x="55" y="214" fill="#e0663f">control</text>
+
+  <text class="cap" x="60" y="250">Datos ⇄ van y vienen · direcciones → las fija la CPU · control ⇄ coordina (lectura/escritura, reloj).</text>
+</svg>

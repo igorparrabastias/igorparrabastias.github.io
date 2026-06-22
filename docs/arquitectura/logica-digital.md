@@ -22,6 +22,8 @@ En un **circuito combinacional** la salida depende **solo de las entradas actual
 
 Un **circuito secuencial** sí tiene **memoria**: su salida depende también del estado anterior. El ladrillo es el **flip-flop**, que guarda un bit de forma estable hasta que se le indique cambiar. Apilando flip-flops se construyen los **registros** (que guardan una palabra completa) y los **contadores**. Un **reloj** marca el ritmo: en cada pulso, el estado avanza de forma ordenada, lo que evita el caos de que las señales lleguen a destiempo.
 
+![Circuito combinacional (sin memoria) frente a secuencial (con realimentación y reloj)](../assets/arq-combinacional-secuencial.svg)
+
 Con estas dos familias —lógica que **calcula** (combinacional) y lógica que **recuerda** (secuencial)— ya se tiene todo lo necesario para construir una CPU.
 
 ---

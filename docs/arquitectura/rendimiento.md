@@ -26,6 +26,8 @@ El aviso más importante de todo el tema: si solo una parte de un programa se pu
 
 La moraleja es profunda: **la parte secuencial manda**. No basta con "añadir más núcleos"; si no se reduce la fracción que no se puede acelerar, el esfuerzo se topa con un muro. Es la razón por la que escalar el rendimiento es mucho más difícil de lo que parece.
 
+![Ley de Amdahl: la aceleración se estanca según la fracción paralelizable](../assets/arq-amdahl.svg)
+
 ---
 
 ➡️ Sigue en [Paralelismo](paralelismo.md).

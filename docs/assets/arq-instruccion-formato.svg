@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" font-family="system-ui, sans-serif" role="img" aria-label="Formato de una instrucción: opcode y operandos, con un ejemplo en ensamblador">
+  <style>
+    .op{fill:#3a47b8;stroke:#3a47b8;stroke-width:2}
+    .ar{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .tw{font-size:13px;font-weight:700;fill:#fff;text-anchor:middle}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .lab{font-size:11px;fill:#666;text-anchor:middle}
+    .cap{font-size:12px;fill:#666}
+    .mono{font-family:ui-monospace, monospace;font-size:13px;fill:#333}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+  </style>
+  <rect width="640" height="200" fill="#ffffff"/>
+  <text class="ttl" x="320" y="30">Formato típico (RISC)</text>
+
+  <rect class="op" x="40"  y="55" width="130" height="48"/><text class="tw" x="105" y="84">opcode</text>
+  <rect class="ar" x="170" y="55" width="150" height="48"/><text class="t"  x="245" y="84">destino</text>
+  <rect class="ar" x="320" y="55" width="150" height="48"/><text class="t"  x="395" y="84">fuente 1</text>
+  <rect class="ar" x="470" y="55" width="130" height="48"/><text class="t"  x="535" y="84">fuente 2</text>
+
+  <text class="lab" x="105" y="120">qué hacer</text>
+  <text class="lab" x="245" y="120">dónde guardar</text>
+  <text class="lab" x="395" y="120">operando</text>
+  <text class="lab" x="535" y="120">operando</text>
+
+  <text class="cap" x="40" y="160">Ejemplo:</text>
+  <text class="mono" x="105" y="160">ADD</text>
+  <text class="mono" x="200" y="160">R1,</text>
+  <text class="mono" x="360" y="160">R2,</text>
+  <text class="mono" x="510" y="160">R3</text>
+  <text class="cap" x="40" y="182" fill="#888">“suma R2 + R3 y guarda el resultado en R1” — cada campo se mapea a una caja de arriba.</text>
+</svg>

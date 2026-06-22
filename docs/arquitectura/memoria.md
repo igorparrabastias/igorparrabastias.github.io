@@ -15,6 +15,8 @@ De arriba (rápida y pequeña) a abajo (lenta y enorme):
 
 Cuanto más arriba, más rápido y más caro por byte. La magia está en que el dato que necesitas *casi siempre* esté ya en un nivel alto.
 
+![Pirámide de la jerarquía de memoria: registros, caché, RAM y disco](../assets/arq-memoria-piramide.svg)
+
 ## Por qué funciona: la localidad
 
 Que la pirámide funcione se debe a un patrón empírico en cómo los programas acceden a la memoria, el **principio de localidad**:

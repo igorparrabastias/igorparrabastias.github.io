@@ -9,6 +9,8 @@ La **ISA** (*Instruction Set Architecture*) es el **contrato entre el hardware y
 - Los **formatos de instrucción**: cómo se empaquetan en binario el código de operación (*opcode*) y los operandos.
 - Los **modos de direccionamiento**.
 
+![Formato de una instrucción: opcode y operandos, con un ejemplo en ensamblador](../assets/arq-instruccion-formato.svg)
+
 ## Modos de direccionamiento
 
 Una instrucción necesita decir *dónde* están sus datos, y hay varias formas de indicarlo:

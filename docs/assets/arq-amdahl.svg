@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" font-family="system-ui, sans-serif" role="img" aria-label="Ley de Amdahl: la aceleración se estanca según la fracción paralelizable">
+  <style>
+    .ax{stroke:#cfd3e8;stroke-width:1.5}
+    .c1{stroke:#3a47b8;stroke-width:3;fill:none}
+    .c2{stroke:#7782d6;stroke-width:3;fill:none}
+    .c3{stroke:#aab0dd;stroke-width:3;fill:none}
+    .asy{stroke:#e0663f;stroke-width:1.3;fill:none;stroke-dasharray:5 4}
+    .lbl{font-size:12px;font-weight:700}
+    .axl{font-size:12px;fill:#666}
+    .tick{font-size:10px;fill:#999}
+    .cap{font-size:12px;fill:#666}
+  </style>
+  <rect width="640" height="320" fill="#ffffff"/>
+
+  <!-- ejes -->
+  <line class="ax" x1="70" y1="270" x2="600" y2="270" marker-end="url(#aa)"/>
+  <line class="ax" x1="70" y1="270" x2="70"  y2="40"/>
+  <defs><marker id="aa" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#cfd3e8"/></marker></defs>
+  <text class="axl" x="300" y="300">número de procesadores ⟶</text>
+  <text class="axl" x="20" y="160" transform="rotate(-90 20 160)">aceleración ⟶</text>
+
+  <!-- asíntotas -->
+  <line class="asy" x1="70" y1="70"  x2="600" y2="70"/><text class="tick" x="605" y="74" fill="#e0663f">20×</text>
+  <line class="asy" x1="70" y1="150" x2="600" y2="150"/><text class="tick" x="605" y="154" fill="#e0663f">10×</text>
+  <line class="asy" x1="70" y1="225" x2="600" y2="225"/><text class="tick" x="605" y="229" fill="#e0663f">4×</text>
+
+  <!-- curvas que se estancan -->
+  <path class="c1" d="M 70 270 C 200 110, 360 80, 600 72"/>
+  <path class="c2" d="M 70 270 C 190 185, 360 158, 600 152"/>
+  <path class="c3" d="M 70 270 C 170 240, 340 228, 600 226"/>
+
+  <text class="lbl" x="330" y="100" fill="#3a47b8">95 % paralelizable</text>
+  <text class="lbl" x="340" y="178" fill="#7782d6">90 %</text>
+  <text class="lbl" x="350" y="248" fill="#aab0dd">75 %</text>
+
+  <text class="cap" x="70" y="318">Aunque añadas infinitos procesadores, la parte secuencial fija un techo. La fracción que no se paraleliza manda.</text>
+</svg>

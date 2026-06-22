@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="system-ui, sans-serif" role="img" aria-label="Arquitectura von Neumann: CPU, memoria y E/S conectadas por un bus común">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .bus{fill:#3a47b8}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:13px;font-weight:700;fill:#fff;text-anchor:middle}
+    .cap{font-size:12px;fill:#666}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+  </style>
+  <rect width="640" height="300" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <!-- CPU -->
+  <rect class="box" x="40" y="55" width="240" height="120" rx="10"/>
+  <text class="t" x="160" y="78">CPU</text>
+  <rect class="sub" x="55"  y="92" width="100" height="34" rx="6"/><text class="ts" x="105" y="113">Unidad de control</text>
+  <rect class="sub" x="165" y="92" width="100" height="34" rx="6"/><text class="ts" x="215" y="113">ALU</text>
+  <rect class="sub" x="55"  y="134" width="210" height="30" rx="6"/><text class="ts" x="160" y="154">Registros</text>
+
+  <!-- Memoria -->
+  <rect class="box" x="320" y="55" width="130" height="120" rx="10"/>
+  <text class="t" x="385" y="100">Memoria</text>
+  <text class="cap" x="338" y="125" font-size="11">datos +</text>
+  <text class="cap" x="338" y="142" font-size="11">instrucciones</text>
+
+  <!-- E/S -->
+  <rect class="box" x="490" y="55" width="110" height="120" rx="10"/>
+  <text class="t" x="545" y="118">E/S</text>
+
+  <!-- bus -->
+  <rect class="bus" x="40" y="220" width="560" height="30" rx="6"/>
+  <text class="tw" x="320" y="240">BUS del sistema  (datos · direcciones · control)</text>
+  <line class="fl" x1="160" y1="175" x2="160" y2="220" marker-end="url(#a)"/>
+  <line class="fl" x1="160" y1="220" x2="160" y2="178" marker-end="url(#a)"/>
+  <line class="fl" x1="385" y1="175" x2="385" y2="220" marker-end="url(#a)"/>
+  <line class="fl" x1="385" y1="220" x2="385" y2="178" marker-end="url(#a)"/>
+  <line class="fl" x1="545" y1="175" x2="545" y2="220" marker-end="url(#a)"/>
+  <line class="fl" x1="545" y1="220" x2="545" y2="178" marker-end="url(#a)"/>
+
+  <text class="cap" x="40" y="285">Datos e instrucciones comparten memoria y bus → el "cuello de botella de von Neumann".</text>
+</svg>

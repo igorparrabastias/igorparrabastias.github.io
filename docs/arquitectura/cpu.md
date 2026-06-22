@@ -21,6 +21,8 @@ La **unidad de control** es el director de orquesta: en cada ciclo genera las se
 
 Juntando las piezas: la unidad de control lee la instrucción del IR, ordena al banco de registros que entregue los operandos, dirige la ALU para que opere y encamina el resultado de vuelta a un registro o a la memoria. Ese flujo coordinado a través del **datapath**, repetido ciclo tras ciclo, es —literalmente— un programa ejecutándose.
 
+![Camino de datos: registros hacia la ALU y de vuelta, con memoria y la unidad de control](../assets/arq-datapath.svg)
+
 ---
 
 ➡️ Sigue en [Conjunto de instrucciones (ISA)](isa.md).

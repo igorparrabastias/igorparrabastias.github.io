@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 280" font-family="system-ui, sans-serif" role="img" aria-label="Diagrama de segmentación: cinco instrucciones avanzando por las etapas IF ID EX MEM WB, desplazadas un ciclo">
+  <style>
+    .if{fill:#cdd3f2;stroke:#3a47b8;stroke-width:1.5}
+    .id{fill:#b9c0ec;stroke:#3a47b8;stroke-width:1.5}
+    .ex{fill:#9aa3e0;stroke:#3a47b8;stroke-width:1.5}
+    .me{fill:#7782d6;stroke:#3a47b8;stroke-width:1.5}
+    .wb{fill:#5663c8;stroke:#3a47b8;stroke-width:1.5}
+    .cell{font-size:11px;font-weight:700;fill:#1a2050;text-anchor:middle}
+    .cellw{font-size:11px;font-weight:700;fill:#fff;text-anchor:middle}
+    .lab{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ax{font-size:11px;fill:#888}
+    .cap{font-size:12px;fill:#666}
+  </style>
+  <rect width="680" height="280" fill="#ffffff"/>
+  <text class="ax" x="330" y="28">tiempo (ciclos) ⟶</text>
+
+  <!-- y labels -->
+  <text class="lab" x="35" y="68">I1</text>
+  <text class="lab" x="35" y="103">I2</text>
+  <text class="lab" x="35" y="138">I3</text>
+  <text class="lab" x="35" y="173">I4</text>
+  <text class="lab" x="35" y="208">I5</text>
+
+  <!-- row I1 (offset 0) -->
+  <g>
+    <rect class="if" x="60"  y="50" width="58" height="28"/><text class="cell"  x="89"  y="69">IF</text>
+    <rect class="id" x="118" y="50" width="58" height="28"/><text class="cell"  x="147" y="69">ID</text>
+    <rect class="ex" x="176" y="50" width="58" height="28"/><text class="cell"  x="205" y="69">EX</text>
+    <rect class="me" x="234" y="50" width="58" height="28"/><text class="cellw" x="263" y="69">MEM</text>
+    <rect class="wb" x="292" y="50" width="58" height="28"/><text class="cellw" x="321" y="69">WB</text>
+  </g>
+  <!-- row I2 (offset 1) -->
+  <g transform="translate(58,35)">
+    <rect class="if" x="60"  y="50" width="58" height="28"/><text class="cell"  x="89"  y="69">IF</text>
+    <rect class="id" x="118" y="50" width="58" height="28"/><text class="cell"  x="147" y="69">ID</text>
+    <rect class="ex" x="176" y="50" width="58" height="28"/><text class="cell"  x="205" y="69">EX</text>
+    <rect class="me" x="234" y="50" width="58" height="28"/><text class="cellw" x="263" y="69">MEM</text>
+    <rect class="wb" x="292" y="50" width="58" height="28"/><text class="cellw" x="321" y="69">WB</text>
+  </g>
+  <!-- row I3 (offset 2) -->
+  <g transform="translate(116,70)">
+    <rect class="if" x="60"  y="50" width="58" height="28"/><text class="cell"  x="89"  y="69">IF</text>
+    <rect class="id" x="118" y="50" width="58" height="28"/><text class="cell"  x="147" y="69">ID</text>
+    <rect class="ex" x="176" y="50" width="58" height="28"/><text class="cell"  x="205" y="69">EX</text>
+    <rect class="me" x="234" y="50" width="58" height="28"/><text class="cellw" x="263" y="69">MEM</text>
+    <rect class="wb" x="292" y="50" width="58" height="28"/><text class="cellw" x="321" y="69">WB</text>
+  </g>
+  <!-- row I4 (offset 3) -->
+  <g transform="translate(174,105)">
+    <rect class="if" x="60"  y="50" width="58" height="28"/><text class="cell"  x="89"  y="69">IF</text>
+    <rect class="id" x="118" y="50" width="58" height="28"/><text class="cell"  x="147" y="69">ID</text>
+    <rect class="ex" x="176" y="50" width="58" height="28"/><text class="cell"  x="205" y="69">EX</text>
+    <rect class="me" x="234" y="50" width="58" height="28"/><text class="cellw" x="263" y="69">MEM</text>
+    <rect class="wb" x="292" y="50" width="58" height="28"/><text class="cellw" x="321" y="69">WB</text>
+  </g>
+  <!-- row I5 (offset 4) -->
+  <g transform="translate(232,140)">
+    <rect class="if" x="60"  y="50" width="58" height="28"/><text class="cell"  x="89"  y="69">IF</text>
+    <rect class="id" x="118" y="50" width="58" height="28"/><text class="cell"  x="147" y="69">ID</text>
+    <rect class="ex" x="176" y="50" width="58" height="28"/><text class="cell"  x="205" y="69">EX</text>
+    <rect class="me" x="234" y="50" width="58" height="28"/><text class="cellw" x="263" y="69">MEM</text>
+    <rect class="wb" x="292" y="50" width="58" height="28"/><text class="cellw" x="321" y="69">WB</text>
+  </g>
+
+  <text class="cap" x="60" y="265">En cada ciclo hay una instrucción en cada etapa: el caudal se multiplica (no la latencia de una sola).</text>
+</svg>

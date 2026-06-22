@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" font-family="system-ui, sans-serif" role="img" aria-label="CPU con pocos núcleos potentes frente a GPU con muchos núcleos pequeños">
+  <style>
+    .frame{fill:none;stroke:#3a47b8;stroke-width:2}
+    .big{fill:#3a47b8}
+    .small{fill:#7782d6;stroke:#fff;stroke-width:1}
+    .tw{font-size:14px;font-weight:700;fill:#fff;text-anchor:middle}
+    .ttl{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="640" height="280" fill="#ffffff"/>
+
+  <!-- CPU -->
+  <text class="ttl" x="160" y="35">CPU</text>
+  <rect class="frame" x="40" y="50" width="240" height="170" rx="10"/>
+  <rect class="big" x="60"  y="70"  width="90" height="60" rx="6"/><text class="tw" x="105" y="105">núcleo</text>
+  <rect class="big" x="170" y="70"  width="90" height="60" rx="6"/><text class="tw" x="215" y="105">núcleo</text>
+  <rect class="big" x="60"  y="145" width="90" height="60" rx="6"/><text class="tw" x="105" y="180">núcleo</text>
+  <rect class="big" x="170" y="145" width="90" height="60" rx="6"/><text class="tw" x="215" y="180">núcleo</text>
+  <text class="cap" x="160" y="245">pocos núcleos potentes</text>
+  <text class="cap" x="160" y="263">→ tareas variadas, en serie</text>
+
+  <!-- GPU -->
+  <text class="ttl" x="475" y="35">GPU</text>
+  <rect class="frame" x="360" y="50" width="240" height="170" rx="10"/>
+  <!-- grid de núcleos pequeños 10 x 6 -->
+  <g>
+    <!-- generate 6 rows x 10 cols -->
+    <!-- row template -->
+    <g>
+      <rect class="small" x="372" y="62"  width="20" height="20"/><rect class="small" x="394" y="62"  width="20" height="20"/><rect class="small" x="416" y="62"  width="20" height="20"/><rect class="small" x="438" y="62"  width="20" height="20"/><rect class="small" x="460" y="62"  width="20" height="20"/><rect class="small" x="482" y="62"  width="20" height="20"/><rect class="small" x="504" y="62"  width="20" height="20"/><rect class="small" x="526" y="62"  width="20" height="20"/><rect class="small" x="548" y="62"  width="20" height="20"/><rect class="small" x="570" y="62"  width="20" height="20"/>
+    </g>
+    <g transform="translate(0,24)">
+      <rect class="small" x="372" y="62"  width="20" height="20"/><rect class="small" x="394" y="62"  width="20" height="20"/><rect class="small" x="416" y="62"  width="20" height="20"/><rect class="small" x="438" y="62"  width="20" height="20"/><rect class="small" x="460" y="62"  width="20" height="20"/><rect class="small" x="482" y="62"  width="20" height="20"/><rect class="small" x="504" y="62"  width="20" height="20"/><rect class="small" x="526" y="62"  width="20" height="20"/><rect class="small" x="548" y="62"  width="20" height="20"/><rect class="small" x="570" y="62"  width="20" height="20"/>
+    </g>
+    <g transform="translate(0,48)">
+      <rect class="small" x="372" y="62"  width="20" height="20"/><rect class="small" x="394" y="62"  width="20" height="20"/><rect class="small" x="416" y="62"  width="20" height="20"/><rect class="small" x="438" y="62"  width="20" height="20"/><rect class="small" x="460" y="62"  width="20" height="20"/><rect class="small" x="482" y="62"  width="20" height="20"/><rect class="small" x="504" y="62"  width="20" height="20"/><rect class="small" x="526" y="62"  width="20" height="20"/><rect class="small" x="548" y="62"  width="20" height="20"/><rect class="small" x="570" y="62"  width="20" height="20"/>
+    </g>
+    <g transform="translate(0,72)">
+      <rect class="small" x="372" y="62"  width="20" height="20"/><rect class="small" x="394" y="62"  width="20" height="20"/><rect class="small" x="416" y="62"  width="20" height="20"/><rect class="small" x="438" y="62"  width="20" height="20"/><rect class="small" x="460" y="62"  width="20" height="20"/><rect class="small" x="482" y="62"  width="20" height="20"/><rect class="small" x="504" y="62"  width="20" height="20"/><rect class="small" x="526" y="62"  width="20" height="20"/><rect class="small" x="548" y="62"  width="20" height="20"/><rect class="small" x="570" y="62"  width="20" height="20"/>
+    </g>
+    <g transform="translate(0,96)">
+      <rect class="small" x="372" y="62"  width="20" height="20"/><rect class="small" x="394" y="62"  width="20" height="20"/><rect class="small" x="416" y="62"  width="20" height="20"/><rect class="small" x="438" y="62"  width="20" height="20"/><rect class="small" x="460" y="62"  width="20" height="20"/><rect class="small" x="482" y="62"  width="20" height="20"/><rect class="small" x="504" y="62"  width="20" height="20"/><rect class="small" x="526" y="62"  width="20" height="20"/><rect class="small" x="548" y="62"  width="20" height="20"/><rect class="small" x="570" y="62"  width="20" height="20"/>
+    </g>
+    <g transform="translate(0,120)">
+      <rect class="small" x="372" y="62"  width="20" height="20"/><rect class="small" x="394" y="62"  width="20" height="20"/><rect class="small" x="416" y="62"  width="20" height="20"/><rect class="small" x="438" y="62"  width="20" height="20"/><rect class="small" x="460" y="62"  width="20" height="20"/><rect class="small" x="482" y="62"  width="20" height="20"/><rect class="small" x="504" y="62"  width="20" height="20"/><rect class="small" x="526" y="62"  width="20" height="20"/><rect class="small" x="548" y="62"  width="20" height="20"/><rect class="small" x="570" y="62"  width="20" height="20"/>
+    </g>
+  </g>
+  <text class="cap" x="480" y="245">miles de núcleos simples</text>
+  <text class="cap" x="480" y="263">→ la misma operación, en masa</text>
+</svg>

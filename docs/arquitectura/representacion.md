@@ -14,6 +14,8 @@ Representar números positivos en binario es directo. El problema es el signo. L
 
 Para los números reales se usa el estándar **IEEE 754**, que guarda tres piezas, como la notación científica: **signo**, **exponente** y **mantisa** (los dígitos significativos). La **precisión simple** usa 32 bits; la **doble**, 64. Esto explica una rareza famosa: `0.1 + 0.2` no da exactamente `0.3`, porque 0,1 no tiene representación binaria finita —igual que 1/3 no la tiene en decimal—. De ahí dos lecciones prácticas: nunca comparar flotantes con `==`, y cuidar el **error de redondeo** cuando se acumulan millones de operaciones.
 
+![Formato IEEE 754 de precisión simple: 1 bit de signo, 8 de exponente, 23 de mantisa](../assets/arq-ieee754.svg)
+
 ## Caracteres
 
 El texto también son números. **ASCII** asignaba 7 bits a cada carácter, suficiente para el inglés. Hoy reina **Unicode**, que da un número (*code point*) a cada símbolo de casi todos los idiomas y a los emojis, normalmente codificado en **UTF-8**, un esquema de longitud variable que es compatible hacia atrás con ASCII y se ha vuelto el estándar de facto en la web.

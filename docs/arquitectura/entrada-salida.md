@@ -24,6 +24,8 @@ Un **bus** es el conjunto de cables compartidos por los que viajan los datos ent
 
 Como un único bus para todo sería un cuello de botella, los computadores usan una **jerarquía de buses**: uno rápido y corto junto a la CPU y la memoria, y otros más lentos para los periféricos. En la práctica conoces sus nombres comerciales: **PCIe** para tarjetas gráficas y SSD veloces, **USB** para periféricos, **SATA** para discos.
 
+![Los tres buses (datos, direcciones, control) conectando CPU, memoria y E/S](../assets/arq-buses.svg)
+
 ---
 
 ➡️ Sigue en [Rendimiento](rendimiento.md).

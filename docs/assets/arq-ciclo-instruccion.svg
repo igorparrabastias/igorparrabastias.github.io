@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" font-family="system-ui, sans-serif" role="img" aria-label="Ciclo de instrucción: buscar, decodificar, ejecutar, escribir, y vuelta a empezar">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .sub{font-size:10px;fill:#888;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+    .ret{stroke:#e0663f;stroke-width:2.5;fill:none}
+    .cap{font-size:12px;fill:#666}
+  </style>
+  <rect width="640" height="230" fill="#ffffff"/>
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e0663f"/></marker>
+  </defs>
+
+  <rect class="box" x="30"  y="70" width="120" height="56" rx="8"/><text class="t" x="90"  y="96">Buscar</text><text class="sub" x="90" y="113">fetch · PC → IR</text>
+  <rect class="box" x="190" y="70" width="120" height="56" rx="8"/><text class="t" x="250" y="96">Decodificar</text><text class="sub" x="250" y="113">interpretar</text>
+  <rect class="box" x="350" y="70" width="120" height="56" rx="8"/><text class="t" x="410" y="96">Ejecutar</text><text class="sub" x="410" y="113">ALU opera</text>
+  <rect class="box" x="510" y="70" width="100" height="56" rx="8"/><text class="t" x="560" y="96">Escribir</text><text class="sub" x="560" y="113">write-back</text>
+
+  <line class="fl" x1="150" y1="98" x2="190" y2="98" marker-end="url(#a)"/>
+  <line class="fl" x1="310" y1="98" x2="350" y2="98" marker-end="url(#a)"/>
+  <line class="fl" x1="470" y1="98" x2="510" y2="98" marker-end="url(#a)"/>
+
+  <!-- retorno: de Escribir de vuelta a Buscar (avanza el PC) -->
+  <path class="ret" d="M 560 126 L 560 175 L 90 175 L 90 126" marker-end="url(#ar)"/>
+  <text class="cap" x="250" y="195" fill="#e0663f">se repite: el PC avanza a la siguiente instrucción (o salta)</text>
+</svg>

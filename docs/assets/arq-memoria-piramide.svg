@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" font-family="system-ui, sans-serif" role="img" aria-label="Pirámide de la jerarquía de memoria: registros, caché, RAM y disco">
+  <style>
+    .l1{fill:#3a47b8}
+    .l2{fill:#5663c8}
+    .l3{fill:#7782d6}
+    .l4{fill:#aab0dd}
+    .tw{font-size:13px;font-weight:700;fill:#fff;text-anchor:middle}
+    .arrL{font-size:11px;font-weight:700;fill:#e0663f;text-anchor:middle}
+    .arrR{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .cap{font-size:12px;fill:#666}
+    .ax{stroke:#e0663f;stroke-width:2;fill:none}
+    .ax2{stroke:#3a47b8;stroke-width:2;fill:none}
+  </style>
+  <rect width="640" height="320" fill="#ffffff"/>
+  <defs>
+    <marker id="ao" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e0663f"/></marker>
+    <marker id="ab" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#3a47b8"/></marker>
+  </defs>
+
+  <!-- pyramid layers (trapezoids) -->
+  <polygon class="l1" points="290,50 350,50 365,105 275,105"/>
+  <text class="tw" x="320" y="85">Registros</text>
+  <polygon class="l2" points="275,108 365,108 385,165 255,165"/>
+  <text class="tw" x="320" y="143">Caché L1 / L2 / L3</text>
+  <polygon class="l3" points="255,168 385,168 410,225 230,225"/>
+  <text class="tw" x="320" y="203">RAM</text>
+  <polygon class="l4" points="230,228 410,228 440,288 200,288"/>
+  <text class="tw" x="320" y="263">Disco / SSD</text>
+
+  <!-- left arrow: faster, costlier (up) -->
+  <line class="ax" x1="150" y1="285" x2="150" y2="55" marker-end="url(#ao)"/>
+  <text class="arrL" x="120" y="180" transform="rotate(-90 120 180)">más rápido · más caro</text>
+
+  <!-- right arrow: bigger, cheaper (down) -->
+  <line class="ax2" x1="500" y1="55" x2="500" y2="285" marker-end="url(#ab)"/>
+  <text class="arrR" x="530" y="180" transform="rotate(-90 530 180)">más grande · más barato</text>
+
+  <text class="cap" x="160" y="312">La localidad hace que el dato buscado casi siempre esté ya arriba.</text>
+</svg>

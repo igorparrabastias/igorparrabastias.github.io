@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 180" font-family="system-ui, sans-serif" role="img" aria-label="Formato IEEE 754 de precisión simple: 1 bit de signo, 8 de exponente, 23 de mantisa">
+  <style>
+    .s{fill:#e0663f;stroke:#b84a26;stroke-width:2}
+    .e{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .m{fill:#dfe3f7;stroke:#3a47b8;stroke-width:2}
+    .lab{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+    .bits{font-size:11px;fill:#666;text-anchor:middle}
+    .cap{font-size:12px;fill:#666}
+    .ttl{font-size:13px;font-weight:700;fill:#333;text-anchor:middle}
+  </style>
+  <rect width="640" height="180" fill="#ffffff"/>
+  <text class="ttl" x="320" y="28">IEEE 754 — precisión simple (32 bits)</text>
+  <rect class="s" x="40"  y="60" width="50"  height="50"/>
+  <rect class="e" x="90"  y="60" width="150" height="50"/>
+  <rect class="m" x="240" y="60" width="360" height="50"/>
+  <text class="lab" x="65"  y="50">signo</text>
+  <text class="lab" x="165" y="50">exponente</text>
+  <text class="lab" x="420" y="50">mantisa</text>
+  <text class="bits" x="65"  y="128">1 bit</text>
+  <text class="bits" x="165" y="128">8 bits</text>
+  <text class="bits" x="420" y="128">23 bits</text>
+  <text class="cap" x="40" y="160">valor = (−1)^signo × 1,mantisa × 2^(exponente − 127)    ·    doble precisión: 1 + 11 + 52 bits</text>
+</svg>

@@ -16,6 +16,8 @@ Esto traslada el problema al **software**: para sacarle partido hay que dividir 
 
 Una **GPU** lleva el SIMD al extremo: en lugar de unos pocos núcleos potentes, tiene **miles de núcleos simples** trabajando en paralelo. Nacieron para calcular millones de píxeles a la vez en los videojuegos, pero resultaron ser **máquinas de multiplicar matrices en masa** —justo lo que necesita el [cómputo de la IA](../matematicas/necesita-ia.md#4--cómputo-cloud-computing--el-músculo)—. Ese fue el giro que las llevó del entretenimiento al corazón del entrenamiento de los modelos más grandes de hoy.
 
+![CPU con pocos núcleos potentes frente a GPU con muchos núcleos pequeños](../assets/arq-cpu-gpu.svg)
+
 > [!NOTE]
 > El paralelismo es la respuesta de la organización al fin de la "comida gratis": durante décadas, cada generación de chips corría más rápido sola; cuando eso se frenó por límites físicos, la industria viró hacia **más núcleos** en vez de núcleos más veloces. Por eso saber pensar en paralelo es hoy una destreza central.
 
