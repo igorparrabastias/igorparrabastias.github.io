@@ -116,11 +116,16 @@ nav:
     - Data Ecosystem (IBM): practica/ibm-data-ecosystem.md
   - Arquitectura y organización de computadores:
     - arquitectura/index.md
-    - Representación y lógica digital: arquitectura/representacion.md
-    - CPU, ISA y ciclo de instrucción: arquitectura/cpu.md
+    - Representación de la información: arquitectura/representacion.md
+    - Lógica digital: arquitectura/logica-digital.md
+    - Modelo von Neumann y ciclo de instrucción: arquitectura/von-neumann.md
+    - La CPU: arquitectura/cpu.md
+    - Conjunto de instrucciones (ISA): arquitectura/isa.md
+    - Segmentación (pipelining): arquitectura/segmentacion.md
     - Jerarquía de memoria: arquitectura/memoria.md
-    - Entrada/salida y buses: arquitectura/entrada-salida.md
-    - Segmentación, rendimiento y paralelismo: arquitectura/paralelismo.md
+    - Entrada/salida: arquitectura/entrada-salida.md
+    - Rendimiento: arquitectura/rendimiento.md
+    - Paralelismo: arquitectura/paralelismo.md
   - Redes y comunicaciones: fundamentos-de-redes-y-comunicaciones-digitales.md
   - Desarrollo web (en construcción): web.md
   # Los ~263 notebooks .ipynb los anida nb_hook.py DENTRO de cada sección temática

@@ -10,23 +10,59 @@ Cómo funciona un computador **por dentro**, del bit a los núcleos. El título 
 
 <div class="grid cards" markdown>
 
--   :material-numeric: __Representación y lógica digital__
+-   :material-numeric: __Representación de la información__
 
     ---
 
-    Binario y complemento a dos, punto flotante IEEE 754, caracteres, y el álgebra
-    de Boole con la que se construyen los circuitos.
+    Binario, hexadecimal, complemento a dos, punto flotante IEEE 754 y la
+    codificación del texto (ASCII/Unicode).
 
     [:octicons-arrow-right-24: Entrar](representacion.md)
 
--   :material-chip: __CPU, ISA y ciclo de instrucción__
+-   :material-gate-and: __Lógica digital__
 
     ---
 
-    El modelo von Neumann, la ALU y los registros, el ciclo buscar–decodificar–
-    ejecutar, el conjunto de instrucciones y RISC vs CISC.
+    Álgebra de Boole, puertas lógicas y los circuitos combinacionales y
+    secuenciales (flip-flops) con los que se construye todo.
+
+    [:octicons-arrow-right-24: Entrar](logica-digital.md)
+
+-   :material-sync: __Modelo von Neumann y ciclo de instrucción__
+
+    ---
+
+    El programa almacenado, sus componentes, el cuello de botella y el ciclo
+    buscar → decodificar → ejecutar.
+
+    [:octicons-arrow-right-24: Entrar](von-neumann.md)
+
+-   :material-chip: __La CPU__
+
+    ---
+
+    La ALU, el banco de registros y la unidad de control (cableada vs
+    microprogramada), unidos por el camino de datos.
 
     [:octicons-arrow-right-24: Entrar](cpu.md)
+
+-   :material-code-braces: __Conjunto de instrucciones (ISA)__
+
+    ---
+
+    El contrato hardware–software: modos de direccionamiento, RISC vs CISC y el
+    ensamblador.
+
+    [:octicons-arrow-right-24: Entrar](isa.md)
+
+-   :material-view-sequential: __Segmentación (pipelining)__
+
+    ---
+
+    Solapar instrucciones como una línea de montaje, sus riesgos (*hazards*) y el
+    paralelismo a nivel de instrucción.
+
+    [:octicons-arrow-right-24: Entrar](segmentacion.md)
 
 -   :material-memory: __Jerarquía de memoria__
 
@@ -37,7 +73,7 @@ Cómo funciona un computador **por dentro**, del bit a los núcleos. El título 
 
     [:octicons-arrow-right-24: Entrar](memoria.md)
 
--   :material-swap-horizontal: __Entrada/salida y buses__
+-   :material-swap-horizontal: __Entrada/salida__
 
     ---
 
@@ -46,12 +82,21 @@ Cómo funciona un computador **por dentro**, del bit a los núcleos. El título 
 
     [:octicons-arrow-right-24: Entrar](entrada-salida.md)
 
--   :material-speedometer: __Segmentación, rendimiento y paralelismo__
+-   :material-speedometer: __Rendimiento__
 
     ---
 
-    Medir el rendimiento (CPI, ley de Amdahl), la segmentación y sus riesgos, y el
-    paralelismo de datos e hilos hasta las GPUs.
+    Medir de verdad: la fórmula del tiempo de CPU, el CPI, los MIPS y la ley de
+    Amdahl.
+
+    [:octicons-arrow-right-24: Entrar](rendimiento.md)
+
+-   :material-arrow-split-vertical: __Paralelismo__
+
+    ---
+
+    Hacer varias cosas a la vez: SIMD, multinúcleo y el paralelismo masivo de las
+    GPUs.
 
     [:octicons-arrow-right-24: Entrar](paralelismo.md)
 

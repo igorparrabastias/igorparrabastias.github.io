@@ -1,38 +1,23 @@
-# Segmentación, rendimiento y paralelismo
+# Paralelismo
 
-Hacer un computador más rápido no es solo subir la frecuencia del reloj. Esta página trata cómo se **mide** el rendimiento y los grandes trucos para **exprimirlo**: solapar trabajo y hacer muchas cosas a la vez.
+Cuando exprimir un solo núcleo ya no da más —y la [ley de Amdahl](rendimiento.md) recuerda que tiene límites—, el camino es **hacer varias cosas a la vez**. Hay varios niveles de paralelismo, de grano fino a grueso.
 
-## Medir el rendimiento
+## SIMD: una instrucción, muchos datos
 
-La frecuencia (GHz) engaña: un chip más veloz puede ser más lento si necesita más ciclos por tarea. La fórmula honesta del tiempo de CPU es:
+**SIMD** (*Single Instruction, Multiple Data*) aplica **la misma operación a un vector entero de valores de golpe**. En vez de sumar dos números, suma dos listas de ocho números en una sola instrucción. Es ideal para todo lo que tenga estructura regular: gráficos, audio, vídeo y, sobre todo, **álgebra lineal**. Los procesadores traen extensiones SIMD (SSE, AVX, NEON) justo para esto.
 
-> **tiempo = nº de instrucciones × CPI × tiempo de ciclo**
+## Multinúcleo: paralelismo de hilos
 
-donde **CPI** es los *ciclos por instrucción* promedio. Mejorar el rendimiento es reducir cualquiera de los tres factores (mejor compilador, mejor arquitectura, mejor tecnología). Medidas como **MIPS** o los **FLOPS** resumen el ritmo, pero hay que tomarlas con cuidado.
+Un chip **multinúcleo** mete varios procesadores completos en el mismo encapsulado, cada uno ejecutando su propio **hilo** de ejecución en paralelo (paralelismo a nivel de hilo, **TLP**). Técnicas como el **multihilo simultáneo** (*hyper-threading*) van más allá y dejan que un mismo núcleo ejecute dos hilos a la vez aprovechando sus huecos ociosos.
 
-### La ley de Amdahl
+Esto traslada el problema al **software**: para sacarle partido hay que dividir el trabajo en tareas independientes, y ahí aparecen las dificultades clásicas de la **concurrencia** —sincronización, condiciones de carrera, bloqueos—. El hardware ofrece los núcleos; aprovecharlos es trabajo del programador.
 
-Un aviso fundamental: si solo una parte de un programa se puede acelerar, la mejora total tiene un techo. La **ley de Amdahl** lo formaliza —si el 80 % es paralelizable y el 20 % no, ni con infinitos núcleos bajarás de ese 20 %—. Moraleja: **la parte secuencial manda**, y por eso no basta con "añadir más núcleos".
+## GPUs: paralelismo masivo
 
-## Segmentación (*pipelining*)
+Una **GPU** lleva el SIMD al extremo: en lugar de unos pocos núcleos potentes, tiene **miles de núcleos simples** trabajando en paralelo. Nacieron para calcular millones de píxeles a la vez en los videojuegos, pero resultaron ser **máquinas de multiplicar matrices en masa** —justo lo que necesita el [cómputo de la IA](../matematicas/necesita-ia.md#4--cómputo-cloud-computing--el-músculo)—. Ese fue el giro que las llevó del entretenimiento al corazón del entrenamiento de los modelos más grandes de hoy.
 
-La idea es la de una **línea de montaje**. En vez de ejecutar una instrucción de principio a fin antes de empezar la siguiente, se divide el ciclo en etapas (buscar, decodificar, ejecutar, memoria, escribir) y, en cada momento, hay **una instrucción distinta en cada etapa**. No acelera una instrucción suelta, pero multiplica el **caudal** (instrucciones terminadas por unidad de tiempo).
-
-El problema son los **riesgos** (*hazards*), situaciones que rompen el flujo:
-
-- **Estructurales**: dos instrucciones quieren el mismo recurso a la vez.
-- **De datos**: una instrucción necesita un resultado que la anterior aún no terminó. Se mitigan con **adelantamiento** (*forwarding*) o, si no hay más remedio, con una **burbuja** (*stall*).
-- **De control**: tras un salto, no se sabe qué instrucción viene. Se ataca con **predicción de saltos**: el procesador apuesta por el camino más probable y, si falla, descarta el trabajo especulado.
-
-Llevar esto más lejos —ejecutar **varias instrucciones por ciclo**— es el diseño **superescalar**, que explota el *paralelismo a nivel de instrucción* (ILP).
-
-## Paralelismo de verdad
-
-Cuando una sola CPU no da más, se replica el trabajo:
-
-- **SIMD** (*una instrucción, muchos datos*): una misma operación se aplica a un vector entero de valores de golpe. Ideal para gráficos, audio y álgebra.
-- **Multinúcleo**: varios procesadores completos en un mismo chip, ejecutando hilos en paralelo (paralelismo a nivel de hilo).
-- **GPUs**: llevan el SIMD al extremo con miles de núcleos simples. Son máquinas de multiplicar matrices en masa —justo lo que necesita el [cómputo de la IA](../matematicas/necesita-ia.md#4--cómputo-cloud-computing--el-músculo)—, por eso pasaron de los videojuegos a entrenar los modelos más grandes.
+> [!NOTE]
+> El paralelismo es la respuesta de la organización al fin de la "comida gratis": durante décadas, cada generación de chips corría más rápido sola; cuando eso se frenó por límites físicos, la industria viró hacia **más núcleos** en vez de núcleos más veloces. Por eso saber pensar en paralelo es hoy una destreza central.
 
 ---
 
