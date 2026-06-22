@@ -58,6 +58,18 @@ nav:
       - Machine Learning con Python: ia-practica/ml-practico.md
       - Curso NVIDIA · Building RAG Agents: ia-practica/curso-nvidia-rag.md
       - Curso DeepLearning.AI · ChatGPT API: ia-practica/curso-deeplearning-chatgpt.md
+  - Matemáticas y teoría:
+    - matematicas/index.md
+    - Lo que de verdad necesita la IA: matematicas/necesita-ia.md
+    - Técnicas de análisis de problemas:
+      - matematicas/tecnicas.md
+      # nb_hook anida aquí los notebooks de técnicas de análisis
+    - Complejidad algorítmica y optimización:
+      - matematicas/complejidad.md
+      # nb_hook anida aquí los notebooks de complejidad
+    - Teoría detrás de los algoritmos:
+      - matematicas/teoria.md
+      # nb_hook anida aquí los notebooks de teoría
   - Fundamentos de Python:
     - python/index.md
     # nb_hook anida aquí: repaso básico, repaso avanzado, anexos
@@ -77,18 +89,6 @@ nav:
   - Problemas de Estructuras de Datos y Algoritmos:
     - problemas/index.md
     # nb_hook anida aquí (tras el índice): los 7 problemas resueltos en Python.
-  - Matemáticas y teoría:
-    - matematicas/index.md
-    - Lo que de verdad necesita la IA: matematicas/necesita-ia.md
-    - Técnicas de análisis de problemas:
-      - matematicas/tecnicas.md
-      # nb_hook anida aquí los notebooks de técnicas de análisis
-    - Complejidad algorítmica y optimización:
-      - matematicas/complejidad.md
-      # nb_hook anida aquí los notebooks de complejidad
-    - Teoría detrás de los algoritmos:
-      - matematicas/teoria.md
-      # nb_hook anida aquí los notebooks de teoría
   - Paradigmas de programación:
     - paradigmas/index.md
     - Funcional y concurrente — Elixir:

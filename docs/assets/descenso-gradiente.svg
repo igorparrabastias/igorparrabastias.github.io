@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="system-ui, sans-serif" role="img" aria-label="Descenso de gradiente: bajar la curva de error siguiendo la pendiente (derivada)">
+  <style>
+    .ax{stroke:#cfd3e8;stroke-width:1.5}
+    .curve{stroke:#3a47b8;stroke-width:3;fill:none}
+    .tan{stroke:#e0663f;stroke-width:2.5;fill:none}
+    .step{stroke:#9aa0c8;stroke-width:2;fill:none;stroke-dasharray:4 3}
+    .dot{fill:#3a47b8}
+    .doto{fill:#e0663f}
+    .lbl{font-size:12px;font-weight:700;fill:#333}
+    .o{font-size:12px;font-weight:700;fill:#e0663f}
+    .cap{font-size:12px;fill:#666}
+    .axl{font-size:11px;fill:#888}
+  </style>
+  <rect width="640" height="300" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <!-- axes -->
+  <line class="ax" x1="70" y1="250" x2="600" y2="250" marker-end="url(#a)"/>
+  <line class="ax" x1="70" y1="250" x2="70"  y2="40"  marker-end="url(#a)"/>
+  <text class="axl" x="585" y="270">parámetros (pesos)</text>
+  <text class="axl" x="30" y="55" transform="rotate(-90 30 55)">error (loss)</text>
+
+  <!-- loss curve (parabola-ish) -->
+  <path class="curve" d="M 110 70 Q 340 360 580 90"/>
+
+  <!-- punto inicial alto + tangente (pendiente = derivada) -->
+  <circle class="doto" cx="160" cy="135" r="6"/>
+  <line class="tan" x1="110" y1="92" x2="220" y2="200"/>
+  <text class="o" x="120" y="120">pendiente = derivada</text>
+
+  <!-- pasos bajando -->
+  <line class="step" x1="160" y1="135" x2="250" y2="200" marker-end="url(#a)"/>
+  <circle class="dot" cx="250" cy="200" r="5"/>
+  <line class="step" x1="250" y1="200" x2="330" y2="232" marker-end="url(#a)"/>
+  <circle class="dot" cx="330" cy="232" r="5"/>
+  <line class="step" x1="330" y1="232" x2="360" y2="242" marker-end="url(#a)"/>
+
+  <!-- mínimo -->
+  <circle class="dot" cx="368" cy="244" r="6"/>
+  <text class="lbl" x="350" y="232">mínimo</text>
+
+  <text class="cap" x="70" y="288">Cada paso baja en contra de la pendiente:  nuevo peso = peso − η · (gradiente).  Eso es TODO el cálculo que hay.</text>
+</svg>

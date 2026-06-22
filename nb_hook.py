@@ -18,6 +18,11 @@ import json
 import glob
 import shutil
 
+try:
+    from mkdocs.utils import get_relative_url
+except Exception:                       # pragma: no cover
+    get_relative_url = None
+
 REPO = os.path.dirname(os.path.abspath(__file__))
 # Orden pedagógico real de los notebooks (generado por _gen_nb_order.py desde los
 # índices curados). Sin esto, el menú saldría en orden alfabético y rompería la
@@ -32,7 +37,6 @@ DOCS = os.path.join(REPO, "docs")
 DST = os.path.join(DOCS, "notebook")
 GH = "igorparrabastias/igorparrabastias.github.io"
 BRANCH = "main"
-
 
 def _titulo(slug):
     return slug.replace("-", " ").replace("_", " ").strip().capitalize()
@@ -215,10 +219,51 @@ def _fix_nb_link(m):
     return f'href="../{path}.html"'
 
 
+def _first_page_url(node, page):
+    """URL (relativa a `page`) de la primera página descendiente de una sección
+    del nav: el destino natural de la 'sección' en las migas de pan. Para las
+    secciones temáticas es su índice; para los subgrupos de notebooks, el primer
+    notebook del grupo."""
+    for child in getattr(node, "children", None) or []:
+        if getattr(child, "is_page", False) and getattr(child, "url", None):
+            if get_relative_url:
+                return get_relative_url(child.url, page.url)
+            return child.url
+        if getattr(child, "is_section", False):
+            u = _first_page_url(child, page)
+            if u:
+                return u
+    return None
+
+
+def _breadcrumb_html(page):
+    """Migas de pan derivadas del nav (`page.ancestors`), iguales para páginas
+    Markdown y notebooks: "📂 Sección › Subtema", enlazadas a su índice. Así, al
+    aterrizar directo en una página (sobre todo un notebook titulado solo
+    'Introducción'), se sabe a qué tema pertenece. Páginas de primer nivel
+    (Inicio, Sobre mí) no llevan migas; tampoco se repite el título de la propia
+    página (p. ej. en la portada de cada sección)."""
+    anc = list(getattr(page, "ancestors", None) or [])      # cercano -> raíz
+    titulos = [a for a in reversed(anc) if getattr(a, "title", None)]
+    while titulos and titulos[-1].title == page.title:
+        titulos.pop()
+    if not titulos:
+        return ""
+    partes = []
+    for sec in titulos:
+        url = _first_page_url(sec, page)
+        partes.append(f'<a href="{url}">{sec.title}</a>' if url else sec.title)
+    return (
+        '<p style="font-size:.78rem;color:var(--md-default-fg-color--light);'
+        'margin:0 0 .5rem;">📂 ' + " › ".join(partes) + '</p>'
+    )
+
+
 def on_page_content(html, page, config, files):
     src = page.file.src_uri
+    migas = _breadcrumb_html(page)
     if not src.endswith(".ipynb"):
-        return html
+        return migas + html
     # Corrige los enlaces internos heredados (ver nota en _NB_REMAP arriba).
     html = re.sub(r'href="\.\./notebook/([^"]+?)\.ipynb"', _fix_nb_link, html)
     # src es 'notebook/<...>.ipynb' (o 'demo/slicing.ipynb'); ambos existen en master.
@@ -231,4 +276,4 @@ def on_page_content(html, page, config, files):
         f'<a class="md-button" target="_blank" href="{github}">Ver en GitHub</a>'
         '</p>'
     )
-    return boton + html
+    return migas + boton + html

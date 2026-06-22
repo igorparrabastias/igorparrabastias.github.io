@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 290" font-family="system-ui, sans-serif" role="img" aria-label="Espacio vectorial: similitud del coseno y analogía rey - hombre + mujer = reina">
+  <style>
+    .ax{stroke:#cfd3e8;stroke-width:1.5}
+    .v{stroke:#3a47b8;stroke-width:2.5;fill:none}
+    .vb{stroke:#7c84c8;stroke-width:2.5;fill:none}
+    .dot{fill:#3a47b8}
+    .lbl{font-size:13px;font-weight:700;fill:#3a47b8}
+    .cap{font-size:12px;fill:#666}
+    .small{font-size:11px;fill:#888}
+    .dash{stroke:#e0663f;stroke-width:2;fill:none;stroke-dasharray:5 4}
+    .ttl{font-size:12px;font-weight:700;fill:#333;text-anchor:middle}
+  </style>
+  <rect width="640" height="290" fill="#ffffff"/>
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#3a47b8"/></marker>
+    <marker id="arb" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7c84c8"/></marker>
+    <marker id="aro" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e0663f"/></marker>
+  </defs>
+
+  <!-- ===== Panel izquierdo: similitud del coseno ===== -->
+  <text class="ttl" x="155" y="28">Similitud del coseno</text>
+  <line class="ax" x1="50" y1="240" x2="280" y2="240"/>
+  <line class="ax" x1="50" y1="240" x2="50" y2="55"/>
+  <line class="v"  x1="50" y1="240" x2="225" y2="85"  marker-end="url(#ar)"/>
+  <line class="vb" x1="50" y1="240" x2="250" y2="160" marker-end="url(#arb)"/>
+  <path class="ax" d="M 95 200 A 60 60 0 0 1 110 222" fill="none" stroke="#999"/>
+  <text class="small" x="112" y="205">θ</text>
+  <text class="lbl" x="230" y="80">"gato"</text>
+  <text class="lbl" x="255" y="160" fill="#7c84c8">"felino"</text>
+  <text class="cap" x="50" y="270">Ángulo pequeño → muy parecidos (cos θ ≈ 1)</text>
+
+  <!-- ===== Panel derecho: aritmética de vectores ===== -->
+  <text class="ttl" x="490" y="28">Aritmética de significados</text>
+  <!-- parallelogram points -->
+  <circle class="dot" cx="400" cy="210" r="4"/><text class="lbl" x="360" y="228">hombre</text>
+  <circle class="dot" cx="560" cy="210" r="4"/><text class="lbl" x="540" y="228">mujer</text>
+  <circle class="dot" cx="400" cy="90"  r="4"/><text class="lbl" x="372" y="82">rey</text>
+  <circle class="dot" cx="560" cy="90"  r="4"/><text class="lbl" x="540" y="82">reina</text>
+  <!-- género axis -->
+  <line class="vb" x1="408" y1="210" x2="552" y2="210" marker-end="url(#arb)"/>
+  <text class="small" x="440" y="203">+ femenino</text>
+  <!-- realeza axis -->
+  <line class="vb" x1="400" y1="202" x2="400" y2="100" marker-end="url(#arb)"/>
+  <text class="small" x="405" y="150">+ realeza</text>
+  <!-- analogía -->
+  <line class="dash" x1="408" y1="90" x2="552" y2="90" marker-end="url(#aro)"/>
+  <text class="cap" x="350" y="270">rey − hombre + mujer ≈ reina</text>
+</svg>

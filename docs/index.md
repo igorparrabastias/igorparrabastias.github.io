@@ -41,6 +41,15 @@ Senior Full Stack Developer · Autodidacta · Programador en Python / PHP / Java
 
     [:octicons-arrow-right-24: Entrar](fundamento-del-pln-y-la-ia.md)
 
+-   :material-lightbulb-on: __Matemáticas y teoría__
+
+    ---
+
+    Lo que de verdad necesita la IA (álgebra lineal, estadística, datos y cómputo),
+    complejidad algorítmica, técnicas de análisis y la teoría detrás de los algoritmos.
+
+    [:octicons-arrow-right-24: Entrar](matematicas/index.md)
+
 -   :material-language-python: __Fundamentos de Python__
 
     ---
@@ -85,15 +94,6 @@ Senior Full Stack Developer · Autodidacta · Programador en Python / PHP / Java
     disco (B, B+), con sus implementaciones.
 
     [:octicons-arrow-right-24: Entrar](index-trees.md)
-
--   :material-lightbulb-on: __Matemáticas y teoría__
-
-    ---
-
-    Complejidad algorítmica y optimización, técnicas de análisis de problemas, la
-    teoría detrás de los algoritmos y cálculo.
-
-    [:octicons-arrow-right-24: Entrar](matematicas/index.md)
 
 -   :material-puzzle: __Paradigmas de programación__
 

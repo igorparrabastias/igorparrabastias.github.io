@@ -12,7 +12,6 @@ La parte que separa al que *usa* algoritmos del que los *entiende*: complejidad,
     ---
 
     Las cuatro patas reales: **álgebra lineal, estadística, datos y cómputo**.
-    Por qué el cálculo no es el cimiento.
 
     [:octicons-arrow-right-24: Entrar](necesita-ia.md)
 
