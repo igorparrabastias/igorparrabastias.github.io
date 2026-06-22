@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" font-family="system-ui, sans-serif" role="img" aria-label="Entrenamiento distribuido: el modelo y los datos repartidos entre muchas GPUs, escalar arriba y a los lados">
+<svg width="1280" height="560" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" font-family="system-ui, sans-serif" role="img" aria-label="Entrenamiento distribuido: el modelo y los datos repartidos entre muchas GPUs, escalar arriba y a los lados">
   <style>
     .gpu{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
     .core{fill:#3a47b8}

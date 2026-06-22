@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 220" font-family="system-ui, sans-serif" role="img" aria-label="Por qué evaluar es difícil: los benchmarks se saturan cerca del 100% y la contaminación de datos hace que el modelo recuerde en vez de razonar">
+<svg width="1240" height="440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 220" font-family="system-ui, sans-serif" role="img" aria-label="Por qué evaluar es difícil: los benchmarks se saturan cerca del 100% y la contaminación de datos hace que el modelo recuerde en vez de razonar">
   <style>
     .axis{stroke:#9aa0c8;stroke-width:1.5}
     .curve{fill:none;stroke:#3a47b8;stroke-width:2.5}

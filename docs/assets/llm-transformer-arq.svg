@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 320" font-family="system-ui, sans-serif" role="img" aria-label="Arquitectura Transformer: pila de encoder y pila de decoder, cada bloque con atención y red feed-forward">
+<svg width="1240" height="640" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 320" font-family="system-ui, sans-serif" role="img" aria-label="Arquitectura Transformer: pila de encoder y pila de decoder, cada bloque con atención y red feed-forward">
   <style>
     .enc{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
     .dec{fill:#dfe3f7;stroke:#3a47b8;stroke-width:1.5}

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 180" font-family="system-ui, sans-serif" role="img" aria-label="Formato IEEE 754 de precisión simple: 1 bit de signo, 8 de exponente, 23 de mantisa">
+<svg width="1280" height="360" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 180" font-family="system-ui, sans-serif" role="img" aria-label="Formato IEEE 754 de precisión simple: 1 bit de signo, 8 de exponente, 23 de mantisa">
   <style>
     .s{fill:#e0663f;stroke:#b84a26;stroke-width:2}
     .e{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}

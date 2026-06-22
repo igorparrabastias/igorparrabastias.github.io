@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" font-family="system-ui, sans-serif" role="img" aria-label="Ley de Amdahl: la aceleración se estanca según la fracción paralelizable">
+<svg width="1280" height="640" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" font-family="system-ui, sans-serif" role="img" aria-label="Ley de Amdahl: la aceleración se estanca según la fracción paralelizable">
   <style>
     .ax{stroke:#cfd3e8;stroke-width:1.5}
     .c1{stroke:#3a47b8;stroke-width:3;fill:none}

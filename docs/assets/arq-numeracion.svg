@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" font-family="system-ui, sans-serif" role="img" aria-label="El mismo número 250 en decimal, hexadecimal y binario">
+<svg width="1200" height="360" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" font-family="system-ui, sans-serif" role="img" aria-label="El mismo número 250 en decimal, hexadecimal y binario">
   <style>
     .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
     .bd{fill:#3a47b8}

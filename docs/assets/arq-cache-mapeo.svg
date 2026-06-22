@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 250" font-family="system-ui, sans-serif" role="img" aria-label="Mapeo de caché: directo (un único hueco), asociativo por conjuntos y totalmente asociativo">
+<svg width="1240" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 250" font-family="system-ui, sans-serif" role="img" aria-label="Mapeo de caché: directo (un único hueco), asociativo por conjuntos y totalmente asociativo">
   <style>
     .slot{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
     .blk{fill:#3a47b8}

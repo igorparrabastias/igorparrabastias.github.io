@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 230" font-family="system-ui, sans-serif" role="img" aria-label="Dos formas de evaluar tareas abiertas: un LLM como juez y las arenas donde personas votan entre respuestas anónimas para construir un ranking Elo">
+<svg width="1240" height="460" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 230" font-family="system-ui, sans-serif" role="img" aria-label="Dos formas de evaluar tareas abiertas: un LLM como juez y las arenas donde personas votan entre respuestas anónimas para construir un ranking Elo">
   <style>
     .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
     .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}

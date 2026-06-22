@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 220" font-family="system-ui, sans-serif" role="img" aria-label="Interpretabilidad: los conceptos están superpuestos en muchas neuronas, y un autoencoder disperso los separa en características interpretables">
+<svg width="1240" height="440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 220" font-family="system-ui, sans-serif" role="img" aria-label="Interpretabilidad: los conceptos están superpuestos en muchas neuronas, y un autoencoder disperso los separa en características interpretables">
   <style>
     .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
     .fl{stroke:#9aa0c8;stroke-width:2;fill:none}

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" font-family="system-ui, sans-serif" role="img" aria-label="Riesgo de datos: una instrucción necesita un resultado que la anterior aún no escribió, lo que obliga a una burbuja">
+<svg width="1280" height="460" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" font-family="system-ui, sans-serif" role="img" aria-label="Riesgo de datos: una instrucción necesita un resultado que la anterior aún no escribió, lo que obliga a una burbuja">
   <style>
     .if{fill:#cdd3f2;stroke:#3a47b8;stroke-width:1.5}
     .ex{fill:#9aa3e0;stroke:#3a47b8;stroke-width:1.5}

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 220" font-family="system-ui, sans-serif" role="img" aria-label="Un megacluster mide su potencia en gigavatios, comparable a una ciudad mediana o un reactor nuclear">
+<svg width="1240" height="440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 220" font-family="system-ui, sans-serif" role="img" aria-label="Un megacluster mide su potencia en gigavatios, comparable a una ciudad mediana o un reactor nuclear">
   <style>
     .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
     .gpu{fill:#3a47b8}

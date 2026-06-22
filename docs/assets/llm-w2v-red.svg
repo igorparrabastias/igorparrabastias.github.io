@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" font-family="system-ui, sans-serif" role="img" aria-label="Red poco profunda de Word2Vec: entrada one-hot, capa de proyección que es el embedding, y salida softmax">
+<svg width="1280" height="440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" font-family="system-ui, sans-serif" role="img" aria-label="Red poco profunda de Word2Vec: entrada one-hot, capa de proyección que es el embedding, y salida softmax">
   <style>
     .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
     .bd{fill:#3a47b8}

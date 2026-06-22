@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 220" font-family="system-ui, sans-serif" role="img" aria-label="Benchmarks modernos: GPQA, MMLU-Pro, SWE-bench y ARC-AGI miden tareas verificables, realistas y difíciles de memorizar">
+<svg width="1240" height="440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 220" font-family="system-ui, sans-serif" role="img" aria-label="Benchmarks modernos: GPQA, MMLU-Pro, SWE-bench y ARC-AGI miden tareas verificables, realistas y difíciles de memorizar">
   <style>
     .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
     .t{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle}

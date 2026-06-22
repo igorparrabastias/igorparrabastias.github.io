@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 200" font-family="system-ui, sans-serif" role="img" aria-label="La CPU no habla con el dispositivo directamente, sino con un módulo de E/S que expone registros">
+<svg width="1240" height="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 200" font-family="system-ui, sans-serif" role="img" aria-label="La CPU no habla con el dispositivo directamente, sino con un módulo de E/S que expone registros">
   <style>
     .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
     .mod{fill:#dfe3f7;stroke:#3a47b8;stroke-width:2}

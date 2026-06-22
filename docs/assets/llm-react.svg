@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" font-family="system-ui, sans-serif" role="img" aria-label="Patrón ReAct: el agente alterna razonar, actuar y observar en un bucle hasta resolver la tarea">
+<svg width="1200" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" font-family="system-ui, sans-serif" role="img" aria-label="Patrón ReAct: el agente alterna razonar, actuar y observar en un bucle hasta resolver la tarea">
   <style>
     .think{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
     .act{fill:#dfe3f7;stroke:#3a47b8;stroke-width:2}

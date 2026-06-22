@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 210" font-family="system-ui, sans-serif" role="img" aria-label="Embeddings contextuales: ELMo y BERT dan a banco un vector distinto según la frase">
+<svg width="1240" height="420" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 210" font-family="system-ui, sans-serif" role="img" aria-label="Embeddings contextuales: ELMo y BERT dan a banco un vector distinto según la frase">
   <style>
     .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
     .v1{fill:#3a47b8}

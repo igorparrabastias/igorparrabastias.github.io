@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" font-family="system-ui, sans-serif" role="img" aria-label="Pirámide de la jerarquía de memoria: registros, caché, RAM y disco">
+<svg width="1280" height="640" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" font-family="system-ui, sans-serif" role="img" aria-label="Pirámide de la jerarquía de memoria: registros, caché, RAM y disco">
   <style>
     .l1{fill:#3a47b8}
     .l2{fill:#5663c8}

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" font-family="system-ui, sans-serif" role="img" aria-label="El costo hídrico oculto: los datacenters generan calor y la refrigeración evaporativa consume agua dulce">
+<svg width="1200" height="440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" font-family="system-ui, sans-serif" role="img" aria-label="El costo hídrico oculto: los datacenters generan calor y la refrigeración evaporativa consume agua dulce">
   <style>
     .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
     .t{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}

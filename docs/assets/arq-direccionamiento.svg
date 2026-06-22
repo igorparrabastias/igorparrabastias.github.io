@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" font-family="system-ui, sans-serif" role="img" aria-label="Modos de direccionamiento: inmediato, de registro, directo e indirecto">
+<svg width="1200" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" font-family="system-ui, sans-serif" role="img" aria-label="Modos de direccionamiento: inmediato, de registro, directo e indirecto">
   <style>
     .row{fill:#f6f7fc;stroke:#e0e3f0;stroke-width:1}
     .name{font-size:13px;font-weight:700;fill:#3a47b8}

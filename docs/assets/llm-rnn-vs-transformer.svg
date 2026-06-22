@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" font-family="system-ui, sans-serif" role="img" aria-label="RNN procesa los tokens en secuencia; el Transformer los procesa todos a la vez con atención total">
+<svg width="1280" height="480" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" font-family="system-ui, sans-serif" role="img" aria-label="RNN procesa los tokens en secuencia; el Transformer los procesa todos a la vez con atención total">
   <style>
     .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
     .bd{fill:#3a47b8}

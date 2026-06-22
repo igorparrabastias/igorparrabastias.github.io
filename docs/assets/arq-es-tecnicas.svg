@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" font-family="system-ui, sans-serif" role="img" aria-label="Tres técnicas de E/S: polling mantiene la CPU ocupada esperando; las interrupciones la liberan; el DMA mueve los datos sin la CPU">
+<svg width="1280" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" font-family="system-ui, sans-serif" role="img" aria-label="Tres técnicas de E/S: polling mantiene la CPU ocupada esperando; las interrupciones la liberan; el DMA mueve los datos sin la CPU">
   <style>
     .busy{fill:#e0663f}
     .free{fill:#aab0dd}
