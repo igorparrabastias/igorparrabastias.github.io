@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 215" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Trie para autocompletar: nodos raíz, C, A, S, A forman la palabra CASA, con una rama extra para CAMA">
+<svg width="960" height="430" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 215" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Trie para autocompletar: nodos raíz, C, A, S, A forman la palabra CASA, con una rama extra para CAMA">
   <defs>
     <marker id="arr-trie" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
       <path d="M0 0L10 5L0 10z" fill="#90a4ae"/>

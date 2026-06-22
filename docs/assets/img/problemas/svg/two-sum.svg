@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Two Sum con hashing: al llegar al 7 busco su pareja 9 menos 7 igual 2, que ya estaba guardada">
+<svg width="960" height="440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Two Sum con hashing: al llegar al 7 busco su pareja 9 menos 7 igual 2, que ya estaba guardada">
   <defs>
     <marker id="ts-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0 0L10 5L0 10z" fill="#1565c0"/>

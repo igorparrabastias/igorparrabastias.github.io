@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Dos formas de guardar un grafo: lista de vecinos y tabla de sí/no">
+<svg width="960" height="440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Dos formas de guardar un grafo: lista de vecinos y tabla de sí/no">
   <rect x="20"  y="8" width="210" height="28" rx="14" fill="#eef0ff"/>
   <text x="125" y="27" text-anchor="middle" font-size="14" fill="#3b3f5c">📝 Lista de vecinos</text>
   <rect x="250" y="8" width="210" height="28" rx="14" fill="#eef0ff"/>

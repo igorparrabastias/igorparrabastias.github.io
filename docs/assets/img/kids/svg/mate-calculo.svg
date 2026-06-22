@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 225" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Cálculo: la matemática del cambio, como medir la velocidad en un tobogán">
+<svg width="960" height="450" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 225" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Cálculo: la matemática del cambio, como medir la velocidad en un tobogán">
   <defs>
     <marker id="spd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0 0L10 5L0 10z" fill="#f9a825"/>

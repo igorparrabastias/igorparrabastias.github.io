@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Internet: una red mundial que conecta computadores de todo el planeta con líneas de datos">
+<svg width="960" height="480" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Internet: una red mundial que conecta computadores de todo el planeta con líneas de datos">
   <!-- caption pill -->
   <rect x="50" y="8" width="380" height="30" rx="15" fill="#eef0ff"/>
   <text x="240" y="28" text-anchor="middle" font-size="14" fill="#3b3f5c">Internet conecta computadores de todo el mundo 🌍</text>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 225" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Pila LIFO: el último en entrar sale primero. Cola FIFO: el primero en entrar sale primero">
+<svg width="960" height="450" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 225" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Pila LIFO: el último en entrar sale primero. Cola FIFO: el primero en entrar sale primero">
   <defs>
     <marker id="arr-up" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
       <path d="M0 0L10 5L0 10z" fill="#ff5252"/>

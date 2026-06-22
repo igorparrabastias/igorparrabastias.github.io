@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="La ruta de suma máxima en el árbol pasa por 15, 20 y 7 y suma 42">
+<svg width="960" height="480" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="La ruta de suma máxima en el árbol pasa por 15, 20 y 7 y suma 42">
   <!-- caption -->
   <rect x="22" y="8" width="436" height="30" rx="15" fill="#eef0ff"/>
   <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">La mejor ruta puede no pasar por la raíz: 15+20+7 = 42</text>

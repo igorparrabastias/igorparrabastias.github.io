@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 210" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Por dentro la IA ve números ordenados en listas (vectores) y tablas (matrices)">
+<svg width="960" height="420" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 210" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Por dentro la IA ve números ordenados en listas (vectores) y tablas (matrices)">
   <rect x="40" y="8" width="400" height="30" rx="15" fill="#eef0ff"/>
   <text x="240" y="28" text-anchor="middle" font-size="15" fill="#3b3f5c">Por dentro, todo son números en listas y tablas 🔢</text>
 

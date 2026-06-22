@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 185" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Línea de tiempo de la IA: desde los primeros computadores de 1950, pasando por las estadísticas de 1980-2000, hasta los chatbots de hoy">
+<svg width="960" height="370" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 185" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Línea de tiempo de la IA: desde los primeros computadores de 1950, pasando por las estadísticas de 1980-2000, hasta los chatbots de hoy">
   <defs>
     <marker id="arh" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0 0L10 5L0 10z" fill="#90a4ae"/>

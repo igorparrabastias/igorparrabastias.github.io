@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Árbol genealógico: nodo raíz arriba, dos hijos y cuatro nietos conectados por líneas">
+<svg width="960" height="480" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" font-family="'Segoe UI',system-ui,sans-serif" role="img" aria-label="Árbol genealógico: nodo raíz arriba, dos hijos y cuatro nietos conectados por líneas">
 
   <!-- caption pill -->
   <rect x="65" y="6" width="350" height="30" rx="15" fill="#eef0ff"/>
