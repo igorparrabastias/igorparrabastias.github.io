@@ -1,0 +1,73 @@
+<svg width="1440" height="720" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="system-ui, sans-serif" role="img" aria-label="Secuencia de deteccion de match: el usuario A da like a B y se persiste; cuando B da like a A, el servicio consulta si A ya dio like; si hay reciprocidad se crea el match y se notifica a ambos para abrir el chat">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .hl{fill:#dfe4fb;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+    .life{stroke:#c9cfee;stroke-width:1.5;stroke-dasharray:4 4}
+    .num{font-size:11px;font-weight:700;fill:#fff}
+    .divid{stroke:#c9cfee;stroke-width:1.5;stroke-dasharray:6 4}
+  </style>
+  <rect width="720" height="360" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <text x="360" y="26" class="t">Detección de match (secuencia)</text>
+
+  <!-- actor boxes -->
+  <rect class="box" x="30"  y="40" width="120" height="34" rx="10"/>
+  <text x="90"  y="62" class="ts">Usuario A</text>
+  <rect class="box" x="225" y="40" width="120" height="34" rx="10"/>
+  <text x="285" y="62" class="ts">Servicio Match</text>
+  <rect class="box" x="415" y="40" width="120" height="34" rx="10"/>
+  <text x="475" y="62" class="ts">Set likes + bloom</text>
+  <rect class="box" x="585" y="40" width="120" height="34" rx="10"/>
+  <text x="645" y="62" class="ts">Usuario B</text>
+
+  <!-- lifelines -->
+  <line class="life" x1="90"  y1="74" x2="90"  y2="338"/>
+  <line class="life" x1="285" y1="74" x2="285" y2="338"/>
+  <line class="life" x1="475" y1="74" x2="475" y2="338"/>
+  <line class="life" x1="645" y1="74" x2="645" y2="338"/>
+
+  <!-- 1: A like B -->
+  <text x="187" y="106" class="cap">like A → B</text>
+  <path class="fl" marker-end="url(#a)" d="M101,112 H281"/>
+  <circle cx="90" cy="112" r="8" fill="#3a47b8"/><text x="90" y="116" class="num" text-anchor="middle">1</text>
+
+  <!-- 2: persiste, ¿B→A? no -->
+  <text x="380" y="144" class="cap">persiste A→B · ¿B→A? → no</text>
+  <path class="fl" marker-end="url(#a)" d="M296,150 H471"/>
+  <circle cx="285" cy="150" r="8" fill="#3a47b8"/><text x="285" y="154" class="num" text-anchor="middle">2</text>
+
+  <!-- divider -->
+  <line class="divid" x1="40" y1="178" x2="700" y2="178"/>
+  <text x="360" y="174" class="cap">más tarde, B abre la app y hace swipe</text>
+
+  <!-- 3: B like A -->
+  <text x="465" y="200" class="cap">like B → A</text>
+  <path class="fl" marker-end="url(#a)" d="M634,206 H289"/>
+  <circle cx="645" cy="206" r="8" fill="#3a47b8"/><text x="645" y="210" class="num" text-anchor="middle">3</text>
+
+  <!-- 4: ¿A→B? bloom + set -->
+  <text x="380" y="238" class="cap">¿existe A→B? bloom + set</text>
+  <path class="fl" marker-end="url(#a)" d="M296,244 H471"/>
+  <circle cx="285" cy="244" r="8" fill="#3a47b8"/><text x="285" y="248" class="num" text-anchor="middle">4</text>
+
+  <!-- 5: sí → match -->
+  <text x="380" y="270" class="cap">sí existe → ¡match!</text>
+  <path class="fl" marker-end="url(#a)" d="M464,276 H289"/>
+  <circle cx="475" cy="276" r="8" fill="#3a47b8"/><text x="475" y="280" class="num" text-anchor="middle">5</text>
+
+  <!-- 6: push a A -->
+  <text x="187" y="302" class="cap">push match + abre chat</text>
+  <path class="fl" marker-end="url(#a)" d="M274,308 H94"/>
+  <circle cx="285" cy="308" r="8" fill="#3a47b8"/><text x="285" y="312" class="num" text-anchor="middle">6</text>
+
+  <!-- 7: push a B -->
+  <text x="465" y="328" class="cap">push match + abre chat</text>
+  <path class="fl" marker-end="url(#a)" d="M296,332 H641"/>
+  <circle cx="285" cy="332" r="8" fill="#3a47b8"/><text x="285" y="336" class="num" text-anchor="middle">7</text>
+</svg>

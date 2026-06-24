@@ -1,0 +1,57 @@
+<svg width="1640" height="800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" font-family="system-ui, sans-serif" role="img" aria-label="Arquitectura de alto nivel de WhatsApp: clientes con conexion persistente WebSocket llegan a un balanceador y a los servidores de conexion que sostienen los sockets vivos; un servicio de sesion sabe en que servidor esta cada usuario; el servicio de mensajes entrega o guarda en el almacen offline; se apoyan en presencia, grupos, key store y blob store con CDN.">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .accent{fill:#3a47b8}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:13px;font-weight:700;fill:#fff;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lyr{font-size:11px;font-weight:700;fill:#9aa0c8;text-anchor:start}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+  </style>
+  <rect width="820" height="400" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <!-- capa cliente -->
+  <text class="lyr" x="20" y="30">Cliente</text>
+  <rect class="box" x="34" y="44" width="150" height="48" rx="10"/><text class="t" x="109" y="64">App A</text><text class="ts" x="109" y="80">cifra · socket vivo</text>
+  <rect class="box" x="34" y="108" width="150" height="48" rx="10"/><text class="t" x="109" y="128">App B</text><text class="ts" x="109" y="144">descifra · push</text>
+
+  <!-- borde -->
+  <text class="lyr" x="210" y="30">Borde</text>
+  <rect class="accent" x="210" y="62" width="110" height="76" rx="10"/><text class="tw" x="265" y="94">Balanceador</text><text class="tw" x="265" y="112" style="font-size:11px">TLS · sticky</text>
+
+  <!-- conexion -->
+  <text class="lyr" x="350" y="30">Conexion</text>
+  <rect class="box" x="350" y="50" width="150" height="56" rx="10"/><text class="t" x="425" y="74">Servidores conexion</text><text class="ts" x="425" y="92">sockets vivos (actores)</text>
+  <rect class="box" x="350" y="120" width="150" height="48" rx="10"/><text class="t" x="425" y="140">Servicio sesion</text><text class="ts" x="425" y="156">userId -&gt; server</text>
+  <rect class="box" x="350" y="182" width="150" height="48" rx="10"/><text class="t" x="425" y="202">Servicio mensajes</text><text class="ts" x="425" y="218">enruta o guarda</text>
+
+  <!-- datos / apoyo -->
+  <text class="lyr" x="540" y="30">Datos · apoyo</text>
+  <rect class="sub" x="540" y="44" width="180" height="42" rx="10"/><text class="t" x="630" y="62">Almacen offline</text><text class="ts" x="630" y="78">buzon por usuario (TTL)</text>
+  <rect class="sub" x="540" y="96" width="180" height="42" rx="10"/><text class="t" x="630" y="114">Presencia / last-seen</text><text class="ts" x="630" y="130">cache (Redis)</text>
+  <rect class="sub" x="540" y="148" width="180" height="42" rx="10"/><text class="t" x="630" y="166">Grupos (fan-out)</text><text class="ts" x="630" y="182">membresias</text>
+  <rect class="sub" x="540" y="200" width="180" height="42" rx="10"/><text class="t" x="630" y="218">Key store (E2E)</text><text class="ts" x="630" y="234">claves publicas · prekeys</text>
+  <rect class="sub" x="540" y="252" width="180" height="42" rx="10"/><text class="t" x="630" y="270">Blob store + CDN</text><text class="ts" x="630" y="286">adjuntos cifrados</text>
+
+  <!-- flujos cliente -> balanceador -->
+  <path class="fl" d="M184,68 L206,90" marker-end="url(#a)"/>
+  <path class="fl" d="M184,132 L206,112" marker-end="url(#a)"/>
+  <!-- balanceador -> conexion -->
+  <path class="fl" d="M320,90 L346,80" marker-end="url(#a)"/>
+  <!-- conexion interna -->
+  <path class="fl" d="M425,106 L425,116" marker-end="url(#a)"/>
+  <path class="fl" d="M425,168 L425,178" marker-end="url(#a)"/>
+  <!-- mensajes -> datos -->
+  <path class="fl" d="M500,200 L536,72" marker-end="url(#a)"/>
+  <path class="fl" d="M500,210 L536,168" marker-end="url(#a)"/>
+  <!-- sesion -> presencia -->
+  <path class="fl" d="M500,140 L536,116" marker-end="url(#a)"/>
+  <!-- conexion -> key store / blob -->
+  <path class="fl" d="M500,80 L536,216" marker-end="url(#a)"/>
+  <path class="fl" d="M500,96 L536,272" marker-end="url(#a)"/>
+
+  <text class="cap" x="410" y="392">Flujo: el cliente abre un socket persistente; el servidor de conexion lo sostiene; el servicio de sesion ubica al destinatario; mensajes entrega via su socket o lo deja en el buzon offline; E2E con claves del key store, adjuntos por el blob store.</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg width="1640" height="800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" font-family="system-ui, sans-serif" role="img" aria-label="Arquitectura de alto nivel de Zoom en dos planos: el control plane con API gateway, servicio de reuniones, auth y agenda sobre una DB SQL; el media plane con signaling, seleccion de servidor de medios cercano y SFUs regionales que reenvian audio y video por WebRTC, mas un servicio de grabacion hacia blob store y CDN.">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .accent{fill:#3a47b8}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:13px;font-weight:700;fill:#fff;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lyr{font-size:11px;font-weight:700;fill:#9aa0c8;text-anchor:start}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+  </style>
+  <rect width="820" height="400" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <!-- capa cliente -->
+  <text class="lyr" x="20" y="30">Cliente</text>
+  <rect class="box" x="34" y="120" width="150" height="56" rx="10"/><text class="t" x="109" y="144">Cliente WebRTC</text><text class="ts" x="109" y="162">sube 1 flujo (simulcast)</text>
+  <rect class="box" x="34" y="206" width="150" height="56" rx="10"/><text class="t" x="109" y="230">Cliente WebRTC</text><text class="ts" x="109" y="248">recibe N-1 flujos</text>
+
+  <!-- borde -->
+  <text class="lyr" x="210" y="30">Borde</text>
+  <rect class="accent" x="210" y="150" width="110" height="92" rx="10"/><text class="tw" x="265" y="186">API Gateway</text><text class="tw" x="265" y="204" style="font-size:11px">auth · tokens</text>
+
+  <!-- control plane -->
+  <text class="lyr" x="350" y="30">Control plane</text>
+  <rect class="sub" x="350" y="44" width="170" height="40" rx="10"/><text class="ts" x="435" y="68">Servicio reuniones</text>
+  <rect class="sub" x="350" y="92" width="170" height="40" rx="10"/><text class="ts" x="435" y="116">Auth / agenda</text>
+  <rect class="box" x="350" y="140" width="170" height="44" rx="10"/><text class="t" x="435" y="158">Signaling</text><text class="ts" x="435" y="174">SDP · ICE (WS) · STUN/TURN</text>
+  <rect class="box" x="350" y="192" width="170" height="44" rx="10"/><text class="t" x="435" y="210">Seleccion de medios</text><text class="ts" x="435" y="226">SFU mas cercano (geo)</text>
+  <rect class="sub" x="350" y="296" width="170" height="40" rx="10"/><text class="t" x="435" y="316">DB SQL (reuniones)</text>
+
+  <!-- media plane -->
+  <text class="lyr" x="560" y="30">Media plane</text>
+  <rect class="box" x="560" y="120" width="160" height="50" rx="10"/><text class="t" x="640" y="142">SFU region A</text><text class="ts" x="640" y="158">reenvia, no transcodifica</text>
+  <rect class="box" x="560" y="182" width="160" height="50" rx="10"/><text class="t" x="640" y="204">SFU region B</text><text class="ts" x="640" y="220">elige capa por receptor</text>
+  <rect class="sub" x="560" y="252" width="160" height="42" rx="10"/><text class="t" x="640" y="270">Grabacion</text><text class="ts" x="640" y="286">compone -&gt; blob</text>
+  <rect class="box" x="560" y="304" width="160" height="42" rx="10"/><text class="t" x="640" y="322">Blob store + CDN</text><text class="ts" x="640" y="338">grabaciones</text>
+
+  <!-- cliente -> gateway -->
+  <path class="fl" d="M184,150 L206,178" marker-end="url(#a)"/>
+  <path class="fl" d="M184,232 L206,214" marker-end="url(#a)"/>
+  <!-- gateway -> control plane -->
+  <path class="fl" d="M320,170 L346,64" marker-end="url(#a)"/>
+  <path class="fl" d="M320,180 L346,112" marker-end="url(#a)"/>
+  <path class="fl" d="M320,190 L346,160" marker-end="url(#a)"/>
+  <path class="fl" d="M320,210 L346,212" marker-end="url(#a)"/>
+  <!-- reuniones -> db -->
+  <path class="fl" d="M435,84 L435,294" marker-end="url(#a)"/>
+  <!-- seleccion -> SFU -->
+  <path class="fl" d="M520,210 L556,150" marker-end="url(#a)"/>
+  <path class="fl" d="M520,216 L556,200" marker-end="url(#a)"/>
+  <!-- cliente <-> SFU (media directo) -->
+  <path class="fl" d="M184,140 L556,140" marker-end="url(#a)"/>
+  <path class="fl" d="M556,210 L184,238" marker-end="url(#a)"/>
+  <!-- SFU -> grabacion -> cdn -->
+  <path class="fl" d="M640,232 L640,250" marker-end="url(#a)"/>
+  <path class="fl" d="M640,294 L640,302" marker-end="url(#a)"/>
+
+  <text class="cap" x="410" y="392">Flujo: el control plane crea la reunion y entrega tokens; el signaling negocia SDP/ICE; se elige el SFU regional cercano; el medio fluye directo cliente-SFU por WebRTC y el SFU reenvia capas; grabacion compone hacia blob store y CDN.</text>
+</svg>

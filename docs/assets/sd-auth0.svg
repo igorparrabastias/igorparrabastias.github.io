@@ -1,0 +1,59 @@
+<svg width="1520" height="760" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="system-ui, sans-serif" role="img" aria-label="Arquitectura de alto nivel de Auth0 (identidad como servicio): la app SPA y la API de recurso hablan por un edge con rate limiting con el servidor de autorizacion OAuth2/OIDC, que se apoya en servicios de tokens JWT/JWKS, login con hashing, MFA, sesiones SSO y configuracion multi-tenant, respaldados por almacen de usuarios, cache de sesiones, claves en KMS/HSM, refresh tokens y registro de auditoria.">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .accent{fill:#3a47b8}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:13px;font-weight:700;fill:#fff;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lyr{font-size:11px;font-weight:700;fill:#9aa0c8;text-anchor:start}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+  </style>
+  <rect width="760" height="380" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <!-- capa cliente -->
+  <text class="lyr" x="14" y="30">Cliente</text>
+  <rect class="box" x="20" y="48" width="140" height="48" rx="10"/><text class="t" x="90" y="68">App / SPA</text><text class="ts" x="90" y="84">auth code + PKCE</text>
+  <rect class="box" x="20" y="116" width="140" height="48" rx="10"/><text class="t" x="90" y="136">API de recurso</text><text class="ts" x="90" y="152">valida JWT (JWKS)</text>
+
+  <!-- borde -->
+  <text class="lyr" x="186" y="30">Borde</text>
+  <rect class="accent" x="186" y="62" width="118" height="84" rx="10"/><text class="tw" x="245" y="96">Edge / Gateway</text><text class="tw" x="245" y="114" style="font-size:11px">TLS · rate limit</text><text class="tw" x="245" y="130" style="font-size:11px">anti-fuerza bruta</text>
+
+  <!-- servicios -->
+  <text class="lyr" x="330" y="30">Servidor de autorizacion</text>
+  <rect class="sub" x="330" y="40" width="200" height="40" rx="10"/><text class="ts" x="430" y="64">OAuth2 / OIDC (/authorize)</text>
+  <rect class="sub" x="330" y="88" width="200" height="40" rx="10"/><text class="ts" x="430" y="112">Tokens JWT · JWKS (/token)</text>
+  <rect class="sub" x="330" y="136" width="200" height="40" rx="10"/><text class="ts" x="430" y="160">Login · hash (argon2)</text>
+  <rect class="sub" x="330" y="184" width="200" height="40" rx="10"/><text class="ts" x="430" y="208">MFA (TOTP · WebAuthn)</text>
+  <rect class="sub" x="330" y="232" width="200" height="40" rx="10"/><text class="ts" x="430" y="256">Sesiones · SSO</text>
+  <rect class="sub" x="330" y="280" width="200" height="40" rx="10"/><text class="ts" x="430" y="304">Tenants / clientes (config)</text>
+
+  <!-- datos -->
+  <text class="lyr" x="566" y="30">Datos · cache · claves</text>
+  <rect class="box" x="566" y="40" width="178" height="46" rx="10"/><text class="t" x="655" y="60">Almacen usuarios</text><text class="ts" x="655" y="76">Postgres (hash, por tenant)</text>
+  <rect class="box" x="566" y="98" width="178" height="46" rx="10"/><text class="t" x="655" y="118">Cache sesiones</text><text class="ts" x="655" y="134">Redis (TTL)</text>
+  <rect class="box" x="566" y="156" width="178" height="46" rx="10"/><text class="t" x="655" y="176">Claves de firma</text><text class="ts" x="655" y="192">KMS / HSM (rotacion)</text>
+  <rect class="box" x="566" y="214" width="178" height="46" rx="10"/><text class="t" x="655" y="234">Refresh tokens</text><text class="ts" x="655" y="250">DB (rotacion · revocacion)</text>
+  <rect class="box" x="566" y="272" width="178" height="46" rx="10"/><text class="t" x="655" y="292">Auditoria / rate limit</text><text class="ts" x="655" y="308">logs · contadores</text>
+
+  <!-- flujos cliente -> borde -->
+  <path class="fl" d="M160,72 L182,92" marker-end="url(#a)"/>
+  <path class="fl" d="M160,140 L182,116" marker-end="url(#a)"/>
+  <!-- borde -> servicios -->
+  <path class="fl" d="M304,86 L326,60" marker-end="url(#a)"/>
+  <path class="fl" d="M304,98 L326,108" marker-end="url(#a)"/>
+  <path class="fl" d="M304,112 L326,156" marker-end="url(#a)"/>
+  <path class="fl" d="M304,124 L326,204" marker-end="url(#a)"/>
+  <path class="fl" d="M304,134 L326,252" marker-end="url(#a)"/>
+  <!-- servicios -> datos -->
+  <path class="fl" d="M530,156 L562,63" marker-end="url(#a)"/>
+  <path class="fl" d="M530,256 L562,121" marker-end="url(#a)"/>
+  <path class="fl" d="M530,108 L562,179" marker-end="url(#a)"/>
+  <path class="fl" d="M530,108 L562,237" marker-end="url(#a)"/>
+  <path class="fl" d="M530,304 L562,295" marker-end="url(#a)"/>
+
+  <text class="cap" x="380" y="370">Flujo: la app inicia authorization code + PKCE en el edge; el servidor valida credenciales (hash) y MFA, emite JWT firmados con claves del KMS y refresh tokens; las apis validan el JWT contra JWKS sin llamar al servidor.</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg width="1280" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="system-ui, sans-serif" role="img" aria-label="Un cómputo transforma una entrada en una salida siguiendo un algoritmo, una secuencia finita de pasos">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+  </style>
+  <rect width="640" height="300" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <text class="t" x="320" y="34" font-size="15">Computar = transformar una entrada en una salida</text>
+
+  <!-- Entrada -->
+  <rect class="box" x="30" y="95" width="140" height="70" rx="10"/>
+  <text class="t" x="100" y="125">Entrada</text>
+  <text class="ts" x="100" y="146">datos / pregunta</text>
+
+  <!-- Proceso -->
+  <rect class="box" x="250" y="75" width="160" height="110" rx="10"/>
+  <text class="t" x="330" y="100">Proceso</text>
+  <text class="ts" x="330" y="118">algoritmo</text>
+  <rect class="sub" x="268" y="128" width="124" height="20" rx="6"/><text class="ts" x="330" y="142">paso 1</text>
+  <rect class="sub" x="268" y="152" width="124" height="20" rx="6"/><text class="ts" x="330" y="166">paso 2 … paso n</text>
+
+  <!-- Salida -->
+  <rect class="box" x="490" y="95" width="140" height="70" rx="10"/>
+  <text class="t" x="560" y="125">Salida</text>
+  <text class="ts" x="560" y="146">resultado</text>
+
+  <line class="fl" x1="170" y1="130" x2="248" y2="130" marker-end="url(#a)"/>
+  <line class="fl" x1="410" y1="130" x2="488" y2="130" marker-end="url(#a)"/>
+
+  <text class="cap" x="320" y="225">Un algoritmo es una secuencia FINITA de pasos no ambiguos que,</text>
+  <text class="cap" x="320" y="243">a partir de una entrada, produce siempre la salida esperada.</text>
+  <text class="cap" x="320" y="273">El computador no "entiende": ejecuta exactamente esos pasos, muy rápido y sin cansarse.</text>
+</svg>

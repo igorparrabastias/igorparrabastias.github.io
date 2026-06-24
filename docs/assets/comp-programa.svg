@@ -1,0 +1,55 @@
+<svg width="1280" height="620" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 310" font-family="system-ui, sans-serif" role="img" aria-label="Elementos básicos de un programa: valores y tipos, expresiones, variables con binding y sentencias">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .mono{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle;font-family:ui-monospace,monospace}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+  </style>
+  <rect width="640" height="310" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <text class="t" x="320" y="30" font-size="15">De qué está hecho un programa</text>
+
+  <!-- Valores y tipos -->
+  <rect class="box" x="20" y="60" width="140" height="80" rx="10"/>
+  <text class="t" x="90" y="86">Valores y tipos</text>
+  <rect class="sub" x="32" y="98" width="116" height="32" rx="6"/>
+  <text class="mono" x="90" y="112">19  3.14</text>
+  <text class="mono" x="90" y="126">"hola"  True</text>
+
+  <!-- Expresiones -->
+  <rect class="box" x="190" y="60" width="140" height="80" rx="10"/>
+  <text class="t" x="260" y="86">Expresiones</text>
+  <text class="ts" x="260" y="104">se evalúan a un valor</text>
+  <rect class="sub" x="202" y="110" width="116" height="22" rx="6"/>
+  <text class="mono" x="260" y="125">precio * 1.19</text>
+
+  <!-- Variables -->
+  <rect class="box" x="360" y="60" width="140" height="80" rx="10"/>
+  <text class="t" x="430" y="86">Variables</text>
+  <text class="ts" x="430" y="104">binding: nombre → valor</text>
+  <rect class="sub" x="372" y="110" width="116" height="22" rx="6"/>
+  <text class="mono" x="430" y="125">iva = 0.19</text>
+
+  <!-- Sentencias -->
+  <rect class="box" x="530" y="60" width="90" height="80" rx="10"/>
+  <text class="t" x="575" y="86">Senten-</text>
+  <text class="t" x="575" y="102">cias</text>
+  <text class="ts" x="575" y="122">ordenan</text>
+  <text class="ts" x="575" y="136">acciones</text>
+
+  <line class="fl" x1="160" y1="100" x2="188" y2="100" marker-end="url(#a)"/>
+  <line class="fl" x1="330" y1="100" x2="358" y2="100" marker-end="url(#a)"/>
+  <line class="fl" x1="500" y1="100" x2="528" y2="100" marker-end="url(#a)"/>
+
+  <text class="cap" x="320" y="185">Un programa combina estos elementos: nombra valores, los opera en expresiones</text>
+  <text class="cap" x="320" y="203">y ejecuta sentencias en orden para producir un resultado.</text>
+
+  <rect class="sub" x="120" y="228" width="400" height="62" rx="10"/>
+  <text class="mono" x="320" y="250">precio = 100</text>
+  <text class="mono" x="320" y="268">total  = precio * (1 + iva)</text>
+  <text class="mono" x="320" y="284">print(total)</text>
+</svg>

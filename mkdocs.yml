@@ -33,6 +33,12 @@ theme:
 nav:
   - Inicio: index.md
   - Sobre mí: sobre-mi.md
+  - Cómo funciona la computación:
+    - computacion/index.md
+    - ¿Qué es computar?: computacion/que-es-computar.md
+    - Máquinas y capas: computacion/maquinas.md
+    - El papel de los lenguajes: computacion/lenguajes.md
+    - Anatomía de un programa: computacion/anatomia-de-un-programa.md
   - Para kids 🧒:
     - kids/index.md
     - 🤖 Inteligencia Artificial y PLN: kids/ia.md
@@ -82,6 +88,10 @@ nav:
       - Estructuras de datos en JavaScript: estructuras/javascript.md
   - Algoritmos:
     - algoritmos/index.md
+    - Ordenamiento: algoritmos/ordenamiento.md
+    - Búsqueda: algoritmos/busqueda.md
+    - Grafos: algoritmos/grafos.md
+    - Métodos numéricos: algoritmos/metodos-numericos.md
     # nb_hook anida aquí (tras el índice): ordenamiento, búsqueda, grafos
     - JavaScript:
       - Algoritmos en JavaScript: algoritmos/javascript.md
@@ -114,6 +124,16 @@ nav:
     - MITx 6.00.1x — soluciones · Python: practica/mitx-6001x.md
     - MITx 6.00.2x — soluciones · Python: practica/mitx-6002x.md
     - Data Ecosystem (IBM): practica/ibm-data-ecosystem.md
+  - Diseño de sistemas:
+    - diseno-de-sistemas/index.md
+    - Uber — transporte en tiempo real: diseno-de-sistemas/uber.md
+    - Netflix — streaming a gran escala: diseno-de-sistemas/netflix.md
+    - Tinder — emparejamiento geoespacial: diseno-de-sistemas/tinder.md
+    - Instagram — feed y fan-out: diseno-de-sistemas/instagram.md
+    - WhatsApp — mensajería en tiempo real: diseno-de-sistemas/whatsapp.md
+    - Zoom — videoconferencia: diseno-de-sistemas/zoom.md
+    - Auth0 — identidad como servicio: diseno-de-sistemas/auth0.md
+    - Conceptos y building blocks: diseno-de-sistemas/conceptos.md
   - Arquitectura y organización de computadores:
     - arquitectura/index.md
     - Representación de la información: arquitectura/representacion.md

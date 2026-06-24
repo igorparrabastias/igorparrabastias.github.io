@@ -1,0 +1,50 @@
+<svg width="1440" height="720" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="system-ui, sans-serif" role="img" aria-label="Consistent hashing: un anillo de hash con tres nodos fisicos y sus nodos virtuales distribuidos, y varias claves que se asignan al primer nodo en sentido horario. Al agregar o quitar un nodo solo se remapean las claves de un tramo del anillo, no todas.">
+  <style>
+    .ring{fill:none;stroke:#3a47b8;stroke-width:2}
+    .node{fill:#3a47b8}
+    .vnode{fill:#ffffff;stroke:#3a47b8;stroke-width:2}
+    .key{fill:#9aa0c8}
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tsl{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:start}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+  </style>
+  <rect width="720" height="360" fill="#ffffff"/>
+
+  <!-- anillo -->
+  <circle class="ring" cx="235" cy="185" r="125"/>
+  <text class="ts" x="235" y="50" fill="#9aa0c8">hash 0 / 2^32</text>
+
+  <!-- nodos fisicos -->
+  <circle class="node" cx="278" cy="68" r="11"/><text class="ts" x="278" y="46">N1</text>
+  <circle class="node" cx="315" cy="281" r="11"/><text class="ts" x="333" y="300">N2</text>
+  <circle class="node" cx="112" cy="207" r="11"/><text class="ts" x="86" y="211">N3</text>
+
+  <!-- nodos virtuales -->
+  <circle class="vnode" cx="358" cy="163" r="8"/><text class="ts" x="378" y="155">N1'</text>
+  <circle class="vnode" cx="192" cy="303" r="8"/><text class="ts" x="172" y="318">N2'</text>
+  <circle class="vnode" cx="155" cy="89" r="8"/><text class="ts" x="135" y="80">N3'</text>
+
+  <!-- claves -->
+  <circle class="key" cx="331" cy="105" r="5"/><text class="ts" x="345" y="100" fill="#9aa0c8">k1</text>
+  <circle class="key" cx="257" cy="308" r="5"/><text class="ts" x="257" y="328" fill="#9aa0c8">k2</text>
+  <circle class="key" cx="127" cy="123" r="5"/><text class="ts" x="111" y="120" fill="#9aa0c8">k3</text>
+
+  <text class="cap" x="235" y="350">cada clave va al primer nodo en sentido horario</text>
+
+  <!-- panel derecho -->
+  <rect class="box" x="430" y="60" width="262" height="100" rx="10"/>
+  <text class="t" x="561" y="84">Nodos virtuales</text>
+  <text class="tsl" x="448" y="106">Cada nodo fisico ocupa varios</text>
+  <text class="tsl" x="448" y="124">puntos del anillo &#8594; reparto</text>
+  <text class="tsl" x="448" y="142">parejo y sin puntos calientes.</text>
+
+  <rect class="box" x="430" y="180" width="262" height="120" rx="10"/>
+  <text class="t" x="561" y="204">Remapeo minimo</text>
+  <text class="tsl" x="448" y="226">Agregar / quitar un nodo solo</text>
+  <text class="tsl" x="448" y="244">reasigna las claves de su tramo</text>
+  <text class="tsl" x="448" y="262">(~K/N), no toda la tabla.</text>
+  <text class="tsl" x="448" y="284">Hash modular: cambiar N remapea</text>
+  <text class="tsl" x="448" y="294" fill="#666" font-size="10">casi todo. Aqui no.</text>
+</svg>

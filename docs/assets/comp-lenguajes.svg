@@ -1,0 +1,43 @@
+<svg width="1280" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="system-ui, sans-serif" role="img" aria-label="Un lenguaje de alto nivel se traduce mediante un compilador o intérprete a código máquina en ceros y unos">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .hw{fill:#3a47b8;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:13px;font-weight:700;fill:#fff;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .mono{font-size:12px;font-weight:700;fill:#3a47b8;text-anchor:middle;font-family:ui-monospace,monospace}
+    .monow{font-size:12px;font-weight:700;fill:#fff;text-anchor:middle;font-family:ui-monospace,monospace}
+    .cap{font-size:12px;fill:#666;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+  </style>
+  <rect width="640" height="300" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <text class="t" x="320" y="34" font-size="15">El lenguaje es un puente entre tu idea y la máquina</text>
+
+  <!-- Alto nivel -->
+  <rect class="box" x="24" y="90" width="170" height="90" rx="10"/>
+  <text class="t" x="109" y="115">Alto nivel</text>
+  <text class="ts" x="109" y="133">legible para humanos</text>
+  <rect class="sub" x="38" y="143" width="142" height="26" rx="6" fill="#fff" stroke="#3a47b8" stroke-width="1.5"/>
+  <text class="mono" x="109" y="160">precio * 1.19</text>
+
+  <!-- Traductor -->
+  <rect class="box" x="235" y="90" width="170" height="90" rx="10"/>
+  <text class="t" x="320" y="120">Traductor</text>
+  <text class="ts" x="320" y="140">compilador</text>
+  <text class="ts" x="320" y="156">o intérprete</text>
+
+  <!-- Codigo maquina -->
+  <rect class="hw" x="446" y="90" width="170" height="90" rx="10"/>
+  <text class="tw" x="531" y="115">Código máquina</text>
+  <text class="monow" x="531" y="140">0100 1011</text>
+  <text class="monow" x="531" y="158">1010 0011</text>
+
+  <line class="fl" x1="194" y1="135" x2="233" y2="135" marker-end="url(#a)"/>
+  <line class="fl" x1="405" y1="135" x2="444" y2="135" marker-end="url(#a)"/>
+
+  <text class="cap" x="320" y="225">Sintaxis = qué combinaciones de símbolos son válidas (la "gramática").</text>
+  <text class="cap" x="320" y="243">Semántica = qué significa cada instrucción (qué hace al ejecutarse).</text>
+  <text class="cap" x="320" y="273">Solo la CPU entiende los 0 y 1; el traductor nos ahorra escribirlos a mano.</text>
+</svg>

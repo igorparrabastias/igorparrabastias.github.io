@@ -1,0 +1,64 @@
+<svg width="1440" height="720" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="system-ui, sans-serif" role="img" aria-label="Pipeline de transcodificacion: el master mezzanine se segmenta en chunks, se codifica en N perfiles de resolucion y bitrate, se empaqueta en CMAF/HLS y se distribuye a la CDN edge">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .hl{fill:#dfe4fb;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+  </style>
+  <rect width="720" height="360" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <text x="360" y="30" class="t">Pipeline de transcodificación (offline, batch)</text>
+
+  <!-- Mezzanine -->
+  <rect class="box" x="20" y="115" width="92" height="70" rx="10"/>
+  <text x="66" y="145" class="ts">Máster</text>
+  <text x="66" y="162" class="cap">(mezzanine)</text>
+
+  <!-- Segmentación -->
+  <rect class="box" x="140" y="115" width="92" height="70" rx="10"/>
+  <text x="186" y="145" class="ts">Segmentar</text>
+  <text x="186" y="162" class="cap">en chunks</text>
+
+  <!-- Codificación N perfiles -->
+  <text x="320" y="50" class="ts">Codificación (N perfiles)</text>
+  <rect class="hl" x="265" y="71"  width="110" height="32" rx="10"/>
+  <text x="320" y="91"  class="cap">2160p · 16 Mbps</text>
+  <rect class="hl" x="265" y="113" width="110" height="32" rx="10"/>
+  <text x="320" y="133" class="cap">1080p · 6 Mbps</text>
+  <rect class="hl" x="265" y="155" width="110" height="32" rx="10"/>
+  <text x="320" y="175" class="cap">720p · 3 Mbps</text>
+  <rect class="hl" x="265" y="197" width="110" height="32" rx="10"/>
+  <text x="320" y="217" class="cap">480p · 1 Mbps</text>
+
+  <!-- Empaquetado -->
+  <rect class="box" x="430" y="115" width="92" height="70" rx="10"/>
+  <text x="476" y="145" class="ts">Empaquetar</text>
+  <text x="476" y="162" class="cap">CMAF / HLS</text>
+
+  <!-- CDN edge -->
+  <rect class="box" x="560" y="115" width="130" height="70" rx="10"/>
+  <text x="625" y="145" class="ts">Distribución</text>
+  <text x="625" y="162" class="cap">a la CDN edge</text>
+
+  <!-- arrows linear -->
+  <path class="fl" marker-end="url(#a)" d="M112,150 H136"/>
+  <!-- fan out to profiles -->
+  <path class="fl" marker-end="url(#a)" d="M232,150 C250,150 247,87  261,87"/>
+  <path class="fl" marker-end="url(#a)" d="M232,150 C250,150 247,129 261,129"/>
+  <path class="fl" marker-end="url(#a)" d="M232,150 C250,150 247,171 261,171"/>
+  <path class="fl" marker-end="url(#a)" d="M232,150 C250,150 247,213 261,213"/>
+  <!-- converge to packaging -->
+  <path class="fl" marker-end="url(#a)" d="M375,87  C405,87  408,150 426,150"/>
+  <path class="fl" marker-end="url(#a)" d="M375,129 C405,129 408,150 426,150"/>
+  <path class="fl" marker-end="url(#a)" d="M375,171 C405,171 408,150 426,150"/>
+  <path class="fl" marker-end="url(#a)" d="M375,213 C405,213 408,150 426,150"/>
+  <!-- to CDN -->
+  <path class="fl" marker-end="url(#a)" d="M522,150 H556"/>
+
+  <text x="360" y="290" class="cap">Un mismo título se expande a decenas de variantes ABR; el empaquetado las indexa en el manifest (.m3u8 / .mpd).</text>
+  <text x="360" y="312" class="cap">Todo ocurre una sola vez por título y se precarga al edge antes de que alguien le dé play.</text>
+</svg>

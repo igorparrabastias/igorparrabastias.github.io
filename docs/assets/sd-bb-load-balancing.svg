@@ -1,0 +1,42 @@
+<svg width="1440" height="720" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="system-ui, sans-serif" role="img" aria-label="Balanceo de carga: los clientes llegan a un balanceador que reparte el trafico entre N replicas identicas del servicio segun una politica (round-robin, least-connections o hashing). El balanceador revisa la salud de las replicas y deja de enviarles trafico si fallan.">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .lb{fill:#3a47b8}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:13px;font-weight:700;fill:#fff;text-anchor:middle}
+    .twn{font-size:11px;font-weight:700;fill:#fff;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+    .chip{fill:#f4f5fd;stroke:#3a47b8;stroke-width:1.5}
+  </style>
+  <rect width="720" height="360" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <!-- clientes -->
+  <rect class="box" x="24" y="140" width="110" height="60" rx="10"/><text class="t" x="79" y="166">Clientes</text><text class="ts" x="79" y="184">N peticiones</text>
+
+  <!-- balanceador -->
+  <rect class="lb" x="200" y="120" width="130" height="100" rx="10"/>
+  <text class="tw" x="265" y="158">Load</text><text class="tw" x="265" y="176">Balancer</text>
+  <text class="twn" x="265" y="200">+ health check</text>
+
+  <!-- replicas -->
+  <rect class="sub" x="470" y="44" width="210" height="46" rx="10"/><text class="t" x="575" y="64">App · replica 1</text><text class="ts" x="575" y="80">stateless</text>
+  <rect class="sub" x="470" y="146" width="210" height="46" rx="10"/><text class="t" x="575" y="166">App · replica 2</text><text class="ts" x="575" y="182">stateless</text>
+  <rect class="sub" x="470" y="248" width="210" height="46" rx="10"/><text class="t" x="575" y="268">App · replica 3</text><text class="ts" x="575" y="284">stateless</text>
+
+  <!-- flujos -->
+  <path class="fl" d="M134,170 L196,170" marker-end="url(#a)"/>
+  <path class="fl" d="M330,150 L466,70" marker-end="url(#a)"/>
+  <path class="fl" d="M330,170 L466,169" marker-end="url(#a)"/>
+  <path class="fl" d="M330,190 L466,270" marker-end="url(#a)"/>
+
+  <!-- chips de politica -->
+  <rect class="chip" x="150" y="300" width="130" height="30" rx="8"/><text class="ts" x="215" y="319">round-robin</text>
+  <rect class="chip" x="295" y="300" width="150" height="30" rx="8"/><text class="ts" x="370" y="319">least-connections</text>
+  <rect class="chip" x="460" y="300" width="120" height="30" rx="8"/><text class="ts" x="520" y="319">hashing (IP/clave)</text>
+
+  <text class="cap" x="360" y="348">Politica de reparto. Hashing fija una clave a una replica (afinidad); round-robin y least-connections equilibran carga.</text>
+</svg>

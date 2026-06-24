@@ -1,0 +1,61 @@
+<svg width="1640" height="800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" font-family="system-ui, sans-serif" role="img" aria-label="Arquitectura de alto nivel de Tinder: la app conecta por un API gateway a los servicios de perfil, descubrimiento geoespacial, ingesta de swipes, deteccion de match y chat, apoyados en un indice geoespacial, cache Redis, colas de mensajes, set de likes y bases de datos.">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .accent{fill:#3a47b8}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:13px;font-weight:700;fill:#fff;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lyr{font-size:11px;font-weight:700;fill:#9aa0c8;text-anchor:start}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+  </style>
+  <rect width="820" height="400" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <!-- capa cliente -->
+  <text class="lyr" x="20" y="30">Cliente</text>
+  <rect class="box" x="40"  y="40" width="150" height="48" rx="10"/><text class="t" x="115" y="60">App movil</text><text class="ts" x="115" y="76">ve feed · swipe</text>
+  <rect class="box" x="40"  y="104" width="150" height="48" rx="10"/><text class="t" x="115" y="124">Canal chat</text><text class="ts" x="115" y="140">WebSocket tras match</text>
+
+  <!-- gateway -->
+  <text class="lyr" x="250" y="30">Borde</text>
+  <rect class="accent" x="250" y="58" width="120" height="76" rx="10"/><text class="tw" x="310" y="92">API Gateway</text><text class="tw" x="310" y="110" style="font-size:11px">auth · rate limit</text>
+
+  <!-- servicios -->
+  <text class="lyr" x="430" y="30">Servicios</text>
+  <rect class="sub" x="430" y="40" width="170" height="40" rx="10"/><text class="ts" x="515" y="64">Perfil / preferencias</text>
+  <rect class="sub" x="430" y="88" width="170" height="40" rx="10"/><text class="ts" x="515" y="112">Descubrimiento (geo)</text>
+  <rect class="sub" x="430" y="136" width="170" height="40" rx="10"/><text class="ts" x="515" y="160">Swipe ingest</text>
+  <rect class="sub" x="430" y="184" width="170" height="40" rx="10"/><text class="ts" x="515" y="208">Deteccion de match</text>
+  <rect class="sub" x="430" y="232" width="170" height="40" rx="10"/><text class="ts" x="515" y="256">Feed de candidatos</text>
+  <rect class="sub" x="430" y="280" width="170" height="40" rx="10"/><text class="ts" x="515" y="304">Chat (mensajeria)</text>
+
+  <!-- datos / infra -->
+  <text class="lyr" x="640" y="30">Datos · colas · cache</text>
+  <rect class="box" x="640" y="40" width="160" height="46" rx="10"/><text class="t" x="720" y="60">Indice geoespacial</text><text class="ts" x="720" y="76">geohash / Elasticsearch</text>
+  <rect class="box" x="640" y="98" width="160" height="46" rx="10"/><text class="t" x="720" y="118">Cache de feeds</text><text class="ts" x="720" y="134">Redis (candidatos)</text>
+  <rect class="box" x="640" y="156" width="160" height="46" rx="10"/><text class="t" x="720" y="176">Colas de swipes</text><text class="ts" x="720" y="192">Kafka (eventos)</text>
+  <rect class="box" x="640" y="214" width="160" height="46" rx="10"/><text class="t" x="720" y="234">Likes / matches</text><text class="ts" x="720" y="250">KV + bloom filter</text>
+  <rect class="box" x="640" y="272" width="160" height="46" rx="10"/><text class="t" x="720" y="292">DB perfiles / mensajes</text><text class="ts" x="720" y="308">SQL / Cassandra</text>
+
+  <!-- flujos cliente -> gateway -->
+  <path class="fl" d="M190,64 L244,82" marker-end="url(#a)"/>
+  <path class="fl" d="M190,128 L244,110" marker-end="url(#a)"/>
+  <!-- gateway -> servicios -->
+  <path class="fl" d="M370,80 L426,60" marker-end="url(#a)"/>
+  <path class="fl" d="M370,92 L426,108" marker-end="url(#a)"/>
+  <path class="fl" d="M370,108 L426,156" marker-end="url(#a)"/>
+  <path class="fl" d="M370,120 L426,204" marker-end="url(#a)"/>
+  <path class="fl" d="M370,130 L426,300" marker-end="url(#a)"/>
+  <!-- servicios -> infra -->
+  <path class="fl" d="M600,108 L636,63" marker-end="url(#a)"/>
+  <path class="fl" d="M600,256 L636,118" marker-end="url(#a)"/>
+  <path class="fl" d="M600,160 L636,179" marker-end="url(#a)"/>
+  <path class="fl" d="M600,204 L636,237" marker-end="url(#a)"/>
+  <path class="fl" d="M600,160 L636,237" marker-end="url(#a)"/>
+  <path class="fl" d="M600,60 L636,295" marker-end="url(#a)"/>
+  <path class="fl" d="M600,300 L636,295" marker-end="url(#a)"/>
+
+  <text class="cap" x="410" y="392">Flujo: la app pide candidatos al servicio de descubrimiento que consulta el indice geoespacial; los swipes entran por colas; deteccion de match comprueba el like reciproco en el set de likes y abre el chat.</text>
+</svg>

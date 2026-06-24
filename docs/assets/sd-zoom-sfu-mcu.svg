@@ -1,0 +1,75 @@
+<svg width="1440" height="720" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="system-ui, sans-serif" role="img" aria-label="Comparacion SFU versus MCU: a la izquierda el SFU recibe un flujo de cada cliente y reenvia selectivamente los N-1 flujos a cada uno, servidor liviano pero mas ancho de banda y CPU en el cliente; a la derecha el MCU mezcla todos los flujos en uno solo y lo envia, cliente liviano pero servidor caro en CPU por transcodificar">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .col{fill:#f6f7fd;stroke:#c9cfee;stroke-width:1.5}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+    .life{stroke:#c9cfee;stroke-width:1.5;stroke-dasharray:4 4}
+  </style>
+  <rect width="720" height="360" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <!-- Columna izquierda: SFU -->
+  <rect class="col" x="16" y="16" width="332" height="328" rx="10"/>
+  <text class="t" x="182" y="38">SFU (Selective Forwarding Unit)</text>
+  <text class="cap" x="182" y="54">reenvia, no transcodifica</text>
+
+  <rect class="box" x="142" y="150" width="80" height="60" rx="10"/>
+  <text class="ts" x="182" y="178">SFU</text>
+  <text class="cap" x="182" y="196">reenvia</text>
+
+  <!-- clientes -->
+  <rect class="sub" x="40"  y="80"  width="76" height="30" rx="10"/>
+  <text class="ts" x="78"  y="99">Cliente 1</text>
+  <rect class="sub" x="248" y="80"  width="76" height="30" rx="10"/>
+  <text class="ts" x="286" y="99">Cliente 2</text>
+  <rect class="sub" x="40"  y="250" width="76" height="30" rx="10"/>
+  <text class="ts" x="78"  y="269">Cliente 3</text>
+  <rect class="sub" x="248" y="250" width="76" height="30" rx="10"/>
+  <text class="ts" x="286" y="269">Cliente 4</text>
+
+  <!-- sube 1 flujo cada uno -->
+  <line class="fl" x1="100" y1="110" x2="150" y2="152" marker-end="url(#a)"/>
+  <line class="fl" x1="264" y1="110" x2="214" y2="152" marker-end="url(#a)"/>
+  <line class="fl" x1="100" y1="250" x2="150" y2="208" marker-end="url(#a)"/>
+  <line class="fl" x1="264" y1="250" x2="214" y2="208" marker-end="url(#a)"/>
+
+  <text class="cap" x="182" y="118">sube 1 flujo</text>
+  <text class="cap" x="182" y="246">sube 1 flujo</text>
+
+  <text class="cap" x="182" y="300">servidor liviano, baja latencia</text>
+  <text class="cap" x="182" y="316">mas ancho de banda y CPU en el cliente (N-1 flujos)</text>
+
+  <!-- Columna derecha: MCU -->
+  <rect class="col" x="372" y="16" width="332" height="328" rx="10"/>
+  <text class="t" x="538" y="38">MCU (Multipoint Control Unit)</text>
+  <text class="cap" x="538" y="54">decodifica, mezcla y recodifica</text>
+
+  <rect class="box" x="498" y="150" width="80" height="60" rx="10"/>
+  <text class="ts" x="538" y="176">MCU</text>
+  <text class="cap" x="538" y="194">mezcla</text>
+
+  <rect class="sub" x="396" y="80"  width="76" height="30" rx="10"/>
+  <text class="ts" x="434" y="99">Cliente 1</text>
+  <rect class="sub" x="604" y="80"  width="76" height="30" rx="10"/>
+  <text class="ts" x="642" y="99">Cliente 2</text>
+  <rect class="sub" x="396" y="250" width="76" height="30" rx="10"/>
+  <text class="ts" x="434" y="269">Cliente 3</text>
+  <rect class="sub" x="604" y="250" width="76" height="30" rx="10"/>
+  <text class="ts" x="642" y="269">Cliente 4</text>
+
+  <!-- intercambio: cada cliente sube 1 y recibe 1 flujo compuesto -->
+  <line class="fl" x1="456" y1="110" x2="506" y2="152" marker-end="url(#a)"/>
+  <line class="fl" x1="620" y1="110" x2="570" y2="152" marker-end="url(#a)"/>
+  <line class="fl" x1="514" y1="208" x2="456" y2="250" marker-end="url(#a)"/>
+  <line class="fl" x1="562" y1="208" x2="620" y2="250" marker-end="url(#a)"/>
+
+  <text class="cap" x="538" y="118">sube 1 / recibe 1</text>
+  <text class="cap" x="538" y="246">recibe 1 flujo compuesto</text>
+
+  <text class="cap" x="538" y="300">cliente liviano (recibe 1 flujo)</text>
+  <text class="cap" x="538" y="316">servidor caro en CPU: transcodifica todo</text>
+</svg>

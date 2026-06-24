@@ -1,0 +1,45 @@
+<svg width="1440" height="720" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="system-ui, sans-serif" role="img" aria-label="Estrategia de cache cache-aside: la aplicacion lee primero de la cache; si acierta devuelve el dato, si falla consulta la base de datos, rellena la cache con un TTL y devuelve. Se mencionan tambien write-through, write-back y la invalidacion.">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tsl{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:start}
+    .num{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+  </style>
+  <rect width="720" height="360" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <!-- app -->
+  <rect class="box" x="40" y="140" width="120" height="64" rx="10"/><text class="t" x="100" y="168">App</text><text class="ts" x="100" y="186">lee dato</text>
+
+  <!-- cache -->
+  <rect class="box" x="280" y="60" width="140" height="64" rx="10"/><text class="t" x="350" y="88">Cache</text><text class="ts" x="350" y="106">Redis · TTL</text>
+
+  <!-- db -->
+  <rect class="sub" x="280" y="230" width="140" height="64" rx="10"/><text class="t" x="350" y="258">Base de datos</text><text class="ts" x="350" y="276">fuente de verdad</text>
+
+  <!-- flujos -->
+  <path class="fl" d="M160,158 L276,100" marker-end="url(#a)"/>
+  <text class="num" x="205" y="118">1 · lee cache</text>
+  <path class="fl" d="M350,124 L160,170" marker-end="url(#a)"/>
+  <text class="num" x="232" y="148" fill="#666">hit &#8594; devuelve</text>
+
+  <path class="fl" d="M160,186 L276,260" marker-end="url(#a)"/>
+  <text class="num" x="205" y="244">2 · miss &#8594; DB</text>
+  <path class="fl" d="M420,250 L470,250" marker-end="url(#a)"/>
+  <path class="fl" d="M490,232 L430,120" marker-end="url(#a)"/>
+  <text class="num" x="510" y="190">3 · rellena</text>
+  <text class="num" x="510" y="206" fill="#666">cache (TTL)</text>
+
+  <!-- panel variantes -->
+  <rect class="sub" x="500" y="248" width="200" height="96" rx="10"/>
+  <text class="t" x="600" y="270">Otras estrategias</text>
+  <text class="tsl" x="514" y="290">write-through: escribe cache+DB</text>
+  <text class="tsl" x="514" y="307">write-back: escribe cache, luego DB</text>
+  <text class="tsl" x="514" y="324">invalidacion / TTL contra dato viejo</text>
+
+  <text class="cap" x="300" y="350">Cache-aside: la app gobierna la cache. Riesgo clave: datos obsoletos &#8594; usar TTL e invalidar al escribir.</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg width="1280" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="system-ui, sans-serif" role="img" aria-label="Método de Newton-Raphson: la recta tangente converge a la raíz">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .cap{font-size:12px;fill:#666}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+    .axis{stroke:#999;stroke-width:1.5}
+    .curve{fill:none;stroke:#3a47b8;stroke-width:2.5}
+    .tan{fill:none;stroke:#9aa0c8;stroke-width:2;stroke-dasharray:5 4}
+    .pt{fill:#3a47b8}
+  </style>
+  <rect width="640" height="300" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <text x="320" y="28" class="t" font-size="15">Newton-Raphson: la tangente apunta a la raíz</text>
+
+  <!-- ejes -->
+  <line x1="60" y1="250" x2="600" y2="250" class="axis"/>
+  <line x1="120" y1="50" x2="120" y2="262" class="axis"/>
+
+  <!-- curva f(x), creciente y convexa -->
+  <path d="M140,235 C260,225 360,180 560,60" class="curve"/>
+  <text x="565" y="60" class="t" font-size="13">f(x)</text>
+
+  <!-- raíz: donde la curva cruza el eje x -->
+  <circle cx="200" cy="250" r="4" class="pt"/>
+  <text x="200" y="270" class="t" font-size="12">raíz</text>
+
+  <!-- x0 -->
+  <line x1="500" y1="250" x2="500" y2="100" stroke="#3a47b8" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="500" cy="100" r="4" class="pt"/>
+  <text x="500" y="266" class="cap" text-anchor="middle">x0</text>
+  <!-- tangente en x0 corta el eje en x1 -->
+  <line x1="500" y1="100" x2="330" y2="250" class="tan"/>
+
+  <!-- x1 -->
+  <line x1="330" y1="250" x2="330" y2="200" stroke="#3a47b8" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="330" cy="200" r="4" class="pt"/>
+  <text x="330" y="266" class="cap" text-anchor="middle">x1</text>
+  <!-- tangente en x1 corta el eje en x2 -->
+  <line x1="330" y1="200" x2="235" y2="250" class="tan"/>
+
+  <!-- x2 -->
+  <text x="235" y="266" class="cap" text-anchor="middle">x2</text>
+
+  <!-- flecha de convergencia -->
+  <path d="M495,120 C420,150 360,165 335,185" class="fl" marker-end="url(#a)"/>
+
+  <text x="430" y="160" class="cap">x ← x − f(x)/f'(x)</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg width="1440" height="720" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="system-ui, sans-serif" role="img" aria-label="Teorema CAP: un triangulo con tres vertices, Consistencia, Disponibilidad y Tolerancia a particiones. En un sistema distribuido las particiones de red son inevitables, asi que cuando ocurre una hay que elegir entre consistencia (CP) o disponibilidad (AP).">
+  <style>
+    .tri{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .node{fill:#3a47b8}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:12px;font-weight:700;fill:#fff;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tsl{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:start}
+    .edge{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .box{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+  </style>
+  <rect width="720" height="360" fill="#ffffff"/>
+
+  <!-- triangulo -->
+  <polygon class="tri" points="230,50 90,290 370,290"/>
+
+  <!-- vertices -->
+  <circle class="node" cx="230" cy="50" r="22"/><text class="tw" x="230" y="48">C</text><text class="tw" x="230" y="62" font-size="9">consist.</text>
+  <text class="t" x="230" y="30">Consistencia</text>
+
+  <circle class="node" cx="90" cy="290" r="22"/><text class="tw" x="90" y="288">A</text><text class="tw" x="90" y="302" font-size="9">disp.</text>
+  <text class="t" x="90" y="328">Disponibilidad</text>
+
+  <circle class="node" cx="370" cy="290" r="22"/><text class="tw" x="370" y="288">P</text><text class="tw" x="370" y="302" font-size="9">particion</text>
+  <text class="t" x="370" y="328">Tolerancia a particiones</text>
+
+  <!-- etiquetas de aristas -->
+  <text class="edge" x="142" y="160">CP</text>
+  <text class="edge" x="320" y="160">AP</text>
+  <text class="edge" x="230" y="305" fill="#9aa0c8">CA (no realista)</text>
+
+  <!-- panel decision -->
+  <rect class="box" x="430" y="70" width="262" height="220" rx="10"/>
+  <text class="t" x="561" y="96">En una particion de red</text>
+  <text class="tsl" x="448" y="124">P es inevitable en sistemas</text>
+  <text class="tsl" x="448" y="141">distribuidos: la red falla.</text>
+  <text class="tsl" x="448" y="168" fill="#3a47b8">CP &#8594; elijo consistencia:</text>
+  <text class="tsl" x="448" y="185" fill="#666">rechazo o bloqueo hasta sincronizar</text>
+  <text class="tsl" x="448" y="202" fill="#666">(p. ej. saldo bancario, etcd).</text>
+  <text class="tsl" x="448" y="229" fill="#3a47b8">AP &#8594; elijo disponibilidad:</text>
+  <text class="tsl" x="448" y="246" fill="#666">respondo con dato posiblemente</text>
+  <text class="tsl" x="448" y="263" fill="#666">viejo (p. ej. DNS, carrito, Dynamo).</text>
+  <text class="tsl" x="448" y="282" fill="#666">Sin particion: tienes C y A a la vez.</text>
+
+  <text class="cap" x="360" y="350">CAP: bajo particion eliges C o A. CA puro no existe en un sistema realmente distribuido.</text>
+</svg>

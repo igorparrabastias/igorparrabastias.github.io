@@ -1,0 +1,40 @@
+<svg width="1280" height="640" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" font-family="system-ui, sans-serif" role="img" aria-label="Capas apiladas de un computador: del hardware abajo al usuario arriba, pasando por el sistema operativo y los programas">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .hw{fill:#3a47b8;stroke:#3a47b8;stroke-width:2}
+    .t{font-size:14px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:14px;font-weight:700;fill:#fff;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .cap{font-size:12px;fill:#666;text-anchor:start}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+  </style>
+  <rect width="640" height="320" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <text class="t" x="320" y="28" font-size="15">Capas: cada una se apoya en la de abajo</text>
+
+  <!-- Usuario -->
+  <rect class="box" x="150" y="50" width="340" height="46" rx="10"/>
+  <text class="t" x="320" y="78">Persona usuaria</text>
+
+  <!-- Programa -->
+  <rect class="box" x="150" y="110" width="340" height="46" rx="10"/>
+  <text class="t" x="320" y="132">Programas / aplicaciones</text>
+  <text class="ts" x="320" y="149">navegador, editor, tu script en Python</text>
+
+  <!-- Sistema operativo -->
+  <rect class="box" x="150" y="170" width="340" height="46" rx="10"/>
+  <text class="t" x="320" y="192">Sistema operativo</text>
+  <text class="ts" x="320" y="209">reparte CPU, memoria, archivos y dispositivos</text>
+
+  <!-- Hardware -->
+  <rect class="hw" x="150" y="230" width="340" height="50" rx="10"/>
+  <text class="tw" x="320" y="252">Hardware</text>
+  <text class="tw" x="320" y="270" font-size="11">CPU · memoria (RAM) · almacenamiento · entrada/salida</text>
+
+  <line class="fl" x1="110" y1="255" x2="110" y2="73" marker-end="url(#a)"/>
+  <text class="cap" x="44" y="168" transform="rotate(-90 44 168)">más abstracto</text>
+
+  <text class="cap" x="510" y="258">físico</text>
+  <text class="cap" x="510" y="135">software</text>
+</svg>

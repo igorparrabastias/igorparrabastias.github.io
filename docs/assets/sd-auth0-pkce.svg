@@ -1,0 +1,60 @@
+<svg width="1440" height="720" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="system-ui, sans-serif" role="img" aria-label="Diagrama de secuencia del flujo OAuth2 Authorization Code con PKCE: la app genera code_verifier y code_challenge=SHA256(verifier), llama a /authorize con el challenge, el usuario se autentica, el servidor redirige con un code, la app canjea el code mas el verifier en /token, el servidor valida que SHA256(verifier) coincida con el challenge y emite access_token, refresh_token e id_token.">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .note{fill:#f4f5fd;stroke:#3a47b8;stroke-width:1.5}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .lbl{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+    .life{stroke:#c9cfee;stroke-width:1.5;stroke-dasharray:4 4}
+  </style>
+  <rect width="720" height="360" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <!-- cabeceras de participantes -->
+  <rect class="box" x="60" y="16" width="120" height="42" rx="10"/><text class="t" x="120" y="36">App / SPA</text><text class="ts" x="120" y="51">cliente publico</text>
+  <rect class="box" x="300" y="16" width="120" height="42" rx="10"/><text class="t" x="360" y="36">Usuario</text><text class="ts" x="360" y="51">navegador</text>
+  <rect class="box" x="520" y="16" width="160" height="42" rx="10"/><text class="t" x="600" y="36">Servidor de autorizacion</text><text class="ts" x="600" y="51">OAuth2 / OIDC</text>
+
+  <!-- lifelines -->
+  <line class="life" x1="120" y1="58" x2="120" y2="330"/>
+  <line class="life" x1="360" y1="58" x2="360" y2="330"/>
+  <line class="life" x1="600" y1="58" x2="600" y2="330"/>
+
+  <!-- 0: self note en App -->
+  <rect class="note" x="42" y="70" width="200" height="30" rx="8"/>
+  <text class="ts" x="142" y="83">0 · genera code_verifier</text>
+  <text class="ts" x="142" y="96">code_challenge = SHA256(verifier)</text>
+
+  <!-- 1: App -> Servidor -->
+  <text class="lbl" x="360" y="120">1 · GET /authorize?code_challenge=...&amp;method=S256</text>
+  <path class="fl" d="M120,126 L598,126" marker-end="url(#a)"/>
+
+  <!-- 2: Servidor -> Usuario -->
+  <text class="lbl" x="480" y="150">2 · pide login</text>
+  <path class="fl" d="M600,156 L362,156" marker-end="url(#a)"/>
+
+  <!-- 3: Usuario -> Servidor -->
+  <text class="lbl" x="480" y="180">3 · credenciales (email/clave) + MFA</text>
+  <path class="fl" d="M360,186 L598,186" marker-end="url(#a)"/>
+
+  <!-- 4: Servidor -> App -->
+  <text class="lbl" x="360" y="210">4 · redirect 302 ?code=AUTH_CODE</text>
+  <path class="fl" d="M600,216 L122,216" marker-end="url(#a)"/>
+
+  <!-- 5: App -> Servidor -->
+  <text class="lbl" x="360" y="240">5 · POST /token { code, code_verifier }</text>
+  <path class="fl" d="M120,246 L598,246" marker-end="url(#a)"/>
+
+  <!-- 6: self note en Servidor -->
+  <rect class="note" x="498" y="258" width="204" height="28" rx="8"/>
+  <text class="ts" x="600" y="276">6 · valida SHA256(verifier) == challenge</text>
+
+  <!-- 7: Servidor -> App -->
+  <text class="lbl" x="360" y="306">7 · 200 { access_token · refresh_token · id_token }</text>
+  <path class="fl" d="M600,312 L122,312" marker-end="url(#a)"/>
+
+  <text class="cap" x="360" y="346">PKCE ata el challenge inicial al verifier del canje: aunque intercepten el code, sin el verifier el /token falla. No requiere client secret en el navegador.</text>
+</svg>

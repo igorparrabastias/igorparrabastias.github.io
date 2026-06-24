@@ -1,0 +1,46 @@
+<svg width="1440" height="720" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="system-ui, sans-serif" role="img" aria-label="Cola de mensajes: un productor publica mensajes en una cola que los almacena en orden; varios consumidores los procesan a su ritmo. La cola desacopla productor y consumidor, absorbe picos de trafico y permite reintentar mensajes fallidos enviandolos a una cola de mensajes muertos.">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .msg{fill:#eef0fb;stroke:#3a47b8;stroke-width:1.5}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+    .lyr{font-size:11px;font-weight:700;fill:#9aa0c8;text-anchor:middle}
+  </style>
+  <rect width="720" height="360" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <!-- productor -->
+  <text class="lyr" x="85" y="60">Productor</text>
+  <rect class="box" x="24" y="120" width="125" height="80" rx="10"/><text class="t" x="86" y="158">Productor</text><text class="ts" x="86" y="176">publica</text>
+
+  <!-- cola -->
+  <text class="lyr" x="360" y="60">Cola (broker)</text>
+  <rect class="sub" x="215" y="118" width="290" height="84" rx="10"/>
+  <text class="ts" x="360" y="110" fill="#9aa0c8">FIFO &#183; durable</text>
+  <rect class="msg" x="232" y="140" width="36" height="40" rx="6"/>
+  <rect class="msg" x="276" y="140" width="36" height="40" rx="6"/>
+  <rect class="msg" x="320" y="140" width="36" height="40" rx="6"/>
+  <rect class="msg" x="364" y="140" width="36" height="40" rx="6"/>
+  <rect class="msg" x="408" y="140" width="36" height="40" rx="6"/>
+  <rect class="msg" x="452" y="140" width="36" height="40" rx="6"/>
+
+  <!-- consumidores -->
+  <text class="lyr" x="630" y="60">Consumidores</text>
+  <rect class="box" x="560" y="92" width="135" height="44" rx="10"/><text class="t" x="627" y="112">Consumidor 1</text><text class="ts" x="627" y="128">ack tras procesar</text>
+  <rect class="box" x="560" y="158" width="135" height="44" rx="10"/><text class="t" x="627" y="178">Consumidor 2</text><text class="ts" x="627" y="194">escala con la carga</text>
+
+  <!-- DLQ -->
+  <rect class="sub" x="280" y="250" width="160" height="42" rx="10"/><text class="ts" x="360" y="270">Dead-letter queue</text><text class="ts" x="360" y="285" fill="#666">reintentos agotados</text>
+
+  <!-- flujos -->
+  <path class="fl" d="M149,160 L211,160" marker-end="url(#a)"/>
+  <path class="fl" d="M505,150 L556,116" marker-end="url(#a)"/>
+  <path class="fl" d="M505,170 L556,178" marker-end="url(#a)"/>
+  <path class="fl" d="M360,202 L360,246" marker-end="url(#a)"/>
+  <text class="ts" x="408" y="226" fill="#666">reintento</text>
+
+  <text class="cap" x="360" y="330">Desacople: el productor no espera al consumidor. La cola absorbe picos (buffer) y reintenta lo fallido; lo irrecuperable va a la DLQ.</text>
+</svg>

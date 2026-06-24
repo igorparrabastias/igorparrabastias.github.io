@@ -1,0 +1,65 @@
+<svg width="1640" height="800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" font-family="system-ui, sans-serif" role="img" aria-label="Arquitectura de alto nivel de Netflix: el cliente recibe el video desde servidores de CDN Open Connect en el edge y habla con un API gateway que enruta a microservicios de catalogo, recomendaciones, playback, perfiles y facturacion; en paralelo, los maestros suben a almacenamiento de objetos tipo S3, un pipeline de transcodificacion genera variantes ABR y las distribuye a la CDN edge.">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .accent{fill:#3a47b8}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .ts{font-size:11px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .tw{font-size:13px;font-weight:700;fill:#fff;text-anchor:middle}
+    .cap{font-size:11px;fill:#666;text-anchor:middle}
+    .lyr{font-size:11px;font-weight:700;fill:#9aa0c8;text-anchor:start}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+    .flv{stroke:#e0663f;stroke-width:3;fill:none}
+  </style>
+  <rect width="820" height="400" fill="#ffffff"/>
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker>
+    <marker id="v" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e0663f"/></marker>
+  </defs>
+
+  <!-- cliente -->
+  <text class="lyr" x="20" y="30">Cliente</text>
+  <rect class="box" x="30" y="46" width="140" height="60" rx="10"/><text class="t" x="100" y="72">Dispositivo</text><text class="ts" x="100" y="90">TV · movil · web</text>
+
+  <!-- edge: CDN + gateway -->
+  <text class="lyr" x="200" y="30">Edge</text>
+  <rect class="accent" x="200" y="46" width="150" height="50" rx="10"/><text class="tw" x="275" y="68">CDN Open Connect</text><text class="tw" x="275" y="86" style="font-size:11px">cache de video (edge)</text>
+  <rect class="accent" x="200" y="116" width="150" height="46" rx="10"/><text class="tw" x="275" y="138">API Gateway (Zuul)</text><text class="tw" x="275" y="155" style="font-size:11px">auth · enrutado</text>
+
+  <!-- microservicios -->
+  <text class="lyr" x="380" y="30">Microservicios (control plane)</text>
+  <rect class="sub" x="380" y="46" width="160" height="36" rx="10"/><text class="ts" x="460" y="68">Catalogo</text>
+  <rect class="sub" x="380" y="90" width="160" height="36" rx="10"/><text class="ts" x="460" y="112">Recomendaciones</text>
+  <rect class="sub" x="380" y="134" width="160" height="36" rx="10"/><text class="ts" x="460" y="156">Playback (manifest/DRM)</text>
+  <rect class="sub" x="380" y="178" width="160" height="36" rx="10"/><text class="ts" x="460" y="200">Perfiles</text>
+  <rect class="sub" x="380" y="222" width="160" height="36" rx="10"/><text class="ts" x="460" y="244">Facturacion</text>
+
+  <!-- pipeline offline -->
+  <text class="lyr" x="570" y="30">Ingesta y procesamiento (offline)</text>
+  <rect class="box" x="570" y="46" width="220" height="44" rx="10"/><text class="t" x="680" y="66">Almacenamiento de objetos</text><text class="ts" x="680" y="82">maestros (tipo S3)</text>
+  <rect class="box" x="570" y="110" width="220" height="50" rx="10"/><text class="t" x="680" y="132">Pipeline de transcodificacion</text><text class="ts" x="680" y="150">variantes ABR por bitrate/codec</text>
+  <rect class="box" x="570" y="180" width="220" height="44" rx="10"/><text class="t" x="680" y="200">Distribucion a CDN edge</text><text class="ts" x="680" y="216">push a servidores Open Connect</text>
+  <rect class="box" x="570" y="244" width="220" height="44" rx="10"/><text class="t" x="680" y="264">Datos / cache de control</text><text class="ts" x="680" y="280">Cassandra · EVCache</text>
+
+  <!-- flujos control -->
+  <path class="fl" d="M170,96 L196,120" marker-end="url(#a)"/>
+  <path class="fl" d="M350,130 L376,80" marker-end="url(#a)"/>
+  <path class="fl" d="M350,135 L376,108" marker-end="url(#a)"/>
+  <path class="fl" d="M350,140 L376,152" marker-end="url(#a)"/>
+  <path class="fl" d="M350,146 L376,196" marker-end="url(#a)"/>
+  <path class="fl" d="M350,152 L376,240" marker-end="url(#a)"/>
+  <path class="fl" d="M540,112 L566,260" marker-end="url(#a)"/>
+  <path class="fl" d="M540,156 L566,124" marker-end="url(#a)"/>
+
+  <!-- pipeline interno -->
+  <path class="fl" d="M680,90 L680,108" marker-end="url(#a)"/>
+  <path class="fl" d="M680,160 L680,178" marker-end="url(#a)"/>
+  <!-- distribucion -> CDN edge -->
+  <path class="fl" d="M570,200 C440,300 320,200 350,98" marker-end="url(#a)"/>
+
+  <!-- flujo de VIDEO: CDN edge -> cliente -->
+  <path class="flv" d="M200,70 L172,66" marker-end="url(#v)"/>
+  <text class="cap" x="135" y="125" fill="#e0663f">video (ABR)</text>
+
+  <text class="cap" x="410" y="392">Control (gris): el cliente pide catalogo/recomendaciones/manifest al gateway. Video (naranja): el bitstream se sirve desde la CDN Open Connect en el edge, no desde el origen.</text>
+</svg>

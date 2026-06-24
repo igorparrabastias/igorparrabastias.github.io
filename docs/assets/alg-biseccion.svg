@@ -1,0 +1,50 @@
+<svg width="1280" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="system-ui, sans-serif" role="img" aria-label="Búsqueda por bisección: el intervalo se parte a la mitad acercándose a la raíz">
+  <style>
+    .box{fill:#eef0fb;stroke:#3a47b8;stroke-width:2}
+    .sub{fill:#ffffff;stroke:#3a47b8;stroke-width:1.5}
+    .t{font-size:13px;font-weight:700;fill:#3a47b8;text-anchor:middle}
+    .cap{font-size:12px;fill:#666}
+    .fl{stroke:#9aa0c8;stroke-width:2.5;fill:none}
+    .axis{stroke:#3a47b8;stroke-width:1.5}
+    .pt{fill:#3a47b8}
+  </style>
+  <rect width="640" height="300" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa0c8"/></marker></defs>
+
+  <text x="320" y="28" class="t" font-size="15">Bisección: el intervalo se parte a la mitad</text>
+
+  <!-- recta numérica de cada iteración -->
+  <!-- iter 1 -->
+  <text x="40" y="80" class="cap">Iter 1</text>
+  <line x1="120" y1="76" x2="520" y2="76" class="axis"/>
+  <circle cx="120" cy="76" r="4" class="pt"/><circle cx="520" cy="76" r="4" class="pt"/>
+  <text x="120" y="64" class="cap" text-anchor="middle">a</text>
+  <text x="520" y="64" class="cap" text-anchor="middle">b</text>
+  <line x1="320" y1="68" x2="320" y2="84" class="axis"/>
+  <text x="320" y="98" class="cap" text-anchor="middle">m = (a+b)/2</text>
+
+  <!-- iter 2: se queda con [m, b] -->
+  <text x="40" y="150" class="cap">Iter 2</text>
+  <line x1="320" y1="146" x2="520" y2="146" class="axis"/>
+  <circle cx="320" cy="146" r="4" class="pt"/><circle cx="520" cy="146" r="4" class="pt"/>
+  <text x="320" y="134" class="cap" text-anchor="middle">a</text>
+  <text x="520" y="134" class="cap" text-anchor="middle">b</text>
+  <line x1="420" y1="138" x2="420" y2="154" class="axis"/>
+  <text x="420" y="168" class="cap" text-anchor="middle">m</text>
+
+  <!-- iter 3: se queda con [m, b] -->
+  <text x="40" y="220" class="cap">Iter 3</text>
+  <line x1="420" y1="216" x2="520" y2="216" class="axis"/>
+  <circle cx="420" cy="216" r="4" class="pt"/><circle cx="520" cy="216" r="4" class="pt"/>
+  <text x="420" y="204" class="cap" text-anchor="middle">a</text>
+  <text x="520" y="204" class="cap" text-anchor="middle">b</text>
+  <line x1="470" y1="208" x2="470" y2="224" class="axis"/>
+
+  <!-- raíz -->
+  <line x1="470" y1="60" x2="470" y2="248" stroke="#3a47b8" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="470" y="266" class="t" font-size="12">raíz</text>
+
+  <!-- flechas de convergencia -->
+  <path d="M540,76 C575,110 575,112 540,146" class="fl" marker-end="url(#a)"/>
+  <path d="M540,146 C575,180 575,182 540,216" class="fl" marker-end="url(#a)"/>
+</svg>
