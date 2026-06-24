@@ -23,6 +23,15 @@ Senior Full Stack Developer · Programador autodidacta
 
 <div class="grid cards" markdown>
 
+-   :material-compass-outline: __Cómo funciona la computación__
+
+    ---
+
+    La rampa de entrada: qué es computar, por qué usamos máquinas, el papel de los
+    lenguajes y la anatomía de un programa. Con enlaces a lo técnico.
+
+    [:octicons-arrow-right-24: Entrar](computacion/index.md)
+
 -   :material-teddy-bear: __Para kids 🧒__
 
     ---
@@ -112,6 +121,15 @@ Senior Full Stack Developer · Programador autodidacta
     (Elixir · Python) y soluciones a los cursos MITx 6.00.1x/2x.
 
     [:octicons-arrow-right-24: Entrar](practica/index.md)
+
+-   :material-server-network: __Diseño de sistemas__
+
+    ---
+
+    Cómo se piensa y construye software a gran escala: 7 casos (Uber, Netflix,
+    WhatsApp…) con diagramas de arquitectura y los *building blocks* reutilizables.
+
+    [:octicons-arrow-right-24: Entrar](diseno-de-sistemas/index.md)
 
 -   :material-chip: __Arquitectura de computadores__
 
